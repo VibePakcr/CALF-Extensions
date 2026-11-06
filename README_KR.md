@@ -4,6 +4,8 @@
 
 **CALF — Controlled Agent Lifecycle Framework**에 연결하는 작은 로컬 확장 모음입니다. 비공개 코어를 수정하지 않고 런타임을 작업 계약·독립 검사·파일 버전이 연결된 실행 증거와 결합합니다.
 
+**0.1.0 개발자 프리뷰:** [다운로드](https://github.com/VibePakcr/CALF-Extensions/releases/tag/v0.1.0) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/v0.1.0) · [릴리즈 안내](RELEASE-NOTES.md). 하나의 Python 공용 패키지로 검증된 macOS·Windows·Linux 환경에서 사용합니다. CALF 앱 설치 파일과는 별도입니다.
+
 첫 확장은 **로컬 FFmpeg 씬 작업 흐름**이며, 개발자 프리뷰로 제공합니다. **승인된 1·2번 씬은 그대로 두고 3번 씬만 수정하는 것**이 이번 구현의 핵심입니다.
 
 ## 이번 프리뷰에서 가능한 것
@@ -29,15 +31,15 @@ Python 표준 라이브러리와 CALF SDK만 사용합니다. SDK와 네이티�
 
 작업 계약은 모델에 종속되지 않습니다. Codex·Antigravity·Claude 등은 권한을 부여받은 호스트에서 CLI/SDK를 사용할 수 있습니다. CALF의 기존 stdio Work MCP로 호환 클라이언트에 실행 증거를 제공할 수도 있습니다. [에이전트·MCP 연결 안내](docs/AGENTS_KR.md)를 참고하세요.
 
-**Claude 실서비스 연결을 완료했다는 뜻은 아닙니다.** 이번에는 모델 호출 없이 로컬 MCP 규약을 시험했습니다. 어떤 버전을 선택할지는 AI의 완료 선언이 아니라 씬 선택 API가 결정합니다.
+**Claude Code 2.1.201은 실제 모델로 조회 → 1회 실행 → 재조회를 수행했습니다.** 이후 네이티브 증거를 확인하고 호스트가 승인한 씬 선택까지 검증했습니다. [Claude 연결 안내](docs/CLAUDE_KR.md)와 [실행 한도가 있는 예제](examples/claude_work.py)는 MCP 연결이 완료된 뒤에만 모델에 작업을 전달합니다. 어떤 버전을 선택할지는 AI의 완료 선언이 아니라 씬 선택 API가 결정합니다.
 
 이 확장은 승인 파일을 덮어쓰지 않습니다. 읽기 전용 파일 속성과 해시로 변경을 보호·감지하지만 OS 샌드박스는 아닙니다. 별도 프로세스에 파일 쓰기 권한이 있으면 통제 경로 밖에서 변경할 수 있으므로, 이를 차단하려면 해당 호스트에서 권한을 제한해야 합니다.
 
 ## 실제 검증 범위
 
-[검증 요약](VERIFICATION.json)에 사용 도구·네이티브 코어·시험 항목을 기록했습니다. **macOS ARM64에서 짧은 합성 MP4**로 시험했으며 Harness 1.8.7과 Workbench 1.9.2의 네이티브 코어가 같은 기록을 확인했습니다.
+[검증 요약](VERIFICATION.json)에 도구·네이티브 코어·시험 항목을 기록했습니다. 짧은 합성 MP4로 **macOS ARM64·Windows 11 x64·Debian 13 x64에서 각각 13개 수락 항목**을 통과했습니다. 이 항목에는 계약 단위 검사 3개가 포함됩니다. Harness 1.8.7과 Workbench 1.9.2의 네이티브 코어가 같은 기록을 확인했습니다. FFmpeg는 순서대로 8.1.2·9.0.2·7.0.2를 사용했습니다.
 
-이 새 확장의 Windows·Linux 실행, 실제 제작 영상, 장시간 작업, 미적·의미적 검수, ComfyUI·Remotion·Veo·Runway 등 외부 API는 **아직 검증하지 않았습니다**. 미디어 참조 아키텍처는 후속 확장의 방향이며, 완료된 연동 목록이 아닙니다.
+Claude Code 실제 작업은 macOS에서 확인했습니다. Claude Desktop GUI 설정, 다른 OS·아키텍처 조합, 실제 제작 영상, 장시간 작업, 미적·의미적 검수, ComfyUI·Remotion·Veo·Runway 등 생성 API는 **이번 시험의 검증 범위가 아닙니다**. 미디어 참조 아키텍처는 후속 확장의 방향이며, 완료된 연동 목록이 아닙니다.
 
 ## 저장소 구성
 

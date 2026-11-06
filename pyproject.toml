@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "calf-extensions"
-version = "0.1.0.dev1"
+version = "0.1.0"
 description = "Local runtime integrations for CALF; FFmpeg scene workflow preview"
 requires-python = ">=3.10"
 license = {file = "LICENSE-EXTENSIONS.txt"}

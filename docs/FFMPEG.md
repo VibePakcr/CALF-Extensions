@@ -4,6 +4,10 @@
 
 This preview makes a new candidate for one scene, checks it, and lets an authorized caller select it. It does not assemble a timeline, generate images/video with AI, or judge artistic quality.
 
+Version 0.1.0 is a portable Python extension for the tested macOS ARM64, Windows 11 x64 and Debian 13 x64 environments. ZIP and tar.gz contain the same source, English/Korean guides and qualification summary. Native CALF, CALF SDK and FFmpeg/ffprobe are installed separately.
+
+Extract updates into a new folder. Keep the complete records home, scene project, old extension/SDK files and tool paths while older work still references them. Contracts pin file identities: replacing or deleting a referenced file can invalidate its current evidence. Register an updated extension in a new configuration folder; do not rewrite old contracts or reset attempts.
+
 ## Prepare the environment
 
 Extract CALF SDK 0.2.1 separately. From this repository root, make that extracted SDK importable for the current process. No global shell or CALF settings need changing.

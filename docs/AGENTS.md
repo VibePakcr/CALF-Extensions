@@ -38,6 +38,6 @@ The native server's optional `--control` flag exposes registered work submission
 
 ## What was tested
 
-A real local stdio session initialized the native server, listed its tools and inspected actual FFmpeg media evidence. Calling an execution tool in read-only mode was refused and created no attempt. The native protocol path is tested; a live Claude account, Claude CLI/Desktop session or model response is not.
+A local stdio session initialized the native server, listed its tools and inspected actual FFmpeg media evidence. Calling an execution tool in read-only mode was refused and created no attempt. A real Claude Code 2.1.201 session on macOS then used inspect → step → inspect, with native `SATISFIED` evidence and scene preservation verified independently. See the [Claude connection guide](CLAUDE.md). Claude Desktop GUI setup was not tested.
 
 The fixed FFmpeg producer only writes inside the new candidate directory, and the selection API never overwrites retained approved media. These controls apply to calls through this extension. They do not revoke unrelated shell, editor or filesystem permissions held by an agent. Use host/OS isolation when those rights must be denied.

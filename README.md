@@ -4,6 +4,8 @@
 
 Small, local extensions for **CALF — Controlled Agent Lifecycle Framework**. Connect a runtime to CALF's work contracts, independent checks and version-bound evidence without modifying the proprietary core.
 
+**0.1.0 developer preview:** [Download](https://github.com/VibePakcr/CALF-Extensions/releases/tag/v0.1.0) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/v0.1.0) · [Release notes](RELEASE-NOTES.md). One portable Python package supports the tested macOS, Windows and Linux environments. It is separate from the native CALF installer.
+
 The first extension is a **local FFmpeg scene workflow**, available here as a developer preview. It addresses a common production problem: **change scene 3 while keeping approved scenes 1 and 2 unchanged**.
 
 ## What works in this preview
@@ -29,15 +31,15 @@ The extension uses only Python's standard library and the CALF SDK. The SDK and 
 
 The work contract is independent of the model. Codex, Antigravity, Claude or another client can use the CLI/SDK from an authorized host. CALF's existing stdio Work MCP can expose recorded evidence to any compatible MCP client. See [agent and MCP integration](docs/AGENTS.md).
 
-**No live Claude integration is claimed.** The local MCP protocol was tested without calling a model. The scene-selection API, not an agent's completion statement, determines which version is selected.
+**Claude Code 2.1.201 was tested with a real model:** inspect → execute once → inspect, followed by native evidence verification and host-authorized scene selection. The [Claude guide](docs/CLAUDE.md) and [bounded example](examples/claude_work.py) wait for MCP to connect before sending a model request. The scene-selection API, not an agent's completion statement, determines which version is selected.
 
 Approved files are never overwritten by this extension. Read-only file permissions and hashes help protect and detect changes, but they are not an OS sandbox. A separate process with filesystem rights can still modify files outside the controlled path; those rights must be restricted by its host if prevention is required.
 
 ## Verified scope
 
-The [verification summary](VERIFICATION.json) records the actual tools, native cores and scenarios. This preview is qualified on **macOS ARM64**, using short synthetic MP4 files. The same records were inspected with Harness 1.8.7 and Workbench 1.9.2 native cores.
+The [verification summary](VERIFICATION.json) records the tools, native cores and scenarios. Short synthetic MP4 tests passed **13 acceptance groups on each of macOS ARM64, Windows 11 x64 and Debian 13 x64**. These groups include three contract unit tests. Harness 1.8.7 and Workbench 1.9.2 native cores read the same records. Tested FFmpeg versions were 8.1.2, 9.0.2 and 7.0.2 respectively.
 
-Windows and Linux execution of this new extension, production footage, longer jobs, aesthetic/semantic review, ComfyUI, Remotion, Veo, Runway and other external APIs are **not yet qualified**. The reference media architecture is a direction for future extensions, not a list of completed integrations.
+The live Claude Code workflow was tested on macOS. Claude Desktop GUI configuration, other OS/architecture combinations, production footage, longer jobs, aesthetic/semantic review, ComfyUI, Remotion, Veo, Runway and other generation APIs are **not qualified by these tests**. The reference architecture describes future extensions, not completed integrations.
 
 ## Repository layout
 
