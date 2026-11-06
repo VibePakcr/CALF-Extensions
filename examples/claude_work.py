@@ -1,1 +1,131 @@
-IiIiT25lIENsYXVkZSBDb2RlIHNlc3Npb24gb3ZlciBXb3JrIE1DUC4gRGVmYXVsdDogcmVhZGluZXNzIG9ubHksIG5vIG1vZGVsIGNhbGwuCgpVc2VzIHRoZSBDTEkgY29udHJvbCBtZXNzYWdlIHNoYXBlcyBwdWJsaXNoZWQgYnkgdGhlIG9mZmljaWFsIENsYXVkZSBBZ2VudCBTREsuCkluc3RhbGwgQ0FMRiBTREsgc2VwYXJhdGVseS4gTm8gZ2xvYmFsIGNvbmZpZyBlZGl0cywgZGVwZW5kZW5jeSBpbnN0YWxsIG9yIGRhZW1vbi4KIiIiCmZyb20gcGF0aGxpYiBpbXBvcnQgUGF0aAppbXBvcnQgYXJncGFyc2UKaW1wb3J0IGpzb24KaW1wb3J0IG1hdGgKaW1wb3J0IG9zCmltcG9ydCBxdWV1ZQppbXBvcnQgcmUKaW1wb3J0IHNpZ25hbAppbXBvcnQgc3VicHJvY2VzcwppbXBvcnQgdGVtcGZpbGUKaW1wb3J0IHRocmVhZGluZwppbXBvcnQgdGltZQpmcm9tIGNhbGZfc2RrIGltcG9ydCBDYWxmQ2xpZW50CgoKZGVmIHJ1bihhcmdzKToKICAgIGZvciBmaWVsZCBpbiBbJ2NsYXVkZScsJ2NhbGYnLCdob21lJywncHJvZmlsZScsJ3Nlc3Npb25fZGlyJ106CiAgICAgICAgcGF0aD1QYXRoKGdldGF0dHIoYXJncyxmaWVsZCkpCiAgICAgICAgaWYgbm90IHBhdGguaXNfYWJzb2x1dGUoKTpyYWlzZSBWYWx1ZUVycm9yKGZpZWxkKycgcmVxdWlyZXMgYW4gYWJzb2x1dGUgcGF0aCcpCiAgICBleGVjdXRhYmxlPVBhdGgoYXJncy5jbGF1ZGUpLnJlc29sdmUoc3RyaWN0PVRydWUpCiAgICBwcm9maWxlPVBhdGgoYXJncy5wcm9maWxlKS5yZXNvbHZlKHN0cmljdD1UcnVlKQogICAgaWYgbm90IGV4ZWN1dGFibGUuaXNfZmlsZSgpIG9yIG5vdCBwcm9maWxlLmlzX2RpcigpOnJhaXNlIFZhbHVlRXJyb3IoJ1NlbGVjdCBhbiBpbnN0YWxsZWQgQ0xJIGFuZCBhbiBleGlzdGluZyBwcm9maWxlJykKICAgIGlmIG5vdCByZS5mdWxsbWF0Y2gocid3b3JrLVswLTlhLWZdezY0fScsYXJncy53b3JrKTpyYWlzZSBWYWx1ZUVycm9yKCdJbnZhbGlkIHdvcmsgSUQnKQogICAgaWYgbm90IG1hdGguaXNmaW5pdGUoYXJncy5idWRnZXRfdXNkKSBvciBub3QgMDxhcmdzLmJ1ZGdldF91c2Q8PS41MDpyYWlzZSBWYWx1ZUVycm9yKCdCdWRnZXQgbXVzdCBiZSBwb3NpdGl2ZSBhbmQgYXQgbW9zdCBVU0QgMC41MCcpCiAgICBpZiBub3QgMTA8PWFyZ3MudGltZW91dDw9MTgwOnJhaXNlIFZhbHVlRXJyb3IoJ1RpbWVvdXQgbXVzdCBiZSAxMOKAkzE4MCBzZWNvbmRzJykKICAgIGZvbGRlcj1QYXRoKGFyZ3Muc2Vzc2lvbl9kaXIpO2ZvbGRlci5ta2RpcihwYXJlbnRzPVRydWUsZXhpc3Rfb2s9RmFsc2UpO2ZvbGRlcj1mb2xkZXIucmVzb2x2ZShzdHJpY3Q9VHJ1ZSkKICAgIGNsaWVudD1DYWxmQ2xpZW50KFBhdGgoYXJncy5jYWxmKS5yZXNvbHZlKHN0cmljdD1UcnVlKSxhcmdzLmhvbWUsdGltZW91dD04MCkKICAgIGJlZm9yZT1jbGllbnQud29yaygnaW5zcGVjdCcsd29yaz1hcmdzLndvcmspCiAgICBpZiBhcmdzLmV4ZWN1dGUgYW5kIChiZWZvcmUuZ2V0KCdwaGFzZScpIT0ncmVhZHknIG9yIGJlZm9yZS5nZXQoJ2F0dGVtcHQnKSE9MCk6CiAgICAgICAgcmFpc2UgVmFsdWVFcnJvcignRXhlY3V0aW9uIHJlcXVpcmVzIGFuIHVuZXhlY3V0ZWQgZnJvemVuIHdvcms7IHJlY29uY2lsZSBleGlzdGluZyBhdHRlbXB0cyBmaXJzdCcpCiAgICBjb25maWc9eydtY3BTZXJ2ZXJzJzp7J2NhbGYnOmNsaWVudC53b3JrX21jcF9zZXJ2ZXIoY29udHJvbD1hcmdzLmV4ZWN1dGUpfX0KICAgIGVudj1kaWN0KG9zLmVudmlyb24sQ0xBVURFX0NPTkZJR19ESVI9c3RyKHByb2ZpbGUpLERJU0FCTEVfVEVMRU1FVFJZPScxJyxESVNBQkxFX0VSUk9SX1JFUE9SVElORz0nMScsCiAgICAgICAgICAgICBESVNBQkxFX0FVVE9VUERBVEVSPScxJyxDTEFVREVfQ09ERV9ESVNBQkxFX05PTkVTU0VOVElBTF9UUkFGRklDPScxJykKICAgIGFsbG93ZWQ9WydtY3BfX2NhbGZfX3dvcmtfaW5zcGVjdCddKyhbJ21jcF9fY2FsZl9fd29ya19zdGVwJ10gaWYgYXJncy5leGVjdXRlIGVsc2UgW10pCiAgICBjb21tYW5kPVtzdHIoZXhlY3V0YWJsZSksJy1wJywnLS1pbnB1dC1mb3JtYXQnLCdzdHJlYW0tanNvbicsJy0tb3V0cHV0LWZvcm1hdCcsJ3N0cmVhbS1qc29uJywnLS12ZXJib3NlJywKICAgICAgICAgICAgICctLW5vLXNlc3Npb24tcGVyc2lzdGVuY2UnLCctLWRpc2FibGUtc2xhc2gtY29tbWFuZHMnLCctLW5vLWNocm9tZScsJy0tc2V0dGluZy1zb3VyY2VzJywnJywKICAgICAgICAgICAgICctLW1jcC1jb25maWcnLGpzb24uZHVtcHMoY29uZmlnKSwnLS1zdHJpY3QtbWNwLWNvbmZpZycsJy0tdG9vbHMnLCcnLAogICAgICAgICAgICAgJy0tcGVybWlzc2lvbi1tb2RlJywnZG9udEFzaycsJy0tYWxsb3dlZFRvb2xzJywqYWxsb3dlZCwnLS1tYXgtYnVkZ2V0LXVzZCcsc3RyKGFyZ3MuYnVkZ2V0X3VzZCldCiAgICBtZXNzYWdlcz1xdWV1ZS5RdWV1ZShtYXhzaXplPTY0KTtldmVudHM9W107c2VxdWVuY2U9MDtkZWFkbGluZT10aW1lLm1vbm90b25pYygpK2FyZ3MudGltZW91dAogICAgd2l0aCB0ZW1wZmlsZS5UZW1wb3JhcnlGaWxlKCkgYXMgZXJyb3JzOgogICAgICAgIGNoaWxkPXN1YnByb2Nlc3MuUG9wZW4oY29tbWFuZCxjd2Q9Zm9sZGVyLGVudj1lbnYsc3RkaW49c3VicHJvY2Vzcy5QSVBFLHN0ZG91dD1zdWJwcm9jZXNzLlBJUEUsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzdGRlcnI9ZXJyb3JzLHRleHQ9VHJ1ZSxidWZzaXplPTEsc3RhcnRfbmV3X3Nlc3Npb249b3MubmFtZSE9J250JykKICAgICAgICBkZWYgcmVhZCgpOgogICAgICAgICAgICBzaXplPTAKICAgICAgICAgICAgdHJ5OgogICAgICAgICAgICAgICAgZm9yIGxpbmUgaW4gY2hpbGQuc3Rkb3V0OgogICAgICAgICAgICAgICAgICAgIHNpemUrPWxlbihsaW5lLmVuY29kZSgndXRmLTgnKSkKICAgICAgICAgICAgICAgICAgICBpZiBzaXplPjEwNDg1NzYgb3IgbGVuKGxpbmUpPjI2MjE0NDpyYWlzZSBWYWx1ZUVycm9yKCdDTEkgb3V0cHV0IGxpbWl0JykKICAgICAgICAgICAgICAgICAgICBtZXNzYWdlcy5wdXQoanNvbi5sb2FkcyhsaW5lKSkKICAgICAgICAgICAgZXhjZXB0IEV4Y2VwdGlvbiBhcyBlcnJvcjptZXNzYWdlcy5wdXQoeyd0cmFuc3BvcnRFcnJvcic6dHlwZShlcnJvcikuX19uYW1lX199KQogICAgICAgICAgICBmaW5hbGx5Om1lc3NhZ2VzLnB1dCh7J3RyYW5zcG9ydEVPRic6VHJ1ZX0pCiAgICAgICAgcmVhZGVyX3RocmVhZD10aHJlYWRpbmcuVGhyZWFkKHRhcmdldD1yZWFkLGRhZW1vbj1UcnVlKTtyZWFkZXJfdGhyZWFkLnN0YXJ0KCkKICAgICAgICBkZWYgc2VuZCh2YWx1ZSk6CiAgICAgICAgICAgIGNoaWxkLnN0ZGluLndyaXRlKGpzb24uZHVtcHModmFsdWUpKydcbicpO2NoaWxkLnN0ZGluLmZsdXNoKCkKICAgICAgICBkZWYgcmVjZWl2ZSgpOgogICAgICAgICAgICBpZiBvcy5mc3RhdChlcnJvcnMuZmlsZW5vKCkpLnN0X3NpemU+NjU1MzY6cmFpc2UgVmFsdWVFcnJvcignQ0xJIGRpYWdub3N0aWMgbGltaXQnKQogICAgICAgICAgICByZW1haW5pbmc9ZGVhZGxpbmUtdGltZS5tb25vdG9uaWMoKQogICAgICAgICAgICBpZiByZW1haW5pbmc8PTA6cmFpc2UgVGltZW91dEVycm9yKCdTZXNzaW9uIGxpbWl0OyBpbnNwZWN0IHdvcmsgYmVmb3JlIGFub3RoZXIgcmVxdWVzdCcpCiAgICAgICAgICAgIHZhbHVlPW1lc3NhZ2VzLmdldCh0aW1lb3V0PXJlbWFpbmluZyk7ZXZlbnRzLmFwcGVuZCh2YWx1ZSkKICAgICAgICAgICAgaWYgdmFsdWUuZ2V0KCd0cmFuc3BvcnRFT0YnKSBvciB2YWx1ZS5nZXQoJ3RyYW5zcG9ydEVycm9yJyk6cmFpc2UgUnVudGltZUVycm9yKCdDbGF1ZGUgY29ubmVjdGlvbiBjbG9zZWQnKQogICAgICAgICAgICBpZiB2YWx1ZS5nZXQoJ3R5cGUnKT09J2NvbnRyb2xfcmVxdWVzdCc6CiAgICAgICAgICAgICAgICBzZW5kKHsndHlwZSc6J2NvbnRyb2xfcmVzcG9uc2UnLCdyZXNwb25zZSc6eydzdWJ0eXBlJzonZXJyb3InLCdyZXF1ZXN0X2lkJzp2YWx1ZVsncmVxdWVzdF9pZCddLAogICAgICAgICAgICAgICAgICAgICAgJ2Vycm9yJzonVW5leHBlY3RlZCByZXF1ZXN0OyBub3QgYXV0aG9yaXplZCBieSB0aGlzIGV4YW1wbGUnfX0pCiAgICAgICAgICAgIHJldHVybiB2YWx1ZQogICAgICAgIGRlZiBjb250cm9sKHJlcXVlc3QpOgogICAgICAgICAgICBub25sb2NhbCBzZXF1ZW5jZQogICAgICAgICAgICBzZXF1ZW5jZSs9MTtpZGVudGl0eT0nY2FsZi1yZWFkeS0nK3N0cihzZXF1ZW5jZSkKICAgICAgICAgICAgc2VuZCh7J3R5cGUnOidjb250cm9sX3JlcXVlc3QnLCdyZXF1ZXN0X2lkJzppZGVudGl0eSwncmVxdWVzdCc6cmVxdWVzdH0pCiAgICAgICAgICAgIHdoaWxlIFRydWU6CiAgICAgICAgICAgICAgICB2YWx1ZT1yZWNlaXZlKCk7cmVzcG9uc2U9dmFsdWUuZ2V0KCdyZXNwb25zZScse30pCiAgICAgICAgICAgICAgICBpZiB2YWx1ZS5nZXQoJ3R5cGUnKT09J2NvbnRyb2xfcmVzcG9uc2UnIGFuZCByZXNwb25zZS5nZXQoJ3JlcXVlc3RfaWQnKT09aWRlbnRpdHk6CiAgICAgICAgICAgICAgICAgICAgaWYgcmVzcG9uc2UuZ2V0KCdzdWJ0eXBlJykhPSdzdWNjZXNzJzpyYWlzZSBSdW50aW1lRXJyb3IoJ0NsYXVkZSBjb250cm9sIHJlcXVlc3QgZmFpbGVkJykKICAgICAgICAgICAgICAgICAgICByZXR1cm4gcmVzcG9uc2UuZ2V0KCdyZXNwb25zZScse30pCiAgICAgICAgdHJ5OgogICAgICAgICAgICBjb250cm9sKHsnc3VidHlwZSc6J2luaXRpYWxpemUnLCdob29rcyc6Tm9uZX0pCiAgICAgICAgICAgIHN0YXJ0dXA9bWluKGRlYWRsaW5lLHRpbWUubW9ub3RvbmljKCkrMzApCiAgICAgICAgICAgIHdoaWxlIHRpbWUubW9ub3RvbmljKCk8c3RhcnR1cDoKICAgICAgICAgICAgICAgIHN0YXR1cz1jb250cm9sKHsnc3VidHlwZSc6J21jcF9zdGF0dXMnfSkKICAgICAgICAgICAgICAgIHNlcnZlcj1uZXh0KChzIGZvciBzIGluIHN0YXR1cy5nZXQoJ21jcFNlcnZlcnMnLFtdKSBpZiBzLmdldCgnbmFtZScpPT0nY2FsZicpLE5vbmUpCiAgICAgICAgICAgICAgICBpZiBzZXJ2ZXIgYW5kIHNlcnZlci5nZXQoJ3N0YXR1cycpPT0nY29ubmVjdGVkJzpicmVhawogICAgICAgICAgICAgICAgaWYgc2VydmVyIGFuZCBzZXJ2ZXIuZ2V0KCdzdGF0dXMnKT09J2ZhaWxlZCc6cmFpc2UgUnVudGltZUVycm9yKCdDQUxGIE1DUCBmYWlsZWQ7IG5vIG1vZGVsIG1lc3NhZ2Ugc2VudCcpCiAgICAgICAgICAgICAgICB0aW1lLnNsZWVwKC41KQogICAgICAgICAgICBlbHNlOnJhaXNlIFRpbWVvdXRFcnJvcignQ0FMRiBNQ1Agbm90IHJlYWR5OyBubyBtb2RlbCBtZXNzYWdlIHNlbnQnKQogICAgICAgICAgICByZXBvcnQ9eydtY3BSZWFkeSc6VHJ1ZSwnbW9kZWxDYWxsZWQnOkZhbHNlLCd3b3JrJzphcmdzLndvcmt9CiAgICAgICAgICAgIGlmIG5vdCBhcmdzLmV4ZWN1dGU6cmV0dXJuIHJlcG9ydAogICAgICAgICAgICBwcm9tcHQ9KCdGb3IgZnJvemVuIHN5bnRoZXRpYyB3b3JrICcrYXJncy53b3JrKycsIGNhbGwgd29ya19pbnNwZWN0LCB0aGVuIHdvcmtfc3RlcCBleGFjdGx5IG9uY2UgZm9yIHRoYXQgc2FtZSBJRCwgJwogICAgICAgICAgICAgICAgICAgICd0aGVuIHdvcmtfaW5zcGVjdC4gTmV2ZXIgc3VibWl0LCByZXRyeSwgY2FuY2VsIG9yIGFkb3B0LiBSZXBvcnQgdGhlIGFjdHVhbCBjaGVjayB2ZXJkaWN0IGFuZCBtYW5pZmVzdCBkaWdlc3QuICcKICAgICAgICAgICAgICAgICAgICAnUmVuZGVyZXIgZXhpdCAwIGlzIG5vdCBhIHBhc3NlZCBjaGVjay4gRG8gbm90IGNsYWltIGFydGlzdGljIHJldmlldy4nKQogICAgICAgICAgICBzZW5kKHsndHlwZSc6J3VzZXInLCdtZXNzYWdlJzp7J3JvbGUnOid1c2VyJywnY29udGVudCc6cHJvbXB0fSwncGFyZW50X3Rvb2xfdXNlX2lkJzpOb25lLCdzZXNzaW9uX2lkJzonZGVmYXVsdCd9KQogICAgICAgICAgICB3aGlsZSBUcnVlOgogICAgICAgICAgICAgICAgcmVzdWx0PXJlY2VpdmUoKQogICAgICAgICAgICAgICAgaWYgcmVzdWx0LmdldCgndHlwZScpPT0ncmVzdWx0JzpicmVhawogICAgICAgICAgICBjYWxscz1bYyBmb3IgZSBpbiBldmVudHMgaWYgZS5nZXQoJ3R5cGUnKT09J2Fzc2lzdGFudCcgZm9yIGMgaW4gZS5nZXQoJ21lc3NhZ2UnLHt9KS5nZXQoJ2NvbnRlbnQnLFtdKSBpZiBjLmdldCgndHlwZScpPT0ndG9vbF91c2UnXQogICAgICAgICAgICBpZiByZXN1bHQuZ2V0KCdpc19lcnJvcicpIG9yIG5vdCBjYWxscyBvciBhbnkoY1snbmFtZSddIG5vdCBpbiBhbGxvd2VkIG9yIGMuZ2V0KCdpbnB1dCcse30pLmdldCgnd29yaycpIT1hcmdzLndvcmsgZm9yIGMgaW4gY2FsbHMpOgogICAgICAgICAgICAgICAgcmFpc2UgUnVudGltZUVycm9yKCdDbGF1ZGUgZGlkIG5vdCBjb21wbGV0ZSB0aGUgcGVybWl0dGVkIHRvb2wgc2VxdWVuY2U7IGluc3BlY3QgbmF0aXZlIHdvcmsnKQogICAgICAgICAgICBpZiBzdW0oY1snbmFtZSddPT0nbWNwX19jYWxmX193b3JrX3N0ZXAnIGZvciBjIGluIGNhbGxzKSE9MTpyYWlzZSBSdW50aW1lRXJyb3IoJ0V4cGVjdGVkIGV4YWN0bHkgb25lIHdvcmtfc3RlcCcpCiAgICAgICAgICAgIGN1cnJlbnQ9Y2xpZW50LndvcmsoJ2luc3BlY3QnLHdvcms9YXJncy53b3JrKQogICAgICAgICAgICByZXBvcnQudXBkYXRlKG1vZGVsQ2FsbGVkPVRydWUsb3V0Y29tZT1jdXJyZW50LmdldCgnb3V0Y29tZScpLHZlcmlmaWVkPWN1cnJlbnQuZ2V0KCd2ZXJpZmllZCcpLAogICAgICAgICAgICAgICAgICAgICAgICAgIG1hbmlmZXN0RGlnZXN0PShjdXJyZW50LmdldCgnbWFuaWZlc3QnKSBvciB7fSkuZ2V0KCdkaWdlc3QnKSwKICAgICAgICAgICAgICAgICAgICAgICAgICB0b29sQ2FsbHM9W2NbJ25hbWUnXSBmb3IgYyBpbiBjYWxsc10scmVwb3J0ZWRDb3N0VVNEPXJlc3VsdC5nZXQoJ3RvdGFsX2Nvc3RfdXNkJyksYWRvcHRpb249J05vdCByZXF1ZXN0ZWQnKQogICAgICAgICAgICByZXR1cm4gcmVwb3J0CiAgICAgICAgZmluYWxseToKICAgICAgICAgICAgdHJ5OmNoaWxkLnN0ZGluLmNsb3NlKCkKICAgICAgICAgICAgZXhjZXB0IChCcm9rZW5QaXBlRXJyb3IsT1NFcnJvcik6cGFzcwogICAgICAgICAgICB0cnk6Y2hpbGQud2FpdCh0aW1lb3V0PTUpCiAgICAgICAgICAgIGV4Y2VwdCBzdWJwcm9jZXNzLlRpbWVvdXRFeHBpcmVkOgogICAgICAgICAgICAgICAgaWYgb3MubmFtZT09J250JzpjaGlsZC50ZXJtaW5hdGUoKQogICAgICAgICAgICAgICAgZWxzZTpvcy5raWxscGcoY2hpbGQucGlkLHNpZ25hbC5TSUdURVJNKQogICAgICAgICAgICAgICAgdHJ5OmNoaWxkLndhaXQodGltZW91dD0xMCkKICAgICAgICAgICAgICAgIGV4Y2VwdCBzdWJwcm9jZXNzLlRpbWVvdXRFeHBpcmVkOmNoaWxkLmtpbGwoKTtjaGlsZC53YWl0KHRpbWVvdXQ9NSkKICAgICAgICAgICAgcmVhZGVyX3RocmVhZC5qb2luKHRpbWVvdXQ9MSkKICAgICAgICAgICAgY2hpbGQuc3Rkb3V0LmNsb3NlKCkKCgpkZWYgbWFpbigpOgogICAgcGFyc2VyPWFyZ3BhcnNlLkFyZ3VtZW50UGFyc2VyKGRlc2NyaXB0aW9uPV9fZG9jX18pCiAgICBmb3IgbmFtZSBpbiBbJ2NsYXVkZScsJ2NhbGYnLCdob21lJywncHJvZmlsZScsJ3Nlc3Npb24tZGlyJ106cGFyc2VyLmFkZF9hcmd1bWVudCgnLS0nK25hbWUsdHlwZT1QYXRoLHJlcXVpcmVkPVRydWUpCiAgICBwYXJzZXIuYWRkX2FyZ3VtZW50KCctLXdvcmsnLHJlcXVpcmVkPVRydWUpCiAgICBwYXJzZXIuYWRkX2FyZ3VtZW50KCctLWV4ZWN1dGUnLGFjdGlvbj0nc3RvcmVfdHJ1ZScsaGVscD0nZXhwbGljaXRseSBhdXRob3JpemUgb25lIENsYXVkZSBtb2RlbCBzZXNzaW9uIGFuZCBvbmUgd29ya19zdGVwJykKICAgIHBhcnNlci5hZGRfYXJndW1lbnQoJy0tYnVkZ2V0LXVzZCcsdHlwZT1mbG9hdCxkZWZhdWx0PS4zNSkKICAgIHBhcnNlci5hZGRfYXJndW1lbnQoJy0tdGltZW91dCcsdHlwZT1pbnQsZGVmYXVsdD0xODApCiAgICBhcmdzPXBhcnNlci5wYXJzZV9hcmdzKCkKICAgIHJlcG9ydD1ydW4oYXJncyk7cHJpbnQoanNvbi5kdW1wcyhyZXBvcnQsZW5zdXJlX2FzY2lpPUZhbHNlLGluZGVudD0yKSkKICAgIHJldHVybiAwIGlmIG5vdCBhcmdzLmV4ZWN1dGUgb3IgKHJlcG9ydC5nZXQoJ3ZlcmlmaWVkJykgYW5kIHJlcG9ydC5nZXQoJ291dGNvbWUnKT09J1NBVElTRklFRCcpIGVsc2UgMgoKaWYgX19uYW1lX189PSdfX21haW5fXyc6cmFpc2UgU3lzdGVtRXhpdChtYWluKCkpCg==
+"""One Claude Code session over Work MCP. Default: readiness only, no model call.
+
+Uses the CLI control message shapes published by the official Claude Agent SDK.
+Install CALF SDK separately. No global config edits, dependency install or daemon.
+"""
+from pathlib import Path
+import argparse
+import json
+import math
+import os
+import queue
+import re
+import signal
+import subprocess
+import tempfile
+import threading
+import time
+from calf_sdk import CalfClient
+
+
+def run(args):
+    for field in ['claude','calf','home','profile','session_dir']:
+        path=Path(getattr(args,field))
+        if not path.is_absolute():raise ValueError(field+' requires an absolute path')
+    executable=Path(args.claude).resolve(strict=True)
+    profile=Path(args.profile).resolve(strict=True)
+    if not executable.is_file() or not profile.is_dir():raise ValueError('Select an installed CLI and an existing profile')
+    if not re.fullmatch(r'work-[0-9a-f]{64}',args.work):raise ValueError('Invalid work ID')
+    if not math.isfinite(args.budget_usd) or not 0<args.budget_usd<=.50:raise ValueError('Budget must be positive and at most USD 0.50')
+    if not 10<=args.timeout<=180:raise ValueError('Timeout must be 10–180 seconds')
+    folder=Path(args.session_dir);folder.mkdir(parents=True,exist_ok=False);folder=folder.resolve(strict=True)
+    client=CalfClient(Path(args.calf).resolve(strict=True),args.home,timeout=80)
+    before=client.work('inspect',work=args.work)
+    if args.execute and (before.get('phase')!='ready' or before.get('attempt')!=0):
+        raise ValueError('Execution requires an unexecuted frozen work; reconcile existing attempts first')
+    config={'mcpServers':{'calf':client.work_mcp_server(control=args.execute)}}
+    env=dict(os.environ,CLAUDE_CONFIG_DIR=str(profile),DISABLE_TELEMETRY='1',DISABLE_ERROR_REPORTING='1',
+             DISABLE_AUTOUPDATER='1',CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC='1')
+    allowed=['mcp__calf__work_inspect']+(['mcp__calf__work_step'] if args.execute else [])
+    command=[str(executable),'-p','--input-format','stream-json','--output-format','stream-json','--verbose',
+             '--no-session-persistence','--disable-slash-commands','--no-chrome','--setting-sources','',
+             '--mcp-config',json.dumps(config),'--strict-mcp-config','--tools','',
+             '--permission-mode','dontAsk','--allowedTools',*allowed,'--max-budget-usd',str(args.budget_usd)]
+    messages=queue.Queue(maxsize=64);events=[];sequence=0;deadline=time.monotonic()+args.timeout
+    with tempfile.TemporaryFile() as errors:
+        child=subprocess.Popen(command,cwd=folder,env=env,stdin=subprocess.PIPE,stdout=subprocess.PIPE,
+                               stderr=errors,text=True,bufsize=1,start_new_session=os.name!='nt')
+        def read():
+            size=0
+            try:
+                for line in child.stdout:
+                    size+=len(line.encode('utf-8'))
+                    if size>1048576 or len(line)>262144:raise ValueError('CLI output limit')
+                    messages.put(json.loads(line))
+            except Exception as error:messages.put({'transportError':type(error).__name__})
+            finally:messages.put({'transportEOF':True})
+        reader_thread=threading.Thread(target=read,daemon=True);reader_thread.start()
+        def send(value):
+            child.stdin.write(json.dumps(value)+'\n');child.stdin.flush()
+        def receive():
+            if os.fstat(errors.fileno()).st_size>65536:raise ValueError('CLI diagnostic limit')
+            remaining=deadline-time.monotonic()
+            if remaining<=0:raise TimeoutError('Session limit; inspect work before another request')
+            value=messages.get(timeout=remaining);events.append(value)
+            if value.get('transportEOF') or value.get('transportError'):raise RuntimeError('Claude connection closed')
+            if value.get('type')=='control_request':
+                send({'type':'control_response','response':{'subtype':'error','request_id':value['request_id'],
+                      'error':'Unexpected request; not authorized by this example'}})
+            return value
+        def control(request):
+            nonlocal sequence
+            sequence+=1;identity='calf-ready-'+str(sequence)
+            send({'type':'control_request','request_id':identity,'request':request})
+            while True:
+                value=receive();response=value.get('response',{})
+                if value.get('type')=='control_response' and response.get('request_id')==identity:
+                    if response.get('subtype')!='success':raise RuntimeError('Claude control request failed')
+                    return response.get('response',{})
+        try:
+            control({'subtype':'initialize','hooks':None})
+            startup=min(deadline,time.monotonic()+30)
+            while time.monotonic()<startup:
+                status=control({'subtype':'mcp_status'})
+                server=next((s for s in status.get('mcpServers',[]) if s.get('name')=='calf'),None)
+                if server and server.get('status')=='connected':break
+                if server and server.get('status')=='failed':raise RuntimeError('CALF MCP failed; no model message sent')
+                time.sleep(.5)
+            else:raise TimeoutError('CALF MCP not ready; no model message sent')
+            report={'mcpReady':True,'modelCalled':False,'work':args.work}
+            if not args.execute:return report
+            prompt=('For frozen synthetic work '+args.work+', call work_inspect, then work_step exactly once for that same ID, '
+                    'then work_inspect. Never submit, retry, cancel or adopt. Report the actual check verdict and manifest digest. '
+                    'Renderer exit 0 is not a passed check. Do not claim artistic review.')
+            send({'type':'user','message':{'role':'user','content':prompt},'parent_tool_use_id':None,'session_id':'default'})
+            while True:
+                result=receive()
+                if result.get('type')=='result':break
+            calls=[c for e in events if e.get('type')=='assistant' for c in e.get('message',{}).get('content',[]) if c.get('type')=='tool_use']
+            if result.get('is_error') or not calls or any(c['name'] not in allowed or c.get('input',{}).get('work')!=args.work for c in calls):
+                raise RuntimeError('Claude did not complete the permitted tool sequence; inspect native work')
+            if sum(c['name']=='mcp__calf__work_step' for c in calls)!=1:raise RuntimeError('Expected exactly one work_step')
+            current=client.work('inspect',work=args.work)
+            report.update(modelCalled=True,outcome=current.get('outcome'),verified=current.get('verified'),
+                          manifestDigest=(current.get('manifest') or {}).get('digest'),
+                          toolCalls=[c['name'] for c in calls],reportedCostUSD=result.get('total_cost_usd'),adoption='Not requested')
+            return report
+        finally:
+            try:child.stdin.close()
+            except (BrokenPipeError,OSError):pass
+            try:child.wait(timeout=5)
+            except subprocess.TimeoutExpired:
+                if os.name=='nt':child.terminate()
+                else:os.killpg(child.pid,signal.SIGTERM)
+                try:child.wait(timeout=10)
+                except subprocess.TimeoutExpired:child.kill();child.wait(timeout=5)
+            reader_thread.join(timeout=1)
+            child.stdout.close()
+
+
+def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    for name in ['claude','calf','home','profile','session-dir']:parser.add_argument('--'+name,type=Path,required=True)
+    parser.add_argument('--work',required=True)
+    parser.add_argument('--execute',action='store_true',help='explicitly authorize one Claude model session and one work_step')
+    parser.add_argument('--budget-usd',type=float,default=.35)
+    parser.add_argument('--timeout',type=int,default=180)
+    args=parser.parse_args()
+    report=run(args);print(json.dumps(report,ensure_ascii=False,indent=2))
+    return 0 if not args.execute or (report.get('verified') and report.get('outcome')=='SATISFIED') else 2
+
+if __name__=='__main__':raise SystemExit(main())

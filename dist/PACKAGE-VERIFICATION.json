@@ -1,1 +1,57 @@
-ewogICJzdGF0dXMiOiAiUEFTUyIsCiAgInZlcnNpb24iOiAiMC4xLjAiLAogICJzY29wZSI6ICJGcmVzaCBleHRyYWN0aW9uIG9mIHB1Ymxpc2hlZCBzb3VyY2UgYXJjaGl2ZXM7IHN5bnRoZXRpYyBGRm1wZWcgbWVkaWEsIG5vdCBwcm9kdWN0aW9uLWZvb3RhZ2UgY2VydGlmaWNhdGlvbiIsCiAgInBsYXRmb3JtcyI6IHsKICAgICJtYWNvcyI6IHsKICAgICAgInN0YXR1cyI6ICJQQVNTIiwKICAgICAgInBsYXRmb3JtIjogIm1hY09TLTI3LjAuMS1hcm02NC1hcm0tNjRiaXQiLAogICAgICAiYXJjaGl2ZSI6ICJDQUxGLUZGbXBlZy1FeHRlbnNpb24tMC4xLjAuemlwIiwKICAgICAgImFyY2hpdmVTaGEyNTYiOiAiN2Q2M2NkMTg1Y2RmYzkwNGRhNTc0MzlmYzg2MzgwYTllMDFlZGE3ZDVhZDk3Mzg2YTYxYjQyNDUxYjVkMzIxMyIsCiAgICAgICJzb3VyY2VGaWxlcyI6IDI5LAogICAgICAic291cmNlTWF0Y2hlcyI6IHRydWUsCiAgICAgICJhY2NlcHRhbmNlR3JvdXBzIjogMTMsCiAgICAgICJjb250cmFjdFVuaXRUZXN0cyI6IDMsCiAgICAgICJleGlzdGluZ1JlY29yZEZpbGVzVW5jaGFuZ2VkIjogMTQ4LAogICAgICAiaGFybmVzc1NoYTI1NiI6ICI4ZTYyZDhmNWU4MTFhNTJkZWY4ZmYwNjczM2NmOTBlYjAzM2U3NDE5MjI2MzEzMDc1Y2VmMWZlMTUwYjg4MmJmIiwKICAgICAgIndvcmtiZW5jaFNoYTI1NiI6ICJkYjJjNzgzYWQ5ZWY4YWQyMmRlNWVlZWM0MGM2NTVhZmM4N2YyZjZiY2M5ZWUwNTJjZWVkYjFhZGQ0ZThjNTc5IgogICAgfSwKICAgICJ3aW5kb3dzIjogewogICAgICAic3RhdHVzIjogIlBBU1MiLAogICAgICAicGxhdGZvcm0iOiAiV2luZG93cy0xMS0xMC4wLjI2MzAwLVNQMCIsCiAgICAgICJhcmNoaXZlIjogIkNBTEYtRkZtcGVnLUV4dGVuc2lvbi0wLjEuMC56aXAiLAogICAgICAiYXJjaGl2ZVNoYTI1NiI6ICI3ZDYzY2QxODVjZGZjOTA0ZGE1NzQzOWZjODYzODBhOWUwMWVkYTdkNWFkOTczODZhNjFiNDI0NTFiNWQzMjEzIiwKICAgICAgInNvdXJjZUZpbGVzIjogMjksCiAgICAgICJzb3VyY2VNYXRjaGVzIjogdHJ1ZSwKICAgICAgImFjY2VwdGFuY2VHcm91cHMiOiAxMywKICAgICAgImNvbnRyYWN0VW5pdFRlc3RzIjogMywKICAgICAgImV4aXN0aW5nUmVjb3JkRmlsZXNVbmNoYW5nZWQiOiAzMDksCiAgICAgICJoYXJuZXNzU2hhMjU2IjogImM3NTlhMzkyMDAzMGRmYTg2ZjI1MTUwYjI1NTI0OGIyZjhiZTEyZmQ3OThjNWZjMmUzZmM5ZTc4ZTE5YzdhYTciLAogICAgICAid29ya2JlbmNoU2hhMjU2IjogIjljMGY0ZDNlNjcyNDJkM2FmNjFmMzQ4OTMzNDFjOTdiODc2OTQ4N2U0OWNkNTBiODE1Y2VlOGIwZDQxYzY4MTkiCiAgICB9LAogICAgImxpbnV4IjogewogICAgICAic3RhdHVzIjogIlBBU1MiLAogICAgICAicGxhdGZvcm0iOiAiTGludXgtNi4xMi4xMDcrZGViMTMtYW1kNjQteDg2XzY0LXdpdGgtZ2xpYmMyLjQxIiwKICAgICAgImFyY2hpdmUiOiAiQ0FMRi1GRm1wZWctRXh0ZW5zaW9uLTAuMS4wLnRhci5neiIsCiAgICAgICJhcmNoaXZlU2hhMjU2IjogImFjNTdhZGVhOTFmNGRkYTFjMjk1MjlhYWUzNjcwMmVmMjBmZDZlNWEwOGUxMDUwNWEzMTllODk0OTliNTVkMzQiLAogICAgICAic291cmNlRmlsZXMiOiAyOSwKICAgICAgInNvdXJjZU1hdGNoZXMiOiB0cnVlLAogICAgICAiYWNjZXB0YW5jZUdyb3VwcyI6IDEzLAogICAgICAiY29udHJhY3RVbml0VGVzdHMiOiAzLAogICAgICAiZXhpc3RpbmdSZWNvcmRGaWxlc1VuY2hhbmdlZCI6IDMwOSwKICAgICAgImhhcm5lc3NTaGEyNTYiOiAiZGQwNGVkZjk5YjgxNTAyNzA2MWYwYTAxMjI0Y2NjOGFmMjY4MzEwZjUzNThjNjgzZTIwY2NiYjUxN2FmNDA3NiIsCiAgICAgICJ3b3JrYmVuY2hTaGEyNTYiOiAiYTNmYjY4MjJjOWU3M2YwMDdiMjFmY2YyMWI3NWYzN2M5MTllOGM3YzE2NzQ5N2UyNGUwOWI4MzA3YmY1ZDQ3YiIKICAgIH0KICB9LAogICJzaGlwcGVkQ2xhdWRlRXhhbXBsZSI6IHsKICAgICJwbGF0Zm9ybSI6ICJtYWNPUyBBUk02NCIsCiAgICAibWNwUmVhZHkiOiB0cnVlLAogICAgIm1vZGVsQ2FsbGVkIjogZmFsc2UsCiAgICAiYWRkaXRpb25hbFN5bnRoZXRpY0NvbnRyb2xsZXJUZXN0cyI6IDMsCiAgICAibm90ZSI6ICJFYXJsaWVyIGxpdmUgQ2xhdWRlIHdvcmtmbG93IHF1YWxpZmljYXRpb24gaXMgaW4gVkVSSUZJQ0FUSU9OLmpzb24uIE5vIGFkZGl0aW9uYWwgcGFpZCBtb2RlbCBjYWxsIGZvciB0aGlzIHBhY2thZ2luZyB0ZXN0LiIKICB9LAogICJhcmNoaXZlcyI6IHsKICAgICJDQUxGLUZGbXBlZy1FeHRlbnNpb24tMC4xLjAudGFyLmd6IjogImFjNTdhZGVhOTFmNGRkYTFjMjk1MjlhYWUzNjcwMmVmMjBmZDZlNWEwOGUxMDUwNWEzMTllODk0OTliNTVkMzQiLAogICAgIkNBTEYtRkZtcGVnLUV4dGVuc2lvbi0wLjEuMC56aXAiOiAiN2Q2M2NkMTg1Y2RmYzkwNGRhNTc0MzlmYzg2MzgwYTllMDFlZGE3ZDVhZDk3Mzg2YTYxYjQyNDUxYjVkMzIxMyIKICB9Cn0K
+{
+  "status": "PASS",
+  "version": "0.1.0",
+  "scope": "Fresh extraction of published source archives; synthetic FFmpeg media, not production-footage certification",
+  "platforms": {
+    "macos": {
+      "status": "PASS",
+      "platform": "macOS-27.0.1-arm64-arm-64bit",
+      "archive": "CALF-FFmpeg-Extension-0.1.0.zip",
+      "archiveSha256": "7d63cd185cdfc904da57439fc86380a9e01eda7d5ad97386a61b42451b5d3213",
+      "sourceFiles": 29,
+      "sourceMatches": true,
+      "acceptanceGroups": 13,
+      "contractUnitTests": 3,
+      "existingRecordFilesUnchanged": 148,
+      "harnessSha256": "8e62d8f5e811a52def8ff06733cf90eb033e7419226313075cef1fe150b882bf",
+      "workbenchSha256": "db2c783ad9ef8ad22de5eeec40c655afc87f2f6bcc9ee052ceedb1add4e8c579"
+    },
+    "windows": {
+      "status": "PASS",
+      "platform": "Windows-11-10.0.26300-SP0",
+      "archive": "CALF-FFmpeg-Extension-0.1.0.zip",
+      "archiveSha256": "7d63cd185cdfc904da57439fc86380a9e01eda7d5ad97386a61b42451b5d3213",
+      "sourceFiles": 29,
+      "sourceMatches": true,
+      "acceptanceGroups": 13,
+      "contractUnitTests": 3,
+      "existingRecordFilesUnchanged": 309,
+      "harnessSha256": "c759a3920030dfa86f25150b255248b2f8be12fd798c5fc2e3fc9e78e19c7aa7",
+      "workbenchSha256": "9c0f4d3e67242d3af61f34893341c97b8769487e49cd50b815cee8b0d41c6819"
+    },
+    "linux": {
+      "status": "PASS",
+      "platform": "Linux-6.12.107+deb13-amd64-x86_64-with-glibc2.41",
+      "archive": "CALF-FFmpeg-Extension-0.1.0.tar.gz",
+      "archiveSha256": "ac57adea91f4dda1c29529aae36702ef20fd6e5a08e10505a319e89499b55d34",
+      "sourceFiles": 29,
+      "sourceMatches": true,
+      "acceptanceGroups": 13,
+      "contractUnitTests": 3,
+      "existingRecordFilesUnchanged": 309,
+      "harnessSha256": "dd04edf99b815027061f0a01224ccc8af268310f5358c683e20ccbb517af4076",
+      "workbenchSha256": "a3fb6822c9e73f007b21fcf21b75f37c919e8c7c167497e24e09b8307bf5d47b"
+    }
+  },
+  "shippedClaudeExample": {
+    "platform": "macOS ARM64",
+    "mcpReady": true,
+    "modelCalled": false,
+    "additionalSyntheticControllerTests": 3,
+    "note": "Earlier live Claude workflow qualification is in VERIFICATION.json. No additional paid model call for this packaging test."
+  },
+  "archives": {
+    "CALF-FFmpeg-Extension-0.1.0.tar.gz": "ac57adea91f4dda1c29529aae36702ef20fd6e5a08e10505a319e89499b55d34",
+    "CALF-FFmpeg-Extension-0.1.0.zip": "7d63cd185cdfc904da57439fc86380a9e01eda7d5ad97386a61b42451b5d3213"
+  }
+}

@@ -1,1 +1,142 @@
-ewogICJzdGF0dXMiOiAiUEFTUyIsCiAgInZlcnNpb24iOiAiMC4xLjAiLAogICJtYXR1cml0eSI6ICJEZXZlbG9wZXIgUHJldmlldyIsCiAgImRhdGUiOiAiMjAyNi0xMS0wNiIsCiAgImZpeHR1cmUiOiAiT25lLXNlY29uZCAzMjB4MTgwIE1QNCwgMjUgZnBzLCBzdGVyZW8gNDgga0h6IEFBQzsgbG9jYWwgc3ludGhldGljIHNvdXJjZXMiLAogICJwbGF0Zm9ybXMiOiB7CiAgICAibWFjb3MtYXJtNjQiOiB7CiAgICAgICJzdGF0dXMiOiAiUEFTUyIsCiAgICAgICJwbGF0Zm9ybSI6ICJtYWNPUy0yNy4wLjEtYXJtNjQtYXJtLTY0Yml0IiwKICAgICAgIkZGbXBlZyI6ICI4LjEuMiIsCiAgICAgICJhY2NlcHRhbmNlR3JvdXBzIjogMTMsCiAgICAgICJjb250cmFjdFVuaXRUZXN0cyI6IDMsCiAgICAgICJjb3JlcyI6IHsKICAgICAgICAiaGFybmVzcyI6IHsKICAgICAgICAgICJ2ZXJzaW9uIjogIjEuOC43IiwKICAgICAgICAgICJzaGEyNTYiOiAiOGU2MmQ4ZjVlODExYTUyZGVmOGZmMDY3MzNjZjkwZWIwMzNlNzQxOTIyNjMxMzA3NWNlZjFmZTE1MGI4ODJiZiIKICAgICAgICB9LAogICAgICAgICJ3b3JrYmVuY2giOiB7CiAgICAgICAgICAidmVyc2lvbiI6ICIxLjkuMiIsCiAgICAgICAgICAic2hhMjU2IjogImRiMmM3ODNhZDllZjhhZDIyZGU1ZWVlYzQwYzY1NWFmYzg3ZjJmNmJjYzllZTA1MmNlZWRiMWFkZDRlOGM1NzkiCiAgICAgICAgfQogICAgICB9CiAgICB9LAogICAgIndpbmRvd3MteDY0IjogewogICAgICAic3RhdHVzIjogIlBBU1MiLAogICAgICAicGxhdGZvcm0iOiAiV2luZG93cy0xMS0xMC4wLjI2MzAwLVNQMCIsCiAgICAgICJ0b29scyI6IHsKICAgICAgICAiZmZtcGVnIjogImZmbXBlZyB2ZXJzaW9uIDkuMC4yLWVzc2VudGlhbHNfYnVpbGQtd3d3Lmd5YW4uZGV2IENvcHlyaWdodCAoYykgMjAwMC0yMDI2IHRoZSBGRm1wZWcgZGV2ZWxvcGVycyIsCiAgICAgICAgImZmcHJvYmUiOiAiZmZwcm9iZSB2ZXJzaW9uIDkuMC4yLWVzc2VudGlhbHNfYnVpbGQtd3d3Lmd5YW4uZGV2IENvcHlyaWdodCAoYykgMjAwNy0yMDI2IHRoZSBGRm1wZWcgZGV2ZWxvcGVycyIKICAgICAgfSwKICAgICAgImFjY2VwdGFuY2VHcm91cHMiOiAxMywKICAgICAgImNvbnRyYWN0VW5pdFRlc3RzIjogMywKICAgICAgImNvcmVzIjogewogICAgICAgICJoYXJuZXNzIjogewogICAgICAgICAgInZlcnNpb24iOiAiMS44LjciLAogICAgICAgICAgInNoYTI1NiI6ICJjNzU5YTM5MjAwMzBkZmE4NmYyNTE1MGIyNTUyNDhiMmY4YmUxMmZkNzk4YzVmYzJlM2ZjOWU3OGUxOWM3YWE3IgogICAgICAgIH0sCiAgICAgICAgIndvcmtiZW5jaCI6IHsKICAgICAgICAgICJ2ZXJzaW9uIjogewogICAgICAgICAgICAiYXJjaCI6ICJ4ODZfNjQiLAogICAgICAgICAgICAiZW5naW5lIjogInJ1c3QiLAogICAgICAgICAgICAibmFtZSI6ICJDQUxGIiwKICAgICAgICAgICAgIm9zIjogIndpbmRvd3MiLAogICAgICAgICAgICAic3FsaXRlIjogImVtYmVkZGVkIiwKICAgICAgICAgICAgInZlcnNpb24iOiAiMS45LjIiCiAgICAgICAgICB9LAogICAgICAgICAgInNoYTI1NiI6ICI5YzBmNGQzZTY3MjQyZDNhZjYxZjM0ODkzMzQxYzk3Yjg3Njk0ODdlNDljZDUwYjgxNWNlZThiMGQ0MWM2ODE5IgogICAgICAgIH0KICAgICAgfQogICAgfSwKICAgICJsaW51eC14NjQiOiB7CiAgICAgICJzdGF0dXMiOiAiUEFTUyIsCiAgICAgICJwbGF0Zm9ybSI6ICJMaW51eC02LjEyLjEwNytkZWIxMy1hbWQ2NC14ODZfNjQtd2l0aC1nbGliYzIuNDEiLAogICAgICAidG9vbHMiOiB7CiAgICAgICAgImZmbXBlZyI6ICJmZm1wZWcgdmVyc2lvbiA3LjAuMi1zdGF0aWMgaHR0cHM6Ly9qb2hudmFuc2lja2xlLmNvbS9mZm1wZWcvICBDb3B5cmlnaHQgKGMpIDIwMDAtMjAyNCB0aGUgRkZtcGVnIGRldmVsb3BlcnMiLAogICAgICAgICJmZnByb2JlIjogImZmcHJvYmUgdmVyc2lvbiA3LjAuMi1zdGF0aWMgaHR0cHM6Ly9qb2hudmFuc2lja2xlLmNvbS9mZm1wZWcvICBDb3B5cmlnaHQgKGMpIDIwMDctMjAyNCB0aGUgRkZtcGVnIGRldmVsb3BlcnMiCiAgICAgIH0sCiAgICAgICJhY2NlcHRhbmNlR3JvdXBzIjogMTMsCiAgICAgICJjb250cmFjdFVuaXRUZXN0cyI6IDMsCiAgICAgICJjb3JlcyI6IHsKICAgICAgICAiaGFybmVzcyI6IHsKICAgICAgICAgICJ2ZXJzaW9uIjogIjEuOC43IiwKICAgICAgICAgICJzaGEyNTYiOiAiZGQwNGVkZjk5YjgxNTAyNzA2MWYwYTAxMjI0Y2NjOGFmMjY4MzEwZjUzNThjNjgzZTIwY2NiYjUxN2FmNDA3NiIKICAgICAgICB9LAogICAgICAgICJ3b3JrYmVuY2giOiB7CiAgICAgICAgICAidmVyc2lvbiI6IHsKICAgICAgICAgICAgImFyY2giOiAieDg2XzY0IiwKICAgICAgICAgICAgImVuZ2luZSI6ICJydXN0IiwKICAgICAgICAgICAgIm5hbWUiOiAiQ0FMRiIsCiAgICAgICAgICAgICJvcyI6ICJsaW51eCIsCiAgICAgICAgICAgICJzcWxpdGUiOiAiZW1iZWRkZWQiLAogICAgICAgICAgICAidmVyc2lvbiI6ICIxLjkuMiIKICAgICAgICAgIH0sCiAgICAgICAgICAic2hhMjU2IjogImEzZmI2ODIyYzllNzNmMDA3YjIxZmNmMjFiNzVmMzdjOTE5ZThjN2MxNjc0OTdlMjRlMDliODMwN2JmNWQ0N2IiCiAgICAgICAgfQogICAgICB9CiAgICB9CiAgfSwKICAiQ2xhdWRlQ29kZSI6IHsKICAgICJzdGF0dXMiOiAiUEFTUyIsCiAgICAiY2xpZW50IjogIjIuMS4yMDEiLAogICAgIm1vZGVsIjogImNsYXVkZS1zb25uZXQtNSIsCiAgICAicGxhdGZvcm0iOiAibWFjT1MgQVJNNjQiLAogICAgInNpbmdsZUFnZW50IjogdHJ1ZSwKICAgICJ0cmFuc3BvcnQiOiAiTG9jYWwgc3RkaW8gV29yayBNQ1AiLAogICAgInNlcXVlbmNlIjogWwogICAgICAid29ya19pbnNwZWN0IiwKICAgICAgIndvcmtfc3RlcCIsCiAgICAgICJ3b3JrX2luc3BlY3QiCiAgICBdLAogICAgIm5hdGl2ZU91dGNvbWUiOiAiU0FUSVNGSUVEIiwKICAgICJzY2VuZTFBbmQyVW5jaGFuZ2VkIjogdHJ1ZSwKICAgICJvbGRTY2VuZTNSZXRhaW5lZCI6IHRydWUsCiAgICAicGVybWlzc2lvbkJ5cGFzcyI6IGZhbHNlLAogICAgImJ1aWx0aW5Ub29scyI6IFtdLAogICAgInJlYWRpbmVzc0dhdGUiOiAiQ0xJIGluaXRpYWxpemUgdGhlbiBtY3Bfc3RhdHVzIGNvbm5lY3RlZCBiZWZvcmUgbW9kZWwgbWVzc2FnZSIsCiAgICAiZmlyc3RQZW5kaW5nVHJpYWxSZXRhaW5lZCI6IHRydWUsCiAgICAiZXZpZGVuY2VTY29wZSI6ICJQcmlvciBsaXZlIHdvcmtmbG93IHZlcmlmaWVkLiBTaGlwcGVkIGhlbHBlciBpcyBhZGRpdGlvbmFsbHkgY2hlY2tlZCBtb2RlbC1mcmVlOyBubyBuZXcgcGFpZCBtb2RlbCBydW4gaXMgcmVxdWlyZWQgZm9yIHBhY2thZ2luZy4iCiAgfSwKICAicHJlc2VydmF0aW9uIjogewogICAgImV4aXN0aW5nQ0FMRkZpbGVzQ2hlY2tlZCI6IDU2NCwKICAgICJjaGFuZ2VkIjogMAogIH0sCiAgIm5vdFF1YWxpZmllZCI6IFsKICAgICJPdGhlciBPUy9hcmNoaXRlY3R1cmUgY29tYmluYXRpb25zIiwKICAgICJDbGF1ZGUgRGVza3RvcCBHVUkgb3IgV2luZG93cy9MaW51eCBDbGF1ZGUgbW9kZWwgZXhlY3V0aW9uIiwKICAgICJQcm9kdWN0aW9uIGZvb3RhZ2UsIGFydGlzdGljIG9yIHNlbWFudGljIHJldmlldyIsCiAgICAiQ29tZnlVSSwgUmVtb3Rpb24gb3IgZXh0ZXJuYWwgZ2VuZXJhdGlvbiBBUElzIiwKICAgICJNZW1vcnkvc29hayBiZW5jaG1hcmsiCiAgXSwKICAicGFja2FnZUNoZWNrcyI6ICJTZXBhcmF0ZSBQQUNLQUdFLVZFUklGSUNBVElPTi5qc29uIGFjY29tcGFuaWVzIHJlbGVhc2UgYXNzZXRzIGFmdGVyIGZyZXNoLWV4dHJhY3Rpb24gdGVzdHMiLAogICJpbXBsZW1lbnRhdGlvblNoYTI1NiI6IHsKICAgICJjYWxmX2V4dGVuc2lvbnMvX19pbml0X18ucHkiOiAiYjY0NGYzM2M4NjM0YTk0NTc4NTAzOWZmOTYxMjMzOTY0ZmU1ZGNiODY0ZjVlNWNhOGRlYTRmZmZjZTAzNDgwMCIsCiAgICAiZXhhbXBsZXMvY2xhdWRlX3dvcmsucHkiOiAiNjc2YWRkZTI1N2U4OTM2NmM4MWE0MjJkYjIyMDU2OGFhMjkyMTAyNGExOWUxY2MwZWViN2NmN2ExNTZhZDkyNyIsCiAgICAiZXhhbXBsZXMvc2NlbmVfY2FuZGlkYXRlLnB5IjogIjljYjc1YTA4M2I3MDBjMTU2YzI1ZDdkYzBlZmM0NWE5YzJkOGE0MjllZTA5ODdkZTVlYWRiZWQ2Y2Q5ZDIwNWMiLAogICAgImNhbGZfZXh0ZW5zaW9ucy9tZWRpYV9mZm1wZWcvdmFsaWRhdG9yLnB5IjogIjI0ZWY3ZjI3ODNkNWVlZDAwMmQ5N2RmNGNiMGRkOWI4ZTU0MDYyZjQ0OWI2OGVkNTg3NjM4YjI3OTc5MzFlNmYiLAogICAgImNhbGZfZXh0ZW5zaW9ucy9tZWRpYV9mZm1wZWcvX19pbml0X18ucHkiOiAiOTJhMWViNGYyYjRlYTc5NDljOWUyOTI3MDYyNDE5NDhhOGZmMjI1MmMxOTQyN2FjZDJhNWRkODUyNzc2YzAxYyIsCiAgICAiY2FsZl9leHRlbnNpb25zL21lZGlhX2ZmbXBlZy9ydW50aW1lLnB5IjogIjdhZTkwYmVkNmFiNDY4YWVlNGNjYmMzNmE1NGQ5ODE0MjgwZjUwYmY3OWNiYzlmNzU1OGNjMTgwYTBhODk5NjQiLAogICAgImNhbGZfZXh0ZW5zaW9ucy9tZWRpYV9mZm1wZWcvaW50ZWdyYXRpb24ucHkiOiAiYWZmZTE2YTlhZDg2YmZmNDRlYjYyZjRjYmI4YmVjODk2ZjAwNTJkYTJiYjQwZmJiODY2NGU3YjUyNWI4ZDg4YSIsCiAgICAiY2FsZl9leHRlbnNpb25zL21lZGlhX2ZmbXBlZy90ZXN0X2NvbnRyYWN0LnB5IjogIjdmMzBiY2JlNGRkYmRlZjI2Nzk1OGFkZGYzMDgzNTA5ZjVjYTQxYjZmYmNmODJhMjAzMzVkYmFlYzUxNjliYWMiLAogICAgImNhbGZfZXh0ZW5zaW9ucy9tZWRpYV9mZm1wZWcvY2xpLnB5IjogImU0NjYxOTY2MDU0ZGRkM2M5ZGFmNDVjMDUwZDRiMjllOGYyZDVjOTMwOWYxNDkzZWJmYzNkNGNiZmQ1MzU3NDQiLAogICAgImNhbGZfZXh0ZW5zaW9ucy9tZWRpYV9mZm1wZWcvY29tbW9uLnB5IjogImJlZWE0YTVlMzllNWIzYTU3NjM2MzM4ZTQ1ZmVmMGRlMjVjMTE1MzNkZGI3NDNmY2I2NjI2MmQ4ZGQ5YzI1YjYiLAogICAgImNhbGZfZXh0ZW5zaW9ucy9tZWRpYV9mZm1wZWcvdmVyaWZ5LnB5IjogIjNjNThkNWIyZGY5OTczZmFiNTExM2Q0NzU2NWEwMjlhYmEwYjRmOTJhNjJiNTAyNTQ4NzI3ZmFmNTM5Mzc0OGIiLAogICAgImNhbGZfZXh0ZW5zaW9ucy9tZWRpYV9mZm1wZWcvcHJvamVjdC5weSI6ICJjYmFiMDJkYzg4NTgyMjM0NzI2ODE2OTFiZWM0ZGU0YzIyMzAwM2Y0YTRlYWJjMTU1Y2I0YWIyZDVjNzdiNWZjIgogIH0sCiAgImFjY2VwdGFuY2VDaGVja3MiOiBbCiAgICAiYm91bmRlZCBjb250cmFjdCB1bml0IHRlc3RzIiwKICAgICJ0aHJlZSBzY2VuZXMgaW5kZXBlbmRlbnRseSByZW5kZXJlZCwgY2hlY2tlZCBhbmQgc2VsZWN0ZWQiLAogICAgImVkaXQgc2NlbmUgMyBvbmx5OyBzY2VuZSAxLzIgaGFzaGVzIGFuZCBwb2ludGVycyB1bmNoYW5nZWQ7IG9sZCBzY2VuZSAzIHJldGFpbmVkIiwKICAgICJzYW1lIGxvZ2ljYWwgcmVxdWVzdCBpcyBpZGVtcG90ZW50OyBjaGFuZ2VkIGludGVudCByZWplY3RlZDsgbm8gZXh0cmEgcmVuZGVyIiwKICAgICJzdWNjZXNzZnVsIHJlbmRlciB3aXRoIHdyb25nIHdpZHRoIGlzIHJlamVjdGVkOyBhcHByb3ZlZCBzZWxlY3Rpb25zIHByZXNlcnZlZCIsCiAgICAiYmxhY2sgY29udHJhY3QgdmlvbGF0aW9uIHByZXNlcnZlcyBhcHByb3ZlZCBzY2VuZSIsCiAgICAic2lsZW50IGNvbnRyYWN0IHZpb2xhdGlvbiBwcmVzZXJ2ZXMgYXBwcm92ZWQgc2NlbmUiLAogICAgImNhbmRpZGF0ZSBieXRlIGNoYW5nZSBpbnZhbGlkYXRlcyBuYXRpdmUgZXZpZGVuY2U7IG5vIGFkb3B0aW9uIiwKICAgICJyZXN0b3JlIHNlbGVjdHMgcmV0YWluZWQgYXBwcm92ZWQgc2NlbmU7IG5vIHJlbmRlcmluZzsgc3RhbGUgcHJvamVjdCBjYW5kaWRhdGUgcmVmdXNlZCIsCiAgICAibG9zdC1yZXNwb25zZSB0aWNrZXQgcmVjb3ZlcmVkIHJlYWQtb25seTsgbm8gcmVzdWJtaXNzaW9uIiwKICAgICJtb2RlbC1pbmRlcGVuZGVudCByZWFkLW9ubHkgTUNQIG9ic2VydmVzIG1lZGlhIHByb29mOyBleGVjdXRpb24gdG9vbCByZWZ1c2VkIiwKICAgICJvdXQtb2YtYmFuZCBhcHByb3ZlZC1maWxlIGVkaXQgZGV0ZWN0ZWQ7IHNlbGVjdGlvbiBjaGFuZ2UgcmVmdXNlZCIsCiAgICAic2Vjb25kIG5hdGl2ZSBjb3JlIHJlYWRzIGlkZW50aWNhbCBtZWRpYSBjb250cmFjdHMsIHZlcmRpY3RzIGFuZCBhZG9wdGlvbiBwcm9vZiIKICBdCn0K
+{
+  "status": "PASS",
+  "version": "0.1.0",
+  "maturity": "Developer Preview",
+  "date": "2026-11-06",
+  "fixture": "One-second 320x180 MP4, 25 fps, stereo 48 kHz AAC; local synthetic sources",
+  "platforms": {
+    "macos-arm64": {
+      "status": "PASS",
+      "platform": "macOS-27.0.1-arm64-arm-64bit",
+      "FFmpeg": "8.1.2",
+      "acceptanceGroups": 13,
+      "contractUnitTests": 3,
+      "cores": {
+        "harness": {
+          "version": "1.8.7",
+          "sha256": "8e62d8f5e811a52def8ff06733cf90eb033e7419226313075cef1fe150b882bf"
+        },
+        "workbench": {
+          "version": "1.9.2",
+          "sha256": "db2c783ad9ef8ad22de5eeec40c655afc87f2f6bcc9ee052ceedb1add4e8c579"
+        }
+      }
+    },
+    "windows-x64": {
+      "status": "PASS",
+      "platform": "Windows-11-10.0.26300-SP0",
+      "tools": {
+        "ffmpeg": "ffmpeg version 9.0.2-essentials_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers",
+        "ffprobe": "ffprobe version 9.0.2-essentials_build-www.gyan.dev Copyright (c) 2007-2026 the FFmpeg developers"
+      },
+      "acceptanceGroups": 13,
+      "contractUnitTests": 3,
+      "cores": {
+        "harness": {
+          "version": "1.8.7",
+          "sha256": "c759a3920030dfa86f25150b255248b2f8be12fd798c5fc2e3fc9e78e19c7aa7"
+        },
+        "workbench": {
+          "version": {
+            "arch": "x86_64",
+            "engine": "rust",
+            "name": "CALF",
+            "os": "windows",
+            "sqlite": "embedded",
+            "version": "1.9.2"
+          },
+          "sha256": "9c0f4d3e67242d3af61f34893341c97b8769487e49cd50b815cee8b0d41c6819"
+        }
+      }
+    },
+    "linux-x64": {
+      "status": "PASS",
+      "platform": "Linux-6.12.107+deb13-amd64-x86_64-with-glibc2.41",
+      "tools": {
+        "ffmpeg": "ffmpeg version 7.0.2-static https://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2024 the FFmpeg developers",
+        "ffprobe": "ffprobe version 7.0.2-static https://johnvansickle.com/ffmpeg/  Copyright (c) 2007-2024 the FFmpeg developers"
+      },
+      "acceptanceGroups": 13,
+      "contractUnitTests": 3,
+      "cores": {
+        "harness": {
+          "version": "1.8.7",
+          "sha256": "dd04edf99b815027061f0a01224ccc8af268310f5358c683e20ccbb517af4076"
+        },
+        "workbench": {
+          "version": {
+            "arch": "x86_64",
+            "engine": "rust",
+            "name": "CALF",
+            "os": "linux",
+            "sqlite": "embedded",
+            "version": "1.9.2"
+          },
+          "sha256": "a3fb6822c9e73f007b21fcf21b75f37c919e8c7c167497e24e09b8307bf5d47b"
+        }
+      }
+    }
+  },
+  "ClaudeCode": {
+    "status": "PASS",
+    "client": "2.1.201",
+    "model": "claude-sonnet-5",
+    "platform": "macOS ARM64",
+    "singleAgent": true,
+    "transport": "Local stdio Work MCP",
+    "sequence": [
+      "work_inspect",
+      "work_step",
+      "work_inspect"
+    ],
+    "nativeOutcome": "SATISFIED",
+    "scene1And2Unchanged": true,
+    "oldScene3Retained": true,
+    "permissionBypass": false,
+    "builtinTools": [],
+    "readinessGate": "CLI initialize then mcp_status connected before model message",
+    "firstPendingTrialRetained": true,
+    "evidenceScope": "Prior live workflow verified. Shipped helper is additionally checked model-free; no new paid model run is required for packaging."
+  },
+  "preservation": {
+    "existingCALFFilesChecked": 564,
+    "changed": 0
+  },
+  "notQualified": [
+    "Other OS/architecture combinations",
+    "Claude Desktop GUI or Windows/Linux Claude model execution",
+    "Production footage, artistic or semantic review",
+    "ComfyUI, Remotion or external generation APIs",
+    "Memory/soak benchmark"
+  ],
+  "packageChecks": "Separate PACKAGE-VERIFICATION.json accompanies release assets after fresh-extraction tests",
+  "implementationSha256": {
+    "calf_extensions/__init__.py": "b644f33c8634a945785039ff961233964fe5dcb864f5e5ca8dea4fffce034800",
+    "examples/claude_work.py": "676adde257e89366c81a422db220568aa2921024a19e1cc0eeb7cf7a156ad927",
+    "examples/scene_candidate.py": "9cb75a083b700c156c25d7dc0efc45a9c2d8a429ee0987de5eadbed6cd9d205c",
+    "calf_extensions/media_ffmpeg/validator.py": "24ef7f2783d5eed002d97df4cb0dd9b8e54062f449b68ed587638b2797931e6f",
+    "calf_extensions/media_ffmpeg/__init__.py": "92a1eb4f2b4ea7949c9e292706241948a8ff2252c19427acd2a5dd852776c01c",
+    "calf_extensions/media_ffmpeg/runtime.py": "7ae90bed6ab468aee4ccbc36a54d9814280f50bf79cbc9f7558cc180a0a89964",
+    "calf_extensions/media_ffmpeg/integration.py": "affe16a9ad86bff44eb62f4cbb8bec896f0052da2bb40fbb8664e7b525b8d88a",
+    "calf_extensions/media_ffmpeg/test_contract.py": "7f30bcbe4ddbdef267958addf3083509f5ca41b6fbcf82a20335dbaec5169bac",
+    "calf_extensions/media_ffmpeg/cli.py": "e4661966054ddd3c9daf45c050d4b29e8f2d5c9309f1493ebfc3d4cbfd535744",
+    "calf_extensions/media_ffmpeg/common.py": "beea4a5e39e5b3a57636338e45fef0de25c11533ddb743fcb66262d8dd9c25b6",
+    "calf_extensions/media_ffmpeg/verify.py": "3c58d5b2df9973fab5113d47565a029aba0b4f92a62b502548727faf5393748b",
+    "calf_extensions/media_ffmpeg/project.py": "cbab02dc8858223472681691bec4de4c223003f4a4eabc155cb4ab2d5c77b5fc"
+  },
+  "acceptanceChecks": [
+    "bounded contract unit tests",
+    "three scenes independently rendered, checked and selected",
+    "edit scene 3 only; scene 1/2 hashes and pointers unchanged; old scene 3 retained",
+    "same logical request is idempotent; changed intent rejected; no extra render",
+    "successful render with wrong width is rejected; approved selections preserved",
+    "black contract violation preserves approved scene",
+    "silent contract violation preserves approved scene",
+    "candidate byte change invalidates native evidence; no adoption",
+    "restore selects retained approved scene; no rendering; stale project candidate refused",
+    "lost-response ticket recovered read-only; no resubmission",
+    "model-independent read-only MCP observes media proof; execution tool refused",
+    "out-of-band approved-file edit detected; selection change refused",
+    "second native core reads identical media contracts, verdicts and adoption proof"
+  ]
+}

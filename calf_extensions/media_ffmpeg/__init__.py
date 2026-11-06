@@ -1,1 +1,2 @@
-IiIiTG9jYWwgRkZtcGVnIHNjZW5lIGV4dGVuc2lvbiBwcmV2aWV3OyB1c2VzIENBTEYgVW5pdmVyc2FsIFdvcmsgdjEuIiIiCl9fdmVyc2lvbl9fID0gJzAuMS4wJwo=
+"""Local FFmpeg scene extension preview; uses CALF Universal Work v1."""
+__version__ = '0.1.0'
