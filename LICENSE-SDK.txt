@@ -1,0 +1,21 @@
+CALF Extension SDK — Integration License
+Copyright (c) 2026 VibePackr. All rights reserved.
+
+Permission is granted, free of charge, to use, copy and modify the source files
+in calf_sdk/, examples/, tests/ and ops/verify.py for developing, testing and distributing extensions that
+integrate with CALF through its documented interfaces. Keep this notice with
+copies or modified versions of those SDK files. Documentation may be copied
+with this SDK or referenced by integrations. Do not misrepresent a modified
+SDK or third-party extension as an official CALF release.
+
+This permission applies only to the SDK integration files. It grants no rights
+to CALF's proprietary core, execution engine or runtime binaries. Free use of
+CALF does not permit reverse engineering, decompilation, disassembly, binary
+patching, or unauthorized modification. Violations may result in legal action
+under applicable law. Use the documented SDK, adapter and MCP interfaces for
+extensions. Third-party components retain their respective licenses.
+
+THIS SDK IS PROVIDED AS IS, WITHOUT WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT. THE AUTHORS ARE NOT LIABLE FOR
+DAMAGES ARISING FROM ITS USE. This developer preview does not guarantee API
+compatibility with future CALF releases.

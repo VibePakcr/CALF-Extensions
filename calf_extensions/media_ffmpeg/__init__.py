@@ -1,0 +1,2 @@
+"""Local FFmpeg scene extension preview; uses CALF Universal Work v1."""
+__version__ = '0.1.0.dev1'

@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "preview": "0.1.0.dev1",
+  "date": "2026-11-06",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "core": {
+    "harness": {
+      "version": "1.8.7",
+      "sha256": "8e62d8f5e811a52def8ff06733cf90eb033e7419226313075cef1fe150b882bf"
+    },
+    "workbench": {
+      "version": "1.9.2",
+      "sha256": "db2c783ad9ef8ad22de5eeec40c655afc87f2f6bcc9ee052ceedb1add4e8c579"
+    }
+  },
+  "sdk": {
+    "version": "0.2.1",
+    "boundaryTests": 16
+  },
+  "extensionContractTests": 3,
+  "tools": {
+    "ffmpeg": {
+      "version": "8.1.2",
+      "sha256": "1332dc2de372bade9a8a63da0d6cdfab9de97fcefbae707bcc0b0506e1203327"
+    },
+    "ffprobe": {
+      "version": "8.1.2",
+      "sha256": "4322275c1c2ac6ba15c695b288788bc1204e75211b3d5c030e5812c82a6dff73"
+    }
+  },
+  "acceptanceChecks": [
+    "bounded contract unit tests",
+    "three scenes independently rendered, checked and selected",
+    "edit scene 3 only; scene 1/2 hashes and pointers unchanged; old scene 3 retained",
+    "same logical request is idempotent; changed intent rejected; no extra render",
+    "successful render with wrong width is rejected; approved selections preserved",
+    "black contract violation preserves approved scene",
+    "silent contract violation preserves approved scene",
+    "candidate byte change invalidates native evidence; no adoption",
+    "restore selects retained approved scene; no rendering; stale project candidate refused",
+    "lost-response ticket recovered read-only; no resubmission",
+    "model-independent read-only MCP observes media proof; execution tool refused",
+    "out-of-band approved-file edit detected; selection change refused",
+    "second native core reads identical media contracts, verdicts and adoption proof"
+  ],
+  "fixture": "One-second 320x180 MP4, 25 fps, stereo 48 kHz AAC; local synthetic sources",
+  "CLI": [
+    "help",
+    "inspect actual selected scenes",
+    "run existing validated ticket without another attempt",
+    "SDK example help"
+  ],
+  "preservation": {
+    "existingFilesChecked": 564,
+    "changed": 0
+  },
+  "notRun": [
+    "Windows/Linux extension execution",
+    "live Claude/model connection",
+    "ComfyUI/Remotion/external generation APIs",
+    "production footage and artistic review",
+    "memory/soak benchmark"
+  ],
+  "limitations": [
+    "synthetic one-second MP4 clips; not production media certification",
+    "technical validation only; aesthetic/semantic review not implemented",
+    "no OS sandbox against an unrelated process with the same filesystem rights"
+  ],
+  "implementationSha256": {
+    "calf_extensions/__init__.py": "b644f33c8634a945785039ff961233964fe5dcb864f5e5ca8dea4fffce034800",
+    "calf_extensions/media_ffmpeg/__init__.py": "485011a11364c3239e5a1d72dd9472ab5e251ceacec2d4a7d5f5126c2842a8d3",
+    "calf_extensions/media_ffmpeg/cli.py": "e4661966054ddd3c9daf45c050d4b29e8f2d5c9309f1493ebfc3d4cbfd535744",
+    "calf_extensions/media_ffmpeg/common.py": "beea4a5e39e5b3a57636338e45fef0de25c11533ddb743fcb66262d8dd9c25b6",
+    "calf_extensions/media_ffmpeg/integration.py": "affe16a9ad86bff44eb62f4cbb8bec896f0052da2bb40fbb8664e7b525b8d88a",
+    "calf_extensions/media_ffmpeg/profile.json": "974a16eb6e352f6a0c350357cdc87d096b74bdd0fea9711031f46fc58941608f",
+    "calf_extensions/media_ffmpeg/project.py": "cbab02dc8858223472681691bec4de4c223003f4a4eabc155cb4ab2d5c77b5fc",
+    "calf_extensions/media_ffmpeg/runtime.py": "7ae90bed6ab468aee4ccbc36a54d9814280f50bf79cbc9f7558cc180a0a89964",
+    "calf_extensions/media_ffmpeg/test_contract.py": "7f30bcbe4ddbdef267958addf3083509f5ca41b6fbcf82a20335dbaec5169bac",
+    "calf_extensions/media_ffmpeg/validator.py": "24ef7f2783d5eed002d97df4cb0dd9b8e54062f449b68ed587638b2797931e6f",
+    "calf_extensions/media_ffmpeg/verify.py": "3c58d5b2df9973fab5113d47565a029aba0b4f92a62b502548727faf5393748b",
+    "examples/scene_candidate.py": "9cb75a083b700c156c25d7dc0efc45a9c2d8a429ee0987de5eadbed6cd9d205c",
+    "pyproject.toml": "c6411ba8949296a2e0111d12c17bd90de5c20649fb41fd1c0b9102db908e4f05"
+  }
+}

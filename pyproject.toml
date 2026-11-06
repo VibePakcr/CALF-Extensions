@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "calf-extensions"
+version = "0.1.0.dev1"
+description = "Local runtime integrations for CALF; FFmpeg scene workflow preview"
+requires-python = ">=3.10"
+license = {file = "LICENSE-EXTENSIONS.txt"}
+dependencies = []
+
+[project.scripts]
+calf-media = "calf_extensions.media_ffmpeg.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["calf_extensions*"]
+
+[tool.setuptools.package-data]
+"calf_extensions.media_ffmpeg" = ["profile.json"]

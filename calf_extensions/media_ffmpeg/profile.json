@@ -1,0 +1,10 @@
+{
+  "width": 320,
+  "height": 180,
+  "fps": 25,
+  "startMs": 0,
+  "durationMs": 1000,
+  "audio": true,
+  "maxBlackMs": 100,
+  "maxSilenceMs": 100
+}
