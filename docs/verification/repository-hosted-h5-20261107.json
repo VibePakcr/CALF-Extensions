@@ -1,0 +1,1092 @@
+{
+  "schema": "calf.repository.hosted.h5.qualification.v1",
+  "date": "2026-11-07",
+  "state": "PASS_SCOPED_PUBLIC_DESKTOP_H5_REMAINING_NOT_RUN",
+  "full_matrix_complete": false,
+  "baseline_commit": "66bdf4a6e8d19ec87b4a10b9e541f1fe3870dc02",
+  "candidate": {
+    "id": "repository-hosted-h5-20261107-r3",
+    "manifest_sha256": "b0e5dadc9e0e4f18f68e228f12f09ff849f3644d086b8eda6f0b44cc71772943",
+    "files": 81,
+    "remote_source_zip_sha256": "e3a3822a154a948e8649d9df5ef8af732f95052f5cee5dee5d9680dc38686cdd",
+    "predecessors": [
+      {
+        "id": "r1",
+        "manifest_sha256": "1a62a8d4532e945e2d7dc6a66f52ff31f3eb2cd5ec7e26c83b1fef55e4192c64"
+      },
+      {
+        "id": "r2",
+        "manifest_sha256": "ce03c2e8f6571ce6fcf64d30b29bd80bd36d15a6f31d53eaffab3935f44776cd"
+      }
+    ],
+    "release_authority": false
+  },
+  "corrections": {
+    "viewer": "One-pass substitution in original template; never reinterpret source/asset marker text",
+    "windows_path_fixture": "Native mktree preserves control-byte inputs without disabling index protection",
+    "windows_cli_fixture": "Owned TerminateProcess return code distinguished from graceful Ctrl+C"
+  },
+  "public_providers": {
+    "github": {
+      "credential_mode": "EXISTING_GH_CLI_LOGIN_NO_TOKEN_EXTRACTION",
+      "transport_scope": "QUALIFICATION_ONLY_FIXED_ENDPOINT_TRANSPORT_NOT_SHIPPED_AUTH_ADAPTER",
+      "live_candidate": "r1",
+      "live_ui": {
+        "state": "PASS",
+        "actual_chrome": true,
+        "offline": false,
+        "live_anonymous_providers": true,
+        "observations": [
+          {
+            "provider": "github",
+            "context": "6852e5578c77a754bf27cf8a69f59a35cac6461fea639acefd58c1e60a113afe",
+            "right_commit": "66bdf4a6e8d19ec87b4a10b9e541f1fe3870dc02",
+            "left_commit": "620447ca5dab2020e19221cda363e9c2b36d1048",
+            "path": "calf_extensions/repository/__init__.py",
+            "sha256": "3349a797cb484b7fc01c91d6499837965843bc8778270ffa0319a93192943898",
+            "blob_oid": "406531c6315425ca9b37779dc5979c4f6eac4e77",
+            "changed_paths": 30,
+            "graph_nodes": 367,
+            "graph_edges": 1237,
+            "coverage": {
+              "analysis": {
+                "analyzers": [
+                  "python-ast-v3"
+                ],
+                "feature_definitions": "EXPLICIT_MAPPING_ONLY",
+                "files": 56,
+                "parsed_python": 26,
+                "runtime_verified": false,
+                "snapshot": {
+                  "content_ready": 56,
+                  "content_total": 56,
+                  "inventory_complete": true
+                },
+                "supported_languages": [
+                  "python"
+                ],
+                "unresolved": 1578
+              },
+              "changed_paths": {
+                "basis": "DIRECT_SNAPSHOT",
+                "complete": true,
+                "total": 30,
+                "unchanged": 26,
+                "unknown": 0
+              },
+              "diff": {
+                "basis": "DIRECT_SNAPSHOT",
+                "candidates": 30,
+                "text_comparable": 30
+              },
+              "inventory": {
+                "left_complete": true,
+                "left_files": 29,
+                "right_complete": true,
+                "right_files": 56
+              },
+              "runtime_verified": false,
+              "sources": {
+                "expected_regular": 85,
+                "left_ready": 29,
+                "ready": 85,
+                "right_ready": 56
+              },
+              "state": "COMPLETE"
+            },
+            "code": true,
+            "direct_diff": true,
+            "below_map": true,
+            "pinned_provider_link": true,
+            "editor_copy": true
+          }
+        ],
+        "widths": [
+          1440,
+          390,
+          320
+        ],
+        "bookmark_language_height_restore": true,
+        "native_editor_launched": false,
+        "http_blocked": false,
+        "runtime_errors": [],
+        "seconds": 44.135
+      },
+      "independent_checks": {
+        "sides": [
+          {
+            "role": "right",
+            "commit": "66bdf4a6e8d19ec87b4a10b9e541f1fe3870dc02",
+            "inventory_files": 56,
+            "inventory_complete": true,
+            "native_git_blob_checks": 56,
+            "local_same_commit_full_inventory": true,
+            "independent_retained_local_blob_matches": 56
+          },
+          {
+            "role": "left",
+            "commit": "620447ca5dab2020e19221cda363e9c2b36d1048",
+            "inventory_files": 29,
+            "inventory_complete": true,
+            "native_git_blob_checks": 29,
+            "local_same_commit_full_inventory": true,
+            "independent_retained_local_blob_matches": 29
+          }
+        ],
+        "context_id": "6852e5578c77a754bf27cf8a69f59a35cac6461fea639acefd58c1e60a113afe",
+        "coverage": {
+          "state": "COMPLETE",
+          "inventory": {
+            "right_files": 56,
+            "right_complete": true,
+            "left_files": 29,
+            "left_complete": true
+          },
+          "sources": {
+            "ready": 85,
+            "expected_regular": 85,
+            "right_ready": 56,
+            "left_ready": 29
+          },
+          "analysis": {
+            "analyzers": [
+              "python-ast-v3"
+            ],
+            "feature_definitions": "EXPLICIT_MAPPING_ONLY",
+            "files": 56,
+            "parsed_python": 26,
+            "runtime_verified": false,
+            "snapshot": {
+              "content_ready": 56,
+              "content_total": 56,
+              "inventory_complete": true
+            },
+            "supported_languages": [
+              "python"
+            ],
+            "unresolved": 1578
+          },
+          "changed_paths": {
+            "complete": true,
+            "total": 30,
+            "unchanged": 26,
+            "unknown": 0,
+            "basis": "DIRECT_SNAPSHOT"
+          },
+          "diff": {
+            "basis": "DIRECT_SNAPSHOT",
+            "text_comparable": 30,
+            "candidates": 30
+          },
+          "runtime_verified": false
+        },
+        "collection": {
+          "collection": {
+            "content_bytes": 128668,
+            "content_ready": 29,
+            "files": 29,
+            "inventory_complete": true,
+            "metadata_bytes": 97038,
+            "operation": "pinned_snapshot",
+            "parents": [
+              "42b2789c2bf2738053c32a011b293c7707bc2bf3"
+            ],
+            "provider": "github",
+            "reasons": [],
+            "requests": 102,
+            "tree_strategy": "RECURSIVE_VERIFIED"
+          },
+          "right_inventory": {
+            "content_bytes": 0,
+            "content_ready": 0,
+            "files": 56,
+            "inventory_complete": true,
+            "metadata_bytes": 34619,
+            "operation": "pinned_snapshot",
+            "parents": [
+              "620447ca5dab2020e19221cda363e9c2b36d1048"
+            ],
+            "provider": "github",
+            "reasons": [],
+            "requests": 6,
+            "tree_strategy": "RECURSIVE_VERIFIED"
+          }
+        },
+        "changed_paths": 30
+      },
+      "initial_anonymous": "SAVED_PARTIAL_RATE_LIMITED_NOT_ACTIVATED",
+      "anonymous_quota_diagnostic": {
+        "purpose": "ONE_BOUNDED_IDENTITY_READ_FOR_RATE_RESET_DIAGNOSIS",
+        "credential_mode": "ANONYMOUS_NO_LOOKUP",
+        "state": "RATE_LIMITED",
+        "retry_at": 1794009179.0,
+        "request_witness": [
+          {
+            "operation": "identity",
+            "method": "GET",
+            "status": 403,
+            "bytes": 280,
+            "request_count": 1
+          }
+        ],
+        "cleanup": {
+          "stopped": true,
+          "threads_stopped": true
+        },
+        "retry_time_kst": "2026-11-07T08:52:59+09:00"
+      },
+      "original_overall_attempt": "FAILED_OFFLINE_RENDERING_RESOLVED_BY_FINAL_REPLAY"
+    },
+    "gitlab": {
+      "credential_mode": "ANONYMOUS_NO_LOOKUP",
+      "transport": "UNMODIFIED_HTTP_WORKER",
+      "live_candidate": "r1",
+      "live_ui": {
+        "state": "PASS",
+        "actual_chrome": true,
+        "offline": false,
+        "live_anonymous_providers": true,
+        "observations": [
+          {
+            "provider": "gitlab",
+            "context": "9a9dc4c64a5544f30290771405e173e488cc73a38ff69ad89314144b1c4534ec",
+            "right_commit": "814b6c27fe9ac68ad3f9bb6db7fe2e8ba95f65d1",
+            "left_commit": "01370f6ad5de62709afd70b4d9a431c95509c6e8",
+            "path": "calf_extensions/media_ffmpeg/__init__.py",
+            "sha256": "92a1eb4f2b4ea7949c9e292706241948a8ff2252c19427acd2a5dd852776c01c",
+            "blob_oid": "ad780bc2747c174e30a55a3ef9b5ef718bbfd4a6",
+            "changed_paths": 19,
+            "graph_nodes": 177,
+            "graph_edges": 618,
+            "coverage": {
+              "analysis": {
+                "analyzers": [
+                  "python-ast-v3"
+                ],
+                "feature_definitions": "EXPLICIT_MAPPING_ONLY",
+                "files": 32,
+                "parsed_python": 12,
+                "runtime_verified": false,
+                "snapshot": {
+                  "content_ready": 32,
+                  "content_total": 32,
+                  "inventory_complete": true
+                },
+                "supported_languages": [
+                  "python"
+                ],
+                "unresolved": 521
+              },
+              "changed_paths": {
+                "basis": "DIRECT_SNAPSHOT",
+                "complete": true,
+                "total": 19,
+                "unchanged": 15,
+                "unknown": 0
+              },
+              "diff": {
+                "basis": "DIRECT_SNAPSHOT",
+                "candidates": 19,
+                "text_comparable": 19
+              },
+              "inventory": {
+                "left_complete": true,
+                "left_files": 34,
+                "right_complete": true,
+                "right_files": 32
+              },
+              "runtime_verified": false,
+              "sources": {
+                "expected_regular": 66,
+                "left_ready": 34,
+                "ready": 66,
+                "right_ready": 32
+              },
+              "state": "COMPLETE"
+            },
+            "code": true,
+            "direct_diff": true,
+            "below_map": true,
+            "pinned_provider_link": true,
+            "editor_copy": true
+          }
+        ],
+        "widths": [
+          1440,
+          390,
+          320
+        ],
+        "bookmark_language_height_restore": true,
+        "native_editor_launched": false,
+        "http_blocked": false,
+        "runtime_errors": [],
+        "seconds": 39.818
+      },
+      "independent_checks": {
+        "sides": [
+          {
+            "role": "right",
+            "commit": "814b6c27fe9ac68ad3f9bb6db7fe2e8ba95f65d1",
+            "inventory_files": 32,
+            "inventory_complete": true,
+            "native_git_blob_checks": 32,
+            "local_same_commit_full_inventory": false,
+            "independent_retained_local_blob_matches": 26
+          },
+          {
+            "role": "left",
+            "commit": "01370f6ad5de62709afd70b4d9a431c95509c6e8",
+            "inventory_files": 34,
+            "inventory_complete": true,
+            "native_git_blob_checks": 34,
+            "local_same_commit_full_inventory": false,
+            "independent_retained_local_blob_matches": 15
+          }
+        ],
+        "context_id": "9a9dc4c64a5544f30290771405e173e488cc73a38ff69ad89314144b1c4534ec",
+        "coverage": {
+          "state": "COMPLETE",
+          "inventory": {
+            "right_files": 32,
+            "right_complete": true,
+            "left_files": 34,
+            "left_complete": true
+          },
+          "sources": {
+            "ready": 66,
+            "expected_regular": 66,
+            "right_ready": 32,
+            "left_ready": 34
+          },
+          "analysis": {
+            "analyzers": [
+              "python-ast-v3"
+            ],
+            "feature_definitions": "EXPLICIT_MAPPING_ONLY",
+            "files": 32,
+            "parsed_python": 12,
+            "runtime_verified": false,
+            "snapshot": {
+              "content_ready": 32,
+              "content_total": 32,
+              "inventory_complete": true
+            },
+            "supported_languages": [
+              "python"
+            ],
+            "unresolved": 521
+          },
+          "changed_paths": {
+            "complete": true,
+            "total": 19,
+            "unchanged": 15,
+            "unknown": 0,
+            "basis": "DIRECT_SNAPSHOT"
+          },
+          "diff": {
+            "basis": "DIRECT_SNAPSHOT",
+            "text_comparable": 19,
+            "candidates": 19
+          },
+          "runtime_verified": false
+        },
+        "collection": {
+          "collection": {
+            "content_bytes": 299590,
+            "content_ready": 34,
+            "files": 34,
+            "inventory_complete": true,
+            "inventory_digest": "83df898fea916d71034b26cdbff150c76db6197e2e92b8549fb2e73e591bec37",
+            "inventory_verification": "PINNED_API_PAGINATION_AND_PATH_CONSISTENCY",
+            "metadata_bytes": 32124,
+            "operation": "pinned_snapshot",
+            "parents": [
+              "42b2789c2bf2738053c32a011b293c7707bc2bf3"
+            ],
+            "provider": "gitlab",
+            "reasons": [],
+            "requests": 81,
+            "tree_oid": null,
+            "tree_oid_reason": "NOT_EXPOSED_BY_GITLAB_COMMIT_API",
+            "tree_pages": 4
+          },
+          "right_inventory": {
+            "content_bytes": 0,
+            "content_ready": 0,
+            "files": 32,
+            "inventory_complete": true,
+            "inventory_digest": "2be1e3961aa1b37f7a3514fde78c968bf352ad1225a76a6d58ee66590c5f3c5f",
+            "inventory_verification": "PINNED_API_PAGINATION_AND_PATH_CONSISTENCY",
+            "metadata_bytes": 9444,
+            "operation": "pinned_snapshot",
+            "parents": [
+              "01370f6ad5de62709afd70b4d9a431c95509c6e8"
+            ],
+            "provider": "gitlab",
+            "reasons": [],
+            "requests": 6,
+            "tree_oid": null,
+            "tree_oid_reason": "NOT_EXPOSED_BY_GITLAB_COMMIT_API",
+            "tree_pages": 1
+          }
+        },
+        "changed_paths": 19
+      },
+      "root_tree_oid": null,
+      "root_tree_oid_reason": "NOT_EXPOSED_BY_GITLAB_COMMIT_API",
+      "full_same_commit_local_inventory": "NOT_RUN"
+    }
+  },
+  "request_audits": {
+    "github_cli": {
+      "requests": 102,
+      "methods": [
+        "GET"
+      ],
+      "operations": [
+        "blob",
+        "branch",
+        "commit",
+        "identity",
+        "tree"
+      ],
+      "status_counts": {
+        "200": 65,
+        "304": 37
+      }
+    },
+    "gitlab": {
+      "requests": 81,
+      "methods": [
+        "GET"
+      ],
+      "operations": [
+        "blob",
+        "branch",
+        "commit",
+        "identity",
+        "tree"
+      ],
+      "status_counts": {
+        "200": 70,
+        "304": 11
+      }
+    }
+  },
+  "final_retained_public_replay": {
+    "candidate_manifest_sha256": "b0e5dadc9e0e4f18f68e228f12f09ff849f3644d086b8eda6f0b44cc71772943",
+    "providers": {
+      "github": {
+        "state": "PASS",
+        "context_id": "6852e5578c77a754bf27cf8a69f59a35cac6461fea639acefd58c1e60a113afe",
+        "sources_roundtrip_exact": true,
+        "provider_reads_during_replay": false,
+        "cached_open_seconds": 0.011,
+        "offline_reopen_seconds": 0.01,
+        "server_stopped": true
+      },
+      "gitlab": {
+        "state": "PASS",
+        "context_id": "9a9dc4c64a5544f30290771405e173e488cc73a38ff69ad89314144b1c4534ec",
+        "sources_roundtrip_exact": true,
+        "provider_reads_during_replay": false,
+        "cached_open_seconds": 0.006,
+        "offline_reopen_seconds": 0.009,
+        "server_stopped": true
+      }
+    }
+  },
+  "platforms": {
+    "macos": {
+      "tests_run": 123,
+      "passed": 123,
+      "skipped": 0,
+      "browser": "Google Chrome",
+      "local_v1_browser": {
+        "state": "PASS",
+        "live": {
+          "state": "PASS",
+          "browser_binary": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+          "node": "v25.9.0",
+          "actual_browser": true,
+          "project_portal": true,
+          "static_call_line": 6,
+          "below_map_inspector": true,
+          "diff": true,
+          "editor_uri": true,
+          "bookmark_restore": true,
+          "touch_pinch_emulation": true,
+          "widths": [
+            1440,
+            390,
+            320
+          ],
+          "runtime_errors": []
+        },
+        "offline": {
+          "state": "PASS",
+          "browser_binary": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+          "node": "v25.9.0",
+          "actual_browser": true,
+          "project_portal": true,
+          "static_call_line": 6,
+          "below_map_inspector": true,
+          "diff": true,
+          "editor_uri": false,
+          "offline_without_http": true,
+          "bookmark_restore": true,
+          "touch_pinch_emulation": true,
+          "widths": [
+            1440,
+            390,
+            320
+          ],
+          "runtime_errors": []
+        },
+        "server_stopped": true,
+        "listening_socket_closed": true,
+        "original_hidden": true,
+        "export_state": "COMPLETE",
+        "provider_http": "H5_FINAL_LOCAL_AND_LEGACY_OFFLINE_REGRESSION",
+        "browser_fixture_sha256": "2dbc75d3e7e196d3134cd2edd0d08b65f8d27a0728a9e2e29b99b2920f49e94e",
+        "offline_fixture_sha256": "af8605db1eb0f7c4fe824b99327fb009ff285a0add15a4c275f68e631fe7dc2b"
+      }
+    },
+    "debian-work": {
+      "tests_run": 123,
+      "passed": 123,
+      "skipped": [],
+      "browser": "Google Chrome",
+      "hosted_fixture_ui": {
+        "state": "PASS",
+        "provider_transport": "GIT_OBJECT_BACKED_FIXTURE_NOT_LIVE_PROVIDER",
+        "readers": "UNCHANGED_GITHUB_AND_GITLAB",
+        "left_commit": "899464ca3c09db6c5e8f398ad18914310f3bbde2",
+        "right_commit": "56152bef6adbb8d98f23bf1eb4856e15279e159c",
+        "server_stopped": true,
+        "socket_closed": true,
+        "original_hidden": true,
+        "source_not_executed": true,
+        "export_state": "COMPLETE",
+        "live": {
+          "state": "PASS",
+          "actual_chrome": true,
+          "offline": false,
+          "providers": [
+            "github",
+            "gitlab"
+          ],
+          "below_map_inspector": true,
+          "code_and_direct_diff": true,
+          "left_right_source": true,
+          "call_line": 6,
+          "bookmark_restore": true,
+          "late_response_guard": true,
+          "editor_copy": true,
+          "native_editor_launched": false,
+          "script_canary_executed": false,
+          "widths": [
+            1440,
+            390,
+            320
+          ],
+          "runtime_errors": []
+        },
+        "offline": {
+          "state": "PASS",
+          "actual_chrome": true,
+          "offline": true,
+          "providers": [
+            "retained-gitlab"
+          ],
+          "below_map_inspector": true,
+          "code_and_direct_diff": true,
+          "left_right_source": true,
+          "call_line": 6,
+          "bookmark_restore": true,
+          "late_response_guard": false,
+          "editor_copy": false,
+          "native_editor_launched": false,
+          "script_canary_executed": false,
+          "widths": [
+            1440,
+            390,
+            320
+          ],
+          "runtime_errors": []
+        }
+      },
+      "gestures": {
+        "state": "PASS",
+        "browser_binary": "/usr/bin/google-chrome",
+        "actual_browser": true,
+        "offline_http_blocked": true,
+        "code_scroll": true,
+        "pinch_emulation": true,
+        "wheel_zoom": true,
+        "keyboard_pan": true,
+        "english_korean": true,
+        "widths": [
+          1440,
+          390,
+          320
+        ],
+        "runtime_errors": [],
+        "native_editor_launched": false,
+        "physical_mobile_device": false
+      },
+      "installation": {
+        "state": "PASS",
+        "platform": "linux",
+        "python": "3.13.5",
+        "wheel_sha256": "8e8a51bd699a913a0ec07ff0e2c37d38c11acdc9c48197efbb750113b7c84f1c",
+        "new_environment_only": true,
+        "network_install": false,
+        "install_exit": 0,
+        "entrypoint_exit": 0,
+        "offline_probe_exit": 0,
+        "installed": {
+          "state": "PASS",
+          "installed_module": "/home/thermany/.local/share/CALF-Repository-H5-20261107-r3-install/venv/lib/python3.13/site-packages/calf_extensions/repository/__init__.py",
+          "network_blocked": true,
+          "sdk_absent": true,
+          "core_not_imported": true,
+          "assets_present": true
+        }
+      }
+    },
+    "packr-win": {
+      "tests_run": 123,
+      "passed": 121,
+      "skipped": [
+        [
+          "test_real_tls_rejects_untrusted_test_certificate (calf_extensions.repository.tests.test_hosted_h1.H1.test_real_tls_rejects_untrusted_test_certificate)",
+          "Native openssl unavailable for negative TLS fixture"
+        ],
+        [
+          "test_output_limit_and_owned_process_timeout (calf_extensions.repository.tests.test_limits.Limits.test_output_limit_and_owned_process_timeout)",
+          "POSIX executable fixture; Windows executable lifecycle is qualified separately"
+        ]
+      ],
+      "browser": "Microsoft Edge",
+      "hosted_fixture_ui": {
+        "state": "PASS",
+        "provider_transport": "GIT_OBJECT_BACKED_FIXTURE_NOT_LIVE_PROVIDER",
+        "readers": "UNCHANGED_GITHUB_AND_GITLAB",
+        "left_commit": "1eeb9969f99a063a8e7209e56b95327ebb3483b0",
+        "right_commit": "458aa048e117d58df94e30fdd3d09081356d6b9b",
+        "server_stopped": true,
+        "socket_closed": true,
+        "original_hidden": true,
+        "source_not_executed": true,
+        "export_state": "COMPLETE",
+        "live": {
+          "state": "PASS",
+          "actual_chrome": true,
+          "offline": false,
+          "providers": [
+            "github",
+            "gitlab"
+          ],
+          "below_map_inspector": true,
+          "code_and_direct_diff": true,
+          "left_right_source": true,
+          "call_line": 6,
+          "bookmark_restore": true,
+          "late_response_guard": true,
+          "editor_copy": true,
+          "native_editor_launched": false,
+          "script_canary_executed": false,
+          "widths": [
+            1440,
+            390,
+            320
+          ],
+          "runtime_errors": []
+        },
+        "offline": {
+          "state": "PASS",
+          "actual_chrome": true,
+          "offline": true,
+          "providers": [
+            "retained-gitlab"
+          ],
+          "below_map_inspector": true,
+          "code_and_direct_diff": true,
+          "left_right_source": true,
+          "call_line": 6,
+          "bookmark_restore": true,
+          "late_response_guard": false,
+          "editor_copy": false,
+          "native_editor_launched": false,
+          "script_canary_executed": false,
+          "widths": [
+            1440,
+            390,
+            320
+          ],
+          "runtime_errors": []
+        }
+      },
+      "gestures": {
+        "state": "PASS",
+        "browser_binary": "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
+        "actual_browser": true,
+        "offline_http_blocked": true,
+        "code_scroll": true,
+        "pinch_emulation": true,
+        "wheel_zoom": true,
+        "keyboard_pan": true,
+        "english_korean": true,
+        "widths": [
+          1440,
+          390,
+          320
+        ],
+        "runtime_errors": [],
+        "native_editor_launched": false,
+        "physical_mobile_device": false
+      },
+      "installation": {
+        "state": "PASS",
+        "platform": "win32",
+        "python": "3.12.10",
+        "wheel_sha256": "8e8a51bd699a913a0ec07ff0e2c37d38c11acdc9c48197efbb750113b7c84f1c",
+        "new_environment_only": true,
+        "network_install": false,
+        "install_exit": 0,
+        "entrypoint_exit": 0,
+        "offline_probe_exit": 0,
+        "installed": {
+          "state": "PASS",
+          "installed_module": "C:\\Users\\tykoh\\AppData\\Local\\CALF-Repository-H5-20261107-r3-install\\venv\\Lib\\site-packages\\calf_extensions\\repository\\__init__.py",
+          "network_blocked": true,
+          "sdk_absent": true,
+          "core_not_imported": true,
+          "assets_present": true
+        }
+      }
+    }
+  },
+  "package": {
+    "state": "PASS",
+    "wheel": "calf_extensions-0.1.0-py3-none-any.whl",
+    "wheel_sha256": "8e8a51bd699a913a0ec07ff0e2c37d38c11acdc9c48197efbb750113b7c84f1c",
+    "backend": "setuptools 80.9.0 / wheel 0.45.1",
+    "new_isolated_environments_only": true,
+    "dependency_install_scope": "new build-env only; public PyPI pinned build dependencies",
+    "runtime_install_no_deps_no_index": true,
+    "installed": {
+      "state": "PASS",
+      "installed_module": "/Volumes/VibePackr_Mac_Library/Build/0de352e7927da8af55d4/output/repository-hosted-h5-package-r3/clean-env/lib/python3.12/site-packages/calf_extensions/repository/__init__.py",
+      "network_blocked": true,
+      "sdk_absent": true,
+      "core_not_imported": true,
+      "assets_present": true
+    },
+    "commands": [
+      {
+        "label": "build-deps",
+        "exit": 0
+      },
+      {
+        "label": "wheel",
+        "exit": 0
+      },
+      {
+        "label": "install",
+        "exit": 0
+      },
+      {
+        "label": "entrypoint",
+        "exit": 0
+      },
+      {
+        "label": "local-offline",
+        "exit": 0
+      }
+    ],
+    "package_published": false
+  },
+  "performance": {
+    "state": "PASS",
+    "candidate_manifest_sha256": "b0e5dadc9e0e4f18f68e228f12f09ff849f3644d086b8eda6f0b44cc71772943",
+    "fixture": {
+      "files": 301,
+      "distinct_contents": 5,
+      "python_functions_per_file": 2,
+      "gitlab_api_transport": "REAL_GIT_OBJECT_BACKED_SYNTHETIC_HTTP_RESPONSES",
+      "cold_collection_is_network_latency": false
+    },
+    "measurements": {
+      "initial_progress_seconds": 0.000201,
+      "initial_state": "RUNNING",
+      "cold_collect_analyze_seconds": 0.241265,
+      "cached_context_and_payload_seconds": 0.022841,
+      "cancel_drain_seconds": 5e-05,
+      "service_peak_rss_mib": 40.078,
+      "largest_git_child_peak_rss_mib": 5.609
+    },
+    "budget": {
+      "requests": {
+        "right_files": 301,
+        "right_complete": true,
+        "left_files": 0,
+        "left_complete": true
+      },
+      "request_count": 20,
+      "limit": 300,
+      "retained_coverage": "COMPLETE"
+    },
+    "thresholds": {
+      "initial_progress_seconds": 1,
+      "cached_context_and_payload_seconds": 2,
+      "cancel_drain_seconds": 10,
+      "service_peak_rss_mib": 512
+    },
+    "browser_memory_measured": false,
+    "provider_request_latency_qualified": false
+  },
+  "preservation": {
+    "state": "PASS_TASK_SCOPE",
+    "protected_files": 607,
+    "protected_unchanged": 607,
+    "external_runtime_configuration_changes": 0,
+    "external_runtime_configuration_modified_or_restored_by_task": false,
+    "historical_h0_h4_files": 15,
+    "historical_h0_h4_files_unchanged": 15,
+    "h5_intentional_source_changes": [
+      "calf_extensions/repository/viewer.py",
+      "calf_extensions/repository/tests/test_github_source.py",
+      "calf_extensions/repository/tests/test_portal_h4.py"
+    ],
+    "shared_working_files_unchanged": false,
+    "concurrent_shared_changes_observed": [
+      "README.md",
+      "README_KR.md"
+    ],
+    "shared_files_modified_or_restored_by_h5": false,
+    "concurrent_non_candidate_repository_files": {
+      "calf_extensions/repository/pack_verify.py": "00ea68308f26a021acfe288c0797a9da34775b5ca89a6c43df5c3ab745543c72"
+    },
+    "concurrent_files_modified_or_restored_by_h5": false,
+    "head_unchanged": true,
+    "index_unchanged_empty": true,
+    "owned_macos_browser_processes_remaining": 0,
+    "remote_audits": {
+      "debian-work": {
+        "state": "PASS",
+        "candidate_manifest_sha256": "b0e5dadc9e0e4f18f68e228f12f09ff849f3644d086b8eda6f0b44cc71772943",
+        "source_files_verified": 81,
+        "source_changes": [],
+        "owned_browser_processes": [],
+        "existing_runtime_installation_modified": false
+      },
+      "packr-win": {
+        "state": "PASS",
+        "candidate_manifest_sha256": "b0e5dadc9e0e4f18f68e228f12f09ff849f3644d086b8eda6f0b44cc71772943",
+        "source_files_verified": 81,
+        "source_changes": [],
+        "owned_browser_processes": [],
+        "existing_runtime_installation_modified": false
+      }
+    },
+    "ffmpeg_calf_records_unchanged": true
+  },
+  "h5_scoped_criteria": {
+    "HG26": {
+      "state": "PASS_TASK_SCOPE",
+      "scope": "Local/v1/FFmpeg regression and baseline hashes; one intentional viewer correction, three test-file changes including new H5 regression"
+    },
+    "HG27": {
+      "state": "PASS_SCOPED_PUBLIC",
+      "scope": "Live GitHub through owner-requested gh CLI qualification transport; live anonymous GitLab. Final rendering replay uses unchanged retained inputs; default anonymous GitHub remains rate-limited partial."
+    },
+    "HG28": {
+      "state": "NOT_RUN",
+      "scope": "No explicitly selected private repository fixture; no account enumeration or credential discovery."
+    },
+    "HG29": {
+      "state": "PASS_THREE_DESKTOP_SCOPE",
+      "scope": "Actual Chrome macOS/Debian and Edge Windows; remote provider-shaped Git fixtures versus actual providers on macOS. Physical mobile/native editor excluded."
+    },
+    "HG30": {
+      "state": "PASS_THREE_OS_ISOLATED_INSTALL",
+      "scope": "Same wheel SHA256; assets/schemas/CLI, no network/SDK/core dependency for Local Git."
+    },
+    "HG31": {
+      "state": "PASS_DEFINED_FIXTURE_ONLY",
+      "scope": "301 files/5 contents; service timing/RSS and cached public browser reopening; no browser aggregate RSS or broad-scale API latency claim."
+    },
+    "HG32": {
+      "state": "PASS_READ_ONLY_SCOPE",
+      "scope": "All captured provider operations GET on fixed registered endpoints; no Git clone/fetch/push, provider writes or inspected code execution."
+    }
+  },
+  "not_qualified": [
+    "Explicit private repository fixtures/permissions",
+    "Enterprise/Self-Managed and non-Python call analysis",
+    "Live public-provider reads on Windows/Linux",
+    "Native editor launch and physical mobile devices",
+    "Windows graceful console interruption",
+    "Windows negative TLS fixture and POSIX executable fixture remain skipped",
+    "Broader workloads, external provider latency and aggregate browser memory",
+    "Shipped gh credential adapter; CLI transport here is qualification only"
+  ],
+  "attempt_history": [
+    {
+      "attempt": "public-r1",
+      "outcome": "PARTIAL_GITHUB_ANONYMOUS_RATE_LIMIT",
+      "preserved": true
+    },
+    {
+      "attempt": "github-cli-r1",
+      "outcome": "QUALIFICATION_TRANSPORT_NUMERIC_IDENTITY_ROUTE_MISSING",
+      "repair": "Only the verified fixed repository ID endpoint added"
+    },
+    {
+      "attempt": "github-cli-r2",
+      "outcome": "LIVE_COLLECTION_UI_PASS_OFFLINE_RENDERING_FAILURE",
+      "repair": "Literal one-pass template slots in candidate r2/r3; retained inputs replayed"
+    },
+    {
+      "attempt": "windows-r1",
+      "outcome": "TWO_INDEX_FIXTURE_ERRORS_AND_ONE_TERMINATION_ASSERTION",
+      "repair": "Raw mktree fixture and explicit Windows owned cleanup; all byte cases retained"
+    },
+    {
+      "attempt": "performance-r3",
+      "outcome": "INCOMPLETE_EXACT_FULL_LAST_PAGE_FIXTURE",
+      "repair": "301-file workload supplies a demonstrable final short page; no completeness rule weakened"
+    },
+    {
+      "attempt": "replay-r3",
+      "outcome": "DEVTOOLS_EMPTY_PORT_PUBLICATION_RACE",
+      "repair": "Bounded numeric-port readiness wait in helper"
+    },
+    {
+      "attempt": "debian-gestures-r1",
+      "outcome": "CHROME_UNIX_SOCKET_PATH_TOO_LONG",
+      "repair": "Fresh shorter owned test path; no application/runtime change"
+    },
+    {
+      "attempt": "windows-cleanup-audit-r1-r2",
+      "outcome": "HELPER_POWERSHELL_NESTED_QUOTING_FAILURE",
+      "repair": "AST-validated Python source carried as Base64 data; final read-only source/process audit passed"
+    }
+  ],
+  "effects": {
+    "provider_write": false,
+    "git_clone_fetch_commit_push": false,
+    "existing_calf_record_writes": false,
+    "inspected_project_execution": false,
+    "native_editor_launched": false,
+    "global_tool_installation": false,
+    "new_test_folders_only_on_remote": true,
+    "package_published": false
+  },
+  "source_sha256": {
+    "calf_extensions/repository/__init__.py": "3349a797cb484b7fc01c91d6499837965843bc8778270ffa0319a93192943898",
+    "calf_extensions/repository/analyze.py": "01222d5a886dc503cec071afce6317d87e83e13bbb0bf50b1da4e39d8208459a",
+    "calf_extensions/repository/assets/portal.css": "824d7a100d2d7847a583592ae11223334f411ebde730e9fec2a53b0d0802157f",
+    "calf_extensions/repository/assets/portal.html": "46e0aabc3c8b507501b71e7de014c7252bf575a9a3b427bbd59faa5c25852404",
+    "calf_extensions/repository/assets/portal.js": "f6acc0a8af57b89da880f03fe9e03b40dcc426b1732181a66f7fd44177a50f76",
+    "calf_extensions/repository/capture.py": "d88afcfe6ee42e80d8299761611c761b03462177a20e7dc60dac6761d26936d4",
+    "calf_extensions/repository/cli.py": "87f1a0d4cc070cf2a95795381e14b302c7b8d15ec22dbed6566cb33b377c1a58",
+    "calf_extensions/repository/compare.py": "906b9b268c9929c55cd1bbec11b38a2be88fad7fd6ef2be80ddcbfc8b8e8bab4",
+    "calf_extensions/repository/export.py": "3404404c09d3c21e33caea926d750142400a9743462cb91fab74955204ec7f48",
+    "calf_extensions/repository/git_reader.py": "0fd0f26c270b57996227a182521ac6bcab2380450431d3f4c488864dcc25f8a5",
+    "calf_extensions/repository/hosted.py": "7cf48fe05bd145b2767d28b0f2b4729811fa5620b46ba54ef691417e63643288",
+    "calf_extensions/repository/http_reader.py": "e51eb4d784c71c4c983eef0da63eb0e1ae5bb809bfa1e289e2b30bb4a6907cc3",
+    "calf_extensions/repository/http_worker.py": "4156717bf55972caeb3e2e3bea61559ee1129023952d8d9d2f79682473758659",
+    "calf_extensions/repository/model.py": "7b42cb17c65313d21fe5038e3bee5e9820e45e07d481785014eac6ab9484b01e",
+    "calf_extensions/repository/navigation.py": "e951aa7d9bef5547a0b86ef339a45abd1384601d182aa4ff0dd1058e09cc52d5",
+    "calf_extensions/repository/offline.py": "a6a1dd477e4a6ea2251471b929c897169758a632eb2fc350031bb11743eb53bf",
+    "calf_extensions/repository/providers/__init__.py": "f4d1d9d99c990438bbcfdaabc4bf984de37465baf75a12e90a4a1d7cd84247a5",
+    "calf_extensions/repository/providers/base.py": "6055aaaf31f897e184445e1f52e7cec14b3b19b8eb3053c22b0f3da7639aeb4e",
+    "calf_extensions/repository/providers/github.py": "d361e486527767a7ca2ff5245e4770b3e1e1219a1a0d5cf4dce6b49be69dbea9",
+    "calf_extensions/repository/providers/gitlab.py": "308b22256d12930f890e76a4bd248d68ca6fbc43f41876254fe7cc5d2d1e615e",
+    "calf_extensions/repository/providers/local.py": "964881d10f2c2d1da190d97811b5b8127d991bc3885605cdd760c83a42783bb3",
+    "calf_extensions/repository/registrations.py": "d5c87c420570f8400f5ce3b192022187592a9e10955c290fc205d35127ca1f12",
+    "calf_extensions/repository/schemas/capture-v1.schema.json": "58f71d0bdfebf46a8d4eaf552f4772ab45a27c8f53179f6a8dc45aaa6eb0afb4",
+    "calf_extensions/repository/schemas/capture-v2.schema.json": "606eea92dd5d839c20381b967e3d5342d5a7549af95e93b25622091bea75605f",
+    "calf_extensions/repository/schemas/navigation-v1.schema.json": "dada5651c82c9a06302ab56a944dfb2fecd81ff3d9e7a61c260e11fbf0974b48",
+    "calf_extensions/repository/tests/__init__.py": "2039c7313d14ca9c9013ef903d5ee29959bf7475c95f755106f9a4a56fdf343e",
+    "calf_extensions/repository/tests/_http_fixture_worker.py": "2c2b303edd50e64ac6834a14fe87dac0d32515a0483cf45b383c0965e25189ab",
+    "calf_extensions/repository/tests/test_git_contract.py": "767c6436b98d3c8908eb84b71eb5995e7f0233c77f718a3569647ddd1d393c97",
+    "calf_extensions/repository/tests/test_github_source.py": "431aff9955579dca706a73dd9ccf257ad064d808aa946f704118454c79e7045a",
+    "calf_extensions/repository/tests/test_gitlab_source.py": "aa4ed684fad6f945e9160acf84254ff951cefc479225ea4f9d2aad9d3357a515",
+    "calf_extensions/repository/tests/test_hosted_h1.py": "686c60acc8e2deffba796f01837bfba8dda752d7b1c329a024b28e00598eccf6",
+    "calf_extensions/repository/tests/test_limits.py": "6c6f49cddd5ed1e30803ced66aef1f1946916ae51978b698b8f102d5b4dc7776",
+    "calf_extensions/repository/tests/test_navigation.py": "80e38e71d0a32dc782cdec8117f7610d17ab715dae2e60ec48384ae6d1c96fd7",
+    "calf_extensions/repository/tests/test_navigation_h4.py": "ada3cc8cfd2476153e28a76feab73d9e85ccd62e87d6837d9e2ea1bf76c99429",
+    "calf_extensions/repository/tests/test_portal.py": "f485dc20c73b7fd021b48483aa280a29658b977c590ab52f6eeb8d103e7579d5",
+    "calf_extensions/repository/tests/test_portal_h4.py": "224037cd6a54f771131fa6342d600256cada85f5b712b6683138ed42a92a96cb",
+    "calf_extensions/repository/tests/test_rendering_h5.py": "4fa643572027b74889b833c58057e30a693ee63eacda1509bfc0696d469d2d03",
+    "calf_extensions/repository/tests/test_source_contract.py": "171825536545fa6f8f007b4763d9866ee12db59d83b5ba98dd85cd07739a1e6e",
+    "calf_extensions/repository/viewer.py": "9886a45dcc08d4ccb6c4f65c8f5968baa62924e14231fdcdf3e226215eb450e2"
+  },
+  "execution_evidence": {
+    "build_project_key": "0de352e7927da8af55d4",
+    "log_ids": {
+      "macos_r3_suite": "1794006645929452000",
+      "debian_r3": "1794006575983998000",
+      "windows_r3": "1794006578041885000",
+      "ffmpeg": "1794006647169050000",
+      "public_gitlab": "1794005799570745000",
+      "github_cli_live_inputs_with_initial_render_failure": "1794006103654177000",
+      "final_public_replay": "1794006834239165000",
+      "mac_local_v1_browser": "1794006699401483000",
+      "package_r3": "1794006576863264000",
+      "performance": "1794006692817113000",
+      "windows_gestures": "1794006889040595000",
+      "debian_gestures_final": "1794006955076812000",
+      "debian_install": "1794007196875092000",
+      "windows_install": "1794007195986851000",
+      "finalization": "1794007617978001000",
+      "final_static": "1794007650902621000",
+      "debian_cleanup_audit": "1794007294147500000",
+      "windows_cleanup_audit": "1794007499971361000"
+    },
+    "baseline_sha256": "2bbf399fcdb861235c0048ecf35ad1b7c3af52ee610e93a8c52d9794b502fae4",
+    "guide_sha256": {
+      "REPOSITORY_HOSTED_H5.md": "609f4126bf8c8249f280db315be34210ac0c44c8912f3645faad97c12dc18ff6",
+      "REPOSITORY_HOSTED_H5_KR.md": "b9223b1ff22affbaf0fd03b60469ce171b43d8f6ae1da3e3eed9ad3212e08f04"
+    },
+    "report_artifact_sha256": {
+      "replay": "e70e423b671f1f1f6bf8ca3c4ba6549ed9c98c8a107f9435e75539a1bc277a8b",
+      "gitlab_public": "ddfe1fba1c7fafe0cd6eb50b0aa69edce5732f4be02da3337be01b0eebe45cec",
+      "github_live_ui": "6cb151a5ea7f1913e4d5f16d99caab3cdb37b5e9467887b2995ab1186125810a",
+      "github_live_progress": "e08f15d1e6522030356273d0d83d9ed956a8b8effb124c3d263141e0bf4407ae",
+      "package": "6dbedb752b2d3cb37e65cc19f51bbdef1b26421bb3d413528f4484ec391ae470",
+      "performance": "55957af69d33d7932a2a7927f2faf6981657012127c1a0b81bb6ec3886bdb522"
+    },
+    "qualification_helper_current_sha256": {
+      "package_check.py": "bb275c84bdf670375ff8f51ea64793ca5e4ac26fbce04c64e42d3db03b461145",
+      "package_check_r3.py": "1dd1ed292b87880f95e12c1d3d10b5e93af7f46085a5354d28fb7592a8ebc9f4",
+      "gesture_browser.cjs": "72e7d8d38a31276a32e4fc3687d33cfe783547b51beb6eaa10405bafefac80d6",
+      "replay_public.py": "343b01c5c0f2e001ab5e34a00c636deb52f43e357cb614f23480f62c80340c92",
+      "audit_remote_r3.py": "b6da4ebfe8abe2748188e7d3031b40ba493fc5e89afd050f7cbbfc56c55d5d4b",
+      "public_browser.cjs": "baa6a6a836f062ba270e7ab980752fa50a2f587cd3c7a0a7b942ecef919a625e",
+      "preflight_remote.py": "ce7183638a5de65475c3cd5006d6db15302ae02ce223fa5edb88d76616a09761",
+      "remote_gestures.py": "8325b33e713f5466ef74c9a91d2e8301b0a5d871ebc58fb48182d2364b8c7c76",
+      "audit_remote_r2.py": "70e35d9d652254de6aade2eaa4da82dd361c4c03061f811cc45e5bb78253fbcc",
+      "replay_browser.cjs": "d5188925916de3522e5b121abf84f371fa70f0e075b6d75fef42bbb5fd6f9699",
+      "remote_bootstrap.py": "5f08aa4d8b0bf182b0d68780e1ee29995d57fc81cba5c247e1a3a1ef84d31dd7",
+      "remote_execute.py": "80066606589384e8bf6d6dcca9238e887fae83b5195f4a9f25f88f66958dc4d8",
+      "finalize_h5.py": "af805fdce61669f490ca05ae8bb776f26e4c00680c08217ebd55aa329f5eb39b",
+      "public_integration.py": "d0ff5c6e9bce3559caf7ca85dac43b74fa0c5adc6143d1f69fea0d7cdd8edd3a",
+      "gh_transport.py": "7ee7813a7dee1702d852ac0419a7b5fb79cf8bf5876f7d05a3aef081223a803b",
+      "remote_execute_r3.py": "4f5352303ac8edb517d61f50147ac43f8f2f07f5085e91a81bbed2542d45db15",
+      "audit_remote.py": "78082a18b8954931177203fa3ba820cdf80bdae9b9de141439a9f214a91119a2",
+      "remote_gestures_short.py": "d5b05c91aaad499b8278d10ebddc3eb0d43401cbad349cb2d4ee7759e2413f21",
+      "quota_diagnostic.py": "14f57943df0bd42a934e7b1374d8641a98a1145c2c90357e3f1981d218449253",
+      "replay_public_r3.py": "9e6286655f8ffd6afef70906e57c6418cfe452fda6aab979c9c8249dffbcfc55",
+      "replay_browser_timing.cjs": "84436738c0f59f20a4f8744e9da97ca70d3f8e9d9b1d4b1730be3f93d1a58d33",
+      "remote_install.py": "e66dc08f8adbf82d0d0af6a623a5e4bd40872d9c00dc320b127b053ee93635f6",
+      "check_local_browser_r3.py": "b53c5501a93eaacb05530b6d389a37519882d5ad1ee68a75324923db27f9a17c",
+      "performance_check.py": "682850067efd85f4464fc19c0eb0e5bee1513ea0d86069a01adc052a2973a703"
+    },
+    "final_static_check_sha256": "1c9b1449168ec728f7d67370a1b714c5e97deaa0443f74e31fdc7b0ea8563c6f"
+  }
+}

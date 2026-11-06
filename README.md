@@ -45,7 +45,7 @@ The live Claude Code workflow was tested on macOS. Claude Desktop GUI configurat
 
 The working source includes a free [Local Git project navigator](docs/REPOSITORY_NAVIGATOR.md). Select a project to explore features, definitions, documents, files and Python symbols in a relationship map, then inspect descriptions, exact-version code, Diff and provenance below the map.
 
-This source-run development preview is separate from the published FFmpeg 0.1.0 archives. It needs no CALF core, SDK, account or model API. See the [cross-platform verification scope and limitations](REPOSITORY_VERIFICATION.json); GitHub/GitLab service adapters and additional language analyzers remain future work.
+This source-run development preview is separate from the published FFmpeg 0.1.0 archives. Local Git needs no CALF core, SDK, account or model API. Manually registered GitHub/GitLab sources now share the map and code/Diff inspector; see the [hosted navigation guide](docs/REPOSITORY_HOSTED_H4.md) and [H5 public/desktop qualification and limits](docs/REPOSITORY_HOSTED_H5.md). Private access, native editor launch and physical mobile testing remain unqualified.
 
 ## Repository layout
 

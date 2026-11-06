@@ -9,6 +9,7 @@ from .viewer import html
 
 def export_capture(data_dir,capture_id,destination,include_source=False):
     store=Store(data_dir);capture=store.load(capture_id)
+    if capture['schema']!='calf.repository.capture.v1':raise RepositoryError('CAPTURE_VERSION_UNSUPPORTED','v2 snapshot map export is not implemented in H0')
     path=store.directory/'navigation'/(capture_id+'.json')
     if not path.is_file():raise RepositoryError('NAVIGATION_MISSING','No project map was collected for this capture')
     if path.stat().st_size>32*1024*1024:raise RepositoryError('EXPORT_LIMIT','Project map exceeds export bound',3)

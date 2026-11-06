@@ -1,0 +1,327 @@
+{
+  "schema": "calf.repository.hosted.h4.qualification.v1",
+  "date": "2026-11-07",
+  "state": "PASS_SCOPED_MACOS_COMMON_NAVIGATION",
+  "baseline_commit": "66bdf4a6e8d19ec87b4a10b9e541f1fe3870dc02",
+  "implementation": [
+    "Manual source registration/selection and typed pinned right/left refs",
+    "Asynchronous bounded collection with cancel, generation/registry guards and preserved active map",
+    "Create-only retained v2 context/history with explicit partial activation and proven parentless baseline",
+    "Inventory-union changed paths, comparison-only deleted files and fixed DIRECT_SNAPSHOT Diff",
+    "One map/below-map inspector, per-source capabilities and independent coverage",
+    "Pinned provider URLs, explicit hash-checked editor copies and context-bound exploration links",
+    "Retained-only offline v2 export with separate source/origin options; legacy v1 preserved"
+  ],
+  "verification": {
+    "repository_suite": {
+      "passed": 121,
+      "failed": 0,
+      "scope": "H0-H4 full suite before final small guards; relevant H4 and Chrome checks repeated after refinement"
+    },
+    "final_h4_focused": {
+      "passed": 20,
+      "failed": 0
+    },
+    "extended_cached_cli": {
+      "passed": 1,
+      "original_hidden": true,
+      "server_stopped": true
+    },
+    "ffmpeg_contract": {
+      "passed": 3,
+      "native_scene_execution": false
+    },
+    "hosted_browser": {
+      "state": "PASS",
+      "provider_transport": "GIT_OBJECT_BACKED_FIXTURE_NOT_LIVE_PROVIDER",
+      "readers": "UNCHANGED_GITHUB_AND_GITLAB",
+      "left_commit": "33f7374f48166f9490a5e56832440e0b3d8925a6",
+      "right_commit": "b56dd9206918c151eb1073cf9d1284d9c4228bcb",
+      "server_stopped": true,
+      "socket_closed": true,
+      "original_hidden": true,
+      "source_not_executed": true,
+      "export_state": "COMPLETE",
+      "live": {
+        "state": "PASS",
+        "actual_chrome": true,
+        "offline": false,
+        "providers": [
+          "github",
+          "gitlab"
+        ],
+        "below_map_inspector": true,
+        "code_and_direct_diff": true,
+        "left_right_source": true,
+        "call_line": 6,
+        "bookmark_restore": true,
+        "late_response_guard": true,
+        "editor_copy": true,
+        "native_editor_launched": false,
+        "script_canary_executed": false,
+        "widths": [
+          1440,
+          390,
+          320
+        ],
+        "runtime_errors": []
+      },
+      "offline": {
+        "state": "PASS",
+        "actual_chrome": true,
+        "offline": true,
+        "providers": [
+          "retained-gitlab"
+        ],
+        "below_map_inspector": true,
+        "code_and_direct_diff": true,
+        "left_right_source": true,
+        "call_line": 6,
+        "bookmark_restore": true,
+        "late_response_guard": false,
+        "editor_copy": false,
+        "native_editor_launched": false,
+        "script_canary_executed": false,
+        "widths": [
+          1440,
+          390,
+          320
+        ],
+        "runtime_errors": []
+      }
+    },
+    "local_legacy_browser": {
+      "state": "PASS",
+      "live": {
+        "state": "PASS",
+        "browser_binary": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+        "node": "v25.9.0",
+        "actual_browser": true,
+        "project_portal": true,
+        "static_call_line": 6,
+        "below_map_inspector": true,
+        "diff": true,
+        "editor_uri": true,
+        "bookmark_restore": true,
+        "touch_pinch_emulation": true,
+        "widths": [
+          1440,
+          390,
+          320
+        ],
+        "runtime_errors": []
+      },
+      "offline": {
+        "state": "PASS",
+        "browser_binary": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+        "node": "v25.9.0",
+        "actual_browser": true,
+        "project_portal": true,
+        "static_call_line": 6,
+        "below_map_inspector": true,
+        "diff": true,
+        "editor_uri": false,
+        "offline_without_http": true,
+        "bookmark_restore": true,
+        "touch_pinch_emulation": true,
+        "widths": [
+          1440,
+          390,
+          320
+        ],
+        "runtime_errors": []
+      },
+      "server_stopped": true,
+      "listening_socket_closed": true,
+      "original_hidden": true,
+      "export_state": "COMPLETE",
+      "provider_http": "H4_LOCAL_AND_LEGACY_OFFLINE_REGRESSION",
+      "browser_fixture_sha256": "2dbc75d3e7e196d3134cd2edd0d08b65f8d27a0728a9e2e29b99b2920f49e94e",
+      "offline_fixture_sha256": "af8605db1eb0f7c4fe824b99327fb009ff285a0add15a4c275f68e631fe7dc2b"
+    }
+  },
+  "qualification_scope": {
+    "os": "macOS",
+    "provider_ui_transport": "Independent real Git objects -> synthetic GitHub/GitLab API responses -> unchanged provider readers -> actual loopback APIs -> actual Chrome",
+    "fresh_live_provider_gets": false,
+    "prior_public_reader_evidence": [
+      "repository-hosted-h2-20261107.json",
+      "repository-hosted-h3-20261107.json"
+    ],
+    "native_editor_launched": false,
+    "physical_mobile_device": false,
+    "offline_original_hidden": true,
+    "offline_http_blocked": true,
+    "widths": [
+      1440,
+      390,
+      320
+    ]
+  },
+  "preservation": {
+    "state": "PASS_TASK_SCOPE",
+    "source_baseline_count": 34,
+    "existing_source_changed_by_h4": [
+      {
+        "path": "calf_extensions/repository/viewer.py",
+        "before": "8cbdbdd0cc6de39030e5b7145eca3c0eef71aa17a73924b2bb6f9530af5cf116",
+        "after": "08ca445e2e4edd5314ee1cde5199eb0b9f3e47dd6cbc65eb148194e8660a4d76"
+      },
+      {
+        "path": "calf_extensions/repository/cli.py",
+        "before": "3c7a356278314b8107821b1c78b27fbda60dfa613bc58c77ff10f1b0c27305c1",
+        "after": "87f1a0d4cc070cf2a95795381e14b302c7b8d15ec22dbed6566cb33b377c1a58"
+      },
+      {
+        "path": "calf_extensions/repository/assets/portal.html",
+        "before": "55124a78624fc7dd1ec1665acc08bd6c60b2b341ac0910669184f2b24f45eac0",
+        "after": "46e0aabc3c8b507501b71e7de014c7252bf575a9a3b427bbd59faa5c25852404"
+      },
+      {
+        "path": "calf_extensions/repository/assets/portal.js",
+        "before": "c01ba752a6106ef97bcbd0b9ba0dbcf11a0c3e1189a96af0df9714d5fc90e16e",
+        "after": "f6acc0a8af57b89da880f03fe9e03b40dcc426b1732181a66f7fd44177a50f76"
+      },
+      {
+        "path": "calf_extensions/repository/assets/portal.css",
+        "before": "707f3f26945de637d2697c9b07720bec612ccf2be53a362bcb9aee5fe2585c89",
+        "after": "824d7a100d2d7847a583592ae11223334f411ebde730e9fec2a53b0d0802157f"
+      }
+    ],
+    "protected_count": 607,
+    "protected_unchanged": 606,
+    "external_runtime_config_changes": [
+      {
+        "path": "/Users/thermany/.claude.json",
+        "before": "1cab52ab2c88ad507618e8ee74b47e4ed1abb4f9822d9572b95569f256679fe2",
+        "after": "a0d2a2b28c14c94bb5fae9619d26d9b4142ff313f8c937c5a9b122e243d716ec"
+      }
+    ],
+    "external_runtime_config_modified_by_task": false,
+    "history_count": 12,
+    "history_changed": [],
+    "shared_working_changes_observed": [],
+    "shared_files_modified_or_restored_by_task": false,
+    "head_unchanged": true,
+    "index_empty": true,
+    "owned_browser_processes_remaining": 0,
+    "provider_readers_unchanged": true,
+    "shared_analyzer_unchanged": true,
+    "legacy_exporter_unchanged": true,
+    "ffmpeg_and_calf_records_unchanged": true
+  },
+  "attempt_history": [
+    {
+      "log": "1794002611239765000",
+      "state": "FIXTURE_ASSERTION_FAILURE",
+      "reason": "Pending source selection legitimately changes selection metadata; active view/graph assertion corrected"
+    },
+    {
+      "log": "1794003407188570000",
+      "state": "FIXTURE_ASSERTION_FAILURE",
+      "reason": "Static JS variable names are not original-path disclosure; inspect serialized export data"
+    },
+    {
+      "output": "repository-hosted-h4-browser-r1",
+      "state": "UI_WAIT_FAILURE",
+      "reason": "No successful publication; diagnosed with bounded job observations in r2"
+    },
+    {
+      "output": "repository-hosted-h4-browser-r2",
+      "state": "BROWSER_FIXTURE_RESPONSE_FAILURE",
+      "reason": "Synthetic GitHub response omitted required body; fixture corrected without changing reader"
+    },
+    {
+      "output": "repository-hosted-h4-browser-r3",
+      "state": "PASS",
+      "reason": "Hosted and retained offline Chrome flow"
+    },
+    {
+      "log": "1794004088457662000",
+      "state": "DEPENDENCY_PATH_FAILURE",
+      "reason": "FFmpeg test first lacked documented CALF-sdk PYTHONPATH; same prior SDK path reused successfully"
+    },
+    {
+      "output": "repository-hosted-h4-browser-r4",
+      "state": "PASS_FINAL",
+      "reason": "Final UI/API refinements and legacy regression verified"
+    }
+  ],
+  "not_qualified": [
+    "H5 complete live provider/public/private permissions matrix",
+    "Windows/Linux hosted UI and native editor launch",
+    "Physical mobile devices and fresh package installation",
+    "Performance/peak-memory qualification",
+    "Merge-base comparison, Enterprise/Self-Managed and non-Python call analysis"
+  ],
+  "acceptance": {
+    "state": "SCOPED_H4_PROGRESS_ONLY",
+    "related_criteria": [
+      "HG10",
+      "HG12",
+      "HG13",
+      "HG14",
+      "HG15",
+      "HG20",
+      "HG21",
+      "HG22",
+      "HG23",
+      "HG24",
+      "HG25"
+    ],
+    "full_matrix": "HG01-HG32 remain NOT_RUN"
+  },
+  "effects": {
+    "inspected_source_repository_or_provider_writes": false,
+    "git_clone_fetch_commit_push": false,
+    "new_app_data_test_artifacts_only": true,
+    "existing_calf_record_writes": false,
+    "navigation_is_execution_authority": false
+  },
+  "source_sha256": {
+    "calf_extensions/repository/assets/portal.css": "824d7a100d2d7847a583592ae11223334f411ebde730e9fec2a53b0d0802157f",
+    "calf_extensions/repository/assets/portal.html": "46e0aabc3c8b507501b71e7de014c7252bf575a9a3b427bbd59faa5c25852404",
+    "calf_extensions/repository/assets/portal.js": "f6acc0a8af57b89da880f03fe9e03b40dcc426b1732181a66f7fd44177a50f76",
+    "calf_extensions/repository/cli.py": "87f1a0d4cc070cf2a95795381e14b302c7b8d15ec22dbed6566cb33b377c1a58",
+    "calf_extensions/repository/navigation.py": "e951aa7d9bef5547a0b86ef339a45abd1384601d182aa4ff0dd1058e09cc52d5",
+    "calf_extensions/repository/offline.py": "a6a1dd477e4a6ea2251471b929c897169758a632eb2fc350031bb11743eb53bf",
+    "calf_extensions/repository/tests/test_navigation_h4.py": "ada3cc8cfd2476153e28a76feab73d9e85ccd62e87d6837d9e2ea1bf76c99429",
+    "calf_extensions/repository/tests/test_portal_h4.py": "18dfe5d84d758e99ed6382e49a202014b1241f66eef5733ffdf896aa27173856",
+    "calf_extensions/repository/viewer.py": "08ca445e2e4edd5314ee1cde5199eb0b9f3e47dd6cbc65eb148194e8660a4d76"
+  },
+  "execution_evidence": {
+    "build_project_key": "0de352e7927da8af55d4",
+    "log_ids": {
+      "repository_suite": "1794004043584771000",
+      "h4_focused": "1794004132283870000",
+      "cached_cli": "1794004321345137000",
+      "ffmpeg_contract": "1794004142155317000",
+      "js_syntax": "1794004406282595000",
+      "hosted_browser": "1794004409388187000",
+      "local_browser": "1794004412056134000",
+      "preservation_final": "1794004498407736000"
+    },
+    "baseline_sha256": "3e13b5f2ace0ff09043cab92f836f49baa48496ce9eefdd0011b1dcf0884cf12",
+    "preservation_sha256": "d8d4bdecc8aa6eb3f5a5c4dc34952843120ae942475c0dafa14f97fab238010b",
+    "hosted_browser_report_sha256": "49b5adf84c0bdf67cf756c2c18afee7ab93b7564892100e2be9f57b2e1da3de9",
+    "local_browser_report_sha256": "e21b7da143de923e6e9cc3238a5a6e431c4bad7e0c936e3813c591096f25d602",
+    "helper_sha256": {
+      "finalize_report.py": "3a3e5c5bf4ab338b32cdcf71f98eb52e030c4ff022bc9f0a9a47c177027714b8",
+      "update_portal.py": "116f037ab2dcf8560553ff2f7e3230795d106ff14acb8cf66f92882c28dcda3b",
+      "hosted_browser.cjs": "1517db9ae690af9ec64b946d58e3f63cbe600fcc2dbe07108affd9040baf9864",
+      "check_hosted_browser.py": "12f303acf66a490b389c7761b54695c417c634f377814e157f795beae2f9fd60",
+      "check_local_browser.py": "b5947eeb07ac9bf80dfa3ab4eca807de27449f678571a8eb4107cb61b1342c68",
+      "check_preservation.py": "6f37a9e4124007a2c93fa1f04b0208f7e83fccca2fdfaedb0d261e59a5f6c2e5"
+    },
+    "guide_sha256": {
+      "REPOSITORY_HOSTED_H4.md": "e1407786f6e25324cddebe692b5fd51dd1a83b92d3636da6dc0dc80793ba103b",
+      "REPOSITORY_HOSTED_H4_KR.md": "ecc8deeba6559d22ca22abfb8b6b06db784306c669b3506d8d53857d0f90011d"
+    },
+    "final_static_check": {
+      "log": "1794004537613183000",
+      "sha256": "ac8c42adeb632cfb23ee4c7afbbc223ed2266c2218e6b4c085ed3bcdc2b0d337",
+      "source_hashes_verified": 9,
+      "local_doc_links": 24
+    }
+  }
+}

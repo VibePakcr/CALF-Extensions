@@ -7,9 +7,9 @@ import time
 from urllib.parse import unquote, urlsplit
 from pathlib import PurePosixPath
 from .compare import source
-from .model import RepositoryError, digest, now, path_record, validate_navigation, validate_settings
+from .model import RepositoryError, canonical, digest, now, validate_navigation, validate_settings
 
-ANALYZER='python-ast-v1'
+ANALYZER='python-ast-v3'
 
 
 def module_name(path):
@@ -35,10 +35,22 @@ def local_bindings(node):
     return names
 
 
-def analyze(reader,store,capture,settings=None):
-    settings=validate_settings({} if settings is None else settings);nodes={};edges=[];unresolved=[];files={};symbols={};module_files={};cache={};source_lines={};deadline=time.monotonic()+120
+def analyze(reader,store,capture,settings=None,*,source_reader=None):
+    """Keep the v1 Local Git call signature while analyzing a source-neutral snapshot."""
+    from .providers.local import LocalSource
+    backend=source_reader or LocalSource.from_reader(reader,store)
+    deadline=time.monotonic()+120
+    snapshot=backend.analysis_snapshot(capture,read_source=source,deadline=deadline)
+    return analyze_snapshot(snapshot,settings,deadline=deadline)
+
+
+def analyze_snapshot(snapshot,settings=None,*,deadline=None):
+    """Analyze retained bytes through the common snapshot contract, with no local paths."""
+    from .providers.base import Snapshot
+    if not isinstance(snapshot,Snapshot):raise RepositoryError('SOURCE_CONTRACT','Expected an immutable snapshot')
+    settings=json.loads(canonical(validate_settings({} if settings is None else settings)));nodes={};edges=[];edge_ids=set();unresolved=[];files={};symbols={};module_files={};cache={};source_lines={};deadline=deadline if deadline is not None else time.monotonic()+120
     def check():
-        if reader.cancel_event.is_set():raise RepositoryError('CANCELLED','Analysis cancelled',130)
+        if snapshot.cancel_event.is_set():raise RepositoryError('CANCELLED','Analysis cancelled',130)
         if time.monotonic()>deadline:raise RepositoryError('ANALYSIS_TIMEOUT','Analysis exceeded its time budget')
     def segment(file,node):
         lines=source_lines.get(file['id'],[])
@@ -53,16 +65,21 @@ def analyze(reader,store,capture,settings=None):
         nodes[value['id']]=value
     def evidence(file,node=None):
         value=cache.get(file['id'],{})
-        return {'file_id':'file:'+file['id'],'path':file['path'],'start_line':getattr(node,'lineno',1),'end_line':getattr(node,'end_lineno',getattr(node,'lineno',1)),
-                'sha256':value.get('sha256'),'capture_id':capture['capture_id'],'method':ANALYZER if node else 'TRACKED_INVENTORY'}
+        ref={'file_id':'file:'+file['id'],'path':file['path'],'start_line':getattr(node,'lineno',1),'end_line':getattr(node,'end_lineno',getattr(node,'lineno',1)),
+             'sha256':value.get('sha256'),'capture_id':snapshot.snapshot_id,'method':ANALYZER if node else 'TRACKED_INVENTORY'}
+        if node is not None:ref.update(start_column=node.col_offset,end_column=node.end_col_offset)
+        return ref
     def edge(a,b,kind,ref,label=None):
-        if len(edges)>=100000:raise RepositoryError('ANALYSIS_LIMIT','Project relation limit exceeded',3)
         if a not in nodes or b not in nodes:raise RepositoryError('EDGE_ENDPOINT','Missing graph endpoint')
         key=digest(json.dumps([a,b,kind,ref,label],sort_keys=True).encode())
+        if key in edge_ids:return
+        if len(edges)>=100000:raise RepositoryError('ANALYSIS_LIMIT','Project relation limit exceeded',3)
+        edge_ids.add(key)
         edges.append({'id':key,'from':a,'to':b,'kind':kind,'provenance':ref,'label':(label or kind)[:256]})
-    root='project:'+capture['repository']['repository_id'];add_node({'id':root,'kind':'project','label':settings.get('label') or PurePosixPath(capture['repository']['root']).name,'description':settings.get('description',''),'state':'REGISTERED'})
+    root='project:'+snapshot.repository.project_id;add_node({'id':root,'kind':'project','label':settings.get('label') or snapshot.repository.label,'description':settings.get('description',''),'state':'REGISTERED'})
     directories={'':root}
-    for f in capture['files']:
+    for entry in snapshot.entries:
+        f=entry.as_dict()
         path=f['path'];identifier='file:'+f['id'];suffix=PurePosixPath(path).suffix.lower()
         kind='document' if suffix in ['.md','.rst','.txt'] else 'file'
         value={'id':identifier,'kind':kind,'label':PurePosixPath(path).name,'path':path,'path_id':f['id'],'language':'python' if suffix=='.py' else suffix.lstrip('.') or 'unknown','description':'','state':'INVENTORIED','analysis':'UNSUPPORTED_LANGUAGE' if suffix!='.py' else 'PENDING'}
@@ -74,9 +91,9 @@ def analyze(reader,store,capture,settings=None):
                 identifier_dir='directory:'+current;add_node({'id':identifier_dir,'kind':'directory','label':piece,'path':current,'state':'INVENTORIED'});edge(directories[parent],identifier_dir,'CONTAINS',{'method':'TRACKED_INVENTORY'});directories[current]=identifier_dir
             parent=current
         edge(directories[parent],identifier,'CONTAINS',evidence(f))
-        if f['working'].get('sha256'):
-            cache[f['id']]=source(reader,store,capture,f['id'],'working')
-            if cache[f['id']].get('text') is not None:source_lines[f['id']]=cache[f['id']]['text'].encode('utf-8').splitlines(keepends=True)
+        content=snapshot.read_content(f['id'])
+        cache[f['id']]=content.value('working' if snapshot.revision.kind=='working' else 'commit',snapshot.revision.commit_id,snapshot.captured_at)
+        if cache[f['id']].get('text') is not None:source_lines[f['id']]=cache[f['id']]['text'].encode('utf-8').splitlines(keepends=True)
         if suffix=='.py':
             name=module_name(path)
             module_files.setdefault(name,[]).append(f['id'])
@@ -112,6 +129,10 @@ def analyze(reader,store,capture,settings=None):
     def resolve_module(name):
         values=module_files.get(name,[])
         return values[0] if len(values)==1 else None
+    def find_symbol(target,qual):
+        found=symbols.get((target,qual),[])
+        return found[0] if len(found)==1 else None
+
     def external(name):
         identity='external:'+name
         if identity not in nodes:add_node({'id':identity,'kind':'external_interface','label':name,'state':'IMPLEMENTATION_NOT_ANALYZED'})
@@ -157,9 +178,6 @@ def analyze(reader,store,capture,settings=None):
         Bindings().visit(tree)
         rebound.update(key for key,count in counts.items() if count>1)
         if '*' in counts:rebound.update([*topdefs,*aliases])
-        def find_symbol(target,qual):
-            found=symbols.get((target,qual),[])
-            return found[0] if len(found)==1 else None
         class Calls(ast.NodeVisitor):
             def __init__(self):self.scope=[];self.qual=[];self.classes=[]
             def visit_ClassDef(self,node):
@@ -223,12 +241,14 @@ def analyze(reader,store,capture,settings=None):
             identity=category+':'+item['id'];add_node({'id':identity,'kind':category,'label':item['label'],'description':item['definition'],'state':'EXPLICIT_MAPPING','references':verified_refs})
             for ref in verified_refs:
                 if ref['status']=='RESOLVED_SOURCE_RANGE':
-                    edge(identity,ref['file_id'],'DOCUMENTS',dict(ref,method='EXPLICIT_USER_MAPPING',capture_id=capture['capture_id']),ref['path'])
+                    edge(identity,ref['file_id'],'DOCUMENTS',dict(ref,method='EXPLICIT_USER_MAPPING',capture_id=snapshot.snapshot_id),ref['path'])
             for target in item.get('targets',[]):
                 match=next((f for f in files.values() if f['path']==target.get('path')),None);to=None
                 if match:to=find_symbol(match['id'],target['symbol']) if target.get('symbol') else 'file:'+match['id']
                 if to:edge(identity,to,'IMPLEMENTS_FEATURE' if category=='feature' else 'DOCUMENTS',{'method':'EXPLICIT_USER_MAPPING','references':verified_refs})
                 else:unresolved.append({'from':identity,'reason':'MAPPING_TARGET_UNRESOLVED','target':target})
-    return validate_navigation({'schema':'calf.repository.navigation.v1','project':root,'capture_id':capture['capture_id'],'generated_at':now(),'nodes':list(nodes.values()),'edges':edges,'unresolved':unresolved,
+    mapping_digest=digest(canonical(settings))
+    navigation_id=digest(canonical([snapshot.input_id,mapping_digest,ANALYZER,'calf.repository.navigation.v1']))
+    return validate_navigation({'schema':'calf.repository.navigation.v1','project':root,'capture_id':snapshot.snapshot_id,'navigation_id':navigation_id,'input_snapshot_id':snapshot.input_id,'mapping_digest':mapping_digest,'source_kind':snapshot.repository.provider,'repository_key':snapshot.repository.key,'generated_at':now(),'nodes':list(nodes.values()),'edges':edges,'unresolved':unresolved,
             'source_captures':{key:{k:v for k,v in value.items() if k not in ['text','snapshot_path','current_path']} for key,value in cache.items()},
-            'coverage':{'analyzers':[ANALYZER],'supported_languages':['python'],'files':len(files),'parsed_python':sum(n.get('analysis')=='PARSED' for n in nodes.values()),'unresolved':len(unresolved),'feature_definitions':'EXPLICIT_MAPPING_ONLY','runtime_verified':False}})
+            'coverage':{'analyzers':[ANALYZER],'supported_languages':['python'],'files':len(files),'parsed_python':sum(n.get('analysis')=='PARSED' for n in nodes.values()),'unresolved':len(unresolved),'feature_definitions':'EXPLICIT_MAPPING_ONLY','runtime_verified':False,'snapshot':{'inventory_complete':snapshot.inventory_complete,'content_ready':sum(v.availability=='READY' for v in snapshot.contents.values()),'content_total':len(snapshot.entries)}}})

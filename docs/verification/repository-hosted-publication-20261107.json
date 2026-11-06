@@ -1,0 +1,28 @@
+{
+  "schema": "calf.repository.hosted.publication-precommit.v1",
+  "date": "2026-11-07",
+  "state": "VERIFIED_FOR_COMMIT",
+  "source_baseline_commit": "66bdf4a6e8d19ec87b4a10b9e541f1fe3870dc02",
+  "h5_qualification": "repository-hosted-h5-20261107.json",
+  "h5_qualification_sha256": "69bed61263a0658fceba79b49838482ad54c57982f706abb2cb5e741ce729399",
+  "h5_candidate_manifest_sha256": "b0e5dadc9e0e4f18f68e228f12f09ff849f3644d086b8eda6f0b44cc71772943",
+  "h5_source_files": 39,
+  "unchanged_h5_source_files": 38,
+  "format_only_normalization": {
+    "path": "calf_extensions/repository/providers/local.py",
+    "before_sha256": "964881d10f2c2d1da190d97811b5b8127d991bc3885605cdd760c83a42783bb3",
+    "after_sha256": "0b56eba58c6617105c1895a11c25d5bd9b730e4c14046ca9c6eb78ac7b9c4224",
+    "change": "Remove one blank line at EOF",
+    "python_ast_unchanged": true
+  },
+  "focused_validation": {
+    "tests": 20,
+    "failures": 0,
+    "build_log": "1794008063700672000",
+    "scope": "Source contracts and portal H4 after EOF-only normalization"
+  },
+  "existing_ffmpeg_or_calf_record_changes": false,
+  "unrelated_pack_changes_included": false,
+  "private_full_matrix_qualification_added": false,
+  "commit_or_push_claim": "Not encoded here; remote SHA is verified after Git completes"
+}

@@ -45,7 +45,7 @@ Claude Code 실제 작업은 macOS에서 확인했습니다. Claude Desktop GUI 
 
 작업 소스에는 무료 [Local Git 프로젝트 탐색기](docs/REPOSITORY_NAVIGATOR_KR.md)가 포함됩니다. 프로젝트를 선택하면 기능·정의·문서·파일·Python 심볼의 관계 지도를 탐색하고, 맵 아래에서 설명·정확한 버전의 코드·Diff·출처를 확인할 수 있습니다.
 
-현재는 소스에서 실행하는 개발 미리보기이며, 공개된 FFmpeg 0.1.0 압축파일과는 별도입니다. CALF 코어·SDK·계정·모델 API를 요구하지 않습니다. [플랫폼별 검증 범위와 한계](REPOSITORY_VERIFICATION.json)를 확인하십시오. GitHub·GitLab 서비스 어댑터와 다른 언어의 분석기는 후속 범위입니다.
+현재는 소스에서 실행하는 개발 미리보기이며 공개된 FFmpeg 0.1.0 압축파일과는 별도입니다. Local Git는 CALF 코어·SDK·계정·모델 API를 요구하지 않습니다. 수동 등록한 GitHub·GitLab 소스도 같은 지도와 코드/Diff 패널로 탐색합니다. [원격 탐색 안내](docs/REPOSITORY_HOSTED_H4_KR.md)와 [H5 공개·데스크톱 검증 범위](docs/REPOSITORY_HOSTED_H5_KR.md)를 확인하십시오. 비공개 접근·에디터 실행·실제 모바일 검증은 남아 있습니다.
 
 ## 저장소 구성
 

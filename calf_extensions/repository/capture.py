@@ -56,14 +56,14 @@ def stable_read(root, raw, limit=SOURCE_LIMIT):
         for fd in reversed(fds):os.close(fd)
 
 class Store:
-    def __init__(self,directory,reader=None):
+    def __init__(self,directory,reader=None,*,create=False):
         self.directory=Path(directory).expanduser().resolve()
         if reader:
             for name in ('root','git_dir','common_dir'):
                 protected=Path(reader.info[name])
                 if self.directory==protected or self.directory.is_relative_to(protected):
                     raise RepositoryError('OUTPUT_IN_REPOSITORY','Data directory must be outside repository and Git directories')
-        if reader:
+        if reader or create:
             self.directory.mkdir(parents=True,exist_ok=True,mode=0o700)
             for name in ['projects','captures','sources']: (self.directory/name).mkdir(exist_ok=True,mode=0o700)
         elif not self.directory.is_dir():
@@ -98,12 +98,44 @@ class Store:
     def load(self,identity):
         if not isinstance(identity,str) or len(identity)!=64 or any(c not in '0123456789abcdef' for c in identity):raise RepositoryError('INVALID_CAPTURE','Invalid capture identity')
         path=self.directory/'captures'/(identity+'.json')
+        if not path.exists():path=self.directory/'captures-v2'/(identity+'.json')
         if path.stat().st_size>32*1024*1024:raise RepositoryError('CAPTURE_LIMIT','Capture metadata too large',3)
         raw=path.read_bytes()
         if digest(raw)!=identity:raise RepositoryError('CAPTURE_CHANGED','Capture bytes do not match identity')
         data=json.loads(raw)
-        if data.get('schema')!=SCHEMA:raise RepositoryError('CAPTURE_SCHEMA','Unknown capture schema')
+        if data.get('schema') not in {SCHEMA,'calf.repository.capture.v2'}:raise RepositoryError('CAPTURE_SCHEMA','Unknown capture schema')
         return dict(data,capture_id=identity)
+    def read_source_bytes(self,key):
+        if not isinstance(key,str) or len(key)!=64 or any(c not in '0123456789abcdef' for c in key):raise RepositoryError('INVALID_SOURCE','Invalid source cache identity')
+        raw,kind=stable_read(self.directory/'sources',key.encode('ascii'))
+        if kind=='absent':raise FileNotFoundError('Retained source is missing')
+        if raw is None or digest(raw)!=key:raise RepositoryError('SOURCE_CACHE_CHANGED','Retained source does not match its byte identity')
+        return raw
+    def save_snapshot(self,snapshot):
+        from .providers.base import Snapshot
+        if not isinstance(snapshot,Snapshot) or snapshot.legacy_capture_id is not None:
+            raise RepositoryError('SOURCE_CONTRACT','Save a new v2 snapshot; legacy captures are never migrated in place')
+        data=snapshot.manifest();raw=canonical(data)
+        if len(raw)>32*1024*1024:raise RepositoryError('CAPTURE_LIMIT','Snapshot metadata exceeds bound',3)
+        for value in snapshot.contents.values():
+            if value.data is not None:self.source(value.data)
+        directory=self.directory/'captures-v2';directory.mkdir(exist_ok=True,mode=0o700)
+        identity=digest(raw);path=directory/(identity+'.json')
+        try:
+            with path.open('xb') as stream:stream.write(raw)
+        except FileExistsError:
+            if path.read_bytes()!=raw:raise RepositoryError('CAPTURE_CONFLICT','Snapshot identity conflict')
+        return identity
+    def load_snapshot(self,identity):
+        from .providers.base import Snapshot
+        data=self.load(identity)
+        if data['schema']==SCHEMA:
+            from .providers.local import snapshot_from_v1
+            return snapshot_from_v1(data,self)
+        manifest={k:v for k,v in data.items() if k!='capture_id'}
+        try:return Snapshot.from_manifest(manifest,self.read_source_bytes)
+        except FileNotFoundError as error:raise RepositoryError('SOURCE_CACHE_MISSING','Snapshot references missing retained bytes') from error
+
     def source(self,data):
         key=digest(data);path=self.directory/'sources'/key
         try:
