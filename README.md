@@ -41,6 +41,12 @@ The [verification summary](VERIFICATION.json) records the tools, native cores an
 
 The live Claude Code workflow was tested on macOS. Claude Desktop GUI configuration, other OS/architecture combinations, production footage, longer jobs, aesthetic/semantic review, ComfyUI, Remotion, Veo, Runway and other generation APIs are **not qualified by these tests**. The reference architecture describes future extensions, not completed integrations.
 
+## Project navigation preview
+
+The working source includes a free [Local Git project navigator](docs/REPOSITORY_NAVIGATOR.md). Select a project to explore features, definitions, documents, files and Python symbols in a relationship map, then inspect descriptions, exact-version code, Diff and provenance below the map.
+
+This source-run development preview is separate from the published FFmpeg 0.1.0 archives. It needs no CALF core, SDK, account or model API. See the [cross-platform verification scope and limitations](REPOSITORY_VERIFICATION.json); GitHub/GitLab service adapters and additional language analyzers remain future work.
+
 ## Repository layout
 
 ```text

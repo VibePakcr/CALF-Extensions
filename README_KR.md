@@ -41,6 +41,12 @@ Python 표준 라이브러리와 CALF SDK만 사용합니다. SDK와 네이티�
 
 Claude Code 실제 작업은 macOS에서 확인했습니다. Claude Desktop GUI 설정, 다른 OS·아키텍처 조합, 실제 제작 영상, 장시간 작업, 미적·의미적 검수, ComfyUI·Remotion·Veo·Runway 등 생성 API는 **이번 시험의 검증 범위가 아닙니다**. 미디어 참조 아키텍처는 후속 확장의 방향이며, 완료된 연동 목록이 아닙니다.
 
+## 프로젝트 탐색 미리보기
+
+작업 소스에는 무료 [Local Git 프로젝트 탐색기](docs/REPOSITORY_NAVIGATOR_KR.md)가 포함됩니다. 프로젝트를 선택하면 기능·정의·문서·파일·Python 심볼의 관계 지도를 탐색하고, 맵 아래에서 설명·정확한 버전의 코드·Diff·출처를 확인할 수 있습니다.
+
+현재는 소스에서 실행하는 개발 미리보기이며, 공개된 FFmpeg 0.1.0 압축파일과는 별도입니다. CALF 코어·SDK·계정·모델 API를 요구하지 않습니다. [플랫폼별 검증 범위와 한계](REPOSITORY_VERIFICATION.json)를 확인하십시오. GitHub·GitLab 서비스 어댑터와 다른 언어의 분석기는 후속 범위입니다.
+
 ## 저장소 구성
 
 ```text

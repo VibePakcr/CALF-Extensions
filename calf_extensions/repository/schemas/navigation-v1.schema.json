@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:calf:repository:navigation:v1",
+  "title": "CALF project structure navigation",
+  "type": "object",
+  "required": ["schema", "project", "capture_id", "generated_at", "nodes", "edges", "unresolved", "coverage"],
+  "properties": {
+    "schema": {"const": "calf.repository.navigation.v1"},
+    "project": {"type": "string", "minLength": 1},
+    "capture_id": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "generated_at": {"type": "string"},
+    "nodes": {"type": "array", "items": {"type": "object", "required": ["id", "kind", "label", "state"], "properties": {
+      "id": {"type": "string", "minLength": 1},
+      "kind": {"enum": ["project", "directory", "feature", "term", "document", "module", "file", "symbol", "external_interface", "check", "evidence"]},
+      "label": {"type": "string"}, "state": {"type": "string"}
+    }}},
+    "edges": {"type": "array", "items": {"type": "object", "required": ["id", "from", "to", "kind", "provenance"], "properties": {
+      "id": {"type": "string"}, "from": {"type": "string"}, "to": {"type": "string"},
+      "kind": {"enum": ["CONTAINS", "DOCUMENTS", "IMPLEMENTS_FEATURE", "IMPORTS", "STATIC_CALL", "REFERENCES_INTERFACE", "TEST_REFERENCE", "SUPPORTED_BY"]},
+      "provenance": {"type": "object", "required": ["method"], "properties": {"method": {"type": "string"}}}
+    }}},
+    "unresolved": {"type": "array"}, "coverage": {"type": "object"}
+  }
+}

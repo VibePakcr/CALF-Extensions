@@ -1,0 +1,187 @@
+{
+  "schema": "calf.repository.qualification.v1",
+  "date": "2026-11-07",
+  "scope": "Synthetic fixture qualification of the source-run project navigation preview, not a production repository or hosted-provider qualification",
+  "source_sha256": {
+    "calf_extensions/__init__.py": "b644f33c8634a945785039ff961233964fe5dcb864f5e5ca8dea4fffce034800",
+    "calf_extensions/repository/__init__.py": "3349a797cb484b7fc01c91d6499837965843bc8778270ffa0319a93192943898",
+    "calf_extensions/repository/analyze.py": "0afaacbfff0e3da1d3a1333228d60cd6eb2dcbb2d2ab13c3a58d5d12b3131241",
+    "calf_extensions/repository/assets/portal.css": "707f3f26945de637d2697c9b07720bec612ccf2be53a362bcb9aee5fe2585c89",
+    "calf_extensions/repository/assets/portal.html": "55124a78624fc7dd1ec1665acc08bd6c60b2b341ac0910669184f2b24f45eac0",
+    "calf_extensions/repository/assets/portal.js": "c01ba752a6106ef97bcbd0b9ba0dbcf11a0c3e1189a96af0df9714d5fc90e16e",
+    "calf_extensions/repository/capture.py": "8c88bc20b10b76f35225b2c5be0b9beb53e070b32a0849b84e2ef16328c962e8",
+    "calf_extensions/repository/cli.py": "cd7743ccaa4cd5fcfaf55a2627b9c991e6951508a930b027109b439375add8f6",
+    "calf_extensions/repository/compare.py": "8e4de515f1ca15a8cbb486f191d32e5a5a291a7b9f856ededa2b2c6761acc4d9",
+    "calf_extensions/repository/export.py": "773f8485f1f5b43fae8c9b679f8c31b7bef3673969c15181d34ae54a8927cf7c",
+    "calf_extensions/repository/git_reader.py": "0fd0f26c270b57996227a182521ac6bcab2380450431d3f4c488864dcc25f8a5",
+    "calf_extensions/repository/model.py": "7b42cb17c65313d21fe5038e3bee5e9820e45e07d481785014eac6ab9484b01e",
+    "calf_extensions/repository/schemas/capture-v1.schema.json": "58f71d0bdfebf46a8d4eaf552f4772ab45a27c8f53179f6a8dc45aaa6eb0afb4",
+    "calf_extensions/repository/schemas/navigation-v1.schema.json": "dada5651c82c9a06302ab56a944dfb2fecd81ff3d9e7a61c260e11fbf0974b48",
+    "calf_extensions/repository/tests/__init__.py": "2039c7313d14ca9c9013ef903d5ee29959bf7475c95f755106f9a4a56fdf343e",
+    "calf_extensions/repository/tests/test_git_contract.py": "767c6436b98d3c8908eb84b71eb5995e7f0233c77f718a3569647ddd1d393c97",
+    "calf_extensions/repository/tests/test_limits.py": "6c6f49cddd5ed1e30803ced66aef1f1946916ae51978b698b8f102d5b4dc7776",
+    "calf_extensions/repository/tests/test_navigation.py": "80e38e71d0a32dc782cdec8117f7610d17ab715dae2e60ec48384ae6d1c96fd7",
+    "calf_extensions/repository/tests/test_portal.py": "f485dc20c73b7fd021b48483aa280a29658b977c590ab52f6eeb8d103e7579d5",
+    "calf_extensions/repository/viewer.py": "be3471aad71759c27d3a8251aa5f418ff10ee2ead34ad312d16f4a309c4f40a1"
+  },
+  "results": {
+    "macos": {
+      "unit": {
+        "passed": 22,
+        "skipped": 0,
+        "reuse": "Prior complete run; corrected disposable missing-object fixture rerun locally"
+      },
+      "browser": {
+        "state": "PASS",
+        "node": "v25.9.0",
+        "actual_browser": true,
+        "project_portal": true,
+        "static_call_line": 6,
+        "below_map_inspector": true,
+        "diff": true,
+        "editor_uri": true,
+        "bookmark_restore": true,
+        "touch_pinch_emulation": true,
+        "widths": [
+          1440,
+          390,
+          320
+        ],
+        "runtime_errors": []
+      },
+      "offline_browser": {
+        "state": "PASS",
+        "node": "v25.9.0",
+        "actual_browser": true,
+        "project_portal": true,
+        "static_call_line": 6,
+        "below_map_inspector": true,
+        "diff": true,
+        "editor_uri": false,
+        "offline_without_http": true,
+        "bookmark_restore": true,
+        "touch_pinch_emulation": true,
+        "widths": [
+          1440,
+          390,
+          320
+        ],
+        "runtime_errors": []
+      },
+      "package_smoke": {
+        "state": "PASS",
+        "platform": "macos-arm64",
+        "wheel_sha256": "53ca56c104b61e09e3516b4277ba20e9957cb3660b3295397b29e9bba1ba8d02",
+        "calf_repo_entrypoint_help": "PASS",
+        "sdk_imported": false,
+        "media_source_files_unchanged": 10,
+        "unrelated_packages_excluded": true,
+        "scope": "Isolated wheel build/install from the scoped commit tree; source-only publication, no release archive replacement"
+      }
+    },
+    "linux": {
+      "unit": {
+        "tests": 22,
+        "errors": 0,
+        "failures": 0,
+        "skipped": [],
+        "success": true
+      },
+      "browser": {
+        "state": "PASS",
+        "node": "v20.19.2",
+        "actual_browser": true,
+        "project_portal": true,
+        "static_call_line": 6,
+        "below_map_inspector": true,
+        "diff": true,
+        "editor_uri": true,
+        "bookmark_restore": true,
+        "touch_pinch_emulation": true,
+        "widths": [
+          1440,
+          390,
+          320
+        ],
+        "runtime_errors": []
+      },
+      "cleanup": {
+        "server_stopped": true,
+        "listening_socket_closed": true,
+        "temporary_directory_removed": true
+      }
+    },
+    "windows": {
+      "unit": {
+        "tests": 22,
+        "errors": 0,
+        "failures": 0,
+        "skipped": [
+          [
+            "test_output_limit_and_owned_process_timeout (calf_extensions.repository.tests.test_limits.Limits.test_output_limit_and_owned_process_timeout)",
+            "POSIX executable fixture; Windows executable lifecycle is qualified separately"
+          ]
+        ],
+        "success": true
+      },
+      "browser": {
+        "state": "PASS",
+        "node": "v24.18.0",
+        "actual_browser": true,
+        "project_portal": true,
+        "static_call_line": 6,
+        "below_map_inspector": true,
+        "diff": true,
+        "editor_uri": true,
+        "bookmark_restore": true,
+        "touch_pinch_emulation": true,
+        "widths": [
+          1440,
+          390,
+          320
+        ],
+        "runtime_errors": []
+      },
+      "cleanup": {
+        "server_stopped": true,
+        "owned_browser_processes_remaining": 0
+      }
+    }
+  },
+  "initial_failures_retained": [
+    {
+      "attempt": "candidate02",
+      "linux": "Browser harness lacked the installed Node 20 experimental WebSocket flag; 22 backend checks passed",
+      "windows": "Disposable loose-object deletion needed the Windows read-only attribute handled; skipped test object was not serializable in the test report"
+    },
+    {
+      "attempt": "candidate03",
+      "linux": "22 backend checks passed; Chrome refused an overlong test temporary socket path. Browser-only follow-up passed with a private short temporary directory, removed afterward."
+    }
+  ],
+  "followup_runtime_changes": false,
+  "raw_private_receipt_sha256": {
+    "remote-debian-work-candidate02/summary.json": "45adc9bedbc4fded781cf607e0e666ec157c32ecce4dbdab4a58856ea5c4becf",
+    "remote-packr-win-candidate02/summary.json": "ee82e478f262637517b3bc7de8a527adcd9b86d773b11a35696c5116d689d26c",
+    "remote-debian-work-candidate03/summary.json": "7a4a0c51209b265be16fef4833ffb7a7b1837d5d6e5a7323db1afc6280602fd9",
+    "remote-packr-win-candidate03/summary.json": "ddfc7355c1746d99888b23471168d6b667ecb98a6ee6cc8dfa2f2c2bb8113293",
+    "remote-debian-work-browser-r1/report.json": "ad737e3cf24978a7f4a90cb62c27ed5c0dfd4d546318a0680eaedb0e63c94a01",
+    "remote-validation-final.json": "de1641a22629a3a18b946d3bebe23e6a84ef579ebf0d987511f0f7ea67b7c50e"
+  },
+  "limits": [
+    "Rust/JS/TS symbol or call analysis",
+    "CALF evidence integration",
+    "GitHub/GitLab service APIs or account discovery",
+    "Physical mobile devices",
+    "Safari",
+    "Actual external editor launch",
+    "All LG01-LG28 release criteria",
+    "Windows/Linux wheel installation",
+    "Native Windows process-tree timeout and output-limit fixture (POSIX-specific test skipped)"
+  ],
+  "publication_checks": {
+    "packaging_initial_failure": "The base Python lacked setuptools; the standard isolated pyproject build environment supplied build dependencies and the wheel/install check passed",
+    "source_runtime_retested": false,
+    "source_runtime_reason": "All runtime hashes match the previously qualified fixed candidate"
+  }
+}

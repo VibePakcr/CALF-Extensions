@@ -1,0 +1,168 @@
+{
+  "extension": "repository",
+  "version": "0.1.0.dev0",
+  "status": "CROSS_PLATFORM_LOCAL_DEVELOPMENT_PREVIEW_VERIFIED_WITH_LIMITS",
+  "date": "2026-11-07",
+  "product": "Project shape portal, relationship map and below-map source inspector",
+  "qualification": {
+    "macos": {
+      "state": "PASS_WITH_SCOPE",
+      "arch": "arm64",
+      "python": "3.12.13",
+      "git": "2.54.0",
+      "chrome": "157.0.8103.38"
+    },
+    "windows": {
+      "state": "PASS_WITH_SCOPE",
+      "arch": "AMD64",
+      "python": "3.12.10",
+      "git": "git version 2.55.0.windows.1",
+      "edge": "156.0.4314.58",
+      "unit_attempted": 22,
+      "unit_passed": 21,
+      "unit_skipped": 1,
+      "skip_reason": "POSIX executable fixture; native Windows process-tree timeout/output-limit qualification remains unverified",
+      "browser": "Actual Edge; headless CDP interaction and touch emulation"
+    },
+    "linux": {
+      "state": "PASS_WITH_SCOPE",
+      "arch": "x86_64",
+      "python": "3.13.5",
+      "git": "git version 2.47.3",
+      "chrome": "Google Chrome 157.0.8103.38",
+      "unit_passed": 22,
+      "browser": "Actual Chrome; headless CDP interaction and touch emulation"
+    }
+  },
+  "checks": {
+    "repository_unit_and_integration": {
+      "state": "PASS_WITH_SCOPE",
+      "macos": {
+        "passed": 22,
+        "evidence": "Previous same-runtime run reused; corrected missing-object fixture rerun and passed"
+      },
+      "linux": {
+        "passed": 22,
+        "skipped": 0
+      },
+      "windows": {
+        "passed": 21,
+        "skipped": 1,
+        "skip": "POSIX executable lifecycle fixture"
+      }
+    },
+    "existing_media_contract_regression": {
+      "state": "PASS",
+      "tests": 3,
+      "scope": "Existing contract unit tests; full media qualification was not repeated"
+    },
+    "traversal": {
+      "state": "PASS",
+      "named_cases": 8,
+      "independent_closure_cases": 18,
+      "scope": "Cycle, diamond, depth, direction and isolation fixtures"
+    },
+    "browser": {
+      "state": "PASS",
+      "widths": [
+        1440,
+        390,
+        320
+      ],
+      "touch_pinch": "CDP emulation, not physical phone",
+      "editor": "URI and line wiring, not actual editor launch",
+      "features": [
+        "project portal",
+        "source relationship",
+        "below-map inspector",
+        "static call site",
+        "Diff",
+        "bookmark restoration",
+        "language toggle"
+      ],
+      "platforms": [
+        "macOS Chrome",
+        "Windows Edge",
+        "Debian Chrome"
+      ],
+      "remote_source_line": 6
+    },
+    "scale": {
+      "state": "PASS_WITH_SCOPE",
+      "tracked_files": 10000,
+      "commits": 20000,
+      "history_page": 200,
+      "runs": 5,
+      "max_seconds": 2.596,
+      "peak_rss_upper_bound_mib": 334.047,
+      "scope": "One docstring per source module, no symbols/calls; OS disk cache not cleared; separate empty app data per run; sum of self and child process RSS peaks"
+    },
+    "offline_browser": {
+      "state": "PASS",
+      "network": "HTTP and HTTPS requests blocked",
+      "widths": [
+        1440,
+        390,
+        320
+      ],
+      "features": [
+        "below-map inspector",
+        "static call site",
+        "Diff",
+        "bookmark restore",
+        "touch pinch emulation"
+      ],
+      "editor": "Original editor link intentionally absent from portable export"
+    },
+    "remote_cleanup": {
+      "state": "PASS",
+      "foreground_servers_stopped": true,
+      "remaining_browser_processes_for_owned_profiles": 0,
+      "short_linux_browser_temp_removed": true,
+      "original_and_successor_candidate_files_unchanged": true
+    },
+    "macos_package_smoke": {
+      "state": "PASS",
+      "platform": "macos-arm64",
+      "wheel_sha256": "53ca56c104b61e09e3516b4277ba20e9957cb3660b3295397b29e9bba1ba8d02",
+      "calf_repo_entrypoint_help": "PASS",
+      "sdk_imported": false,
+      "media_source_files_unchanged": 10,
+      "unrelated_packages_excluded": true,
+      "scope": "Isolated wheel build/install from the scoped commit tree; source-only publication, no release archive replacement"
+    }
+  },
+  "preservation": {
+    "existing_media_source_files": 10,
+    "media_source_hashes_unchanged": true,
+    "existing_calf_core_and_records_modified": false,
+    "calf_core_or_records_migrated": false
+  },
+  "supported_analysis": {
+    "python": "Standard AST definitions, docstrings, imports and resolvable static references",
+    "dynamic_calls": "Unresolved",
+    "features_and_terms": "Explicit project mappings with source-range resolution",
+    "other_languages": "File, document and version navigation only"
+  },
+  "not_qualified": [
+    "Rust/JS/TS symbol or call analysis",
+    "CALF evidence integration",
+    "GitHub/GitLab service APIs or account discovery",
+    "Physical mobile devices",
+    "Safari",
+    "Actual external editor launch",
+    "All LG01-LG28 release criteria",
+    "Windows/Linux wheel installation",
+    "Native Windows process-tree timeout and output-limit fixture (POSIX-specific test skipped)"
+  ],
+  "authority": "Navigation projection only; static relationships do not establish runtime success or release authority",
+  "distribution": "Repository source preview. This qualification does not update existing FFmpeg release archives, tags or native applications.",
+  "qualification_provenance": {
+    "owner_approved_candidate02_sha256": "6736e50e2e9b8e01f3cb513b2b228d6f351a449122d9832e88c8aaf70c0fd53e",
+    "tested_followup_candidate03_sha256": "70c59f41335d093e6109050d1a9d80a17bb6d18a25f3a526d2a4288665119e29",
+    "runtime_source_files_identical": 15,
+    "changes": "Disposable Windows missing-object test, skip serialization and Linux browser tooling environment only. No runtime code changed.",
+    "history": "Initial failed test-tool attempts and both immutable candidate directories retained; first failures are not rewritten as passes."
+  },
+  "result_receipts": "docs/verification/repository-20261107.json"
+}
