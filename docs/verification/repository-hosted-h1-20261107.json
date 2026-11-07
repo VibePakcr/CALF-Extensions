@@ -1,0 +1,188 @@
+{
+  "schema": "calf.repository.hosted-h1.qualification.v1",
+  "date": "2026-11-07",
+  "state": "H1_IMPLEMENTED_MACOS_SYNTHETIC_TRANSPORT_AND_LOCAL_UI_VERIFIED",
+  "baseline_commit": "66bdf4a6e8d19ec87b4a10b9e541f1fe3870dc02",
+  "implemented": [
+    "Manual GitHub.com/GitLab.com app-data registry, schema marker, append-preserved versions and disable-only removal",
+    "Environment credential references resolved on explicit requests only; pipe-owned worker authentication",
+    "Fixed-origin GET/HEAD endpoint policy, standard TLS, bounded responses/retries/ETag cache/pagination",
+    "Foreground identity probes with cancellable owned processes, generation/CAS publication guards and local API",
+    "CLI sources add/list/remove/check and probe --source; legacy Local interfaces preserved"
+  ],
+  "checks": {
+    "repository_suite": {
+      "state": "PASS",
+      "tests": 62,
+      "legacy": 22,
+      "h0": 12,
+      "h1": 28,
+      "seconds": 39.528,
+      "skips": 0
+    },
+    "ffmpeg_contract": {
+      "state": "PASS",
+      "tests": 3
+    },
+    "http_fixture": {
+      "state": "PASS",
+      "network": "Actual local HTTP server and subprocess transport; test-only injected connection factory",
+      "credential": "Synthetic canary only; owner credentials not read",
+      "covered": [
+        "Registration without credential lookup/network",
+        "Stable identity, rename and ID/version mismatch",
+        "GitLab subgroup/Unicode/plus namespace",
+        "GitHub/GitLab header separation and child argv/environment containment",
+        "Credential echo rejection and auth-session cache rotation",
+        "401/403/404/429 and no early rate-limit retry",
+        "ETag 304 with/without matching cache",
+        "Scoped identity redirects and pinned tree-pagination loop/scope/auth/budget limits",
+        "Invalid/duplicate JSON, HTML, oversized and truncated bodies",
+        "Owned stalled process cancellation, timeout and output bounds",
+        "Late response supersession and cancellation before identity publication",
+        "Loopback origin/bearer, typed bounded JSON and token-field refusal",
+        "Local map remains responsive and unchanged during identity-probe cancellation"
+      ]
+    },
+    "tls_negative_fixture": {
+      "state": "PASS",
+      "scope": "Actual local TLS server with an untrusted certificate rejected using default SSL verification; no trusted public TLS success claim"
+    },
+    "browser": {
+      "state": "PASS",
+      "browser_binary": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "node": "v25.9.0",
+      "actual_browser": true,
+      "project_portal": true,
+      "static_call_line": 6,
+      "below_map_inspector": true,
+      "diff": true,
+      "editor_uri": true,
+      "bookmark_restore": true,
+      "touch_pinch_emulation": true,
+      "widths": [
+        1440,
+        390,
+        320
+      ],
+      "runtime_errors": []
+    },
+    "offline_browser": {
+      "state": "PASS",
+      "browser_binary": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "node": "v25.9.0",
+      "actual_browser": true,
+      "project_portal": true,
+      "static_call_line": 6,
+      "below_map_inspector": true,
+      "diff": true,
+      "editor_uri": false,
+      "offline_without_http": true,
+      "bookmark_restore": true,
+      "touch_pinch_emulation": true,
+      "widths": [
+        1440,
+        390,
+        320
+      ],
+      "runtime_errors": []
+    },
+    "cleanup": {
+      "server_stopped": true,
+      "listening_socket_closed": true,
+      "owned_task_processes_remaining": 0
+    },
+    "static_parse": {
+      "state": "PASS",
+      "scope": "All repository Python sources parsed without executing project code"
+    }
+  },
+  "preservation": {
+    "state": "PASS",
+    "protected_files": 607,
+    "protected_unchanged": true,
+    "shared_working_unchanged": true,
+    "h0_source_changed": [
+      "calf_extensions/repository/viewer.py",
+      "calf_extensions/repository/cli.py"
+    ],
+    "head_unchanged": true,
+    "index_unchanged_empty": true,
+    "owned_task_processes_remaining": 0
+  },
+  "qualification_effects": {
+    "real_provider_requests": false,
+    "owner_credential_lookup": false,
+    "remote_resources_changed": false,
+    "existing_native_calf_records_written": false,
+    "git_commit_or_push": false,
+    "registration_ui_added": false
+  },
+  "identity_scope": "Identity verification only; no hosted ref/tree/blob snapshot collection or map publication",
+  "not_qualified": [
+    "Actual public/private GitHub/GitLab API access and permissions",
+    "Successful trusted public TLS",
+    "Hosted collectors, map/code/Diff UI, editor/permalinks and v2 offline export (H2-H4)",
+    "H1 on Windows/Linux",
+    "Fresh package installation and measured performance/peak memory",
+    "Physical phones and actual external editor launch"
+  ],
+  "acceptance": {
+    "related_criteria": [
+      "HG01",
+      "HG02",
+      "HG16",
+      "HG17",
+      "HG18",
+      "HG19",
+      "HG20"
+    ],
+    "state": "SCOPED_MACOS_FIXTURE_PROGRESS_ONLY",
+    "full_hosted_criteria": "HG01-HG32 remain NOT_RUN"
+  },
+  "source_sha256": {
+    "calf_extensions/repository/__init__.py": "3349a797cb484b7fc01c91d6499837965843bc8778270ffa0319a93192943898",
+    "calf_extensions/repository/analyze.py": "1fb48e3efbd02cee37dbb7afbb46bd3b34c7dfb4da14164fa10575af094ab3d5",
+    "calf_extensions/repository/assets/portal.css": "707f3f26945de637d2697c9b07720bec612ccf2be53a362bcb9aee5fe2585c89",
+    "calf_extensions/repository/assets/portal.html": "55124a78624fc7dd1ec1665acc08bd6c60b2b341ac0910669184f2b24f45eac0",
+    "calf_extensions/repository/assets/portal.js": "c01ba752a6106ef97bcbd0b9ba0dbcf11a0c3e1189a96af0df9714d5fc90e16e",
+    "calf_extensions/repository/capture.py": "d88afcfe6ee42e80d8299761611c761b03462177a20e7dc60dac6761d26936d4",
+    "calf_extensions/repository/cli.py": "3c7a356278314b8107821b1c78b27fbda60dfa613bc58c77ff10f1b0c27305c1",
+    "calf_extensions/repository/compare.py": "906b9b268c9929c55cd1bbec11b38a2be88fad7fd6ef2be80ddcbfc8b8e8bab4",
+    "calf_extensions/repository/export.py": "3404404c09d3c21e33caea926d750142400a9743462cb91fab74955204ec7f48",
+    "calf_extensions/repository/git_reader.py": "0fd0f26c270b57996227a182521ac6bcab2380450431d3f4c488864dcc25f8a5",
+    "calf_extensions/repository/hosted.py": "7cf48fe05bd145b2767d28b0f2b4729811fa5620b46ba54ef691417e63643288",
+    "calf_extensions/repository/http_reader.py": "72deecf587081bbad8848fb734349a9217131509fbabd579a84cf613c0833dc2",
+    "calf_extensions/repository/http_worker.py": "4156717bf55972caeb3e2e3bea61559ee1129023952d8d9d2f79682473758659",
+    "calf_extensions/repository/model.py": "7b42cb17c65313d21fe5038e3bee5e9820e45e07d481785014eac6ab9484b01e",
+    "calf_extensions/repository/providers/__init__.py": "f4d1d9d99c990438bbcfdaabc4bf984de37465baf75a12e90a4a1d7cd84247a5",
+    "calf_extensions/repository/providers/base.py": "6055aaaf31f897e184445e1f52e7cec14b3b19b8eb3053c22b0f3da7639aeb4e",
+    "calf_extensions/repository/providers/local.py": "964881d10f2c2d1da190d97811b5b8127d991bc3885605cdd760c83a42783bb3",
+    "calf_extensions/repository/registrations.py": "d5c87c420570f8400f5ce3b192022187592a9e10955c290fc205d35127ca1f12",
+    "calf_extensions/repository/schemas/capture-v1.schema.json": "58f71d0bdfebf46a8d4eaf552f4772ab45a27c8f53179f6a8dc45aaa6eb0afb4",
+    "calf_extensions/repository/schemas/capture-v2.schema.json": "606eea92dd5d839c20381b967e3d5342d5a7549af95e93b25622091bea75605f",
+    "calf_extensions/repository/schemas/navigation-v1.schema.json": "dada5651c82c9a06302ab56a944dfb2fecd81ff3d9e7a61c260e11fbf0974b48",
+    "calf_extensions/repository/tests/__init__.py": "2039c7313d14ca9c9013ef903d5ee29959bf7475c95f755106f9a4a56fdf343e",
+    "calf_extensions/repository/tests/_http_fixture_worker.py": "2c2b303edd50e64ac6834a14fe87dac0d32515a0483cf45b383c0965e25189ab",
+    "calf_extensions/repository/tests/test_git_contract.py": "767c6436b98d3c8908eb84b71eb5995e7f0233c77f718a3569647ddd1d393c97",
+    "calf_extensions/repository/tests/test_hosted_h1.py": "686c60acc8e2deffba796f01837bfba8dda752d7b1c329a024b28e00598eccf6",
+    "calf_extensions/repository/tests/test_limits.py": "6c6f49cddd5ed1e30803ced66aef1f1946916ae51978b698b8f102d5b4dc7776",
+    "calf_extensions/repository/tests/test_navigation.py": "80e38e71d0a32dc782cdec8117f7610d17ab715dae2e60ec48384ae6d1c96fd7",
+    "calf_extensions/repository/tests/test_portal.py": "f485dc20c73b7fd021b48483aa280a29658b977c590ab52f6eeb8d103e7579d5",
+    "calf_extensions/repository/tests/test_source_contract.py": "171825536545fa6f8f007b4763d9866ee12db59d83b5ba98dd85cd07739a1e6e",
+    "calf_extensions/repository/viewer.py": "8cbdbdd0cc6de39030e5b7145eca3c0eef71aa17a73924b2bb6f9530af5cf116"
+  },
+  "execution_evidence": {
+    "log_ids": {
+      "repository_suite": "1793991558258817000",
+      "ffmpeg_contract": "1793991554263931000",
+      "browser": "1793991559007241000",
+      "preservation": "1793991667385001000"
+    },
+    "build_project_key": "0de352e7927da8af55d4",
+    "browser_driver_sha256": "2dbc75d3e7e196d3134cd2edd0d08b65f8d27a0728a9e2e29b99b2920f49e94e",
+    "offline_driver_sha256": "af8605db1eb0f7c4fe824b99327fb009ff285a0add15a4c275f68e631fe7dc2b",
+    "preservation_baseline_sha256": "8092625e32d98a43bfd1860baa46303d55c1da2e41214c1a07490dff0ade43be"
+  },
+  "authority": "Read-only navigation plumbing only; no CALF core, release authority or remote-write authority added"
+}

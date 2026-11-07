@@ -1,0 +1,683 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "calf.extension-pack.v1"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9]*(?:[.-][a-z0-9]+)*$",
+      "maxLength": 96
+    },
+    "version": {
+      "type": "string",
+      "maxLength": 96,
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*)(?:\\.(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*))*)?(?:\\+[0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*)?$"
+    },
+    "availability": {
+      "enum": [
+        "reference",
+        "candidate",
+        "release"
+      ]
+    },
+    "channel": {
+      "enum": [
+        "experimental",
+        "preview",
+        "stable"
+      ]
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "en": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048
+        },
+        "ko": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048
+        }
+      },
+      "required": [
+        "en",
+        "ko"
+      ]
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/dependency"
+      },
+      "maxItems": 32
+    },
+    "entryPoints": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/entryPoint"
+      },
+      "minItems": 1,
+      "maxItems": 16
+    },
+    "modes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/mode"
+      },
+      "minItems": 1,
+      "maxItems": 8
+    },
+    "resources": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "maxWorkers": {
+          "const": 1
+        },
+        "onDemand": {
+          "const": true
+        },
+        "modelRequired": {
+          "const": false
+        },
+        "historyLoading": {
+          "const": "selected-only"
+        },
+        "limitsDocument": {
+          "type": "string",
+          "maxLength": 512,
+          "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[A-Za-z0-9_.-]+(?:/[A-Za-z0-9_.-]+)*(?:#[A-Za-z0-9_-]+)?$"
+        }
+      },
+      "required": [
+        "maxWorkers",
+        "onDemand",
+        "modelRequired",
+        "historyLoading",
+        "limitsDocument"
+      ]
+    },
+    "verification": {
+      "$ref": "#/$defs/verification"
+    },
+    "recovery": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "specification": {
+          "type": "string",
+          "maxLength": 512,
+          "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[A-Za-z0-9_.-]+(?:/[A-Za-z0-9_.-]+)*(?:#[A-Za-z0-9_-]+)?$"
+        },
+        "capabilities": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "inspect",
+              "reconcile-same-request",
+              "recheck-candidate",
+              "retry-with-original-budget",
+              "select-retained-scene",
+              "reopen-capture"
+            ]
+          },
+          "uniqueItems": true,
+          "maxItems": 6
+        }
+      },
+      "required": [
+        "specification",
+        "capabilities"
+      ]
+    },
+    "documentation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "en": {
+          "type": "string",
+          "maxLength": 512,
+          "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[A-Za-z0-9_.-]+(?:/[A-Za-z0-9_.-]+)*(?:#[A-Za-z0-9_-]+)?$"
+        },
+        "ko": {
+          "type": "string",
+          "maxLength": 512,
+          "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[A-Za-z0-9_.-]+(?:/[A-Za-z0-9_.-]+)*(?:#[A-Za-z0-9_-]+)?$"
+        }
+      },
+      "required": [
+        "en",
+        "ko"
+      ]
+    }
+  },
+  "required": [
+    "schema",
+    "id",
+    "version",
+    "availability",
+    "channel",
+    "summary",
+    "dependencies",
+    "entryPoints",
+    "modes",
+    "resources",
+    "verification",
+    "recovery",
+    "documentation"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "availability": {
+            "const": "release"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "modes": {
+            "items": {
+              "properties": {
+                "status": {
+                  "const": "implemented"
+                }
+              }
+            }
+          },
+          "verification": {
+            "properties": {
+              "lifecycleStatus": {
+                "const": "PASS"
+              },
+              "lifecycleEvidence": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "availability": {
+            "const": "candidate"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "channel": {
+            "enum": [
+              "experimental",
+              "preview"
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:calf:extension-pack:manifest:1",
+  "title": "CALF Extension Pack v1 — draft specification 0.1.0",
+  "$defs": {
+    "versionRange": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "minInclusive": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]*)(\\.(0|[1-9][0-9]*)){0,3}$",
+          "maxLength": 64
+        },
+        "maxExclusive": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]*)(\\.(0|[1-9][0-9]*)){0,3}$",
+          "maxLength": 64
+        }
+      },
+      "required": [
+        "minInclusive",
+        "maxExclusive"
+      ]
+    },
+    "dependency": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9]*(?:[.-][a-z0-9]+)*$",
+          "maxLength": 96
+        },
+        "kind": {
+          "enum": [
+            "runtime",
+            "sdk",
+            "system-tool",
+            "system-application",
+            "python-package",
+            "pack"
+          ]
+        },
+        "versionPolicy": {
+          "enum": [
+            "interval",
+            "capability-only"
+          ]
+        },
+        "versionRange": {
+          "$ref": "#/$defs/versionRange"
+        },
+        "requiredFeatures": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2048
+          },
+          "uniqueItems": true,
+          "maxItems": 32
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "versionPolicy",
+        "requiredFeatures"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "versionPolicy": {
+                "const": "interval"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "versionRange"
+            ]
+          },
+          "else": {
+            "properties": {
+              "versionRange": false,
+              "requiredFeatures": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "core": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "protocol": {
+          "const": "calf.runtime.v1"
+        },
+        "editions": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "harness": {
+              "$ref": "#/$defs/versionRange"
+            },
+            "workbench": {
+              "$ref": "#/$defs/versionRange"
+            }
+          },
+          "required": [],
+          "minProperties": 1
+        }
+      },
+      "required": [
+        "protocol",
+        "editions"
+      ]
+    },
+    "mode": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9]*(?:[.-][a-z0-9]+)*$",
+          "maxLength": 96
+        },
+        "status": {
+          "enum": [
+            "planned",
+            "implemented"
+          ]
+        },
+        "supervised": {
+          "type": "boolean"
+        },
+        "core": {
+          "$ref": "#/$defs/core"
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9]*(?:[.-][a-z0-9]+)*$",
+            "maxLength": 96
+          },
+          "uniqueItems": true,
+          "maxItems": 32
+        },
+        "entryPoints": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9]*(?:[.-][a-z0-9]+)*$",
+            "maxLength": 96
+          },
+          "uniqueItems": true,
+          "minItems": 1,
+          "maxItems": 16
+        },
+        "network": {
+          "enum": [
+            "none",
+            "loopback-only",
+            "explicit-remote"
+          ]
+        },
+        "remoteDestinations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^https://",
+            "maxLength": 512
+          },
+          "minItems": 1,
+          "maxItems": 16,
+          "uniqueItems": true
+        },
+        "effects": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "observe",
+              "export-capture",
+              "create-candidate",
+              "select-scene-version"
+            ]
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "id",
+        "status",
+        "supervised",
+        "dependencies",
+        "entryPoints",
+        "network",
+        "effects"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "supervised": {
+                "const": true
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "core"
+            ]
+          },
+          "else": {
+            "properties": {
+              "core": false,
+              "effects": {
+                "items": {
+                  "enum": [
+                    "observe",
+                    "export-capture"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "network": {
+                "const": "explicit-remote"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "remoteDestinations"
+            ]
+          },
+          "else": {
+            "properties": {
+              "remoteDestinations": false
+            }
+          }
+        }
+      ]
+    },
+    "entryPoint": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9]*(?:[.-][a-z0-9]+)*$",
+          "maxLength": 96
+        },
+        "status": {
+          "enum": [
+            "planned",
+            "implemented"
+          ]
+        },
+        "transport": {
+          "enum": [
+            "cli",
+            "python",
+            "stdio-mcp",
+            "loopback-http",
+            "offline-html"
+          ]
+        },
+        "targetKind": {
+          "enum": [
+            "python-module",
+            "python-callable",
+            "package-file",
+            "core-command"
+          ]
+        },
+        "target": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048
+        }
+      },
+      "required": [
+        "id",
+        "status",
+        "transport"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "implemented"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "targetKind",
+              "target"
+            ]
+          },
+          "else": {
+            "properties": {
+              "target": false,
+              "targetKind": false
+            }
+          }
+        },
+        {
+          "if": {
+            "required": [
+              "targetKind"
+            ],
+            "properties": {
+              "targetKind": {
+                "const": "python-module"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "target": {
+                "pattern": "^[A-Za-z_][A-Za-z0-9_]*(?:\\.[A-Za-z_][A-Za-z0-9_]*)*$"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "required": [
+              "targetKind"
+            ],
+            "properties": {
+              "targetKind": {
+                "const": "python-callable"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "target": {
+                "pattern": "^[A-Za-z_][A-Za-z0-9_]*(?:\\.[A-Za-z_][A-Za-z0-9_]*)*:[A-Za-z_][A-Za-z0-9_]*$"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "required": [
+              "targetKind"
+            ],
+            "properties": {
+              "targetKind": {
+                "const": "package-file"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "target": {
+                "type": "string",
+                "maxLength": 512,
+                "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[A-Za-z0-9_.-]+(?:/[A-Za-z0-9_.-]+)*(?:#[A-Za-z0-9_-]+)?$"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "required": [
+              "targetKind"
+            ],
+            "properties": {
+              "targetKind": {
+                "const": "core-command"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "target": {
+                "const": "work-mcp"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "specification": {
+          "type": "string",
+          "maxLength": 512,
+          "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[A-Za-z0-9_.-]+(?:/[A-Za-z0-9_.-]+)*(?:#[A-Za-z0-9_-]+)?$"
+        },
+        "requiredChecks": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2048
+          },
+          "minItems": 1,
+          "maxItems": 64,
+          "uniqueItems": true
+        },
+        "lifecycleStatus": {
+          "enum": [
+            "NOT_RUN",
+            "PASS",
+            "FAIL",
+            "UNKNOWN"
+          ]
+        },
+        "runtimeEvidence": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 512,
+            "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[A-Za-z0-9_.-]+(?:/[A-Za-z0-9_.-]+)*(?:#[A-Za-z0-9_-]+)?$"
+          },
+          "maxItems": 32,
+          "uniqueItems": true
+        },
+        "lifecycleEvidence": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 512,
+            "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[A-Za-z0-9_.-]+(?:/[A-Za-z0-9_.-]+)*(?:#[A-Za-z0-9_-]+)?$"
+          },
+          "maxItems": 32,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "specification",
+        "requiredChecks",
+        "lifecycleStatus",
+        "runtimeEvidence",
+        "lifecycleEvidence"
+      ]
+    }
+  }
+}

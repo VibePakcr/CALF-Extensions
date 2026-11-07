@@ -1,0 +1,316 @@
+{
+  "schema": "calf.repository.hosted-h3.qualification.v1",
+  "date": "2026-11-07",
+  "state": "H3_IMPLEMENTED_MACOS_GITLAB_FIXTURES_AND_SCOPED_PUBLIC_RAW_READS_VERIFIED",
+  "baseline_commit": "66bdf4a6e8d19ec87b4a10b9e541f1fe3870dc02",
+  "implemented": [
+    "Standalone GitLabSource implementing common typed ref pin/snapshot contract",
+    "Numeric project identity/canonical namespace binding, branch/tag/full SHA-1 commit selection",
+    "Pinned recursive keyset tree pages using existing H1 link/auth/cancellation policy",
+    "Explicit missing pagination metadata, duplicate/loop/path-parent consistency failures",
+    "Exact raw blob reads, Git SHA-1/SHA256 verification, selective source and bounded immutable v2 snapshots",
+    "Null Git root tree OID with explicit reason and separate normalized inventory digest in collection report"
+  ],
+  "checks": {
+    "repository_suite": {
+      "state": "PASS",
+      "tests": 101,
+      "previous": 81,
+      "h3": 20,
+      "seconds": 50.433,
+      "skips": 0
+    },
+    "h3_focused_suite": {
+      "state": "PASS",
+      "tests": 20,
+      "seconds": 8.028
+    },
+    "ffmpeg_contract": {
+      "state": "PASS",
+      "tests": 3
+    },
+    "scoped_live_public": {
+      "state": "PASS",
+      "repository_url": "https://gitlab.com/vibepackr-group/CALF-Extensions",
+      "credential_mode": "ANONYMOUS_NO_LOOKUP",
+      "api_version": "v4",
+      "phase": "COMPLETE",
+      "repository_id": "88597295",
+      "requested_ref_kind": "commit",
+      "requested_ref_name": "814b6c27fe9ac68ad3f9bb6db7fe2e8ba95f65d1",
+      "pinned_commit": "814b6c27fe9ac68ad3f9bb6db7fe2e8ba95f65d1",
+      "snapshot_id": "362788c301b694760953498453976d0bc7456c0f5aaf5dfc68152ed0a8b52baa",
+      "collection": {
+        "provider": "gitlab",
+        "operation": "pinned_snapshot",
+        "inventory_complete": true,
+        "reasons": [],
+        "metadata_bytes": 15225,
+        "requests": 20,
+        "tree_pages": 2,
+        "tree_oid": null,
+        "tree_oid_reason": "NOT_EXPOSED_BY_GITLAB_COMMIT_API",
+        "inventory_verification": "PINNED_API_PAGINATION_AND_PATH_CONSISTENCY",
+        "parents": [
+          "01370f6ad5de62709afd70b4d9a431c95509c6e8"
+        ],
+        "inventory_digest": "2be1e3961aa1b37f7a3514fde78c968bf352ad1225a76a6d58ee66590c5f3c5f",
+        "files": 32,
+        "content_ready": 10,
+        "content_bytes": 53473
+      },
+      "inventory_files": 32,
+      "inventory_complete": true,
+      "selected_source_files": 10,
+      "retained_v2_roundtrip": true,
+      "full_same_commit_local_comparison": "NOT_RUN_REMOTE_COMMIT_NOT_RETAINED_LOCALLY",
+      "local_reference_commit": "66bdf4a6e8d19ec87b4a10b9e541f1fe3870dc02",
+      "source_files": [
+        {
+          "path": "calf_extensions/__init__.py",
+          "bytes": 76,
+          "sha256": "b644f33c8634a945785039ff961233964fe5dcb864f5e5ca8dea4fffce034800",
+          "git_blob_sha1": "6b695d8212105072be0b5564437184cc4c88a86f"
+        },
+        {
+          "path": "calf_extensions/media_ffmpeg/__init__.py",
+          "bytes": 95,
+          "sha256": "92a1eb4f2b4ea7949c9e292706241948a8ff2252c19427acd2a5dd852776c01c",
+          "git_blob_sha1": "ad780bc2747c174e30a55a3ef9b5ef718bbfd4a6"
+        },
+        {
+          "path": "calf_extensions/media_ffmpeg/cli.py",
+          "bytes": 3527,
+          "sha256": "e4661966054ddd3c9daf45c050d4b29e8f2d5c9309f1493ebfc3d4cbfd535744",
+          "git_blob_sha1": "3719a3d30a38399222adc46ad09656c8a3058b52"
+        },
+        {
+          "path": "calf_extensions/media_ffmpeg/common.py",
+          "bytes": 7568,
+          "sha256": "beea4a5e39e5b3a57636338e45fef0de25c11533ddb743fcb66262d8dd9c25b6",
+          "git_blob_sha1": "505ca6dfc40ff7d2cb7b500692f95e00d3d6b4f6"
+        },
+        {
+          "path": "calf_extensions/media_ffmpeg/integration.py",
+          "bytes": 6698,
+          "sha256": "affe16a9ad86bff44eb62f4cbb8bec896f0052da2bb40fbb8664e7b525b8d88a",
+          "git_blob_sha1": "c0dccae25b2ff356fa17cfc6d063895c60cf4cb7"
+        },
+        {
+          "path": "calf_extensions/media_ffmpeg/project.py",
+          "bytes": 11737,
+          "sha256": "cbab02dc8858223472681691bec4de4c223003f4a4eabc155cb4ab2d5c77b5fc",
+          "git_blob_sha1": "0b0a4575ab6969c0bc8821f6bba7ba08168bee16"
+        },
+        {
+          "path": "calf_extensions/media_ffmpeg/runtime.py",
+          "bytes": 2127,
+          "sha256": "7ae90bed6ab468aee4ccbc36a54d9814280f50bf79cbc9f7558cc180a0a89964",
+          "git_blob_sha1": "2b377b2165f18aa3b1bb4d6c4779d10be622d39a"
+        },
+        {
+          "path": "calf_extensions/media_ffmpeg/test_contract.py",
+          "bytes": 1886,
+          "sha256": "7f30bcbe4ddbdef267958addf3083509f5ca41b6fbcf82a20335dbaec5169bac",
+          "git_blob_sha1": "1382728f6d402f602064d9bf58ca26f78ddca918"
+        },
+        {
+          "path": "calf_extensions/media_ffmpeg/validator.py",
+          "bytes": 6651,
+          "sha256": "24ef7f2783d5eed002d97df4cb0dd9b8e54062f449b68ed587638b2797931e6f",
+          "git_blob_sha1": "79b1726d45755af87920ef520ebb43464f3ecb25"
+        },
+        {
+          "path": "calf_extensions/media_ffmpeg/verify.py",
+          "bytes": 13108,
+          "sha256": "3c58d5b2df9973fab5113d47565a029aba0b4f92a62b502548727faf5393748b",
+          "git_blob_sha1": "0ef7a2e669ff71b8a55d73be9ee961e2a17a7085"
+        }
+      ],
+      "selected_local_git_blobs_equal": true,
+      "source_bytes": 53473,
+      "graph_nodes": 163,
+      "graph_edges": 508,
+      "selected_code_subgraph_equal": true,
+      "provider_writes": false,
+      "ui_qualified": false,
+      "seconds": 17.031
+    },
+    "static_parse": {
+      "state": "PASS",
+      "scope": "All repository Python sources parsed without executing repository code"
+    },
+    "cleanup": {
+      "worker": {
+        "stopped": true,
+        "threads_stopped": true
+      },
+      "owned_task_processes_remaining": 0
+    },
+    "local_browser_regression": {
+      "state": "REUSED_H2_PASS_UNCHANGED_CODE_AND_ASSETS",
+      "evidence": "repository-hosted-h2-20261107.json",
+      "live_and_offline": true,
+      "fresh_h3_browser_run": false
+    }
+  },
+  "fixture_scope": [
+    "Independently generated real Git objects for ref namespace collisions, annotated tags and ref movement",
+    "Representable Unicode/control-character path identity, empty/BOM/CRLF/binary/non-UTF8 bytes and modes",
+    "1005-entry paginated tree, pinned source/commit links, duplicated paths/pages and cursor loops",
+    "Full page without next metadata remains incomplete; valid empty tree differs from inaccessible/missing 404",
+    "Invalid paths/modes/names/parents/page shapes and identity/name/commit/tree-null mismatches",
+    "Raw versus transcoded bytes, corrupt blob identity, per-file and aggregate limits, shared-blob deduplication",
+    "Budget/source-selection gaps, cancellation and retained-v2 roundtrip",
+    "Complete normalized Local/GitLab map and direct Diff equality in the synthetic Git fixture",
+    "Actual owned HTTP raw reads with JSON MIME/non-UTF8 bytes and cancellation during stalled raw HTTP"
+  ],
+  "live_scope": {
+    "provider": "GitLab.com API v4",
+    "credential_mode": "ANONYMOUS",
+    "root_tree_oid": null,
+    "root_tree_oid_reason": "NOT_EXPOSED_BY_GITLAB_COMMIT_API",
+    "full_inventory_provider_assertion": true,
+    "raw_files_independently_matched": 10,
+    "selected_retained_local_code_subgraph_equal": true,
+    "full_same_commit_local_inventory_and_map": "NOT_RUN",
+    "reason": "GitLab main commit was unavailable in the current local Git store; local H2 baseline commit returned ACCESS_UNKNOWN through this public mirror API",
+    "tree_pages_explanation": "Two separate single-page inventory passes, not a live multi-page fixture"
+  },
+  "preservation": {
+    "state": "PASS_TASK_SCOPE_EXTERNAL_RUNTIME_CHANGE_OBSERVED",
+    "protected_files": 607,
+    "protected_files_unchanged": 606,
+    "external_runtime_configuration_changes": 1,
+    "external_runtime_configuration_modified_or_restored_by_task": false,
+    "existing_repository_source_files_unchanged": 32,
+    "github_reader_unchanged": true,
+    "historical_h0_h1_h2_files_unchanged": 9,
+    "shared_working_unchanged": true,
+    "head_unchanged": true,
+    "index_unchanged_empty": true,
+    "owned_task_processes_remaining": 0
+  },
+  "attempt_history": {
+    "initial_fixture_failure": {
+      "log": "1794000689347194000",
+      "cause": "Pagination-incomplete fixture omitted JSON content type; test fixture corrected; no production HTTP weakening"
+    },
+    "initial_live_reference_attempt": {
+      "log": "1794000871664051000",
+      "remote_commit": "814b6c27fe9ac68ad3f9bb6db7fe2e8ba95f65d1",
+      "state": "FAILED_LOCAL_REFERENCE_GIT_READ_FAILED"
+    },
+    "local_baseline_live_attempt": {
+      "log": "1794000952219038000",
+      "requested_commit": "66bdf4a6e8d19ec87b4a10b9e541f1fe3870dc02",
+      "state": "FAILED_API_ACCESS_UNKNOWN"
+    },
+    "successful_attempt_scope": "Explicitly pinned observed public mirror commit; compare selected same-path blob identities against independently retained local Git blobs without clone/fetch",
+    "late_external_runtime_observation": {
+      "initial_baseline_matches": 607,
+      "final_baseline_matches": 606,
+      "external_application_runtime_configuration_changes": 1,
+      "task_modified_or_restored_external_configuration": false,
+      "existing_source_and_calf_material": "UNCHANGED"
+    }
+  },
+  "qualification_effects": {
+    "real_public_gitlab_gets": true,
+    "owner_credentials_used": false,
+    "provider_writes": false,
+    "clone_fetch_push": false,
+    "existing_calf_record_writes": false,
+    "git_commit_or_push": false,
+    "existing_production_sources_modified": false,
+    "hosted_ui_added": false
+  },
+  "not_qualified": [
+    "Full same-commit live Local/GitLab inventory/map equivalence",
+    "Live multi-page, tag and Unicode edge fixtures (synthetic Git-backed tests cover these cases)",
+    "Private GitLab access/permissions",
+    "Self-Managed GitLab and SHA-256 Git objects",
+    "H3 on Windows/Linux",
+    "Shared hosted source-selection/map/code/Diff UI, editor/permalinks and v2 offline export (H4)",
+    "Fresh package installation, performance/peak-memory and physical devices",
+    "Independent raw commit/root-tree object verification"
+  ],
+  "acceptance": {
+    "state": "SCOPED_GITLAB_MACOS_READER_PROGRESS_ONLY",
+    "related_criteria": [
+      "HG03",
+      "HG06",
+      "HG07",
+      "HG09",
+      "HG10",
+      "HG11",
+      "HG27"
+    ],
+    "full_hosted_criteria": "HG01-HG32 remain NOT_RUN"
+  },
+  "source_sha256": {
+    "calf_extensions/repository/__init__.py": "3349a797cb484b7fc01c91d6499837965843bc8778270ffa0319a93192943898",
+    "calf_extensions/repository/analyze.py": "01222d5a886dc503cec071afce6317d87e83e13bbb0bf50b1da4e39d8208459a",
+    "calf_extensions/repository/assets/portal.css": "707f3f26945de637d2697c9b07720bec612ccf2be53a362bcb9aee5fe2585c89",
+    "calf_extensions/repository/assets/portal.html": "55124a78624fc7dd1ec1665acc08bd6c60b2b341ac0910669184f2b24f45eac0",
+    "calf_extensions/repository/assets/portal.js": "c01ba752a6106ef97bcbd0b9ba0dbcf11a0c3e1189a96af0df9714d5fc90e16e",
+    "calf_extensions/repository/capture.py": "d88afcfe6ee42e80d8299761611c761b03462177a20e7dc60dac6761d26936d4",
+    "calf_extensions/repository/cli.py": "3c7a356278314b8107821b1c78b27fbda60dfa613bc58c77ff10f1b0c27305c1",
+    "calf_extensions/repository/compare.py": "906b9b268c9929c55cd1bbec11b38a2be88fad7fd6ef2be80ddcbfc8b8e8bab4",
+    "calf_extensions/repository/export.py": "3404404c09d3c21e33caea926d750142400a9743462cb91fab74955204ec7f48",
+    "calf_extensions/repository/git_reader.py": "0fd0f26c270b57996227a182521ac6bcab2380450431d3f4c488864dcc25f8a5",
+    "calf_extensions/repository/hosted.py": "7cf48fe05bd145b2767d28b0f2b4729811fa5620b46ba54ef691417e63643288",
+    "calf_extensions/repository/http_reader.py": "e51eb4d784c71c4c983eef0da63eb0e1ae5bb809bfa1e289e2b30bb4a6907cc3",
+    "calf_extensions/repository/http_worker.py": "4156717bf55972caeb3e2e3bea61559ee1129023952d8d9d2f79682473758659",
+    "calf_extensions/repository/model.py": "7b42cb17c65313d21fe5038e3bee5e9820e45e07d481785014eac6ab9484b01e",
+    "calf_extensions/repository/providers/__init__.py": "f4d1d9d99c990438bbcfdaabc4bf984de37465baf75a12e90a4a1d7cd84247a5",
+    "calf_extensions/repository/providers/base.py": "6055aaaf31f897e184445e1f52e7cec14b3b19b8eb3053c22b0f3da7639aeb4e",
+    "calf_extensions/repository/providers/github.py": "d361e486527767a7ca2ff5245e4770b3e1e1219a1a0d5cf4dce6b49be69dbea9",
+    "calf_extensions/repository/providers/gitlab.py": "308b22256d12930f890e76a4bd248d68ca6fbc43f41876254fe7cc5d2d1e615e",
+    "calf_extensions/repository/providers/local.py": "964881d10f2c2d1da190d97811b5b8127d991bc3885605cdd760c83a42783bb3",
+    "calf_extensions/repository/registrations.py": "d5c87c420570f8400f5ce3b192022187592a9e10955c290fc205d35127ca1f12",
+    "calf_extensions/repository/schemas/capture-v1.schema.json": "58f71d0bdfebf46a8d4eaf552f4772ab45a27c8f53179f6a8dc45aaa6eb0afb4",
+    "calf_extensions/repository/schemas/capture-v2.schema.json": "606eea92dd5d839c20381b967e3d5342d5a7549af95e93b25622091bea75605f",
+    "calf_extensions/repository/schemas/navigation-v1.schema.json": "dada5651c82c9a06302ab56a944dfb2fecd81ff3d9e7a61c260e11fbf0974b48",
+    "calf_extensions/repository/tests/__init__.py": "2039c7313d14ca9c9013ef903d5ee29959bf7475c95f755106f9a4a56fdf343e",
+    "calf_extensions/repository/tests/_http_fixture_worker.py": "2c2b303edd50e64ac6834a14fe87dac0d32515a0483cf45b383c0965e25189ab",
+    "calf_extensions/repository/tests/test_git_contract.py": "767c6436b98d3c8908eb84b71eb5995e7f0233c77f718a3569647ddd1d393c97",
+    "calf_extensions/repository/tests/test_github_source.py": "f41c01ba7125ad7bacdc136ffdbd569d7353c37754e8d6dbed17537b5e177038",
+    "calf_extensions/repository/tests/test_gitlab_source.py": "aa4ed684fad6f945e9160acf84254ff951cefc479225ea4f9d2aad9d3357a515",
+    "calf_extensions/repository/tests/test_hosted_h1.py": "686c60acc8e2deffba796f01837bfba8dda752d7b1c329a024b28e00598eccf6",
+    "calf_extensions/repository/tests/test_limits.py": "6c6f49cddd5ed1e30803ced66aef1f1946916ae51978b698b8f102d5b4dc7776",
+    "calf_extensions/repository/tests/test_navigation.py": "80e38e71d0a32dc782cdec8117f7610d17ab715dae2e60ec48384ae6d1c96fd7",
+    "calf_extensions/repository/tests/test_portal.py": "f485dc20c73b7fd021b48483aa280a29658b977c590ab52f6eeb8d103e7579d5",
+    "calf_extensions/repository/tests/test_source_contract.py": "171825536545fa6f8f007b4763d9866ee12db59d83b5ba98dd85cd07739a1e6e",
+    "calf_extensions/repository/viewer.py": "8cbdbdd0cc6de39030e5b7145eca3c0eef71aa17a73924b2bb6f9530af5cf116"
+  },
+  "execution_evidence": {
+    "log_ids": {
+      "repository_suite": "1794000870043315000",
+      "h3_focused_suite": "1794000785393803000",
+      "ffmpeg_contract": "1794000870767209000",
+      "scoped_live_public": "1794001121081508000",
+      "preservation": "1794000996730329000",
+      "preservation_final": "1794001513379476000"
+    },
+    "build_project_key": "0de352e7927da8af55d4",
+    "baseline_sha256": "ddf60e336d67397c3435874974a5f2c6f4cd5ce7ca03f559fdb7b05a823d29cf",
+    "live_report_sha256": "6f27ef1d5ccf6e8af7a9acd8fc827e41a87c677ab97722e367b0cb2b8eaeae77",
+    "reused_browser_report_source": "repository-hosted-h2-20261107.json"
+  },
+  "authority": "Read-only navigation/source contracts only; no CALF core, release authority or remote-write authority added",
+  "preservation_initial": {
+    "state": "PASS_BASELINE_UNCHANGED",
+    "protected_files": 607,
+    "protected_files_unchanged": 607,
+    "external_runtime_configuration_changes": 0,
+    "external_runtime_configuration_modified_or_restored_by_task": false,
+    "existing_repository_source_files_unchanged": 32,
+    "github_reader_unchanged": true,
+    "historical_h0_h1_h2_files_unchanged": 9,
+    "shared_working_unchanged": true,
+    "head_unchanged": true,
+    "index_unchanged_empty": true,
+    "owned_task_processes_remaining": 0
+  }
+}

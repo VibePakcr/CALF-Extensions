@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:calf:repository:capture:v1",
+  "title": "Local Git provenance for a project map",
+  "type": "object",
+  "required": ["schema", "extension_version", "captured_at", "repository", "worktree", "files", "history", "summary", "coverage"],
+  "properties": {
+    "schema": {"const": "calf.repository.capture.v1"},
+    "extension_version": {"type": "string"}, "captured_at": {"type": "string"},
+    "repository": {"type": "object", "required": ["repository_id", "root", "git_dir", "common_dir", "object_format", "head"], "properties": {"object_format": {"enum": ["sha1", "sha256"]}, "head": {"type": ["string", "null"]}}},
+    "worktree": {"type": "object", "required": ["worktree_id", "index_digest"]},
+    "files": {"type": "array", "items": {"type": "object", "required": ["id", "path", "path_utf8", "head", "index", "working", "staged"]}},
+    "history": {"type": "array"}, "summary": {"type": "object"},
+    "coverage": {"type": "object", "required": ["state", "history_has_more", "working_unknown"], "properties": {"state": {"enum": ["COMPLETE", "PARTIAL"]}}}
+  }
+}

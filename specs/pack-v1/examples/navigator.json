@@ -1,0 +1,103 @@
+{
+  "schema": "calf.extension-pack.v1",
+  "id": "calf.repository.navigator",
+  "version": "0.1.0-dev.1",
+  "availability": "reference",
+  "channel": "experimental",
+  "summary": {
+    "en": "Manual Local Git, GitHub and GitLab map/code/Diff navigation.",
+    "ko": "Local Git·GitHub·GitLab을 수동 선택해 지도·코드·Diff로 탐색합니다."
+  },
+  "dependencies": [
+    {
+      "id": "python",
+      "kind": "runtime",
+      "versionPolicy": "interval",
+      "versionRange": {
+        "minInclusive": "3.10.0",
+        "maxExclusive": "4.0.0"
+      },
+      "requiredFeatures": [
+        "stdlib",
+        "utf8"
+      ]
+    },
+    {
+      "id": "git",
+      "kind": "system-tool",
+      "versionPolicy": "interval",
+      "versionRange": {
+        "minInclusive": "2.43.0",
+        "maxExclusive": "3.0.0"
+      },
+      "requiredFeatures": [
+        "read-only-contract",
+        "no-lazy-fetch",
+        "sha1-and-sha256-objects"
+      ]
+    }
+  ],
+  "entryPoints": [
+    {
+      "id": "cli",
+      "status": "planned",
+      "transport": "cli"
+    },
+    {
+      "id": "viewer",
+      "status": "planned",
+      "transport": "loopback-http"
+    }
+  ],
+  "modes": [
+    {
+      "id": "navigate",
+      "status": "planned",
+      "supervised": false,
+      "dependencies": [
+        "python",
+        "git"
+      ],
+      "entryPoints": [
+        "cli",
+        "viewer"
+      ],
+      "network": "explicit-remote",
+      "remoteDestinations": [
+        "https://api.github.com",
+        "https://gitlab.com"
+      ],
+      "effects": [
+        "observe",
+        "export-capture"
+      ]
+    }
+  ],
+  "resources": {
+    "maxWorkers": 1,
+    "onDemand": true,
+    "modelRequired": false,
+    "historyLoading": "selected-only",
+    "limitsDocument": "docs/NAVIGATOR_PACK.md"
+  },
+  "verification": {
+    "specification": "docs/NAVIGATOR_PACK.md",
+    "requiredChecks": [
+      "local-contracts",
+      "source-contracts",
+      "hosted-contracts",
+      "portal-contracts"
+    ],
+    "lifecycleStatus": "NOT_RUN",
+    "runtimeEvidence": [],
+    "lifecycleEvidence": []
+  },
+  "recovery": {
+    "specification": "docs/NAVIGATOR_PACK.md",
+    "capabilities": []
+  },
+  "documentation": {
+    "en": "docs/NAVIGATOR_PACK.md",
+    "ko": "docs/NAVIGATOR_PACK_KR.md"
+  }
+}

@@ -1,0 +1,280 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CALF source capture v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "repository",
+    "revision",
+    "capabilities",
+    "captured_at",
+    "inventory_complete",
+    "files"
+  ],
+  "properties": {
+    "schema": {
+      "const": "calf.repository.capture.v2"
+    },
+    "repository": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "provider",
+        "origin",
+        "repository_id",
+        "label"
+      ],
+      "properties": {
+        "provider": {
+          "enum": [
+            "local",
+            "github",
+            "gitlab"
+          ]
+        },
+        "origin": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "repository_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1024
+        },
+        "label": {
+          "type": "string",
+          "maxLength": 8192
+        }
+      }
+    },
+    "revision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repository_key",
+        "kind",
+        "commit_id",
+        "base_commit",
+        "ref_kind",
+        "ref_name",
+        "tree_oid",
+        "object_format",
+        "observed_at"
+      ],
+      "properties": {
+        "repository_key": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "kind": {
+          "enum": [
+            "commit",
+            "working"
+          ]
+        },
+        "commit_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^(?:[0-9a-f]{40}|[0-9a-f]{64})$"
+        },
+        "base_commit": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^(?:[0-9a-f]{40}|[0-9a-f]{64})$"
+        },
+        "ref_kind": {
+          "enum": [
+            null,
+            "working",
+            "head",
+            "branch",
+            "tag",
+            "commit"
+          ]
+        },
+        "ref_name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "maxLength": 4096
+        },
+        "tree_oid": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^(?:[0-9a-f]{40}|[0-9a-f]{64})$"
+        },
+        "object_format": {
+          "enum": [
+            null,
+            "sha1",
+            "sha256"
+          ]
+        },
+        "observed_at": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "capabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "working",
+        "index",
+        "conflict_stages",
+        "immutable_revision",
+        "provider_permalink",
+        "cached_copy_editor",
+        "offline_export"
+      ],
+      "properties": {
+        "working": {
+          "type": "boolean"
+        },
+        "index": {
+          "type": "boolean"
+        },
+        "conflict_stages": {
+          "type": "boolean"
+        },
+        "immutable_revision": {
+          "type": "boolean"
+        },
+        "provider_permalink": {
+          "type": "boolean"
+        },
+        "cached_copy_editor": {
+          "type": "boolean"
+        },
+        "offline_export": {
+          "type": "boolean"
+        }
+      }
+    },
+    "captured_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "inventory_complete": {
+      "type": "boolean"
+    },
+    "files": {
+      "type": "array",
+      "maxItems": 50000,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "path",
+          "path_utf8",
+          "mode",
+          "blob_oid",
+          "content"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "maxLength": 16384
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "path_utf8": {
+            "type": "boolean"
+          },
+          "mode": {
+            "enum": [
+              "100644",
+              "100755",
+              "120000",
+              "160000"
+            ]
+          },
+          "blob_oid": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^(?:[0-9a-f]{40}|[0-9a-f]{64})$"
+          },
+          "content": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "availability",
+              "sha256",
+              "expected_sha256",
+              "size",
+              "unavailable_kind",
+              "reason"
+            ],
+            "properties": {
+              "availability": {
+                "enum": [
+                  "READY",
+                  "ABSENT",
+                  "NOT_FETCHED",
+                  "UNAVAILABLE",
+                  "LIMIT_EXCEEDED",
+                  "IDENTITY_MISMATCH"
+                ]
+              },
+              "sha256": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "expected_sha256": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "size": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "unavailable_kind": {
+                "enum": [
+                  "unavailable",
+                  "unreadable",
+                  "oversized",
+                  "symlink",
+                  "submodule",
+                  "not_regular"
+                ]
+              },
+              "reason": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,411 @@
+{
+  "schema": "calf.repository.hosted.acceptance.v1",
+  "state": "H0_H5_SCOPED_PUBLIC_DESKTOP_QUALIFIED_FULL_MATRIX_INCOMPLETE",
+  "date": "2026-11-07",
+  "baseline_commit": "66bdf4a6e8d19ec87b4a10b9e541f1fe3870dc02",
+  "providers": [
+    "github.com",
+    "gitlab.com"
+  ],
+  "criteria": [
+    {
+      "id": "HG01",
+      "phase": "H1",
+      "scenario_en": "Explicit registration scope",
+      "scenario_ko": "명시적 등록 범위",
+      "expected_en": "Only the registered repository is requested; no user/org/project enumeration or automatic fork/submodule registration.",
+      "expected_ko": "등록한 저장소만 요청하며 계정·조직 전체 조회나 fork·submodule 자동 등록이 없어야 합니다.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "HG02",
+      "phase": "H1",
+      "scenario_en": "Repository identity and URL resolution",
+      "scenario_ko": "저장소 신원과 URL 해석",
+      "expected_en": "Provider + API host + stable repository ID isolates similarly named projects; GitLab subgroups and renames preserve identity; a changed ID is refused.",
+      "expected_ko": "provider·API host·고정 저장소 ID로 동명 저장소를 구분하고 GitLab 하위 그룹·이름 변경을 처리하며 ID가 바뀌면 중단합니다.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "HG03",
+      "phase": "H0",
+      "scenario_en": "Ref pinning under concurrent changes",
+      "scenario_ko": "수집 중 ref 변경과 고정",
+      "expected_en": "All reads use resolved commit A even if the branch moves to B; new refresh creates B separately; no mixed capture. Branch/tag name collisions and annotated tags resolve explicitly.",
+      "expected_ko": "브랜치가 A에서 B로 이동해도 모든 읽기는 고정 A를 사용하며 B는 별도 갱신으로 수집합니다. 브랜치·태그 동명과 annotated tag도 명시적으로 해석합니다.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "HG04",
+      "phase": "H0",
+      "scenario_en": "Local compatibility and immutable capture migration",
+      "scenario_ko": "로컬 호환성과 기존 수집본 보존",
+      "expected_en": "Existing CLI commands and v1 capture/navigation bytes remain usable and unchanged; remote captures contain no fictitious worktree/index/Git directory.",
+      "expected_ko": "기존 CLI와 v1 수집·지도 파일을 변경 없이 읽고 원격 수집본에 가짜 worktree·index·Git 디렉터리를 만들지 않습니다.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "HG05",
+      "phase": "H2",
+      "scenario_en": "GitHub tree truncation",
+      "scenario_ko": "GitHub 트리 잘림",
+      "expected_en": "A truncated recursive response expands subtrees within budget, or reports partial inventory; a directory over 1,000 entries never relies on Contents listing.",
+      "expected_ko": "재귀 응답이 잘리면 예산 안에서 하위 트리를 읽거나 목록 미완료로 표시하며 1,000개 초과 디렉터리를 Contents 목록으로 완성했다고 보지 않습니다.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "HG06",
+      "phase": "H3",
+      "scenario_en": "GitLab pagination and missing paths",
+      "scenario_ko": "GitLab 페이지와 없는 경로",
+      "expected_en": "Follow validated next links/cursors; duplicate pages, loops, missing expected metadata and budget exits stay explicit. A 404 is never an empty successful tree.",
+      "expected_ko": "검증한 다음 링크·커서를 따르고 중복 페이지·루프·예상 메타데이터 부재·예산 종료를 명시합니다. 404를 빈 정상 트리로 바꾸지 않습니다.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "HG07",
+      "phase": "H2-H3",
+      "scenario_en": "Raw blob identity",
+      "scenario_ko": "원문 blob 바이트 신원",
+      "expected_en": "Raw bytes, size and SHA256 match an independent local fixture; GitHub blob OID verifies; GitLab raw blob reads preserve non-UTF8 bytes without JSON transcoding.",
+      "expected_ko": "독립 로컬 fixture와 원문 바이트·크기·SHA256이 같고 GitHub blob OID를 검증하며 GitLab raw blob으로 비 UTF-8 바이트도 변환 없이 읽습니다.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "HG08",
+      "phase": "H0",
+      "scenario_en": "Zero bytes versus absence versus unavailable",
+      "scenario_ko": "0바이트·부재·미확보 구분",
+      "expected_en": "Empty text has its real hash; deletion is inferred only from a complete pinned inventory. NOT_FETCHED, denied, oversized and corrupt content cannot become empty files.",
+      "expected_ko": "빈 파일에도 실제 해시가 있고 삭제는 완료된 고정 목록으로만 판단합니다. 미수집·접근 거절·과대·손상 원문을 빈 파일로 바꾸지 않습니다.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "HG09",
+      "phase": "H2-H3",
+      "scenario_en": "Symlink, submodule and LFS boundaries",
+      "scenario_ko": "symlink·submodule·LFS 경계",
+      "expected_en": "Modes and LFS pointers remain explicit; no target traversal, archive extraction, Git filters, project import or code execution occurs.",
+      "expected_ko": "mode와 LFS pointer를 구분하고 대상 추적·압축 해제·Git filter·프로젝트 import·코드 실행이 없어야 합니다.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "HG10",
+      "phase": "H0-H4",
+      "scenario_en": "Local/provider graph equivalence",
+      "scenario_ko": "로컬·provider 지도 동등성",
+      "expected_en": "The same fixture commit produces the same normalized file/symbol/document/call relationships, lines, descriptions and explicit feature mappings across all three sources.",
+      "expected_ko": "동일 fixture 커밋에서 세 소스의 파일·심볼·문서·호출 관계와 줄·설명·명시적 기능 연결이 정규화 후 같아야 합니다.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "HG11",
+      "phase": "H2-H3",
+      "scenario_en": "Path encoding",
+      "scenario_ko": "경로 인코딩",
+      "expected_en": "Spaces, Korean, +, %, #, tabs/newlines, slash refs and distinct Unicode spellings keep exact identity. Unrepresentable path bytes are unsupported gaps, not replacement paths.",
+      "expected_ko": "공백·한글·+·%·#·탭/개행·slash ref·서로 다른 Unicode 표기의 신원을 유지하며 표현 불가 바이트 경로는 대체 경로가 아닌 미지원 공백으로 남깁니다.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "HG12",
+      "phase": "H4",
+      "scenario_en": "Complete changed-path inventory",
+      "scenario_ko": "전체 변경 경로 목록",
+      "expected_en": "A fixture with 350+ changed files is derived from both complete pinned trees even when provider compare omits entries; partial trees cannot claim a complete list.",
+      "expected_ko": "350개 이상 변경 fixture에서도 두 고정 트리로 경로 목록을 만들고 provider compare 누락에 영향받지 않으며 부분 트리는 전체 목록으로 표시하지 않습니다.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "HG13",
+      "phase": "H4",
+      "scenario_en": "Direct versus merge-base comparison",
+      "scenario_ko": "직접 비교·merge-base 비교 구분",
+      "expected_en": "A diverged-branch fixture shows distinct A-to-B and merge-base-to-B results; labels and pinned endpoints match the selected mode.",
+      "expected_ko": "분기 fixture에서 A→B와 merge-base→B 결과를 구분하며 표시와 고정 양 끝 버전이 선택한 모드와 일치해야 합니다.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "HG14",
+      "phase": "H4",
+      "scenario_en": "Exact per-file Diff",
+      "scenario_ko": "파일별 정확한 Diff",
+      "expected_en": "Adds/deletes, rename hints, mode changes, binary, BOM, CRLF and final-newline differences retain both path/commit/hash identities; no patch means no invented zero diff.",
+      "expected_ko": "추가·삭제·rename 힌트·mode·binary·BOM·CRLF·마지막 개행 차이가 양쪽 경로·커밋·해시와 연결되고 patch 부재를 차이 없음으로 만들지 않습니다.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "HG15",
+      "phase": "H4",
+      "scenario_en": "Independent coverage dimensions",
+      "scenario_ko": "범위별 완료 상태",
+      "expected_en": "Inventory, fetched sources, supported-language analysis and changed paths have separate counts/states; static links never become runtime/CALF success.",
+      "expected_ko": "파일 목록·원문 수집·지원 언어 분석·변경 경로의 수와 완료 상태를 구분하고 정적 연결을 실행·CALF 성공으로 승격하지 않습니다.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "HG16",
+      "phase": "H1",
+      "scenario_en": "Access and authentication failures",
+      "scenario_ko": "인증·접근 실패",
+      "expected_en": "Missing environment, 401, permission/rate-limit 403, private-or-missing 404 and empty repository remain distinct; access failure never overwrites a retained capture.",
+      "expected_ko": "환경 변수 부재·401·권한/제한 403·비공개 또는 부재인 404·빈 저장소를 구분하고 접근 실패가 기존 수집본을 덮지 않습니다.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "HG17",
+      "phase": "H1",
+      "scenario_en": "Credential containment",
+      "scenario_ko": "자격증명 보존 경계",
+      "expected_en": "Canary credentials appear only in the correct outbound authentication header; none in argv, registry, logs, browser payload/storage, links, cached content or exports.",
+      "expected_ko": "시험 토큰은 지정된 외부 인증 헤더에만 있고 argv·등록 파일·로그·브라우저 데이터/저장소·링크·캐시·내보내기에 없어야 합니다.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "HG18",
+      "phase": "H1",
+      "scenario_en": "HTTP destination and endpoint policy",
+      "scenario_ko": "HTTP 목적지와 endpoint 정책",
+      "expected_en": "Only configured HTTPS API origins and read endpoint templates are reachable; malicious next/redirect URLs, cross-project cursors and side-effecting GET endpoints are refused.",
+      "expected_ko": "설정된 HTTPS API origin과 읽기 endpoint 틀만 사용하며 악성 다음 링크·redirect·다른 프로젝트 커서·부작용 GET을 거절합니다.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "HG19",
+      "phase": "H1",
+      "scenario_en": "Rate limits and conditional cache",
+      "scenario_ko": "사용량 제한과 조건부 캐시",
+      "expected_en": "Honor provider retry/reset timing without early retries; 304 requires matching cached content and auth partition; no unlimited retry, stale-to-fresh promotion or cross-registration leak.",
+      "expected_ko": "provider의 재시도·리셋 시각 전 요청을 반복하지 않고 304는 대응 캐시·인증 구획이 있어야 하며 무한 재시도·오래된 자료의 최신 승격·등록 간 유출이 없어야 합니다.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "HG20",
+      "phase": "H1-H4",
+      "scenario_en": "Bounds, cancellation and late responses",
+      "scenario_ko": "한도·취소·늦은 응답",
+      "expected_en": "Oversized/truncated bodies, stalled DNS/TLS/reads, cancellation and reverse-ordered responses remain bounded; canceled jobs publish nothing and late results cannot replace a newer selection.",
+      "expected_ko": "과대·잘린 응답·DNS/TLS/읽기 정지·취소·역순 응답을 제한하며 취소 작업은 게시하지 않고 늦은 결과가 최신 선택을 덮지 못합니다.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "HG21",
+      "phase": "H4",
+      "scenario_en": "Map-to-inspector consistency",
+      "scenario_ko": "지도와 하단 패널의 일치",
+      "expected_en": "Node/edge selection ties description, feature, exact code line, source hash and graph revision together below the whole map; version changes never silently rebind the graph.",
+      "expected_ko": "맵 전체 아래에서 설명·기능·코드 줄·원문 해시·지도 버전이 노드/관계 선택과 일치하며 코드 버전 전환이 지도를 몰래 바꾸지 않습니다.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "HG22",
+      "phase": "H4",
+      "scenario_en": "Navigation identity and restoration",
+      "scenario_ko": "탐색 신원과 복원",
+      "expected_en": "History/pins/zoom/language/ref/Diff sides restore for the same registration, snapshot and navigation ID; another source or mapping digest cannot inherit those bookmarks silently.",
+      "expected_ko": "같은 등록·수집·지도 ID에서 이력·고정·줌·언어·ref·Diff 양쪽을 복원하며 다른 소스나 매핑 해시의 링크를 몰래 재사용하지 않습니다.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "HG23",
+      "phase": "H4",
+      "scenario_en": "Remote version capabilities",
+      "scenario_ko": "원격 버전 기능 표시",
+      "expected_en": "Remote views expose selected commit and comparison sides; local index/working/stage controls are absent. Provider links use verified repository URLs and pinned commits.",
+      "expected_ko": "원격 화면은 선택 커밋과 비교 양쪽을 제공하며 로컬 index·working·stage 조작은 없고 provider 링크는 검증된 저장소와 고정 커밋을 사용합니다.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "HG24",
+      "phase": "H4",
+      "scenario_en": "Editor target identity",
+      "scenario_ko": "에디터 대상 신원",
+      "expected_en": "Open a labeled retained copy or an explicitly bound matching local file; verify commit/blob identity and line. Never invent a local checkout or a remotely writable path.",
+      "expected_ko": "보존 사본 또는 명시적으로 연결한 일치 로컬 파일만 커밋·blob·줄을 확인해 열며 가짜 로컬 checkout이나 원격 편집 경로를 만들지 않습니다.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "HG25",
+      "phase": "H4",
+      "scenario_en": "Offline export",
+      "scenario_ko": "오프라인 내보내기",
+      "expected_en": "With networking blocked and originals hidden, retained map/code/Diff work within exported coverage. Source and origin inclusion are explicit; tokens and local/editor paths are excluded.",
+      "expected_ko": "네트워크 차단·원본 숨김 상태에서 포함 범위의 지도·코드·Diff가 작동하고 원문·origin은 명시적으로 포함하며 토큰·로컬/에디터 경로는 제외합니다.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "HG26",
+      "phase": "H5",
+      "scenario_en": "Local/FFmpeg/CALF preservation",
+      "scenario_ko": "Local·FFmpeg·CALF 보존",
+      "expected_en": "Repeat affected Local Git and FFmpeg contract checks; original sources, refs/index/config, v1 captures, FFmpeg release files and original CALF records retain their baseline hashes.",
+      "expected_ko": "영향받는 Local Git·FFmpeg 계약 검사를 수행하고 원래 소스·refs/index/설정·v1 수집본·FFmpeg 릴리즈·CALF 기록의 기준 해시를 보존합니다.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "HG27",
+      "phase": "H5",
+      "scenario_en": "Live public-provider qualification",
+      "scenario_ko": "실제 공개 provider 검증",
+      "expected_en": "Both providers return independently verified pinned fixture content and map/Diff observations; record API versions, counts and limits. Mock success alone cannot qualify either provider.",
+      "expected_ko": "두 provider의 실제 고정 fixture 원문·지도·Diff를 독립 검증하고 API 버전·수·제한을 기록하며 mock만으로 provider 지원을 검증했다고 하지 않습니다.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "HG28",
+      "phase": "H5",
+      "scenario_en": "Private-provider qualification",
+      "scenario_ko": "비공개 provider 검증",
+      "expected_en": "Verify an explicitly authorized private fixture and read access for each provider; unavailable live private evidence remains NOT_RUN and the published support claim is narrowed.",
+      "expected_ko": "provider별로 명시 승인된 비공개 fixture와 읽기 접근을 검증하고 실제 근거가 없으면 NOT_RUN으로 남겨 공개 지원 주장을 제한합니다.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "HG29",
+      "phase": "H5",
+      "scenario_en": "Actual platform/browser qualification",
+      "scenario_ko": "실제 플랫폼·브라우저 검증",
+      "expected_en": "macOS/Windows/Linux actual browser checks cover EN/KO, 1440/390/320 widths, code scrolling, zoom/pinch and no console errors; physical-device/editor tests stay separately labeled.",
+      "expected_ko": "macOS·Windows·Linux 실제 브라우저에서 한영·1440/390/320 폭·코드 스크롤·줌/핀치·콘솔 오류를 확인하고 실기기·에디터 실실행은 따로 표시합니다.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "HG30",
+      "phase": "H5",
+      "scenario_en": "Package and provider independence",
+      "scenario_ko": "패키지와 provider 독립성",
+      "expected_en": "Clean package installs include assets, schemas and CLI; Local Git works offline with no provider credentials or SDK/core/model imports; unrelated packs and records are preserved.",
+      "expected_ko": "새 패키지 설치에서 자산·스키마·CLI를 확인하고 provider 자격증명·SDK/코어/모델 없이 Local Git이 오프라인 동작하며 다른 팩과 기록을 보존합니다.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "HG31",
+      "phase": "H5",
+      "scenario_en": "Measured bounded performance",
+      "scenario_ko": "측정한 성능과 한도",
+      "expected_en": "Record request/source/page budgets, cold versus cached timings and peak memory on a defined fixture. Target progress <=1s, cached opening <=2s, cancellation drain <=10s and peak RSS <=512 MiB.",
+      "expected_ko": "정의한 fixture에서 요청·원문·페이지 예산, cold/cache 시간과 최대 메모리를 기록합니다. 목표는 진행 표시 1초·캐시 열기 2초·취소 정리 10초·최대 RSS 512 MiB 이내입니다.",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "HG32",
+      "phase": "H5",
+      "scenario_en": "Read-only remote effects and evidence",
+      "scenario_ko": "원격 읽기 효과와 근거",
+      "expected_en": "Request audit contains only the chosen read endpoints; no remote writes, Git clone/fetch/push, webhooks, CI triggers or project-code execution. Incomplete/failed attempts and cleanup stay recorded.",
+      "expected_ko": "요청 기록은 지정 읽기 endpoint뿐이며 원격 쓰기·Git clone/fetch/push·webhook·CI 시작·프로젝트 코드 실행이 없어야 합니다. 미완료·실패·정리 근거도 보존합니다.",
+      "status": "NOT_RUN"
+    }
+  ],
+  "h0_contract_progress": {
+    "state": "PASS_MACOS_CONTRACT_FIXTURE_ONLY",
+    "evidence": "verification/repository-hosted-h0-20261107.json",
+    "related_criteria": [
+      "HG03",
+      "HG04",
+      "HG08",
+      "HG10"
+    ],
+    "full_hosted_criteria_remain": "NOT_RUN"
+  },
+  "h1_contract_progress": {
+    "state": "PASS_MACOS_SYNTHETIC_TRANSPORT_AND_LOCAL_UI_ONLY",
+    "evidence": "verification/repository-hosted-h1-20261107.json",
+    "related_criteria": [
+      "HG01",
+      "HG02",
+      "HG16",
+      "HG17",
+      "HG18",
+      "HG19",
+      "HG20"
+    ],
+    "scope": "Manual registry, identity-only HTTP, credential-reference boundaries, cache/budgets, owned-process cancellation and local API fixtures; no live provider or hosted map qualification",
+    "full_hosted_criteria_remain": "NOT_RUN"
+  },
+  "h2_contract_progress": {
+    "state": "PASS_MACOS_GITHUB_READER_FIXTURES_AND_SCOPED_LIVE_PUBLIC",
+    "evidence": "verification/repository-hosted-h2-20261107.json",
+    "related_criteria": [
+      "HG03",
+      "HG05",
+      "HG07",
+      "HG09",
+      "HG10",
+      "HG11",
+      "HG27"
+    ],
+    "scope": "GitHub pinned reader only; anonymous public full inventory and 13 selected source files independently checked. No GitLab/private/shared hosted UI qualification. Full matrix criteria remain NOT_RUN.",
+    "full_hosted_criteria_remain": "NOT_RUN"
+  },
+  "h3_contract_progress": {
+    "state": "PASS_MACOS_GITLAB_READER_FIXTURES_AND_SCOPED_PUBLIC_RETAINED_BLOBS",
+    "evidence": "verification/repository-hosted-h3-20261107.json",
+    "related_criteria": [
+      "HG03",
+      "HG06",
+      "HG07",
+      "HG09",
+      "HG10",
+      "HG11",
+      "HG27"
+    ],
+    "scope": "GitLab pinned recursive tree/raw reader; full graph equivalence through independent Git-backed fixtures. Public mirror: 32-file inventory, 10 raw files and selected retained-code subgraph checked across different commits; no full same-commit live equality or hosted UI qualification.",
+    "full_hosted_criteria_remain": "NOT_RUN"
+  },
+  "h4_contract_progress": {
+    "state": "PASS_SCOPED_MACOS_COMMON_NAVIGATION",
+    "evidence": "verification/repository-hosted-h4-20261107.json",
+    "related_criteria": [
+      "HG10",
+      "HG12",
+      "HG13",
+      "HG14",
+      "HG15",
+      "HG20",
+      "HG21",
+      "HG22",
+      "HG23",
+      "HG24",
+      "HG25"
+    ],
+    "scope": "Common source selection/map/code/Diff/history/editor-copy/v2 offline verified on macOS with Git-backed GitHub/GitLab provider fixtures and actual Chrome; prior Local/v1/FFmpeg preserved. Full live/private/platform/package/performance matrix remains H5.",
+    "full_hosted_criteria_remain": "NOT_RUN"
+  },
+  "h5_contract_progress": {
+    "state": "PASS_SCOPED_PUBLIC_DESKTOP_H5_REMAINING_NOT_RUN",
+    "evidence": "verification/repository-hosted-h5-20261107.json",
+    "scope": "Actual public GitHub via gh CLI qualification transport and anonymous GitLab, exact retained final rendering, three desktop OSes/browsers/installations and defined fixture measurements. Private/full matrix remains incomplete.",
+    "scoped_criteria": {
+      "HG26": {
+        "state": "PASS_TASK_SCOPE",
+        "scope": "Local/v1/FFmpeg regression and baseline hashes; one intentional viewer correction, three test-file changes including new H5 regression"
+      },
+      "HG27": {
+        "state": "PASS_SCOPED_PUBLIC",
+        "scope": "Live GitHub through owner-requested gh CLI qualification transport; live anonymous GitLab. Final rendering replay uses unchanged retained inputs; default anonymous GitHub remains rate-limited partial."
+      },
+      "HG28": {
+        "state": "NOT_RUN",
+        "scope": "No explicitly selected private repository fixture; no account enumeration or credential discovery."
+      },
+      "HG29": {
+        "state": "PASS_THREE_DESKTOP_SCOPE",
+        "scope": "Actual Chrome macOS/Debian and Edge Windows; remote provider-shaped Git fixtures versus actual providers on macOS. Physical mobile/native editor excluded."
+      },
+      "HG30": {
+        "state": "PASS_THREE_OS_ISOLATED_INSTALL",
+        "scope": "Same wheel SHA256; assets/schemas/CLI, no network/SDK/core dependency for Local Git."
+      },
+      "HG31": {
+        "state": "PASS_DEFINED_FIXTURE_ONLY",
+        "scope": "301 files/5 contents; service timing/RSS and cached public browser reopening; no browser aggregate RSS or broad-scale API latency claim."
+      },
+      "HG32": {
+        "state": "PASS_READ_ONLY_SCOPE",
+        "scope": "All captured provider operations GET on fixed registered endpoints; no Git clone/fetch/push, provider writes or inspected code execution."
+      }
+    },
+    "full_matrix_criteria_status_preserved": "NOT_RUN"
+  }
+}

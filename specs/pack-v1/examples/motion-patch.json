@@ -1,0 +1,191 @@
+{
+  "schema": "calf.extension-pack.v1",
+  "id": "calf.media.motion-patch",
+  "version": "0.1.0-dev.1",
+  "availability": "reference",
+  "channel": "experimental",
+  "summary": {
+    "en": "Planned local alignment of a selected background patch.",
+    "ko": "선택한 배경 패치의 작은 어긋남을 로컬에서 보정하는 계획입니다."
+  },
+  "dependencies": [
+    {
+      "id": "python",
+      "kind": "runtime",
+      "versionPolicy": "interval",
+      "versionRange": {
+        "minInclusive": "3.10.0",
+        "maxExclusive": "4.0.0"
+      },
+      "requiredFeatures": [
+        "stdlib",
+        "utf8"
+      ]
+    },
+    {
+      "id": "calf-sdk",
+      "kind": "sdk",
+      "versionPolicy": "interval",
+      "versionRange": {
+        "minInclusive": "0.2.1",
+        "maxExclusive": "0.2.2"
+      },
+      "requiredFeatures": [
+        "public-universal-work-v1"
+      ]
+    },
+    {
+      "id": "numpy",
+      "kind": "python-package",
+      "versionPolicy": "interval",
+      "versionRange": {
+        "minInclusive": "2.2.6",
+        "maxExclusive": "2.2.7"
+      },
+      "requiredFeatures": [
+        "array-processing"
+      ]
+    },
+    {
+      "id": "opencv-python-headless",
+      "kind": "python-package",
+      "versionPolicy": "interval",
+      "versionRange": {
+        "minInclusive": "4.12.0.88",
+        "maxExclusive": "4.12.0.89"
+      },
+      "requiredFeatures": [
+        "image-registration"
+      ]
+    },
+    {
+      "id": "calf.media.ffmpeg",
+      "kind": "pack",
+      "versionPolicy": "interval",
+      "versionRange": {
+        "minInclusive": "0.1.0",
+        "maxExclusive": "0.1.1"
+      },
+      "requiredFeatures": [
+        "scene-candidate-render"
+      ]
+    }
+  ],
+  "entryPoints": [
+    {
+      "id": "cli",
+      "status": "planned",
+      "transport": "cli"
+    },
+    {
+      "id": "sdk",
+      "status": "planned",
+      "transport": "python"
+    },
+    {
+      "id": "mcp",
+      "status": "planned",
+      "transport": "stdio-mcp"
+    }
+  ],
+  "modes": [
+    {
+      "id": "patch",
+      "status": "planned",
+      "supervised": true,
+      "core": {
+        "protocol": "calf.runtime.v1",
+        "editions": {
+          "harness": {
+            "minInclusive": "1.8.7",
+            "maxExclusive": "1.8.8"
+          },
+          "workbench": {
+            "minInclusive": "1.9.2",
+            "maxExclusive": "1.9.3"
+          }
+        }
+      },
+      "dependencies": [
+        "python",
+        "calf-sdk",
+        "numpy",
+        "opencv-python-headless"
+      ],
+      "entryPoints": [
+        "cli",
+        "sdk",
+        "mcp"
+      ],
+      "network": "none",
+      "effects": [
+        "observe",
+        "create-candidate"
+      ]
+    },
+    {
+      "id": "comparison-preview",
+      "status": "planned",
+      "supervised": true,
+      "core": {
+        "protocol": "calf.runtime.v1",
+        "editions": {
+          "harness": {
+            "minInclusive": "1.8.7",
+            "maxExclusive": "1.8.8"
+          },
+          "workbench": {
+            "minInclusive": "1.9.2",
+            "maxExclusive": "1.9.3"
+          }
+        }
+      },
+      "dependencies": [
+        "python",
+        "calf-sdk",
+        "numpy",
+        "opencv-python-headless",
+        "calf.media.ffmpeg"
+      ],
+      "entryPoints": [
+        "cli",
+        "sdk",
+        "mcp"
+      ],
+      "network": "none",
+      "effects": [
+        "observe",
+        "create-candidate"
+      ]
+    }
+  ],
+  "resources": {
+    "maxWorkers": 1,
+    "onDemand": true,
+    "modelRequired": false,
+    "historyLoading": "selected-only",
+    "limitsDocument": "docs/EXTENSION_PACK_SPEC.md"
+  },
+  "verification": {
+    "specification": "docs/EXTENSION_PACK_SPEC.md",
+    "requiredChecks": [
+      "held-out-alignment-error",
+      "edit-intent-preserved",
+      "outside-mask-pixels-unchanged",
+      "temporal-stability",
+      "new-distortion-review",
+      "current-native-evidence-after-binding"
+    ],
+    "lifecycleStatus": "NOT_RUN",
+    "runtimeEvidence": [],
+    "lifecycleEvidence": []
+  },
+  "recovery": {
+    "specification": "docs/EXTENSION_PACK_SPEC.md",
+    "capabilities": []
+  },
+  "documentation": {
+    "en": "docs/EXTENSION_PACK_SPEC.md",
+    "ko": "docs/EXTENSION_PACK_SPEC_KR.md"
+  }
+}

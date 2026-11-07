@@ -1,10 +1,15 @@
 # CALF Extensions
 
+## 로컬 확장팩 프리뷰
+
+공통 팩 관리기와 Repository 팩 0.1.0-preview.1의 설치·업데이트·복구를 macOS·Windows·Linux에서 검증했습니다. [다운로드·검증 결과](https://github.com/VibePakcr/CALF-Extensions/releases/tag/packs-v0.1.0-preview.1) · [한국어 안내](docs/PACKS_GUIDE_KR.md) · [English](docs/PACKS_GUIDE.md). 읽기 전용 로컬 모드에는 Python·Git만 필요하며 모델이나 네이티브 코어는 요구하지 않습니다.
+
+
 [English](README.md) · [CALF 다운로드](https://github.com/VibePakcr/CALF/blob/main/DOWNLOADS.md) · [라이선스](LICENSE-EXTENSIONS.txt)
 
 **CALF — Controlled Agent Lifecycle Framework**에 연결하는 작은 로컬 확장 모음입니다. 비공개 코어를 수정하지 않고 런타임을 작업 계약·독립 검사·파일 버전이 연결된 실행 증거와 결합합니다.
 
-**0.1.0 개발자 프리뷰:** [다운로드](https://github.com/VibePakcr/CALF-Extensions/releases/tag/v0.1.0) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/v0.1.0) · [릴리즈 안내](RELEASE-NOTES.md). 하나의 Python 공용 패키지로 검증된 macOS·Windows·Linux 환경에서 사용합니다. CALF 앱 설치 파일과는 별도입니다.
+**0.1.0 개발자 프리뷰:** [다운로드](https://github.com/VibePakcr/CALF-Extensions/releases/tag/v0.1.0) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/ffmpeg-v0.1.0) · [릴리즈 안내](RELEASE-NOTES.md). 하나의 Python 공용 패키지로 검증된 macOS·Windows·Linux 환경에서 사용합니다. CALF 앱 설치 파일과는 별도입니다.
 
 첫 확장은 **로컬 FFmpeg 씬 작업 흐름**이며, 개발자 프리뷰로 제공합니다. **승인된 1·2번 씬은 그대로 두고 3번 씬만 수정하는 것**이 이번 구현의 핵심입니다.
 
@@ -41,7 +46,19 @@ Python 표준 라이브러리와 CALF SDK만 사용합니다. SDK와 네이티�
 
 Claude Code 실제 작업은 macOS에서 확인했습니다. Claude Desktop GUI 설정, 다른 OS·아키텍처 조합, 실제 제작 영상, 장시간 작업, 미적·의미적 검수, ComfyUI·Remotion·Veo·Runway 등 생성 API는 **이번 시험의 검증 범위가 아닙니다**. 미디어 참조 아키텍처는 후속 확장의 방향이며, 완료된 연동 목록이 아닙니다.
 
+## 프로젝트 탐색 미리보기
+
+**무료 설치형 Repository Navigator 프리뷰:** [ZIP·체크섬·한영 매뉴얼 다운로드](https://github.com/VibePakcr/CALF-Extensions/releases/tag/navigator-v0.1.0-dev.1). Local Git과 수동 등록한 GitHub·GitLab을 같은 지도·코드·Diff로 탐색합니다. Python·Git만 필요하며 CALF core·SDK·모델은 요구하지 않습니다.
+
+작업 소스에는 무료 [Local Git 프로젝트 탐색기](docs/REPOSITORY_NAVIGATOR_KR.md)가 포함됩니다. 프로젝트를 선택하면 기능·정의·문서·파일·Python 심볼의 관계 지도를 탐색하고, 맵 아래에서 설명·정확한 버전의 코드·Diff·출처를 확인할 수 있습니다.
+
+현재는 소스에서 실행하는 개발 미리보기이며 공개된 FFmpeg 0.1.0 압축파일과는 별도입니다. Local Git는 CALF 코어·SDK·계정·모델 API를 요구하지 않습니다. 수동 등록한 GitHub·GitLab 소스도 같은 지도와 코드/Diff 패널로 탐색합니다. [원격 탐색 안내](docs/REPOSITORY_HOSTED_H4_KR.md)와 [H5 공개·데스크톱 검증 범위](docs/REPOSITORY_HOSTED_H5_KR.md)를 확인하십시오. 비공개 접근·에디터 실행·실제 모바일 검증은 남아 있습니다.
+
+Local Git·GitHub·GitLab을 묶은 [설치형 Repository Navigator 프리뷰](docs/NAVIGATOR_PACK_KR.md)와 실제 화면이 담긴 [한글](docs/navigator-manual/ko.html)·[영문](docs/navigator-manual/en.html) 매뉴얼을 추가했습니다. 세 운영체제 설치 검사와 범위는 [설치본 검증](docs/NAVIGATOR_PACK_VERIFICATION.json)에 기록합니다.
+
 ## 저장소 구성
+
+작업 소스에는 [로컬 팩 설치·업데이트 프리뷰](docs/PACK_MANAGER_KR.md)와 [공통 팩 규격](docs/EXTENSION_PACK_SPEC_KR.md)도 있습니다. 후보 팩을 준비·검수하고 의존성 잠금 정보를 보존하며 업데이트·버전 복귀 뒤에도 기존 작업을 이어갑니다. [Repository 로컬 Git inspect](docs/REPOSITORY_PACK_KR.md)는 Python·Git만 사용하는 별도 설치·검수 경로와 버전이 고정된 작업 바인딩을 지원합니다. 이 개발 기능은 **공개된 0.1.0 압축파일에는 포함되지 않았습니다.** 등록소 다운로드·필수 모델·상주 서비스를 추가하지 않으며, 모션은 이 팩 생명주기 프리뷰에서 아직 구현하지 않았으며, 별도 Repository Navigator가 관리형 foreground 뷰어를 제공합니다.
 
 ```text
 calf_extensions/media_ffmpeg/   실행기·독립 검사기·씬 선택·CLI

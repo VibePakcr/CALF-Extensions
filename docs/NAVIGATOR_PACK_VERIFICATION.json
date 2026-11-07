@@ -1,0 +1,116 @@
+{
+  "schema": "calf.navigator.qualification.v1",
+  "status": "PASS_WITH_DECLARED_LIMITS",
+  "version": "0.1.0-dev.1",
+  "runtime_zip_sha256": "8afcd970347df168b0bb6095a2bb5ce2af9f4a1636a4de6bd79596d8642d59ef",
+  "platforms": [
+    {
+      "platform": "darwin",
+      "python": "3.12.13",
+      "state": "PASS",
+      "bundle_pack": "8afcd970347df168b0bb6095a2bb5ce2af9f4a1636a4de6bd79596d8642d59ef",
+      "local_code": true,
+      "local_diff": true,
+      "workspace_mutex": true,
+      "stop_and_reopen": true,
+      "credential_value_not_retained": true,
+      "source_head_index_worktree_unchanged": true
+    },
+    {
+      "platform": "linux",
+      "python": "3.13.5",
+      "state": "PASS",
+      "bundle_pack": "8afcd970347df168b0bb6095a2bb5ce2af9f4a1636a4de6bd79596d8642d59ef",
+      "local_code": true,
+      "local_diff": true,
+      "workspace_mutex": true,
+      "stop_and_reopen": true,
+      "credential_value_not_retained": true,
+      "source_head_index_worktree_unchanged": true
+    },
+    {
+      "platform": "win32",
+      "python": "3.12.10",
+      "state": "PASS",
+      "bundle_pack": "8afcd970347df168b0bb6095a2bb5ce2af9f4a1636a4de6bd79596d8642d59ef",
+      "local_code": true,
+      "local_diff": true,
+      "workspace_mutex": true,
+      "stop_and_reopen": true,
+      "credential_value_not_retained": true,
+      "source_head_index_worktree_unchanged": true
+    }
+  ],
+  "offline_install_contract_tests_per_platform": 84,
+  "repository_regression_tests": 126,
+  "manager_contract_tests": 25,
+  "ffmpeg_contract_tests": 3,
+  "preservation": {
+    "protected": {
+      "files": 607,
+      "unchanged": true
+    },
+    "preserved_local_lifecycle": {
+      "files": 7,
+      "unchanged": true
+    },
+    "history": {
+      "files": 18,
+      "unchanged": true
+    }
+  },
+  "actual_browser": {
+    "platform": "macOS Chrome",
+    "public_github": true,
+    "public_gitlab": true,
+    "local_code_diff": true,
+    "remote_direct_diff": true,
+    "retained_reopen": true,
+    "editor_copy_uri": true,
+    "offline_with_http_blocked": true,
+    "viewport_widths": [
+      1400,
+      390,
+      320
+    ],
+    "native_editor_launch": false
+  },
+  "screenshot_provenance": {
+    "actual_installed_frames": true,
+    "runtime_repository_code_byte_identical_to_final": true,
+    "only_runtime_guide_text_changed_since_capture": true
+  },
+  "update_rollback": {
+    "state": "PASS",
+    "old_binding_kept_version": "0.1.0-dev.1",
+    "updated_active": "0.1.0-dev.2",
+    "rollback_active": "0.1.0-dev.1",
+    "stale_compare_and_swap_refused": true,
+    "preexisting_store_files_unchanged_after_rollback": 89
+  },
+  "manuals": {
+    "languages": [
+      "en",
+      "ko"
+    ],
+    "pdf_pages_each": 9,
+    "utf8": true,
+    "responsive_html_widths": [
+      390,
+      320
+    ],
+    "visual_review": "all pages plus full-size samples",
+    "pdf_sha256": {
+      "en": "4c575a165f6f6f9674851f74e76c72643366095528be081ef03984e9ec9b3610",
+      "ko": "7f9fae3469904f080e2af88f3a1ffe3d630f4747f13f5f8ae22f7009b4ef1889"
+    }
+  },
+  "not_run": [
+    "private-account workflows",
+    "self-hosted providers",
+    "native editor launch",
+    "physical mobile devices"
+  ],
+  "historical_evidence_unchanged": true,
+  "public_release_published": false
+}
