@@ -61,4 +61,3 @@ All **607 protected files** in the H1-start preservation set retained their hash
 
 Actual public/private GitHub/GitLab access, successful trusted public TLS, hosted collection/map/Diff/export, Windows/Linux H1, clean package installation, performance/memory qualification, physical phones and actual external editor launching remain **NOT_RUN**. Full HG01–HG32 acceptance remains NOT_RUN; the linked qualification adds scoped H1 fixture progress only. Next is H2's GitHub pinned-ref/tree/blob reader.
 
-END

@@ -115,7 +115,7 @@ calf_extensions/repository/
 
 기존 소스맵에서 맵 조작·하단 inspector·코드/차이 표현·이력·상태 링크를 추립니다. VibePackr 경로·제품 코드·수집 원문·GAPE 데이터·T9 정책을 배포 자산에 복제하지 않습니다. 새 CLI는 `calf-media`와 분리하며 기본 실행에서 `calf_sdk`를 import하지 않습니다. Runtime 제3자 Python/Node 의존성과 FFmpeg 요구를 추가하지 않습니다. Git과 브라우저는 사용자의 설치본을 사용합니다.
 
-배포 시 entry point·package-data·영한 사용법·독립적인 repository 검증 요약을 추가합니다. 기존 FFmpeg 검증서·체크섬·릴리즈 기록을 새 확장의 성공 근거로 재사용하지 않습니다. 현재 core/SDK/라이선스 파일을 수정하거나 동봉하지 않습니다. 무료 확장 라이선스 경계를 유지합니다.
+배포 시 entry point·package-data·영·한 사용법·독립적인 repository 검증 요약을 추가합니다. 기존 FFmpeg 검증서·체크섬·릴리즈 기록을 새 확장의 성공 근거로 재사용하지 않습니다. 현재 core/SDK/라이선스 파일을 수정하거나 동봉하지 않습니다. 무료 확장 라이선스 경계를 유지합니다.
 
 ## 6. 구현 순서와 단계별 종료 조건
 
@@ -126,7 +126,7 @@ calf_extensions/repository/
 | P2 원문·비교 | blob/index/작업 파일 수집, 4종 비교, 충돌·rename·merge·binary 상태 | LG07–LG13·LG17·LG19·LG20 통과; 원문 SHA와 Diff 재구성 대조 |
 | P3 뷰어 | 실제 로컬 읽기 API, 맵 하단 inspector, 언어 토글·검색·이력·에디터 | LG18·LG21–LG24·LG26 UI/API 기준 통과; 원본 모드별 표시 대조 |
 | P4 내보내기 | 새 수집본 기반 offline HTML/JSON, 범위·원문 선택, 휴대용 경로 | LG14·LG17·LG19·LG21·LG25 통과; 네트워크 차단 상태에서 재열기 |
-| P5 배포 준비 | 3 OS 실제 실행 기록, 설치·package-data·영한 문서, regression 보고 | LG01–LG28의 해당 플랫폼 항목 통과; 기존 media 검증과 격리·보존 확인 |
+| P5 배포 준비 | 3 OS 실제 실행 기록, 설치·package-data·영·한 문서, regression 보고 | LG01–LG28의 해당 플랫폼 항목 통과; 기존 media 검증과 격리·보존 확인 |
 
 단계 산출물은 후속 단계의 입력입니다. 검사·API 구조를 먼저 고정하고 UI와 수집기가 각자 다른 버전 의미를 만들지 않도록 합니다. Packaging·공개 게시·원격 push는 별도 실행 단계이며 이 계획 작성에 포함하지 않습니다.
 
@@ -162,17 +162,16 @@ calf_extensions/repository/
 | LG24 | 화면 크기·언어 | 데스크톱 1440, 모바일 390·320px에서 페이지 가로 넘침 없음; 코드만 독립 스크롤; EN/KO UI 혼합·깨진 문자·console 오류 없음 |
 | LG25 | 내보내기 범위 | 새 출력 폴더만 생성; source 미포함 기본·선택 포함·제외 수 정확; 인증·Git 설정·SDK 기록·절대 root·접근 토큰 제외 |
 | LG26 | 성능·대형 저장소 | 10,000 tracked 파일·20,000 작은 commit의 고정 fixture, 이력 첫 200개로 각 플랫폼 관측; 아래 응답/메모리 기준 충족 |
-| LG27 | Package·regression | 새 폴더 설치에서 assets/영한 문서/CLI 존재; SDK/FFmpeg 없는 환경에서 Git 탐색 동작; 기존 media 검사와 패키지 기능 유지 |
+| LG27 | Package·regression | 새 폴더 설치에서 assets/영·한 문서/CLI 존재; SDK/FFmpeg 없는 환경에서 Git 탐색 동작; 기존 media 검사와 패키지 기능 유지 |
 | LG28 | 실제 플랫폼 근거 | macOS ARM64·Windows x64·Linux x64의 실제 Git/브라우저 실행 결과·버전·artifact hash 보존; 합성/모의 실행을 실제 플랫폼 근거로 승격하지 않음 |
 
-LG26의 초기 목표는 로컬 SSD·동일 fixture에서 화면 shell 1초, 첫 metadata 페이지 10초, 1 MiB 이하 수집 텍스트의 warm open 1초, warm Diff 2초 이내입니다. 브라우저 기본 렌더링은 한 번에 최대 500개 map node와 200줄 코드, 브라우저를 제외한 확장 process tree(Python viewer와 소유 Git 자식)의 peak RSS 512 MiB 이내를 목표로 합니다. 비교 가능한 반복 5회의 최대값과 조건을 보고합니다. 조절해야 하면 원인·측정값·변경 이유를 남기며, 실패한 구현에 맞춰 목표를 조용히 낮추지 않습니다.
+LG26의 초기 목표는 로컬 SSD·동일 fixture에서 화면 shell 1초, 첫 metadata 페이지 10초, 1 MiB 이하 수집 텍스트의 warm open 1초, warm Diff 2초 이내입니다. 브라우저 기본 렌더링은 한 번에 최대 500개 map node와 200줄 코드, 브라우저를 제외한 확장 process tree(Python viewer와 소유 Git 자식)의 peak RSS 512 MiB 이내를 목표로 합니다. 비교 가능한 반복 5회의 최대값과 조건을 보고합니다. 조절해야 하면 원인·측정값·변경 이유를 남기며, 구현이 실패했다는 이유로 목표를 낮추지 않습니다.
 
 초기 자원 한도는 Git 명령 30초, 전체 metadata 수집 120초, stdout 16 MiB·stderr 256 KiB/명령, 원문 preview 1 MiB/파일, export 원문 총 64 MiB입니다. 원문·목록 한도에 걸리면 제외 수/부분 범위를 보여주고 사용자가 더 좁은 범위로 다시 요청하게 합니다. 이력 페이지와 화면 node 제한은 전체 데이터의 삭제가 아니라 명시적인 로딩 범위입니다.
 
 ## 8. 수락과 후속 연결
 
-Local Git preview 수락은 위 검증·원본 보존·실제 UI 확인과 영한 문서 일치를 모두 요구합니다. 테스트 실행 전의 항목은 PLANNED, 미실행은 NOT_RUN, 실패는 FAIL, OS 특성상 불가능한 fixture는 이유가 있는 N/A로 남깁니다. 한 OS의 PASS를 다른 OS에 복사하지 않습니다. Safari/Chromium 계열별 실제 확인 범위도 따로 기록합니다. CALF가 구현 검사를 감독할 경우 새 계약의 현재 입력에 대한 공식 native 판정을 별도 보존하며 프로세스 종료 코드만으로 완료를 주장하지 않습니다.
+Local Git preview 수락은 위 검증·원본 보존·실제 UI 확인과 영·한 문서 일치를 모두 요구합니다. 테스트 실행 전의 항목은 PLANNED, 미실행은 NOT_RUN, 실패는 FAIL, OS 특성상 불가능한 fixture는 이유가 있는 N/A로 남깁니다. 한 OS의 PASS를 다른 OS에 복사하지 않습니다. Safari/Chromium 계열별 실제 확인 범위도 따로 기록합니다. CALF가 구현 검사를 감독할 경우 새 계약의 현재 입력에 대한 공식 native 판정을 별도 보존하며 프로세스 종료 코드만으로 완료를 판정하지 않습니다.
 
 다음 단계의 CALF 연결은 공식 SDK 0.2.1의 `tasks/inspect/changes`를 통해 출처와 버전을 연결합니다. 현재 작업 목록은 최근 32건이며, `changes`의 task/attempt/recovery는 작업 트리 Git Diff와 구분됩니다. 저장소 탐색은 이 한계를 우회해 core journal/SQLite를 읽거나 CI 성공을 CALF 성공으로 바꾸지 않습니다. GitHub·GitLab은 같은 저장소 모델 위의 PR/MR/CI adapter로 추가합니다.
 
-END

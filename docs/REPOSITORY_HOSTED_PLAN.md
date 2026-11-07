@@ -158,7 +158,7 @@ H0–H4 are implemented with scoped macOS evidence, including prior public GitHu
 
 ## 10. Acceptance matrix
 
-Every item is NOT_RUN. HG27/28 require actual provider qualification, distinct from mocks. HG13 merge-base mode is optional: direct comparison is mandatory, and unimplemented modes stay hidden. HG24 qualifies only the editor-target mechanism actually offered.
+The matrix below records the original acceptance targets. For completed checks and remaining NOT_RUN items, see the H0–H5 reports. HG27/28 require actual provider qualification, distinct from mocks. HG13 merge-base mode is optional: direct comparison is mandatory, and unimplemented modes stay hidden. HG24 qualifies only the editor-target mechanism actually offered.
 
 | ID | Phase | Scenario | Observable pass condition |
 | --- | --- | --- | --- |
@@ -207,4 +207,3 @@ The regression baseline is the existing macOS/Debian 22 checks and Windows 21 pl
 
 Retain registration/pinned-revision manifests, credential-redacted request summaries, byte hashes, scoped outcomes, UI evidence and cleanup/preservation checks. Append predecessor/successor evidence rather than rewriting old failures or captures as successes. Provider/CI states do not become native CALF success or release authority.
 
-END

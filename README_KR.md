@@ -6,7 +6,7 @@ CALF — Controlled Agent Lifecycle Framework에 연결하는 로컬 도구 모�
 
 ## 영상 작업 관리 팩 · 0.1.0-preview.1
 
-외부 영상 도구에 보낸 요청부터 반환본·검토·채택·재수정까지 기존 CALF 씬 기록에 연결합니다. 반환 파일의 원본 바이트와 해상도를 보존합니다.
+외부 영상 도구에 보낸 요청부터 결과 파일 수신·검토·채택·재수정까지 기존 CALF 씬 기록으로 관리합니다. 반환 파일의 원본 바이트와 해상도를 보존합니다.
 
 | 시작 순서 | 바로가기 |
 |---|---|
@@ -33,7 +33,7 @@ Python 3.10 이상, 별도 CALF SDK 0.2.1·네이티브 실행기·FFmpeg/ffprob
 | Local Pack Tools + Repository Pack · 0.1.0-preview.1 | [GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/tag/packs-v0.1.0-preview.1) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/packs-v0.1.0-preview.1) | [팩 안내](docs/PACKS_GUIDE_KR.md). Python·Git. 로컬 저장소 읽기 전용 작업입니다. |
 | FFmpeg 씬 작업 · 0.1.0 | [GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/tag/v0.1.0) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/ffmpeg-v0.1.0) | [FFmpeg 안내](docs/FFMPEG_KR.md). Python·SDK·CALF 실행기·FFmpeg/ffprobe. |
 
-이전 FFmpeg 프리뷰의 [운영체제별 검증](VERIFICATION.json)은 별도입니다. 그 결과를 새 영상 관리 팩의 검증으로 확대하지 않습니다. 기존 배포 파일과 이전 버전은 계속 보관합니다.
+이전 FFmpeg 프리뷰의 [운영체제별 검증](VERIFICATION.json)은 새 영상 작업 관리 팩의 검증과 별개입니다. 기존 배포 파일과 이전 버전은 계속 보관합니다.
 
 ## 에이전트·개발자 참고
 
@@ -43,3 +43,5 @@ Python 3.10 이상, 별도 CALF SDK 0.2.1·네이티브 실행기·FFmpeg/ffprob
 - [확장 라이선스](LICENSE-EXTENSIONS.txt) · [SDK 라이선스](LICENSE-SDK.txt)
 
 SDK·네이티브 실행기는 별도입니다. 새 버전은 새 폴더에 준비하고 이전 소스·도구 위치, 계약·기록·승인 영상을 보존하세요.
+
+최신 안내 문서는 [문서 체크섬](DOCS-SHA256SUMS)으로 확인할 수 있습니다. 루트의 `SHA256SUMS`는 최초 FFmpeg 0.1.0 패키지의 파일 목록이며, 배포 압축 파일은 해당 릴리즈의 체크섬과 대조하세요. 기존 패키지에는 그 버전의 매뉴얼이 그대로 보관됩니다.

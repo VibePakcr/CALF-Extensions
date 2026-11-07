@@ -18,7 +18,7 @@ Windows 제어문자 경로는 체크아웃이나 index 보호 해제 없이 nat
 b0e5dadc9e0e4f18f68e228f12f09ff849f3644d086b8eda6f0b44cc71772943
 ```
 
-## 실제 공개 provider
+## 실제 공개 저장소 검증
 
 | 경로 | 실제 검증 범위 |
 | --- | --- |
@@ -50,8 +50,7 @@ Windows에서는 native OpenSSL이 없는 부정 TLS fixture와 POSIX 전용 실
 
 최종 기록에 소스·후보·보조기 해시, 실제 요청 감사, 바이트 검사, 플랫폼 영수증, 제외 검사, 측정 범위와 정리를 연결합니다. H0–H4 기록과 v1·FFmpeg·CALF 자산을 보존합니다. 보호 파일 607개와 H0–H4 역사 파일 15개의 기준 해시가 모두 일치했습니다. 설정을 복구·덮어쓰기하지 않았습니다.
 
-미검증: 명시적으로 허용한 비공개 fixture·권한, Enterprise/Self-Managed, Windows/Linux의 실제 공개 provider 읽기, native editor 실행, 실제 모바일 기기, Windows 콘솔 정상 중단, 넓은 성능·메모리 범위. HG01–HG32 전체 행렬을 완료로 선언하지 않고 H5 범위별 결과를 별도로 기록합니다. 저장소 커밋·push, provider 쓰기, webhook·CI 기동이나 조사한 프로젝트 코드 실행은 포함하지 않습니다.
+미검증: 명시적으로 허용한 비공개 fixture·권한, Enterprise/Self-Managed, Windows/Linux의 실제 공개 저장소 읽기, 외부 에디터 실행, 실제 모바일 기기, Windows 콘솔 정상 중단, 넓은 성능·메모리 범위. HG01–HG32 전체 행렬을 완료로 선언하지 않고 H5 범위별 결과를 별도로 기록합니다. 저장소 커밋·push, provider 쓰기, webhook·CI 기동이나 조사한 프로젝트 코드 실행은 포함하지 않습니다.
 
 다른 작업의 README 동시 변경과 새 pack 검증 모듈 추가는 그대로 보존하고 이번 고정 탐색 후보에서 제외했습니다.
 
-END

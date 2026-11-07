@@ -62,7 +62,7 @@ CALF-Video-Work-Management-Pack-0.1.0-preview.1/
 
 ## 4. 먼저 도움말이 열리는지 확인하세요
 
-macOS/Linux 셸 예시입니다. 이 관리 추가분의 실제 실행 검증은 macOS에서 수행했습니다.
+macOS/Linux 셸 예시입니다. 영상 작업 관리 팩의 실제 실행은 macOS에서 검증했습니다.
 
 ```sh
 cd "/absolute/path/to/CALF-Extensions"
@@ -79,7 +79,7 @@ python3 -B -m calf_extensions.media_jobs.cli --help
 
 `register`, `request`, `receive`, `run`, `adopt`, `reconcile`, `status`가 도움말에 나오면 명령 진입점을 찾은 것입니다. 아직 영상 작업이나 외부 생성 서비스를 실행한 것은 아닙니다. 이 환경변수는 현재 터미널에서만 사용합니다.
 
-Windows PowerShell에서는 다음과 같이 씁니다. 아래는 동등한 경로 설정·도움말 예시이며, 이 추가 관리 흐름의 Windows 실행을 검증했다는 뜻은 아닙니다.
+Windows PowerShell에서는 다음과 같이 씁니다. 아래는 같은 경로 설정과 도움말을 PowerShell로 작성한 예제입니다. 영상 작업 관리 팩의 Windows 실행은 아직 검증하지 않았습니다.
 
 ```powershell
 Set-Location 'C:\Work\CALF-Extensions'

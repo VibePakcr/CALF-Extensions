@@ -19,9 +19,9 @@ python -m calf_extensions.repository.cli probe --source SOURCE_ID --data-dir APP
 python -m calf_extensions.repository.cli sources remove SOURCE_ID --data-dir APP_DATA
 ```
 
-익명 접근은 `--credential-env`를 생략합니다. `sources check`와 `probe --source`는 같은 foreground 신원 확인입니다. Ctrl+C는 취소를 요청하고 소유한 작업을 정리합니다. 성공 시 종료 코드 0, 취소 시 130, 실패 시 비영 종료 코드를 반환합니다. 기존 `open/scan/probe --repo`와 v1 내보내기 인터페이스를 유지합니다. `open/scan --source`는 아직 구현하지 않았습니다.
+익명 접근은 `--credential-env`를 생략합니다. `sources check`와 `probe --source`는 같은 포그라운드 신원 확인입니다. Ctrl+C는 취소를 요청하고 소유한 작업을 정리합니다. 성공 시 종료 코드 0, 취소 시 130, 실패 시 0이 아닌 종료 코드를 반환합니다. 기존 `open/scan/probe --repo`와 v1 내보내기 인터페이스를 유지합니다. `open/scan --source`는 아직 구현하지 않았습니다.
 
-등록부는 `APP_DATA/registrations`만 소유하며 schema 표식을 검증하고 Git 저장소 내부 출력 위치를 거절하며 이전 등록 버전을 보존합니다. 제거는 등록을 비활성화하고 수집본·이력을 남깁니다. 같은 provider URL의 중복 등록은 같은 인증 참조일 때만 멱등 처리합니다. 참조 변경은 제거 후 명시적으로 다시 등록합니다. 남아 있는 잠금은 `REGISTRY_BUSY`로 반환하며 임의로 지우지 않습니다. 다른 형식의 등록 영역과 심볼릭 링크는 거절합니다.
+등록부는 `APP_DATA/registrations`만 관리하며 schema 표식을 검증하고 Git 저장소 내부 출력 위치를 거절하며 이전 등록 버전을 보존합니다. 제거는 등록을 비활성화하고 수집본·이력을 남깁니다. 같은 provider URL의 중복 등록은 같은 인증 참조일 때만 멱등 처리합니다. 참조 변경은 제거 후 명시적으로 다시 등록합니다. 남아 있는 잠금은 `REGISTRY_BUSY`로 반환하며 임의로 지우지 않습니다. 다른 형식의 등록 영역과 심볼릭 링크는 거절합니다.
 
 신원 상태는 `REGISTERED_UNVERIFIED`와 `IDENTITY_VERIFIED`입니다. 검증한 이름 변경은 고정 숫자 ID를 유지하며 ID 변경은 거절합니다. 공개 여부는 미확인으로 남을 수 있습니다. GitLab의 명시적 `empty_repo`는 EMPTY/NONEMPTY를 확정할 수 있지만 GitHub `size=0`은 근거가 부족해 UNKNOWN입니다. 404는 비공개 접근 불가를 포함하는 `ACCESS_UNKNOWN`이며 빈 저장소·삭제로 판정하지 않습니다.
 
@@ -38,7 +38,7 @@ python -m calf_extensions.repository.cli sources remove SOURCE_ID --data-dir APP
 
 ## 로컬 API와 소유 작업
 
-기존 foreground Local 포털에 아래 경로를 추가하며 loopback Host·Origin·bearer 검사를 유지합니다. 등록·작업 처리는 활성 프로젝트 지도 잠금을 점유하지 않습니다. POST는 typed JSON, `Content-Type: application/json`, 하나의 Content-Length, 최대 8 KiB를 요구합니다. 토큰 값·임의 fetch URL은 받지 않습니다.
+기존 foreground Local 포털에 아래 경로를 추가하며 loopback Host·Origin·bearer 검사를 유지합니다. 등록·작업 처리는 활성 프로젝트 지도 잠금을 점유하지 않습니다. POST는 자료형이 정해진 JSON, `Content-Type: application/json`, 하나의 Content-Length, 최대 8 KiB를 요구합니다. 토큰 값·임의 fetch URL은 받지 않습니다.
 
 | 방식 | 경로 | 본문 / 결과 |
 | --- | --- | --- |
@@ -55,10 +55,9 @@ python -m calf_extensions.repository.cli sources remove SOURCE_ID --data-dir APP
 
 최종 macOS 저장소 검사 **62개: 기존 22 + H0 12 + H1 28**이 통과했습니다. H1 fixture는 실제 로컬 HTTP subprocess, 인증 헤더 위치, 제한된 redirect·페이지, 인증값 반사·교체, 상태·캐시·예산·본문 실패, 정지 worker, 취소·generation 경쟁, 로컬 API 보호, 취소 중 Local 지도 계속 열기를 검사합니다. 신뢰하지 않는 인증서를 제공하는 실제 로컬 TLS 서버는 거절했습니다. GitLab 한글·플러스 namespace를 한 번만 인코딩하며 잘린 신원 응답을 성공 자료로 사용하지 않습니다.
 
-FFmpeg 계약 검사 3개가 통과했습니다. 새로운 실제 Chrome live/offline 검사에서 지도·코드·Diff·호출 줄·북마크·한영·핀치 에뮬레이션·1440/390/320 폭이 런타임 오류 없이 통과했습니다. 오프라인 열기 시 원래 fixture 저장소를 숨겼습니다. 서버·수신 소켓·소유 시험 브라우저를 정리했습니다. 새로운 hosted 소스 입력 UI는 추가하거나 검증하지 않았습니다.
+FFmpeg 계약 검사 3개가 통과했습니다. 새로운 실제 Chrome의 실시간·오프라인 검사에서 지도·코드·Diff·호출 줄·북마크·영·한 전환·핀치 에뮬레이션·1440/390/320 폭이 런타임 오류 없이 통과했습니다. 오프라인 열기 시 원래 fixture 저장소를 숨겼습니다. 서버·수신 소켓·소유 시험 브라우저를 정리했습니다. 새로운 hosted 소스 입력 UI는 추가하거나 검증하지 않았습니다.
 
 H1 시작 때의 **보호 파일 607개** 해시를 보존했습니다. 기존 FFmpeg·라이선스·릴리즈 파일, 과거 v1 자료, 이전 CALF 보존 집합을 포함합니다. 다른 작업의 README·패키지 변경은 그대로입니다. H0 소스에서는 의도한 CLI·포털 연결부만 변경했습니다. native CALF 기록에 쓰지 않았으며 이번 검증에서 커밋·push·실제 provider 요청·소유자 자격증명 조회·원격 변경은 수행하지 않았습니다.
 
 실제 공개/비공개 GitHub·GitLab 접근, 신뢰된 공개 TLS 성공, hosted 수집·지도·Diff·내보내기, H1 Windows·Linux, 새 패키지 설치, 성능·메모리 검증, 실물 스마트폰·외부 에디터 실제 실행은 **NOT_RUN**입니다. 전체 HG01–HG32 판정은 NOT_RUN으로 유지하며 연결한 검증 기록에 H1 fixture 범위의 진행만 추가합니다. 다음은 H2 GitHub 고정 ref/tree/blob reader입니다.
 
-END

@@ -4,7 +4,7 @@
 
 This source adapter connects manual external-tool handoffs and returned videos to the existing CALF scene workflow. It uses the separate SDK/native Work APIs and existing scene adoption/restoration. It does not generate, correct or interpolate video, use the motion experiments, activate an installed pack, or change host settings.
 
-Each `PROJECT/handoffs/KEY` retains the edit instructions, tool label, scene/project base identity and reference snapshots. Hand `handoff.txt` and those snapshots to your external tool. Creating a request does not establish submission, execution or completion at that tool. There are no provider calls, uploads, credentials or generation charges.
+Each `PROJECT/handoffs/KEY` retains the edit instructions, tool label, scene/project base identity and reference snapshots. Hand `handoff.txt` and those snapshots to your external tool. Creating a request does not establish submission, execution or completion at that tool. This adapter makes no provider calls or uploads, handles no credentials and incurs no generation charges. Your external tool’s own terms and charges still apply.
 
 Returned MP4s are copied byte for byte. `receive` submits one native copy/check contract; `run` advances that work once. Passing technical checks never selects a scene automatically. The caller reviews the visual/semantic result before explicitly using `adopt`.
 
@@ -22,7 +22,7 @@ The request folder after demo completion; files created after the request are al
 
 ### 2. Receive and check the return
 
-Point `RETURNED_MP4` at the downloaded result. Intake does not re-encode or resize it. `ready_for_review` means technical checks passed and scene selection is unchanged. Review the original/return motion and requested edit at this point.
+Point `RETURNED_MP4` at the downloaded result. Intake does not re-encode or resize it. `ready_for_review` means technical checks passed and scene selection is unchanged. Compare the original and returned video, including motion and the requested edit.
 
 ![Actual returned.mp4 reviewed in macOS Quick Look](../../docs/media-jobs-manual/images/finder-returned.jpg)
 
@@ -30,7 +30,7 @@ Actual playback of the synthetic return. The operator performs visual review.
 
 ### 3. Review the video, then adopt
 
-The reviewing caller explicitly adopts. The demo separately confirmed identical returned/selected SHA-256 hashes and an unchanged `scene-2` selection. This screen shows the retained `video.mp4` and `version.json` after adoption.
+After reviewing the result, the caller explicitly selects it with adopt. The demo separately confirmed identical returned/selected SHA-256 hashes and an unchanged `scene-2` selection. This screen shows the retained `video.mp4` and `version.json` after adoption.
 
 ![Actual retained selected-version folder with video.mp4 and version.json](../../docs/media-jobs-manual/images/finder-version.jpg)
 
@@ -42,7 +42,7 @@ Write revised instructions to `BRIEF_V2`, choose a new key and link it with `--p
 
 ![Actual handoffs directory retaining both sign-v1 and sign-v2 request folders](../../docs/media-jobs-manual/images/finder-revisions.jpg)
 
-A revision is a new retained request. Check its technical verdict through the CLI.
+Each revision creates a new request and preserves the earlier one. Check its technical verdict through the CLI.
 
 [See the user guide for setup and all step-by-step commands.](../../docs/media-jobs-manual/README.md)
 

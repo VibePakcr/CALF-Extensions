@@ -50,4 +50,3 @@ All 15 FFmpeg/license/release files, 27 historical v1 files and 565 files in the
 
 Next is H1: manual registration, credential references, bounded HTTP and collection/cancellation jobs. Full hosted acceptance remains NOT_RUN; H0 adds contract-fixture evidence only.
 
-END

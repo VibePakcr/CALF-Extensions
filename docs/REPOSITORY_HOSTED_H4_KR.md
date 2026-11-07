@@ -21,7 +21,7 @@ python -m calf_extensions.repository.cli open --source SOURCE_ID --data-dir DATA
 
 ## 하나의 지도와 하단 상세
 
-활성 지도는 분석한 **오른쪽 snapshot**에 속합니다. 노드·관계를 선택하면 맵 전체 아래에 설명, 명시적 기능 연결, 원문 신원과 코드를 보여줍니다. 원격 코드 버전은 분석한 오른쪽·비교 왼쪽·비교 오른쪽입니다. 코드 버전을 바꿔도 지도를 다시 분석하거나 몰래 바꾸지 않습니다. Local Git의 HEAD/index/working/충돌 stage 동작은 유지합니다.
+활성 지도는 분석한 **오른쪽 snapshot**에 속합니다. 노드·관계를 선택하면 맵 전체 아래에 설명, 명시적 기능 연결, 원문 신원과 코드를 보여줍니다. 원격 코드 버전은 분석한 오른쪽·비교 왼쪽·비교 오른쪽입니다. 코드 버전을 바꿔도 지도를 다시 분석하거나 자동으로 바꾸지 않습니다. Local Git의 HEAD/index/working/충돌 stage 동작은 유지합니다.
 
 기본 왼쪽은 선택한 오른쪽 commit의 첫 부모입니다. 부모가 없다는 메타데이터를 확인한 경우에만 빈 시작 상태와 비교하며 가짜 commit을 만들지 않습니다. 다른 쌍은 왼쪽 ref 종류와 이름을 지정합니다. 양쪽 ref를 고정한 뒤 목록과 원문을 읽습니다. 비교는 `DIRECT_SNAPSHOT`이며 merge-base 비교는 제공하지 않습니다.
 
@@ -39,7 +39,7 @@ python -m calf_extensions.repository.cli open --source SOURCE_ID --data-dir DATA
 
 ## Provider 링크와 에디터 사본
 
-Provider 파일 링크는 확인한 저장소 URL과 고정 commit을 사용합니다. 원격에는 local working/index/stage 조작이 없습니다. “보존 코드 사본 준비”는 app data에 안전한 이름으로 해시를 대조한 별도 사본을 만들고 VS Code URI를 제공합니다. 이 사본을 편집해도 수집 바이트나 provider는 바뀌지 않습니다. H4에서는 native editor 실행을 검증하지 않았고 자동 실행하지 않습니다. 기존 Local Git 에디터 링크는 유지합니다.
+Provider 파일 링크는 확인한 저장소 URL과 고정 commit을 사용합니다. 원격에는 local working/index/stage 조작이 없습니다. “보존 코드 사본 준비”는 app data에 안전한 이름으로 해시를 대조한 별도 사본을 만들고 VS Code URI를 제공합니다. 이 사본을 편집해도 수집 바이트나 provider는 바뀌지 않습니다. H4에서는 외부 에디터 실행을 검증하지 않았고 자동 실행하지 않습니다. 기존 Local Git 에디터 링크는 유지합니다.
 
 ## v2 오프라인 내보내기
 
@@ -54,10 +54,9 @@ python -m calf_extensions.repository.cli export --data-dir DATA_DIRECTORY --view
 
 ## 검증 범위와 남은 단계
 
-macOS에서 repository 시험 121개, 최종 버전 거부 보강 뒤 H4 집중 검사 20개, FFmpeg 계약 3개, 실제 Chrome 원격 fixture 포털·오프라인과 보존된 독립 Local Git/v1 브라우저 회귀를 확인했습니다. 원격 화면 검증은 독립적으로 만든 실제 Git 객체에서 provider 응답을 구성하고 변경하지 않은 GitHub·GitLab reader를 통과시켰습니다. **이번 실행이 실제 원격 provider·비공개 계정 검증을 뜻하지는 않습니다.** H2/H3 공개 reader 근거는 수정 없이 역사 기록으로 유지합니다.
+macOS에서 repository 시험 121개, 최종 버전 거부 보강 뒤 H4 집중 검사 20개, FFmpeg 계약 3개, 실제 Chrome 원격 fixture 포털·오프라인과 보존된 독립 Local Git/v1 브라우저 회귀를 확인했습니다. 원격 화면 검증은 독립적으로 만든 실제 Git 객체에서 provider 응답을 구성하고 변경하지 않은 GitHub·GitLab reader를 통과시켰습니다. **이번 실행에서는 실제 원격 서비스나 비공개 계정을 검증하지 않았습니다.** H2/H3 공개 reader 근거는 수정 없이 역사 기록으로 유지합니다.
 
 Chrome에서 맵 아래 코드·Diff, 호출 줄 6, 고정 provider 링크, 에디터 사본 URI, 비교 양쪽 원문, 늦은 응답 격리, 탐색 링크·언어·높이 복원, script canary 비실행과 1440/390/320 폭을 확인했습니다. 오프라인은 원본 숨김·HTTP 차단 상태입니다. 검증 뒤 소유 서버 socket·worker·브라우저를 정리합니다.
 
-H5의 비공개 provider 권한, 전체 실제 provider 행렬, Windows/Linux 원격 UI, 실제 모바일 기기, native editor 실행, 새 패키지 설치와 성능·최대 메모리 측정은 남습니다. 전체 행렬 HG01–HG32는 NOT_RUN으로 유지하며 H4 한정 진척을 별도로 기록합니다. 커밋·push·패키지 게시를 포함하지 않습니다.
+H5의 비공개 provider 권한, 전체 실제 provider 행렬, Windows/Linux 원격 UI, 실제 모바일 기기, 외부 에디터 실행, 새 패키지 설치와 성능·최대 메모리 측정은 남습니다. 전체 행렬 HG01–HG32는 NOT_RUN으로 유지하며 H4 한정 진척을 별도로 기록합니다. 커밋·push·패키지 게시를 포함하지 않습니다.
 
-END

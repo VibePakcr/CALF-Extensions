@@ -175,4 +175,3 @@ Accept the Local Git preview only after verification, preservation, actual UI re
 
 Subsequent CALF integration uses SDK 0.2.1 `tasks/inspect/changes` for evidence provenance and versions. The current list is limited to 32 recent jobs; task/attempt/recovery changes differ from working-tree Git Diff. Do not bypass those boundaries by reading core journals/SQLite or converting CI success into CALF success. GitHub/GitLab add PR/MR/CI adapters over the same repository model.
 
-END

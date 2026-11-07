@@ -57,7 +57,7 @@ The request folder after demo completion; files created after the request are al
 
 ### 2. Receive and check the return
 
-Point `RETURNED_MP4` at the downloaded result. Intake does not re-encode or resize it. `ready_for_review` means technical checks passed and scene selection is unchanged. Review the original/return motion and requested edit at this point.
+Point `RETURNED_MP4` at the downloaded result. Intake does not re-encode or resize it. `ready_for_review` means technical checks passed and scene selection is unchanged. Compare the original and returned video, including motion and the requested edit.
 
 ```sh
 jobs receive --project "$PROJECT" --key sign-v1 --file "$RETURNED_MP4" \
@@ -72,7 +72,7 @@ Actual playback of the synthetic return. The operator performs visual review.
 
 ### 3. Review the video, then adopt
 
-The reviewing caller explicitly adopts. The demo separately confirmed identical returned/selected SHA-256 hashes and an unchanged `scene-2` selection. This screen shows the retained `video.mp4` and `version.json` after adoption.
+After reviewing the result, the caller explicitly selects it with adopt. The demo separately confirmed identical returned/selected SHA-256 hashes and an unchanged `scene-2` selection. This screen shows the retained `video.mp4` and `version.json` after adoption.
 
 ```sh
 jobs adopt --project "$PROJECT" --key sign-v1
@@ -94,7 +94,7 @@ jobs request --project "$PROJECT" --scene scene-1 --key sign-v2 --parent sign-v1
 
 ![Actual handoffs directory retaining both sign-v1 and sign-v2 request folders](images/finder-revisions.jpg)
 
-A revision is a new retained request. Check its technical verdict through the CLI.
+Each revision creates a new request and preserves the earlier one. Check its technical verdict through the CLI.
 
 After a lost submit response, do not resubmit. Use `jobs reconcile --project "$PROJECT" --key sign-v1` to find the existing work. Restore a retained version through the original FFmpeg CLI `restore`. Technical checks do not establish aesthetic quality or satisfaction of the requested edit.
 

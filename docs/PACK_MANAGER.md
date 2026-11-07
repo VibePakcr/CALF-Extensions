@@ -8,7 +8,7 @@ This is a **local developer preview** released as separate Local Pack Tools; no 
 
 ## 1. Select local paths
 
-Run commands from the CALF Extensions source root. Use `python` on Windows, with physical Windows paths. An installed future distribution also exposes `calf-pack`. No command edits your shell, global packages, provider profile, MCP settings or CALF preferences.
+Run commands from the CALF Extensions source root. Use `python` on Windows, with physical Windows paths. A future installed distribution will also expose `calf-pack`. No command edits your shell, global packages, provider profile, MCP settings or CALF preferences.
 
 Prepare `environment.json` outside the pack payload. It contains paths, not credentials:
 
@@ -45,7 +45,7 @@ python3 -B -m calf_extensions.packs.cli --home /work/new-pack-store stage --arch
 
 `build_ffmpeg` wraps the existing media implementation and public docs with candidate metadata and a complete inventory; it is not a pip distribution or a core/SDK/FFmpeg bundle. Use the printed digest from a trusted build/channel. The source label is provenance supplied by the caller, not a signature or permission grant.
 
-Stage accepts a bounded ZIP or tar archive with files directly at its root. It rejects unsafe/linked/duplicate/case-colliding paths, size limits, inventory mismatches and reference manifests before activation. The copied archive and first error remain in the operation record. The same ID/version cannot be overwritten with different bytes. Repeating the same stage only reads its retained identity; it executes no producer.
+Stage accepts a bounded ZIP or tar archive with files directly at its root. Before activation, it rejects unsafe paths, links, duplicate or case-colliding paths, archives that exceed size limits, inventory mismatches and reference manifests. The copied archive and first error remain in the operation record. The same ID/version cannot be overwritten with different bytes. Repeating the same stage only reads its retained identity; it executes no producer.
 
 ## 3. Check, qualify and activate
 

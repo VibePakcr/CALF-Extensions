@@ -8,11 +8,11 @@
 
 **영상 작업 관리 팩 0.1.0-preview.1:** 요청·반환·채택·재수정 기록을 기존 CALF 씬 흐름에 연결합니다. [GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/tag/media-jobs-v0.1.0-preview.1) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/media-jobs-v0.1.0-preview.1)
 
-아래 네 화면은 **실제 macOS Finder·빠른 보기 캡처**입니다. 완료된 합성 MP4 데모의 요청·반환·채택·재수정 파일을 보여 줍니다. OS 화면은 한국어이며, 작업 실행과 검사 상태는 아래 CLI 설명을 따릅니다. 기존 CLI 결과 렌더링은 접힌 보조 예시에 보존했습니다.
+아래 네 화면은 **실제 macOS Finder·빠른 보기 캡처**입니다. 완료된 합성 MP4 데모의 요청·반환·채택·재수정 파일을 보여 줍니다. OS 화면은 한국어이며, 작업 실행과 검사 상태는 아래 CLI 설명을 따릅니다. CLI 출력을 문서용 이미지로 정리한 이전 예시는 아래 접힌 항목에 남겨 두었습니다.
 
 ### 시작 전 준비
 
-먼저 Python 3.10 이상, 별도 CALF SDK·네이티브 실행기, FFmpeg/ffprobe를 준비합니다. 새로운 기록·프로젝트·도구 설정 경로를 정하세요. 아래 명령은 macOS/Linux 셸 표기이며 이번 실제 실행은 macOS에서 확인했습니다. Windows PowerShell 명령은 이 추가분에서 검증하지 않았습니다.
+먼저 Python 3.10 이상, 별도 CALF SDK·네이티브 실행기, FFmpeg/ffprobe를 준비합니다. 새로운 기록·프로젝트·도구 설정 경로를 정하세요. 아래 명령은 macOS/Linux 셸 표기이며 이번 실제 실행은 macOS에서 확인했습니다. 영상 작업 관리 팩의 Windows PowerShell 실행은 아직 검증하지 않았습니다.
 
 ```sh
 # Run from the extracted source root; choose physical absolute paths.
@@ -72,7 +72,7 @@ jobs status --project "$PROJECT" --key sign-v1
 
 ### 3. 영상을 검토한 뒤 채택하기
 
-검토 결과를 채택하기로 한 호출자가 실행합니다. 데모에서는 반환 파일과 채택 파일의 SHA-256 일치와 `scene-2` 선택 보존을 별도로 확인했습니다. 화면은 채택 후 보관된 `video.mp4`와 `version.json`입니다.
+영상을 검토하고 채택하기로 결정한 뒤 실행합니다. 데모에서는 반환 파일과 채택 파일의 SHA-256 일치와 `scene-2` 선택 보존을 별도로 확인했습니다. 화면은 채택 후 보관된 `video.mp4`와 `version.json`입니다.
 
 ```sh
 jobs adopt --project "$PROJECT" --key sign-v1

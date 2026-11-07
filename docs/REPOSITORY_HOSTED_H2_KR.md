@@ -49,7 +49,7 @@ finally:
 
 실제 익명 GitHub API는 공개 [VibePakcr/CALF-Extensions](https://github.com/VibePakcr/CALF-Extensions)의 고정 commit `66bdf4a6e8d19ec87b4a10b9e541f1fe3870dc02`와 API 버전 `2026-03-10`을 사용했습니다. **목록 56개 전체**가 독립 로컬 Git 객체와 일치했고 **선택 원문 13개 / 82,756바이트**가 정확히 일치했습니다. 정규화 지도도 일치했으며 225개 노드·516개 관계를 확인했고 보존 v2를 그대로 다시 읽었습니다. 성공 시도는 **19회 요청 / 9.688초**입니다. 앞선 실제 지도 실패와 로컬 진단은 별도로 보존했습니다.
 
-새로운 실제 macOS Chrome Local live/offline 회귀에서 지도·코드·Diff·호출 줄·북마크·한영·핀치 에뮬레이션·1440/390/320 폭이 런타임 오류 없이 통과했습니다. 오프라인 열기 때 원래 fixture 소스를 숨겼습니다. 이는 Local UI 회귀 근거이며 hosted 소스 UI는 아직 구현하지 않았습니다. 서버·소켓·소유 시험 브라우저를 정리했습니다.
+새로운 실제 macOS Chrome의 Local 실시간·오프라인 회귀 검사에서 지도·코드·Diff·호출 줄·북마크·영·한 전환·핀치 에뮬레이션·1440/390/320 폭이 런타임 오류 없이 통과했습니다. 오프라인 열기 때 원래 fixture 소스를 숨겼습니다. 이는 Local UI 회귀 근거이며 hosted 소스 UI는 아직 구현하지 않았습니다. 서버·소켓·소유 시험 브라우저를 정리했습니다.
 
 FFmpeg·라이선스·릴리즈 파일, 과거 v1 자료, 기존 CALF 자료, H0/H1 문서·검증 기록 6개, 다른 작업의 README·패키지 변경은 기준 해시를 유지했습니다. 더 넓은 607개 보존 집합 중 **606개가 동일**했고 외부 앱 런타임 설정 1개에서 작업 중 변경을 관측했습니다. 본 작업에서 해당 설정 내용을 수정·복구하지 않았습니다. 기존 프로세스 제한 fixture에서 OS `killpg` EPERM이 한 번 발생했으나 변경 없는 단독 재검사와 후속 전체 검사는 통과했습니다. 최초 실패를 검증 기록에 남기며 간헐적 OS 원인이 H2로 해결됐다고 주장하지 않습니다.
 
@@ -57,4 +57,3 @@ GitLab 수집(H3), 실제 비공개 접근, 실제 annotated tag·tree 잘림·�
 
 계약: [Git Trees](https://docs.github.com/en/rest/git/trees#get-a-tree), [Git blobs](https://docs.github.com/en/rest/git/blobs#get-a-blob), [Git refs](https://docs.github.com/en/rest/git/refs#get-a-reference), [annotated tags](https://docs.github.com/en/rest/git/tags#get-a-tag), [Git commits](https://docs.github.com/en/rest/git/commits#get-a-commit).
 
-END

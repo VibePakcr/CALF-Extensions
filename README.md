@@ -43,3 +43,5 @@ The older FFmpeg preview has separate [cross-platform verification](VERIFICATION
 - [Extensions license](LICENSE-EXTENSIONS.txt) · [SDK license](LICENSE-SDK.txt)
 
 The SDK/native runtime are separate. Keep old source/tool locations, contracts, records and approved media when preparing a new version in a new folder.
+
+Current guides: [documentation checksums](DOCS-SHA256SUMS). The root `SHA256SUMS` records the original FFmpeg 0.1.0 package; use each release’s checksums for its archives. Published packages retain the manuals supplied with that version.

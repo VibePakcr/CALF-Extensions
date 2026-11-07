@@ -4,7 +4,7 @@
 
 ## Project navigation preview
 
-[GitHub download](https://github.com/VibePakcr/CALF-Extensions/releases/tag/navigator-v0.1.0-dev.1) · [GitLab download](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/navigator-v0.1.0-dev.1) · [English PDF - 9 pages](https://github.com/VibePakcr/CALF-Extensions/releases/download/navigator-v0.1.0-dev.1/CALF-Repository-Navigator-Guide-en.pdf) · [한국어 PDF - 9쪽](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/navigator-v0.1.0-dev.1/downloads/CALF-Repository-Navigator-Guide-ko.pdf)
+[GitHub download](https://github.com/VibePakcr/CALF-Extensions/releases/tag/navigator-v0.1.0-dev.1) · [GitLab download](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/navigator-v0.1.0-dev.1) · [English PDF - 9 pages](https://github.com/VibePakcr/CALF-Extensions/blob/main/docs/navigator-manual/en.pdf) · [한국어 PDF - 9쪽](https://gitlab.com/vibepackr-group/CALF-Extensions/-/blob/main/docs/navigator-manual/ko.pdf)
 
 ### Illustrated user manual
 
@@ -27,13 +27,13 @@ Installation runs offline fixture checks and records exact Python/Git identities
 
 STORE, DATA and inspected repositories must be separate. No account discovery, global tool installation or background service is added.
 
-Optional: select executables with --python ABSOLUTE_PATH --git ABSOLUTE_PATH. Add --no-browser to open to use the printed local URL manually.
+Optional: select executables with --python ABSOLUTE_PATH --git ABSOLUTE_PATH. To open the printed local URL yourself, add --no-browser to the open command.
 
 #### 2. Attach Local Git and explore the map
 
 1. Choose one existing worktree explicitly. Replace the example path with your actual project path.
 2. Find a file or symbol, then select a node. Choose file/module or symbol view, incoming/outgoing/both, and depth 1/2/3/all analyzed connections.
-3. Wheel to zoom, drag empty space to pan, or use + / - / Fit map. Previous/Next revisits selections; Impact candidates follows reverse static reachability.
+3. Scroll the mouse wheel to zoom, drag empty space to pan, or use + / - / Fit map. Use Previous and Next to revisit earlier selections; Impact candidates traces links backward to show code that may be affected.
 
 ```sh
 python3 START_NAVIGATOR.py open --home ../navigator-store --repo /path/to/project
@@ -49,7 +49,7 @@ Python symbols/calls are analyzed. Other languages retain file/document structur
 
 1. Select a node and read its description, source and identities in the inspector below the map.
 2. For Local Git choose analyzed capture, HEAD, index or working file. Diff compares HEAD to the selected version. Conflict stages 1/2/3 are separate states.
-3. Use line navigation, code height, collapse and pin. Long lines scroll horizontally. Interface language changes do not translate source, comments or user definitions.
+3. Jump to a line, resize or collapse the code panel, and pin a file for comparison. Long lines scroll horizontally. Interface language changes do not translate source, comments or user definitions.
 
 ![HEAD to working-file Diff, with exact identities and added/removed lines.](images/local-diff-en.png)
 
@@ -68,7 +68,7 @@ Anonymous API quotas apply. A limit, timeout or missing object can leave a parti
 #### 5. Inspect pinned remote code and Diff
 
 1. Select a file in the map, search results or Changed paths after collection.
-2. Remote versions are analyzed right / comparison left / comparison right. Diff compares the pinned snapshots directly, not a working tree or merge base.
+2. For remote sources, choose analyzed right, comparison left or comparison right. Diff compares the pinned snapshots directly, not a working tree or merge base.
 3. Read commit, blob and SHA256 identities. Open pinned provider file links to that commit. No remote branch or file is changed.
 
 ![Actual public GitHub left/right comparison in the installed inspector.](images/github-diff-en.png)
@@ -141,7 +141,7 @@ Old bindings retain their original version. A new open from --home binds the act
 
 Preview limits: 1 MiB/file, 64 MiB retained-source budget, 300 requests/120 seconds per hosted collection.
 
-Fresh installed CLI flows were tested on macOS, Debian and Windows. Screenshots/current browser flows use macOS Chrome. Physical mobile, native editor, private-account and self-hosted behavior are not qualified.
+Installation and CLI workflows were tested on macOS, Debian and Windows. Screenshots/current browser flows use macOS Chrome. Physical mobile, native editor, private-account and self-hosted behavior are not qualified.
 
 The ZIP includes offline HTML guides at `manuals/en.html` and `manuals/ko.html`.
 

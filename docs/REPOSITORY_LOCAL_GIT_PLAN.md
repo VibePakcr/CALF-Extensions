@@ -4,7 +4,7 @@
 
 ## Product reference
 
-Build a free CALF extension that applies the owner's START_HERE experience to another project: a template and generator that turn project structure into a portal, relationship map and inspector below the entire map. GitHub, GitLab and Local Git supply project/version data.
+Build a free CALF extension with a template and generator that turn a project's structure into a start portal, relationship map and inspector below the map. GitHub, GitLab and Local Git supply project/version data.
 
 The main path is **project → features/definitions/documents → modules/files/symbols → incoming/outgoing relationships and impact candidates → code/Diff → verification evidence**. Commit lists and branch graphs are not the primary product. The implemented Git reader supports exact source/version/provenance identities.
 
@@ -60,4 +60,3 @@ Live navigation uses a user-opened foreground loopback viewer; retained exports 
 
 Git LG01–LG28 remain additional reliability/release criteria. Passing Git checks alone does not complete the project-map product. Leave unexecuted platforms, languages and features NOT_RUN/UNSUPPORTED/UNMAPPED and publish only actual qualification. Preserve existing FFmpeg extension and CALF records.
 
-END

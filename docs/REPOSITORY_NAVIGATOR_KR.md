@@ -2,9 +2,9 @@
 
 [English](REPOSITORY_NAVIGATOR.md) · [구현 계획](REPOSITORY_LOCAL_GIT_PLAN_KR.md) · [검증 범위](../REPOSITORY_VERIFICATION.json)
 
-프로젝트의 기능·정의·문서·파일·심볼을 관계 지도로 만들고, 맵 아래에서 설명·원문·Diff·출처를 탐색하는 무료 확장입니다. Local Git은 정확한 원문과 버전을 확인하는 하위 계층입니다. 이 확장은 Git 작업 실행 화면을 제공하지 않습니다.
+프로젝트의 기능·정의·문서·파일·심볼을 관계 지도로 만들고, 지도 아래에서 설명·원문·Diff·출처를 탐색하는 무료 확장입니다. Local Git은 정확한 원문과 버전을 확인하는 하위 계층입니다. 이 확장은 Git 작업 실행 화면을 제공하지 않습니다.
 
-현재는 소스에서 실행하는 개발 미리보기입니다. Python 3.10 이상·Git 2.43 이상·현대적인 브라우저를 요구합니다. 실제 검증한 버전은 검증서에 따로 기록합니다. 기본 실행에는 SDK·CALF 코어·FFmpeg·계정·모델 API가 필요하지 않습니다.
+현재는 소스에서 실행하는 개발 미리보기입니다. Python 3.10 이상·Git 2.43 이상·최신 브라우저를 요구합니다. 실제 검증한 버전은 검증서에 따로 기록합니다. 기본 실행에는 SDK·CALF 코어·FFmpeg·계정·모델 API가 필요하지 않습니다.
 
 ## 프로젝트 열기
 
@@ -14,7 +14,7 @@
 python -m calf_extensions.repository.cli open --repo PROJECT_DIRECTORY --data-dir DATA_DIRECTORY
 ```
 
-브라우저가 프로젝트 포털을 엽니다. 서버는 `127.0.0.1`의 임의 포트에서 이 터미널 프로세스가 열린 동안만 실행합니다. `Ctrl+C`로 종료합니다. 자동으로 브라우저를 열지 않으려면 `--no-browser`를 붙입니다. 설치한 패키지의 동일 entry point 이름은 `calf-repo`입니다.
+브라우저가 프로젝트 포털을 엽니다. 서버는 `127.0.0.1`의 임의 포트에서 이 터미널 프로세스가 열린 동안만 실행합니다. `Ctrl+C`로 종료합니다. 자동으로 브라우저를 열지 않으려면 `--no-browser`를 붙입니다. 설치한 패키지에서는 같은 기능을 `calf-repo` 명령으로 실행할 수 있습니다.
 
 등록한 폴더의 추적 파일만 수집합니다. PC나 GitHub·GitLab 계정 전체를 스캔하거나 등록하지 않습니다. 첫 사용 시 프로젝트를 명시적으로 지정하고, 이후 갱신도 새로고침으로 요청합니다. 원래 소스·refs·index·Git 설정·CALF 기록은 변경하지 않습니다. 수집본과 캐시는 별도 데이터 폴더에 생성합니다.
 
@@ -67,4 +67,4 @@ python -m calf_extensions.repository.cli export --data-dir DATA_DIRECTORY --capt
 
 첫 분석기는 Python 표준 AST를 사용합니다. 동적 호출·모호한 재바인딩·미지원 구문은 해석된 호출로 만들지 않습니다. Rust·JS/TS 등은 파일·문서·버전 탐색을 제공하며 심볼/호출 분석은 아직 미지원입니다. Bare·partial/promisor repository는 거절하고 shallow 경계를 표시합니다. LFS payload·submodule·symlink 대상은 자동으로 따라가지 않습니다.
 
-CALF 검증 근거 연결, GitHub·GitLab API, 계정 탐색, 언어별 추가 분석기와 배포 자격 검증은 후속 단계입니다. 이 색인은 탐색용 projection이며 release authority나 검사 성공 판정이 아닙니다. 기존 FFmpeg 확장과 CALF 기록을 이동하거나 다시 쓰지 않습니다.
+CALF 검증 근거 연결, GitHub·GitLab API, 계정 탐색, 언어별 추가 분석기와 배포 전 검수는 후속 단계입니다. 이 색인은 수집한 자료를 탐색하기 위한 것입니다. 릴리즈 권한이나 검사 성공을 판정하는 근거는 아닙니다. 기존 FFmpeg 확장과 CALF 기록을 이동하거나 다시 쓰지 않습니다.

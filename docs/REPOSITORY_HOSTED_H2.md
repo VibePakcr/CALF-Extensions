@@ -57,4 +57,3 @@ GitLab collection (H3), actual private access, live annotated-tag/truncation/pat
 
 Contracts: [Git Trees](https://docs.github.com/en/rest/git/trees#get-a-tree), [Git blobs](https://docs.github.com/en/rest/git/blobs#get-a-blob), [Git refs](https://docs.github.com/en/rest/git/refs#get-a-reference), [annotated tags](https://docs.github.com/en/rest/git/tags#get-a-tag), [Git commits](https://docs.github.com/en/rest/git/commits#get-a-commit).
 
-END

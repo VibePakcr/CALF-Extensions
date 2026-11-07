@@ -4,7 +4,7 @@
 
 기준: `66bdf4a6e8d19ec87b4a10b9e541f1fe3870dc02` · 2026-11-07 · **H0–H5 공개·데스크톱 범위 검증, 비공개·전체 행렬은 미완료**
 
-공통 계약은 [H0 기록](REPOSITORY_HOSTED_H0_KR.md), 수동 등록·인증 참조·제한된 HTTP·취소 가능한 신원 확인은 [H1 기록](REPOSITORY_HOSTED_H1_KR.md)을 확인하십시오. [H2 기록](REPOSITORY_HOSTED_H2_KR.md)은 GitHub 고정 reader와 범위가 한정된 익명 공개 검증을 추가합니다. [H3 기록](REPOSITORY_HOSTED_H3_KR.md)은 GitLab 고정 tree/raw blob과 범위를 한정한 공개 보존 blob 대조를 추가합니다. [H4 기록](REPOSITORY_HOSTED_H4_KR.md)은 공통 소스 선택·지도·코드/Diff·이력·에디터 사본·v2 오프라인과 macOS Git 기반 provider UI fixture 검증을 추가합니다. [H5 기록](REPOSITORY_HOSTED_H5_KR.md)은 실제 공개 provider·데스크톱 3종·macOS 새 설치·측정 범위를 기록합니다. 비공개·전체 행렬은 미완료입니다.
+공통 계약은 [H0 기록](REPOSITORY_HOSTED_H0_KR.md), 수동 등록·인증 참조·제한된 HTTP·취소 가능한 신원 확인은 [H1 기록](REPOSITORY_HOSTED_H1_KR.md)을 확인하십시오. [H2 기록](REPOSITORY_HOSTED_H2_KR.md)은 GitHub 고정 reader와 범위가 한정된 익명 공개 검증을 추가합니다. [H3 기록](REPOSITORY_HOSTED_H3_KR.md)은 GitLab 고정 tree/raw blob과 범위를 한정한 공개 보존 blob 대조를 추가합니다. [H4 기록](REPOSITORY_HOSTED_H4_KR.md)은 공통 소스 선택·지도·코드/Diff·이력·에디터 사본·v2 오프라인과 macOS Git 기반 provider UI fixture 검증을 추가합니다. [H5 기록](REPOSITORY_HOSTED_H5_KR.md)은 실제 공개 저장소와 데스크톱 3종의 검증 결과·macOS 새 설치·측정 범위를 기록합니다. 비공개·전체 행렬은 미완료입니다.
 
 ## 1. 목표와 첫 범위
 
@@ -110,14 +110,14 @@ rate limit과 조건부 요청은 공식 계약을 따릅니다. [GitHub 권장 
 
 수집은 활성 payload 락 밖에서 수행합니다. 작업별 후보를 만들고 제한된 진행 상태를 제공한 뒤 취소·선택 generation을 확인하여 짧은 락 안에서 일관된 수집/지도 쌍을 게시합니다. 다른 화면에서는 이전 정상 수집본을 계속 열 수 있어야 합니다. DNS·TLS 정리도 제한하며 선택한 transport가 이를 중단하지 못하면 소유 범위가 분명한 취소 가능 worker process를 사용합니다. 읽기 timeout만 설정했다고 취소 검증 완료로 보지 않습니다.
 
-새 로컬 수집 작업·진행·취소 API는 제한된 typed JSON(초기 body 8 KiB)과 기존 loopback Host/Origin/bearer 검사를 사용합니다. 등록 ID와 typed ref만 받고 provider token이나 임의 fetch URL은 받지 않습니다. 기존 Local Git CLI·refresh 계약도 유지합니다. 수집을 조작하는 로컬 POST가 provider POST/쓰기 권한이 되지 않습니다. 자격증명이 바뀌면 credential-session 캐시 구획도 갱신하며 보존 원문 보기는 역사 자료로 표시합니다.
+새 로컬 수집·진행·취소 API는 자료형이 정해진 JSON(초기 본문 한도 8 KiB)을 받으며, 기존 루프백 Host·Origin·bearer 검사를 적용합니다. 등록 ID와 종류를 명시한 ref만 받고 provider token이나 임의 fetch URL은 받지 않습니다. 기존 Local Git CLI·refresh 계약도 유지합니다. 수집을 조작하는 로컬 POST가 provider POST/쓰기 권한이 되지 않습니다. 자격증명이 바뀌면 credential-session 캐시 구획도 갱신하며 보존 원문 보기는 역사 자료로 표시합니다.
 
 
 소스 선택기에 Local/GitHub/GitLab 등록을 표시하고, 원격 branch/tag/commit 선택과 비교 양쪽을 추가합니다. 맵 선택은 전체 맵 아래 설명·기능·원문·줄·SHA와 함께 갱신합니다. code 버전을 바꿔도 지도는 분석 시점에 속함을 표시하고, 지도를 바꾸려면 새 버전 분석을 명시적으로 요청합니다. 늦게 도착한 응답은 이전 선택의 패널을 덮지 못합니다.
 
 원격에는 index·working·conflict stage가 없으므로 해당 조작을 표시하지 않습니다. 원격 원문 permalink는 고정 commit을 사용합니다. 에디터는 명시적으로 만든 보존 사본 또는 commit/blob이 일치하는 등록 로컬 파일에만 연결합니다. 보존 사본을 원격 편집 경로라고 표시하지 않습니다. 에디터 사본은 원격 경로를 그대로 파일 경로로 쓰지 않고 안전한 로컬 이름과 원문 신원을 사용합니다. 원문·저장소 문서는 escape한 텍스트로 표시하며 프로젝트 HTML/script를 실행하지 않고 미지원 인코딩을 손실 대체 문자로 바꾸지 않습니다.
 
-내보내기는 보존된 원문/비교만 사용합니다. 원문은 기본 제외, origin URL·비공개 이름 정보도 별도 명시 포함으로 처리하고 기본 projection은 비식별 source key와 바이트 근거를 유지합니다. token·자격증명 참조·개인 경로는 제외합니다. 데이터 공유 범위는 manifest에 기록합니다.
+내보내기는 보존된 원문/비교만 사용합니다. 원문은 기본 제외, origin URL·비공개 이름 정보도 별도 명시 포함으로 처리하고 기본 projection은 비식별 source key와 바이트 근거를 유지합니다. 토큰·자격증명 참조·개인 경로는 제외합니다. 데이터 공유 범위는 manifest에 기록합니다.
 
 `sources add/list/remove/check`와 `probe --source`는 H1에서 구현했습니다. 신원 확인 전용 의미와 데이터 경로 인수는 H1 문서를 따릅니다. H4에서 `open/scan --source`와 보존본 `open/export --view`를 구현했습니다. [H4 사용법과 검증 범위](REPOSITORY_HOSTED_H4_KR.md)를 확인하십시오.
 
@@ -154,11 +154,11 @@ H0–H4는 기존 공개 GitHub·GitLab reader 검사와 이번 Git 기반 provi
 | `capture.py`, `analyze.py` | v1 호환 읽기·v2 보존·공통 snapshot 원문 분석 |
 | `compare.py` | revision 쌍·트리 합집합·정확한 원문 Diff |
 | `viewer.py`, `cli.py`, `assets/*` | source/capability·비동기 수집 상태·선택 신원·공통 UI |
-| `export.py`, `schemas/*`, `tests/*`, 한영 문서 | provider 없는 offline 재생·origin 분리·fixture·검증 근거 |
+| `export.py`, `schemas/*`, `tests/*`, 영·한 문서 | provider 없는 offline 재생·origin 분리·fixture·검증 근거 |
 
 ## 10. 검증 매트릭스
 
-모든 항목은 아직 NOT_RUN입니다. HG27/28은 실제 provider 검증이며 mock과 구분합니다. HG13의 merge-base 모드는 선택 기능이므로 직접 비교의 정확성은 필수이고 미구현 모드는 숨깁니다. HG24의 로컬 파일 매핑도 제공한 방식만 검증 완료로 표시합니다.
+아래 표는 처음 정한 검증 목표입니다. 완료된 검사와 남아 있는 NOT_RUN 항목은 H0–H5 보고서에서 확인하세요. HG27/28은 실제 provider 검증이며 mock과 구분합니다. HG13의 merge-base 모드는 선택 기능이므로 직접 비교의 정확성은 필수이고 미구현 모드는 숨깁니다. HG24의 로컬 파일 매핑도 제공한 방식만 검증 완료로 표시합니다.
 
 | ID | 단계 | 시나리오 | 관측 가능한 통과 조건 |
 | --- | --- | --- | --- |
@@ -182,15 +182,15 @@ H0–H4는 기존 공개 GitHub·GitLab reader 검사와 이번 Git 기반 provi
 | HG18 | H1 | HTTP 목적지와 endpoint 정책 | 설정된 HTTPS API origin과 읽기 endpoint 틀만 사용하며 악성 다음 링크·redirect·다른 프로젝트 커서·부작용 GET을 거절합니다. |
 | HG19 | H1 | 사용량 제한과 조건부 캐시 | provider의 재시도·리셋 시각 전 요청을 반복하지 않고 304는 대응 캐시·인증 구획이 있어야 하며 무한 재시도·오래된 자료의 최신 승격·등록 간 유출이 없어야 합니다. |
 | HG20 | H1-H4 | 한도·취소·늦은 응답 | 과대·잘린 응답·DNS/TLS/읽기 정지·취소·역순 응답을 제한하며 취소 작업은 게시하지 않고 늦은 결과가 최신 선택을 덮지 못합니다. |
-| HG21 | H4 | 지도와 하단 패널의 일치 | 맵 전체 아래에서 설명·기능·코드 줄·원문 해시·지도 버전이 노드/관계 선택과 일치하며 코드 버전 전환이 지도를 몰래 바꾸지 않습니다. |
-| HG22 | H4 | 탐색 신원과 복원 | 같은 등록·수집·지도 ID에서 이력·고정·줌·언어·ref·Diff 양쪽을 복원하며 다른 소스나 매핑 해시의 링크를 몰래 재사용하지 않습니다. |
+| HG21 | H4 | 지도와 하단 패널의 일치 | 맵 전체 아래에서 설명·기능·코드 줄·원문 해시·지도 버전이 노드/관계 선택과 일치하며 코드 버전 전환이 지도를 자동으로 바꾸지 않습니다. |
+| HG22 | H4 | 탐색 신원과 복원 | 같은 등록·수집·지도 ID에서 이력·고정·줌·언어·ref·Diff 양쪽을 복원하며 다른 소스나 매핑 해시의 링크를 자동으로 재사용하지 않습니다. |
 | HG23 | H4 | 원격 버전 기능 표시 | 원격 화면은 선택 커밋과 비교 양쪽을 제공하며 로컬 index·working·stage 조작은 없고 provider 링크는 검증된 저장소와 고정 커밋을 사용합니다. |
 | HG24 | H4 | 에디터 대상 신원 | 보존 사본 또는 명시적으로 연결한 일치 로컬 파일만 커밋·blob·줄을 확인해 열며 가짜 로컬 checkout이나 원격 편집 경로를 만들지 않습니다. |
 | HG25 | H4 | 오프라인 내보내기 | 네트워크 차단·원본 숨김 상태에서 포함 범위의 지도·코드·Diff가 작동하고 원문·origin은 명시적으로 포함하며 토큰·로컬/에디터 경로는 제외합니다. |
 | HG26 | H5 | Local·FFmpeg·CALF 보존 | 영향받는 Local Git·FFmpeg 계약 검사를 수행하고 원래 소스·refs/index/설정·v1 수집본·FFmpeg 릴리즈·CALF 기록의 기준 해시를 보존합니다. |
-| HG27 | H5 | 실제 공개 provider 검증 | 두 provider의 실제 고정 fixture 원문·지도·Diff를 독립 검증하고 API 버전·수·제한을 기록하며 mock만으로 provider 지원을 검증했다고 하지 않습니다. |
+| HG27 | H5 | 실제 공개 저장소 검증 | 두 provider의 실제 고정 fixture 원문·지도·Diff를 독립 검증하고 API 버전·수·제한을 기록하며 mock만으로 provider 지원을 검증했다고 하지 않습니다. |
 | HG28 | H5 | 비공개 provider 검증 | provider별로 명시 승인된 비공개 fixture와 읽기 접근을 검증하고 실제 근거가 없으면 NOT_RUN으로 남겨 공개 지원 주장을 제한합니다. |
-| HG29 | H5 | 실제 플랫폼·브라우저 검증 | macOS·Windows·Linux 실제 브라우저에서 한영·1440/390/320 폭·코드 스크롤·줌/핀치·콘솔 오류를 확인하고 실기기·에디터 실실행은 따로 표시합니다. |
+| HG29 | H5 | 실제 플랫폼·브라우저 검증 | macOS·Windows·Linux 실제 브라우저에서 영·한 전환·1440/390/320 폭·코드 스크롤·줌/핀치·콘솔 오류를 확인하고 실기기·에디터 실제 실행은 따로 표시합니다. |
 | HG30 | H5 | 패키지와 provider 독립성 | 새 패키지 설치에서 자산·스키마·CLI를 확인하고 provider 자격증명·SDK/코어/모델 없이 Local Git이 오프라인 동작하며 다른 팩과 기록을 보존합니다. |
 | HG31 | H5 | 측정한 성능과 한도 | 정의한 fixture에서 요청·원문·페이지 예산, cold/cache 시간과 최대 메모리를 기록합니다. 목표는 진행 표시 1초·캐시 열기 2초·취소 정리 10초·최대 RSS 512 MiB 이내입니다. |
 | HG32 | H5 | 원격 읽기 효과와 근거 | 요청 기록은 지정 읽기 endpoint뿐이며 원격 쓰기·Git clone/fetch/push·webhook·CI 시작·프로젝트 코드 실행이 없어야 합니다. 미완료·실패·정리 근거도 보존합니다. |
@@ -207,4 +207,3 @@ H0–H4는 기존 공개 GitHub·GitLab reader 검사와 이번 Git 기반 provi
 
 검증 산출물은 등록/고정 버전 manifest, credential을 제거한 요청 요약, 원문 해시, 범위별 결과, UI 증거와 종료/보존 확인입니다. 새 기록은 predecessor/successor로 추가하고 기존 검증서와 수집본을 성공으로 덮어쓰지 않습니다. CI나 provider 상태를 native CALF 성공/릴리즈 권한으로 바꾸지 않습니다.
 
-END

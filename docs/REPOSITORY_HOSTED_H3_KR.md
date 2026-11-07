@@ -4,7 +4,7 @@
 
 2026-11-07 · GitLabSource 구현 · macOS Git 기반 fixture와 범위를 한정한 공개 raw 읽기 검증
 
-H3는 공통 SourceReader 구현인 `providers/gitlab.py`를 추가합니다. 수동 등록·신원 확인한 GitLab.com 프로젝트의 typed ref를 전체 SHA-1 commit으로 고정하고, 그 commit의 페이지별 목록과 한도 안의 raw blob 바이트를 수집합니다. 기존 GitHubSource·Local Git·HTTP 정책·분석기·CLI·UI 자산·FFmpeg·CALF 기록은 그대로입니다.
+H3는 공통 SourceReader 구현인 `providers/gitlab.py`를 추가합니다. 수동 등록·신원 확인한 GitLab.com 프로젝트의 종류를 명시한 ref를 전체 SHA-1 commit으로 고정하고, 그 commit의 페이지별 목록과 한도 안의 raw blob 바이트를 수집합니다. 기존 GitHubSource·Local Git·HTTP 정책·분석기·CLI·UI 자산·FFmpeg·CALF 기록은 그대로입니다.
 
 ## Reader 인터페이스
 
@@ -44,14 +44,13 @@ finally:
 
 최종 저장소 검사 **101개: 기존 81 + H3 20**과 FFmpeg 계약 검사 3개가 통과했습니다. Git 기반 fixture는 annotated tag/branch 동명 충돌·ref 이동·정확한 Unicode/raw 바이트/mode·1,005개 항목의 페이지 목록·next 범위/순환/중복·페이지 정보 누락·빈 값과 404·원문/metadata 한도·손상·취소·v2 보존 재로딩·완전한 정규화 Local/GitLab 지도와 직접 Diff 일치를 검사합니다. 실제 소유 HTTP subprocess는 JSON MIME에서도 비 UTF-8 raw 바이트를 보존했고 멈춘 raw 읽기를 Snapshot 게시 없이 취소했습니다.
 
-실제 익명 읽기는 기존 공개 [GitLab CALF-Extensions 미러](https://gitlab.com/vibepackr-group/CALF-Extensions)의 프로젝트 `88597295`, 고정 commit `814b6c27fe9ac68ad3f9bb6db7fe2e8ba95f65d1`을 사용했습니다. 목록은 **파일 32개**입니다. **선택 Python 원문 10개 / 53,473바이트**가 같은 경로의 독립 보존 로컬 Git blob과 일치했고 선택 코드의 관계 부분도 일치했습니다. 전체 원격 지도는 163개 노드·508개 관계입니다. 성공 시도는 **20회 요청 / 17.031초**이며 보존 v2를 그대로 다시 읽었습니다. 목록을 두 번 수집했고 각각 한 페이지였습니다. 실제 다중 페이지 fixture 검증은 아닙니다.
+실제 익명 읽기는 기존 공개 [GitLab CALF-Extensions 미러](https://gitlab.com/vibepackr-group/CALF-Extensions)의 프로젝트 `88597295`, 고정 commit `814b6c27fe9ac68ad3f9bb6db7fe2e8ba95f65d1`을 사용했습니다. 목록은 **파일 32개**입니다. **선택 Python 원문 10개 / 53,473바이트**가 같은 경로의 독립 보존 로컬 Git blob과 일치했고 선택 코드의 관계 부분도 일치했습니다. 전체 원격 지도는 163개 노드·508개 관계입니다. 성공 시도는 **20회 요청 / 17.031초**이며 보존 v2를 그대로 다시 읽었습니다. 목록을 두 번 수집했고 각각 한 페이지였습니다. 실제 서비스에서 여러 페이지를 읽는 동작까지 검증한 것은 아닙니다.
 
-미러 최신 commit을 로컬 저장소에서 읽을 수 없었고, 로컬 H2 기준 commit도 미러 API에서 읽을 수 없었습니다. 앞선 두 시도를 보존했습니다. 성공한 실제 검사는 두 고정 commit 사이에 보존된 선택 blob·코드 관계 부분을 대조합니다. **같은 commit 전체 Local/GitLab 목록·지도 일치는 NOT_RUN**입니다. 전체 동등성은 독립 합성 Git fixture에서 증명했으며 실제 미러 검사로 주장하지 않습니다.
+미러 최신 commit을 로컬 저장소에서 읽을 수 없었고, 로컬 H2 기준 commit도 미러 API에서 읽을 수 없었습니다. 앞선 두 시도를 보존했습니다. 성공한 실제 검사는 두 고정 commit 사이에 보존된 선택 blob·코드 관계 부분을 대조합니다. **같은 커밋 전체에 대한 Local/GitLab 목록·지도 일치는 NOT_RUN**입니다. 전체 동등성은 독립 합성 Git 시험 자료에서 확인했습니다. 실제 미러 검사에서는 그 범위까지 확인하지 못했습니다.
 
-GitHubSource와 공통 분석기·UI·HTTP를 포함한 **기존 저장소 소스 32개**, 과거 H0–H2 문서·검증 기록 9개, 다른 작업의 README·패키지 변경은 H3 시작 때의 해시를 유지했습니다. 최초 보존 검사에서는 607개 모두 일치했고 최종 검사에서는 **606/607개**가 일치했으며 외부 앱 런타임 설정 1개의 변경을 관측했습니다. 본 작업에서 해당 설정을 수정·복구하지 않았고 두 관측을 모두 보존했습니다. native CALF 기록 쓰기·provider 쓰기·clone/fetch/push·소유자 자격증명 사용·커밋/push는 수행하지 않았습니다. 소유 worker·thread를 정리했습니다. 기존 H2 실제 Chrome live/offline 근거는 소스·자산 해시 일치를 확인하고 재사용하며 새 브라우저·hosted UI 검증을 했다고 주장하지 않습니다.
+GitHubSource와 공통 분석기·UI·HTTP를 포함한 **기존 저장소 소스 32개**, 과거 H0–H2 문서·검증 기록 9개, 다른 작업의 README·패키지 변경은 H3 시작 때의 해시를 유지했습니다. 최초 보존 검사에서는 607개 모두 일치했고 최종 검사에서는 **606/607개**가 일치했으며 외부 앱 런타임 설정 1개의 변경을 관측했습니다. 본 작업에서 해당 설정을 수정·복구하지 않았고 두 관측을 모두 보존했습니다. native CALF 기록 쓰기·provider 쓰기·clone/fetch/push·소유자 자격증명 사용·커밋/push는 수행하지 않았습니다. 소유 worker·thread를 정리했습니다. 기존 H2 실제 Chrome live/offline 근거는 소스·자산 해시 일치를 확인하고 재사용하며 새 브라우저·원격 소스 UI를 새로 검증한 결과는 아닙니다.
 
-비공개 GitLab 접근, 실제 tag·Unicode·다중 페이지 경계 사례, Self-Managed, SHA-256 Git 객체, H3 Windows·Linux, hosted UI·내보내기, 새 패키지 설치, 성능·최대 메모리·실기기는 NOT_RUN입니다. 전체 HG01–HG32는 NOT_RUN으로 유지하고 H3 reader의 범위를 한정한 진행만 추가합니다. 다음은 H4 공통 소스 선택·지도·코드·Diff 흐름입니다.
+비공개 GitLab 접근, 실제 tag·Unicode·다중 페이지 경계 사례, Self-Managed, SHA-256 Git 객체, H3 Windows·Linux, hosted UI·내보내기, 새 패키지 설치, 성능·최대 메모리·실기기는 NOT_RUN입니다. 전체 HG01–HG32는 NOT_RUN으로 유지하고 H3 reader의 검증한 범위의 진행 결과만 추가합니다. 다음은 H4 공통 소스 선택·지도·코드·Diff 흐름입니다.
 
 계약: [repository tree·raw blob](https://docs.gitlab.com/api/repositories/), [branches](https://docs.gitlab.com/api/branches/), [tags](https://docs.gitlab.com/api/tags/), [commits](https://docs.gitlab.com/api/commits/), [페이지](https://docs.gitlab.com/api/rest/#pagination).
 
-END

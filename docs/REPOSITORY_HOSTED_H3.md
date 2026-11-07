@@ -54,4 +54,3 @@ Private GitLab access, live tag/Unicode/multi-page edge cases, Self-Managed, SHA
 
 Contracts: [repository tree and raw blobs](https://docs.gitlab.com/api/repositories/), [branches](https://docs.gitlab.com/api/branches/), [tags](https://docs.gitlab.com/api/tags/), [commits](https://docs.gitlab.com/api/commits/), [pagination](https://docs.gitlab.com/api/rest/#pagination).
 
-END

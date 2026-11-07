@@ -22,7 +22,7 @@ Extract into a new folder and retain referenced old code/tool paths and the comp
 - macOS ARM64 / FFmpeg 8.1.2, Windows 11 x64 / FFmpeg 9.0.2, Debian 13 x64 / FFmpeg 7.0.2에서 각각 13개 수락 항목을 통과했습니다. 계약 단위 검사 3개가 포함됩니다.
 - 승인 씬 3개, 3번만 교체, 1·2번 해시·선택 버전 유지, 규격·검은 화면·무음 후보 거부, 오래된 증거 무효화, 중복 요청, 읽기 전용 복구 조회, MCP 경계, 재렌더 없는 복원을 확인했습니다.
 - macOS의 실제 Claude Code 2.1.201이 조회 → 실행 → 재조회를 수행했습니다. CALF의 현재 `SATISFIED` 증거를 확인한 뒤 호스트가 승인한 선택을 적용했습니다. MCP 준비 전 전송했던 첫 실패 기록도 보존했으며, 수정한 흐름은 연결 완료 후에만 모델에 요청합니다.
-- 영한 설치·업데이트·FFmpeg·Claude 안내와 기본적으로 모델을 호출하지 않는 Claude 연결 확인 예제를 포함합니다.
+- 영·한 설치·업데이트·FFmpeg·Claude 안내와 기본적으로 모델을 호출하지 않는 Claude 연결 확인 예제를 포함합니다.
 
 검증된 OS에서 같은 ZIP 또는 tar.gz를 사용합니다. 네이티브 CALF 1.8.7/1.9.2·SDK 0.2.1·Python·FFmpeg/ffprobe는 별도로 준비합니다. 비공개 코어·SDK 사본·외부 실행 파일·모델·인증정보·기존 기록·생성 영상을 동봉하지 않습니다. 릴리즈 SHA256SUMS로 다운로드를 확인하세요. 패키지 내부에는 파일별 SHA256SUMS도 있습니다.
 

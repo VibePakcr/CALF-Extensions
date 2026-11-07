@@ -60,4 +60,3 @@ Chrome checks cover below-map code/Diff, call line 6, pinned provider links, edi
 
 H5 remains pending: private-provider permissions, full live-provider matrix, Windows/Linux hosted UI, physical mobile devices, native editor launch, fresh package installation and performance/peak-memory measurements. HG01–HG32 remain NOT_RUN for the full matrix; scoped H4 progress is recorded separately. No commit/push or package publication is included.
 
-END
