@@ -10,7 +10,7 @@ CALF — Controlled Agent Lifecycle Framework에 연결하는 로컬 도구 모�
 
 | 시작 순서 | 바로가기 |
 |---|---|
-| **1. ZIP 다운로드** | **[GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/download/media-jobs-v0.1.0-preview.1/CALF-Video-Work-Management-Pack-0.1.0-preview.1.zip)** · **[GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/media-jobs-v0.1.0-preview.1/downloads/CALF-Video-Work-Management-Pack-0.1.0-preview.1.zip)** |
+| **1. ZIP 다운로드** | **[GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/download/media-jobs-v0.1.0-preview.1/CALF-Video-Work-Management-Pack-0.1.0-preview.1.zip)** · **[GitLab](https://gitlab.com/-/project/88597295/uploads/70317778aad7ed83ef0ec59d9c40dd50/CALF-Video-Work-Management-Pack-0.1.0-preview.1.zip)** |
 | **2. 설치** | **[INSTALL_KR.md — AI와 함께하는 초보자 안내](INSTALL_KR.md)** · [English](INSTALL.md) |
 | **3. 사용** | **[실제 캡처가 포함된 단계별 매뉴얼](docs/media-jobs-manual/README_KR.md)** |
 | 다른 압축 형식·체크섬·검증 보고서 | [GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/tag/media-jobs-v0.1.0-preview.1) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/media-jobs-v0.1.0-preview.1) |

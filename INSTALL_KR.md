@@ -6,7 +6,7 @@
 
 ## 먼저 다운로드하세요
 
-**[ZIP 받기 · GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/download/media-jobs-v0.1.0-preview.1/CALF-Video-Work-Management-Pack-0.1.0-preview.1.zip)** · [ZIP 받기 · GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/media-jobs-v0.1.0-preview.1/downloads/CALF-Video-Work-Management-Pack-0.1.0-preview.1.zip)
+**[ZIP 받기 · GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/download/media-jobs-v0.1.0-preview.1/CALF-Video-Work-Management-Pack-0.1.0-preview.1.zip)** · [ZIP 받기 · GitLab](https://gitlab.com/-/project/88597295/uploads/70317778aad7ed83ef0ec59d9c40dd50/CALF-Video-Work-Management-Pack-0.1.0-preview.1.zip)
 
 0.1.0-preview.1을 **새 폴더에 압축 해제**한 뒤 그 안의 `INSTALL_KR.md`를 여세요. 파일 탐색기에서 “파일 확장자 표시”를 켜면 찾기 쉽습니다. 예전 FFmpeg 0.1.0 배포본과는 다른 파일입니다. 압축 해제만으로 기존 CALF나 활성 팩이 교체되지 않습니다.
 

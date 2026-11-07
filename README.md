@@ -10,7 +10,7 @@ Keep external video requests, returned files, review, adoption and revisions con
 
 | Start here | Link |
 |---|---|
-| **1. Download ZIP** | **[GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/download/media-jobs-v0.1.0-preview.1/CALF-Video-Work-Management-Pack-0.1.0-preview.1.zip)** · **[GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/media-jobs-v0.1.0-preview.1/downloads/CALF-Video-Work-Management-Pack-0.1.0-preview.1.zip)** |
+| **1. Download ZIP** | **[GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/download/media-jobs-v0.1.0-preview.1/CALF-Video-Work-Management-Pack-0.1.0-preview.1.zip)** · **[GitLab](https://gitlab.com/-/project/88597295/uploads/70317778aad7ed83ef0ec59d9c40dd50/CALF-Video-Work-Management-Pack-0.1.0-preview.1.zip)** |
 | **2. Install** | **[INSTALL.md — AI-assisted beginner guide](INSTALL.md)** · [한국어](INSTALL_KR.md) |
 | **3. Use it** | **[Step-by-step guide with actual captures](docs/media-jobs-manual/README.md)** |
 | Other formats / checksums / report | [GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/tag/media-jobs-v0.1.0-preview.1) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/media-jobs-v0.1.0-preview.1) |

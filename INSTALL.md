@@ -6,7 +6,7 @@ This guide helps first-time users prepare CALF Extensions with an AI assistant. 
 
 ## Download first
 
-**[Download ZIP · GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/download/media-jobs-v0.1.0-preview.1/CALF-Video-Work-Management-Pack-0.1.0-preview.1.zip)** · [Download ZIP · GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/media-jobs-v0.1.0-preview.1/downloads/CALF-Video-Work-Management-Pack-0.1.0-preview.1.zip)
+**[Download ZIP · GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/download/media-jobs-v0.1.0-preview.1/CALF-Video-Work-Management-Pack-0.1.0-preview.1.zip)** · [Download ZIP · GitLab](https://gitlab.com/-/project/88597295/uploads/70317778aad7ed83ef0ec59d9c40dd50/CALF-Video-Work-Management-Pack-0.1.0-preview.1.zip)
 
 Extract 0.1.0-preview.1 into a **new folder**, then open its `INSTALL.md`. Enable “show file extensions” in your file manager if needed. This is separate from the older FFmpeg 0.1.0 archive. Extracting it does not replace existing CALF or activate a pack.
 
