@@ -1,0 +1,160 @@
+{
+  "schema": "calf.extension-pack.v1",
+  "id": "calf.media.ffmpeg",
+  "version": "0.1.0",
+  "availability": "reference",
+  "channel": "preview",
+  "summary": {
+    "en": "One scene candidate with technical checks and preserved approvals.",
+    "ko": "승인 씬을 보존하며 씬 후보 하나를 기술 검수합니다."
+  },
+  "dependencies": [
+    {
+      "id": "python",
+      "kind": "runtime",
+      "versionPolicy": "interval",
+      "versionRange": {
+        "minInclusive": "3.10.0",
+        "maxExclusive": "4.0.0"
+      },
+      "requiredFeatures": [
+        "stdlib",
+        "utf8"
+      ]
+    },
+    {
+      "id": "calf-sdk",
+      "kind": "sdk",
+      "versionPolicy": "interval",
+      "versionRange": {
+        "minInclusive": "0.2.1",
+        "maxExclusive": "0.2.2"
+      },
+      "requiredFeatures": [
+        "public-universal-work-v1"
+      ]
+    },
+    {
+      "id": "ffmpeg",
+      "kind": "system-tool",
+      "versionPolicy": "interval",
+      "versionRange": {
+        "minInclusive": "7.0.2",
+        "maxExclusive": "10.0.0"
+      },
+      "requiredFeatures": [
+        "libx264",
+        "aac",
+        "blackdetect",
+        "silencedetect",
+        "file-only-input"
+      ]
+    },
+    {
+      "id": "ffprobe",
+      "kind": "system-tool",
+      "versionPolicy": "interval",
+      "versionRange": {
+        "minInclusive": "7.0.2",
+        "maxExclusive": "10.0.0"
+      },
+      "requiredFeatures": [
+        "json-stream-inventory"
+      ]
+    }
+  ],
+  "entryPoints": [
+    {
+      "id": "cli",
+      "status": "implemented",
+      "transport": "cli",
+      "targetKind": "python-callable",
+      "target": "calf_extensions.media_ffmpeg.cli:main"
+    },
+    {
+      "id": "sdk",
+      "status": "implemented",
+      "transport": "python",
+      "targetKind": "python-module",
+      "target": "calf_extensions.media_ffmpeg.integration"
+    },
+    {
+      "id": "native-work-mcp",
+      "status": "implemented",
+      "transport": "stdio-mcp",
+      "targetKind": "core-command",
+      "target": "work-mcp"
+    }
+  ],
+  "modes": [
+    {
+      "id": "scenes",
+      "status": "implemented",
+      "supervised": true,
+      "core": {
+        "protocol": "calf.runtime.v1",
+        "editions": {
+          "harness": {
+            "minInclusive": "1.8.7",
+            "maxExclusive": "1.8.8"
+          },
+          "workbench": {
+            "minInclusive": "1.9.2",
+            "maxExclusive": "1.9.3"
+          }
+        }
+      },
+      "dependencies": [
+        "python",
+        "calf-sdk",
+        "ffmpeg",
+        "ffprobe"
+      ],
+      "entryPoints": [
+        "cli",
+        "sdk",
+        "native-work-mcp"
+      ],
+      "network": "none",
+      "effects": [
+        "observe",
+        "create-candidate",
+        "select-scene-version"
+      ]
+    }
+  ],
+  "resources": {
+    "maxWorkers": 1,
+    "onDemand": true,
+    "modelRequired": false,
+    "historyLoading": "selected-only",
+    "limitsDocument": "docs/FFMPEG.md"
+  },
+  "verification": {
+    "specification": "docs/FFMPEG.md",
+    "requiredChecks": [
+      "current-native-satisfied",
+      "exact-candidate-and-profile",
+      "media-technical-contract",
+      "scene-scope-and-project-cas",
+      "approved-scenes-preserved"
+    ],
+    "lifecycleStatus": "NOT_RUN",
+    "runtimeEvidence": [
+      "VERIFICATION.json"
+    ],
+    "lifecycleEvidence": []
+  },
+  "recovery": {
+    "specification": "docs/FFMPEG.md",
+    "capabilities": [
+      "inspect",
+      "reconcile-same-request",
+      "select-retained-scene"
+    ]
+  },
+  "documentation": {
+    "en": "docs/FFMPEG.md",
+    "ko": "docs/FFMPEG_KR.md"
+  }
+}

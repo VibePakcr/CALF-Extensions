@@ -1,5 +1,10 @@
 # CALF Extensions
 
+## 로컬 확장팩 프리뷰
+
+공통 팩 관리기와 Repository 팩 0.1.0-preview.1의 설치·업데이트·복구를 macOS·Windows·Linux에서 검증했습니다. [다운로드·검증 결과](https://github.com/VibePakcr/CALF-Extensions/releases/tag/packs-v0.1.0-preview.1) · [한국어 안내](docs/PACKS_GUIDE_KR.md) · [English](docs/PACKS_GUIDE.md). 읽기 전용 로컬 모드에는 Python·Git만 필요하며 모델이나 네이티브 코어는 요구하지 않습니다.
+
+
 [English](README.md) · [CALF 다운로드](https://github.com/VibePakcr/CALF/blob/main/DOWNLOADS.md) · [라이선스](LICENSE-EXTENSIONS.txt)
 
 **CALF — Controlled Agent Lifecycle Framework**에 연결하는 작은 로컬 확장 모음입니다. 비공개 코어를 수정하지 않고 런타임을 작업 계약·독립 검사·파일 버전이 연결된 실행 증거와 결합합니다.
