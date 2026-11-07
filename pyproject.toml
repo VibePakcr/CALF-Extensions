@@ -12,6 +12,7 @@ dependencies = []
 
 [project.scripts]
 calf-media = "calf_extensions.media_ffmpeg.cli:main"
+calf-pack = "calf_extensions.packs.cli:main"
 calf-repo = "calf_extensions.repository.cli:main"
 
 [tool.setuptools.packages.find]
@@ -19,4 +20,5 @@ include = ["calf_extensions*"]
 
 [tool.setuptools.package-data]
 "calf_extensions.media_ffmpeg" = ["profile.json"]
+"calf_extensions.packs" = ["manifest.schema.json"]
 "calf_extensions.repository" = ["assets/*.html", "assets/*.css", "assets/*.js", "schemas/*.json"]

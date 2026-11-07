@@ -186,7 +186,7 @@ class NavigationHub:
             if job.state not in TERMINAL:job.cancel.set()
     def sources(self):
         values=[dict(r.public(),kind='hosted') for r in self.hosted.registry.list(include_disabled=True)]
-        if self.local:values.insert(0,{'id':'local','provider':'local','url':str(self.local.reader.root),'kind':'local','enabled':True})
+        if self.local:values.insert(0,{'id':'local','provider':'local','url':str(self.local.reader.root),'label':self.local.reader.root.name,'kind':'local','enabled':True})
         with self.lock:return {'sources':values,'selected':self.selected,'active_source':self.active.source_id if self.active else 'local' if self.local else None}
     def select(self,source=None,context=None):
         view=None

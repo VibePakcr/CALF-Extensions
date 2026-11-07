@@ -15,13 +15,14 @@ def default_data():
     return Path(os.environ.get('XDG_DATA_HOME',str(Path.home()/'.local/share')))/'calf-repository'
 
 
-def main():
+def main(installation=None,manual_root=None):
     parser=argparse.ArgumentParser(description=__doc__)
     sub=parser.add_subparsers(dest='action',required=True)
     for action in ['probe','scan','open']:
         p=sub.add_parser(action);selection=p.add_mutually_exclusive_group(required=True);selection.add_argument('--repo',type=Path);
         selection.add_argument('--source')
-        if action=='open':selection.add_argument('--view')
+        if action=='open':
+            selection.add_argument('--view');selection.add_argument('--sources',action='store_true',help='open an empty manual source-selection workspace')
         if action in ['scan','open']:
             p.add_argument('--ref-kind',choices=['branch','tag','commit']);p.add_argument('--ref');p.add_argument('--left-kind',choices=['branch','tag','commit']);p.add_argument('--left-ref')
         p.add_argument('--git',type=Path);p.add_argument('--data-dir',type=Path);p.add_argument('--project-map',type=Path)
@@ -87,7 +88,7 @@ def main():
                 else:
                     graph=project.refresh();result={'state':project.capture['coverage']['state'],'capture_id':project.capture['capture_id'],'graph_nodes':len(graph['nodes']),'graph_edges':len(graph['edges']),'coverage':graph['coverage']}
             else:
-                server=PortalServer(project,data_dir=args.data_dir or default_data(),settings=settings)
+                server=PortalServer(project,data_dir=args.data_dir or default_data(),settings=settings,installation=installation,manual_root=manual_root)
                 try:
                     if args.view:server.navigation.select(context=args.view)
                     elif args.source:

@@ -5,7 +5,7 @@ import re
 import secrets
 import threading
 from http.server import BaseHTTPRequestHandler,ThreadingHTTPServer
-from pathlib import Path
+from pathlib import Path,PurePosixPath
 from urllib.parse import parse_qs,urlsplit
 from .analyze import analyze
 from .compare import compare
@@ -57,11 +57,11 @@ class Project:
 class PortalServer(ThreadingHTTPServer):
     daemon_threads=False
     block_on_close=True
-    def __init__(self,project=None,hosted=None,*,data_dir=None,settings=None,source_factory=None):
+    def __init__(self,project=None,hosted=None,*,data_dir=None,settings=None,source_factory=None,installation=None,manual_root=None):
         directory=project.store.directory if project else data_dir
         self.hosted=hosted or HostedServices(directory)
         self.navigation=NavigationHub(directory,project,self.hosted,settings,source_factory)
-        self.initial_job=None
+        self.initial_job=None;self.installation=installation;self.manual_root=Path(manual_root).resolve() if manual_root else None
         self.project=project;self.token=secrets.token_urlsafe(32)
         super().__init__(('127.0.0.1',0),PortalHandler)
     def server_close(self):
@@ -78,12 +78,12 @@ class PortalHandler(BaseHTTPRequestHandler):
         super().setup();self.connection.settimeout(2)
     def log_message(self,*args):pass
     def respond(self,status,data,kind='application/json; charset=utf-8'):
-        raw=data.encode('utf-8') if isinstance(data,str) else canonical(data)
+        raw=data if isinstance(data,bytes) else data.encode('utf-8') if isinstance(data,str) else canonical(data)
         if len(raw)>16*1024*1024:
             status=413;raw=canonical({'error':'RESPONSE_LIMIT'})
         self.send_response(status);self.send_header('Content-Type',kind);self.send_header('Content-Length',str(len(raw)))
         self.send_header('Cache-Control','no-store');self.send_header('X-Content-Type-Options','nosniff');self.send_header('Referrer-Policy','no-referrer')
-        self.send_header('Content-Security-Policy',"default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'self'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'")
+        self.send_header('Content-Security-Policy',"default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'self'; img-src 'self' data:; base-uri 'none'; frame-ancestors 'none'; form-action 'none'")
         self.end_headers();self.wfile.write(raw)
     def allowed(self,api):
         if self.headers.get('Host')!=self.server.origin.removeprefix('http://'):return False
@@ -92,10 +92,17 @@ class PortalHandler(BaseHTTPRequestHandler):
         return not api or hmac.compare_digest(self.headers.get('Authorization',''),'Bearer '+self.server.token)
     def do_GET(self):
         query=urlsplit(self.path)
-        if not self.allowed(query.path not in ['/','/favicon.ico']):return self.respond(403,{'error':'REQUEST_REFUSED'})
+        if not self.allowed(query.path not in ['/','/favicon.ico'] and not query.path.startswith('/manual/')):return self.respond(403,{'error':'REQUEST_REFUSED'})
         if query.path=='/favicon.ico':
             self.send_response(204);self.end_headers();return
-        if query.path=='/':return self.respond(200,html({'mode':'live','token':self.server.token,'supports_sources':True,'initial_job':self.server.initial_job}),'text/html; charset=utf-8')
+        if query.path=='/':return self.respond(200,html({'mode':'live','token':self.server.token,'supports_sources':True,'initial_job':self.server.initial_job,'installation':self.server.installation,'manuals_available':self.server.manual_root is not None}),'text/html; charset=utf-8')
+        if query.path.startswith('/manual/'):
+            name=query.path.removeprefix('/manual/');parts=PurePosixPath(name)
+            if query.query or not name or any(p in {'.','..'} for p in parts.parts) or not re.fullmatch('[A-Za-z0-9_./-]+',name) or self.server.manual_root is None:return self.respond(404,{'error':'NOT_FOUND'})
+            target=self.server.manual_root.joinpath(*parts.parts).resolve()
+            kinds={'.html':'text/html; charset=utf-8','.png':'image/png','.pdf':'application/pdf','.css':'text/css; charset=utf-8'}
+            if not target.is_relative_to(self.server.manual_root) or target.suffix not in kinds or not target.is_file() or target.stat().st_size>16*1024*1024:return self.respond(404,{'error':'NOT_FOUND'})
+            return self.respond(200,target.read_bytes(),kinds[target.suffix])
         if query.path=='/api/registrations' or query.path.startswith('/api/jobs/'):
             if query.query:return self.respond(400,{'error':'REQUEST_REFUSED'})
             try:return self.respond(200,self.server.hosted.get_api(query.path))
@@ -135,6 +142,11 @@ class PortalHandler(BaseHTTPRequestHandler):
         return strict_json(raw)
     def do_POST(self):
         if not self.allowed(True):return self.respond(403,{'error':'REQUEST_REFUSED'})
+        if self.path=='/api/stop':
+            try:
+                if self.read_json_body()!={}:raise RepositoryError('INVALID_BODY','Empty stop request required')
+            except (RepositoryError,OSError,ValueError):return self.respond(400,{'error':'INVALID_BODY'})
+            self.respond(200,{'state':'STOPPING'});self.server.shutdown();return
         if self.path.startswith('/api/registrations') or self.path.startswith('/api/jobs/') or self.path.startswith('/api/nav/'):
             try:
                 body=self.read_json_body();handler=self.server.navigation if self.path.startswith('/api/nav/') else self.server.hosted

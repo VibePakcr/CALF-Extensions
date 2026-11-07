@@ -1,0 +1,82 @@
+{
+  "source": "Actual installed browser frames, not mockups",
+  "installation": "calf.repository.navigator 0.1.0-dev.1",
+  "images": {
+    "gitlab-diff-ko.png": {
+      "source": "navigator-captures-r5/gitlab-diff-ko.png",
+      "sha256": "e5e9fc62f1333ef9a208d806f46e5be8bd28708b54e19bd27ed86885430f9980"
+    },
+    "github-registration-ko.png": {
+      "source": "navigator-captures-r2/github-registration-ko.png",
+      "sha256": "89481343962c0d2564263a99b82c21bd7f47ea3fbad0d1040f22d59d948ebbc1"
+    },
+    "local-map-en.png": {
+      "source": "navigator-captures-r5/local-map-en.png",
+      "sha256": "de14da5dc4a3302bee1b310c455ce8389b3bc25c23899ad708bba936c1a00283"
+    },
+    "github-diff-ko.png": {
+      "source": "navigator-captures-r2/github-diff-ko.png",
+      "sha256": "ab7d562d0189233d069891fcbfa738deaf3f50ea1523ea100050ff5429ac7e9a"
+    },
+    "local-diff-ko.png": {
+      "source": "navigator-captures-r2/local-diff-ko.png",
+      "sha256": "8c70113bcde94d391333e87a7e47ab4170f05dba515f349e96a53e7f3a4612ab"
+    },
+    "gitlab-registration-ko.png": {
+      "source": "navigator-captures-r2/gitlab-registration-ko.png",
+      "sha256": "ee8790db92fd0c889ce134ed523b5df732285544aa837402915aa34924a82d51"
+    },
+    "local-code-en.png": {
+      "source": "navigator-captures-r2/local-code-en.png",
+      "sha256": "e60110f355ba52f30eda7c920b6455e4bbf46bc721946dc15d577885f0c78872"
+    },
+    "github-diff-en.png": {
+      "source": "navigator-captures-r2/github-diff-en.png",
+      "sha256": "59e3512b504acfde700ca0dbc4acee145974552f0f0216bf0619613f4564f635"
+    },
+    "local-code-ko.png": {
+      "source": "navigator-captures-r2/local-code-ko.png",
+      "sha256": "05268a0954f3e45e5a4694336e42e519784586cb1075cb64e11f118da13f2746"
+    },
+    "local-diff-en.png": {
+      "source": "navigator-captures-r2/local-diff-en.png",
+      "sha256": "4923b119be307d6b1e2f98e8bc5b9fef763344fd98524c31c0b55df490f2db36"
+    },
+    "gitlab-registration-en.png": {
+      "source": "navigator-captures-r2/gitlab-registration-en.png",
+      "sha256": "d45719114030e777c6f3aec5d81e3e98de58628b4d563ed378d03e049f0827ba"
+    },
+    "github-registration-en.png": {
+      "source": "navigator-captures-r2/github-registration-en.png",
+      "sha256": "b9a00456a41db0d8a6e4dc32bb5efe2a11d5a16b1f28345d07d6f51d86909931"
+    },
+    "gitlab-diff-en.png": {
+      "source": "navigator-captures-r5/gitlab-diff-en.png",
+      "sha256": "c8ffe844061d3015bd927a94b384079292ae40f6e5db79241ecba90552148f63"
+    },
+    "stopped-ko.png": {
+      "source": "navigator-captures-r2/stopped-ko.png",
+      "sha256": "969a0143898b028ba9e75f5e23dcc843ac132fc81608242e0be8f597b4e153d0"
+    },
+    "local-map-ko.png": {
+      "source": "navigator-captures-r5/local-map-ko.png",
+      "sha256": "d65390f2e242fd9e6c8a7ba0991cd2ad403a0875c69d919f0901852589f39482"
+    },
+    "retained-ko.png": {
+      "source": "navigator-captures-r5/retained-ko.png",
+      "sha256": "44422541548fbae495a0d4c51d195a49a64ed84c1fbb5e6ac1210994109950da"
+    },
+    "hosted-code-ko.png": {
+      "source": "navigator-captures-r5/hosted-code-ko.png",
+      "sha256": "b6ff769096d48a24b352b4ab5645125f7b7836189bf90f18c8613e62a4dea710"
+    },
+    "retained-en.png": {
+      "source": "navigator-captures-r5/retained-en.png",
+      "sha256": "263b23c7b8549f95ab61dcc486d7ef155f255fd31de2fbca48eb780b025110e9"
+    },
+    "hosted-code-en.png": {
+      "source": "navigator-captures-r5/hosted-code-en.png",
+      "sha256": "cf74c374fe92ff06fc154195dc062cb1f6aae72513c8e34e7f0c9c15955d3932"
+    }
+  }
+}

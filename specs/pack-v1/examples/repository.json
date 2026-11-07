@@ -1,0 +1,150 @@
+{
+  "schema": "calf.extension-pack.v1",
+  "id": "calf.repository.local-git",
+  "version": "0.1.0-dev.1",
+  "availability": "reference",
+  "channel": "experimental",
+  "summary": {
+    "en": "Planned read-only Local Git navigation without CALF core or SDK.",
+    "ko": "CALF 코어·SDK 없이 사용하는 읽기 전용 Local Git 탐색 계획입니다."
+  },
+  "dependencies": [
+    {
+      "id": "python",
+      "kind": "runtime",
+      "versionPolicy": "interval",
+      "versionRange": {
+        "minInclusive": "3.10.0",
+        "maxExclusive": "4.0.0"
+      },
+      "requiredFeatures": [
+        "stdlib",
+        "utf8"
+      ]
+    },
+    {
+      "id": "git",
+      "kind": "system-tool",
+      "versionPolicy": "interval",
+      "versionRange": {
+        "minInclusive": "2.43.0",
+        "maxExclusive": "3.0.0"
+      },
+      "requiredFeatures": [
+        "read-only-contract",
+        "no-lazy-fetch",
+        "sha1-and-sha256-objects"
+      ]
+    },
+    {
+      "id": "browser",
+      "kind": "system-application",
+      "versionPolicy": "capability-only",
+      "requiredFeatures": [
+        "html5",
+        "svg",
+        "utf8",
+        "offline-html"
+      ]
+    }
+  ],
+  "entryPoints": [
+    {
+      "id": "cli",
+      "status": "planned",
+      "transport": "cli"
+    },
+    {
+      "id": "viewer",
+      "status": "planned",
+      "transport": "loopback-http"
+    },
+    {
+      "id": "offline",
+      "status": "planned",
+      "transport": "offline-html"
+    }
+  ],
+  "modes": [
+    {
+      "id": "inspect",
+      "status": "planned",
+      "supervised": false,
+      "dependencies": [
+        "python",
+        "git"
+      ],
+      "entryPoints": [
+        "cli"
+      ],
+      "network": "none",
+      "effects": [
+        "observe"
+      ]
+    },
+    {
+      "id": "viewer",
+      "status": "planned",
+      "supervised": false,
+      "dependencies": [
+        "python",
+        "git",
+        "browser"
+      ],
+      "entryPoints": [
+        "viewer"
+      ],
+      "network": "loopback-only",
+      "effects": [
+        "observe"
+      ]
+    },
+    {
+      "id": "offline-export",
+      "status": "planned",
+      "supervised": false,
+      "dependencies": [
+        "python",
+        "git"
+      ],
+      "entryPoints": [
+        "cli",
+        "offline"
+      ],
+      "network": "none",
+      "effects": [
+        "observe",
+        "export-capture"
+      ]
+    }
+  ],
+  "resources": {
+    "maxWorkers": 1,
+    "onDemand": true,
+    "modelRequired": false,
+    "historyLoading": "selected-only",
+    "limitsDocument": "docs/REPOSITORY_LOCAL_GIT_PLAN.md"
+  },
+  "verification": {
+    "specification": "docs/REPOSITORY_LOCAL_GIT_PLAN.md",
+    "requiredChecks": [
+      "exact-head-index-working-identities",
+      "source-refs-index-settings-preserved",
+      "no-hooks-filters-lazy-fetch",
+      "coverage-and-partial-results",
+      "viewer-and-offline-identity",
+      "owned-process-cleanup"
+    ],
+    "lifecycleStatus": "NOT_RUN",
+    "runtimeEvidence": [],
+    "lifecycleEvidence": []
+  },
+  "recovery": {
+    "specification": "docs/REPOSITORY_LOCAL_GIT_PLAN.md",
+    "capabilities": []
+  },
+  "documentation": {
+    "en": "docs/REPOSITORY_LOCAL_GIT_PLAN.md",
+    "ko": "docs/REPOSITORY_LOCAL_GIT_PLAN_KR.md"
+  }
+}

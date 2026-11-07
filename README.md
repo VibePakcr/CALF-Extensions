@@ -4,7 +4,7 @@
 
 Small, local extensions for **CALF — Controlled Agent Lifecycle Framework**. Connect a runtime to CALF's work contracts, independent checks and version-bound evidence without modifying the proprietary core.
 
-**0.1.0 developer preview:** [Download](https://github.com/VibePakcr/CALF-Extensions/releases/tag/v0.1.0) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/v0.1.0) · [Release notes](RELEASE-NOTES.md). One portable Python package supports the tested macOS, Windows and Linux environments. It is separate from the native CALF installer.
+**0.1.0 developer preview:** [Download](https://github.com/VibePakcr/CALF-Extensions/releases/tag/v0.1.0) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/ffmpeg-v0.1.0) · [Release notes](RELEASE-NOTES.md). One portable Python package supports the tested macOS, Windows and Linux environments. It is separate from the native CALF installer.
 
 The first extension is a **local FFmpeg scene workflow**, available here as a developer preview. It addresses a common production problem: **change scene 3 while keeping approved scenes 1 and 2 unchanged**.
 
@@ -43,11 +43,17 @@ The live Claude Code workflow was tested on macOS. Claude Desktop GUI configurat
 
 ## Project navigation preview
 
+**Free installed Repository Navigator preview:** [Download ZIP, checksums and EN/KO manuals](https://github.com/VibePakcr/CALF-Extensions/releases/tag/navigator-v0.1.0-dev.1). Local Git, manually registered GitHub and GitLab share one map and code/Diff viewer. Python and Git only; no CALF core, SDK or model required.
+
 The working source includes a free [Local Git project navigator](docs/REPOSITORY_NAVIGATOR.md). Select a project to explore features, definitions, documents, files and Python symbols in a relationship map, then inspect descriptions, exact-version code, Diff and provenance below the map.
 
 This source-run development preview is separate from the published FFmpeg 0.1.0 archives. Local Git needs no CALF core, SDK, account or model API. Manually registered GitHub/GitLab sources now share the map and code/Diff inspector; see the [hosted navigation guide](docs/REPOSITORY_HOSTED_H4.md) and [H5 public/desktop qualification and limits](docs/REPOSITORY_HOSTED_H5.md). Private access, native editor launch and physical mobile testing remain unqualified.
 
+The unified [installable Repository Navigator preview](docs/NAVIGATOR_PACK.md) now bundles Local Git, GitHub and GitLab, with [illustrated English](docs/navigator-manual/en.html) and [Korean](docs/navigator-manual/ko.html) manuals. See [installed-pack qualification](docs/NAVIGATOR_PACK_VERIFICATION.json) for the three-OS checks and remaining limits.
+
 ## Repository layout
+
+The working source also contains a [local pack lifecycle preview](docs/PACK_MANAGER.md) and [common pack specification](docs/EXTENSION_PACK_SPEC.md). It stages and qualifies candidates, retains dependency locks and preserves work across update/rollback. [Repository Local Git inspect](docs/REPOSITORY_PACK.md) now has its own Python/Git-only lifecycle and pinned work bindings. This development addition is **not included in the published 0.1.0 archives**; it adds no registry download, model requirement or background service. Motion remains unimplemented in this pack lifecycle preview; the separate Repository Navigator provides the managed foreground viewer.
 
 ```text
 calf_extensions/media_ffmpeg/   runtime, independent validator, scene selection, CLI
