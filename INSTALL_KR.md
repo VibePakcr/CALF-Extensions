@@ -1,16 +1,18 @@
 # AI와 함께 설치하기
 
+**문서 개정판 docs.1:** 배포 패키지 안의 영·한 매뉴얼도 최신 교정본으로 맞췄습니다. 실행 코드와 기존 버전은 유지합니다. [변경 내용·검증 범위](DOCUMENTATION-RELEASE-20261107.1.md).
+
 [English](INSTALL.md) · [README](README_KR.md) · [실제 화면으로 보는 영상 작업 관리](docs/media-jobs-manual/README_KR.md)
 
 이 안내는 AI의 도움을 받아 CALF Extensions를 처음 준비하는 사용자를 위한 문서입니다. **영상 작업 관리 팩 0.1.0-preview.1**를 기준으로 설명합니다. 설치 과정에 AI 모델이나 생성 API 키를 등록할 필요는 없습니다. 영상 생성은 사용 중인 외부 도구에서 수행하고, CALF는 요청·반환·검사·채택·재수정 기록을 관리합니다.
 
 ## 먼저 다운로드하세요
 
-**[ZIP 받기 · GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/download/media-jobs-v0.1.0-preview.1/CALF-Video-Work-Management-Pack-0.1.0-preview.1.zip)** · [ZIP 받기 · GitLab](https://gitlab.com/-/project/88597295/uploads/70317778aad7ed83ef0ec59d9c40dd50/CALF-Video-Work-Management-Pack-0.1.0-preview.1.zip)
+**[ZIP 받기 · GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/download/docs-20261107.1/CALF-Video-Work-Management-Pack-0.1.0-preview.1%2Bdocs.1.zip)** · [ZIP 받기 · GitLab](https://gitlab.com/-/project/88597295/uploads/91b29c940e075497d7ab5951dfdc43c8/CALF-Video-Work-Management-Pack-0.1.0-preview.1+docs.1.zip)
 
 0.1.0-preview.1을 **새 폴더에 압축 해제**한 뒤 그 안의 `INSTALL_KR.md`를 여세요. 파일 탐색기에서 “파일 확장자 표시”를 켜면 찾기 쉽습니다. 예전 FFmpeg 0.1.0 배포본과는 다른 파일입니다. 압축 해제만으로 기존 CALF나 활성 팩이 교체되지 않습니다.
 
-다른 형식·SHA256SUMS·검증 보고서: [GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/tag/media-jobs-v0.1.0-preview.1) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/media-jobs-v0.1.0-preview.1)
+다른 형식·SHA256SUMS·검증 보고서: [GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/tag/docs-20261107.1) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/docs-20261107.1)
 
 ## 1. AI에게 이 문장을 전달하세요
 

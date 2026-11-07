@@ -1,5 +1,7 @@
 # CALF Extensions
 
+**문서 개정판 docs.1:** 배포 패키지 안의 영·한 매뉴얼도 최신 교정본으로 맞췄습니다. 실행 코드와 기존 버전은 유지합니다. [변경 내용·검증 범위](DOCUMENTATION-RELEASE-20261107.1.md).
+
 CALF — Controlled Agent Lifecycle Framework에 연결하는 로컬 도구 모음입니다.
 
 [English](README.md) · **[AI와 함께 처음 설치하기](INSTALL_KR.md)** · [CALF 실행기 다운로드](https://github.com/VibePakcr/CALF/blob/main/DOWNLOADS.md)
@@ -10,10 +12,10 @@ CALF — Controlled Agent Lifecycle Framework에 연결하는 로컬 도구 모�
 
 | 시작 순서 | 바로가기 |
 |---|---|
-| **1. ZIP 다운로드** | **[GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/download/media-jobs-v0.1.0-preview.1/CALF-Video-Work-Management-Pack-0.1.0-preview.1.zip)** · **[GitLab](https://gitlab.com/-/project/88597295/uploads/70317778aad7ed83ef0ec59d9c40dd50/CALF-Video-Work-Management-Pack-0.1.0-preview.1.zip)** |
+| **1. ZIP 다운로드** | **[GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/download/docs-20261107.1/CALF-Video-Work-Management-Pack-0.1.0-preview.1%2Bdocs.1.zip)** · **[GitLab](https://gitlab.com/-/project/88597295/uploads/91b29c940e075497d7ab5951dfdc43c8/CALF-Video-Work-Management-Pack-0.1.0-preview.1+docs.1.zip)** |
 | **2. 설치** | **[INSTALL_KR.md — AI와 함께하는 초보자 안내](INSTALL_KR.md)** · [English](INSTALL.md) |
 | **3. 사용** | **[실제 캡처가 포함된 단계별 매뉴얼](docs/media-jobs-manual/README_KR.md)** |
-| 다른 압축 형식·체크섬·검증 보고서 | [GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/tag/media-jobs-v0.1.0-preview.1) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/media-jobs-v0.1.0-preview.1) |
+| 다른 압축 형식·체크섬·검증 보고서 | [GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/tag/docs-20261107.1) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/docs-20261107.1) |
 
 Python 3.10 이상, 별도 CALF SDK 0.2.1·네이티브 실행기·FFmpeg/ffprobe가 필요합니다. 새 폴더에 압축을 풀어 실행하는 프리뷰이며 의존 도구는 별도로 준비합니다. macOS ARM64·1080p 합성 영상으로 검증했습니다. 이 추가 팩의 Windows/Linux·실제 납품 영상·생성 API 연결은 검증 범위에 포함되지 않습니다.
 
@@ -29,9 +31,9 @@ Python 3.10 이상, 별도 CALF SDK 0.2.1·네이티브 실행기·FFmpeg/ffprob
 
 | 기능 | 다운로드 | 안내·준비물 |
 |---|---|---|
-| Repository Navigator · 0.1.0-dev.1 | [GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/tag/navigator-v0.1.0-dev.1) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/navigator-v0.1.0-dev.1) | [화면 매뉴얼](docs/navigator-manual/README_KR.md). Python·Git. CALF core·SDK는 필요하지 않습니다. |
-| Local Pack Tools + Repository Pack · 0.1.0-preview.1 | [GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/tag/packs-v0.1.0-preview.1) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/packs-v0.1.0-preview.1) | [팩 안내](docs/PACKS_GUIDE_KR.md). Python·Git. 로컬 저장소 읽기 전용 작업입니다. |
-| FFmpeg 씬 작업 · 0.1.0 | [GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/tag/v0.1.0) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/ffmpeg-v0.1.0) | [FFmpeg 안내](docs/FFMPEG_KR.md). Python·SDK·CALF 실행기·FFmpeg/ffprobe. |
+| Repository Navigator · 0.1.0-dev.1 | [GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/tag/docs-20261107.1) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/docs-20261107.1) | [화면 매뉴얼](docs/navigator-manual/README_KR.md). Python·Git. CALF core·SDK는 필요하지 않습니다. |
+| Local Pack Tools + Repository Pack · 0.1.0-preview.1 | [GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/tag/docs-20261107.1) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/docs-20261107.1) | [팩 안내](docs/PACKS_GUIDE_KR.md). Python·Git. 로컬 저장소 읽기 전용 작업입니다. |
+| FFmpeg 씬 작업 · 0.1.0 | [GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/tag/docs-20261107.1) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/docs-20261107.1) | [FFmpeg 안내](docs/FFMPEG_KR.md). Python·SDK·CALF 실행기·FFmpeg/ffprobe. |
 
 이전 FFmpeg 프리뷰의 [운영체제별 검증](VERIFICATION.json)은 새 영상 작업 관리 팩의 검증과 별개입니다. 기존 배포 파일과 이전 버전은 계속 보관합니다.
 

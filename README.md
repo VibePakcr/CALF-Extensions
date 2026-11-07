@@ -1,5 +1,7 @@
 # CALF Extensions
 
+**Documentation revision docs.1:** download packages now include the reviewed English and Korean manuals. Runtime code and previous releases are retained. [Changes and verification scope](DOCUMENTATION-RELEASE-20261107.1.md).
+
 Local tools for CALF — Controlled Agent Lifecycle Framework.
 
 [한국어](README_KR.md) · **[Install with an AI assistant](INSTALL.md)** · [CALF core downloads](https://github.com/VibePakcr/CALF/blob/main/DOWNLOADS.md)
@@ -10,10 +12,10 @@ Keep external video requests, returned files, review, adoption and revisions con
 
 | Start here | Link |
 |---|---|
-| **1. Download ZIP** | **[GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/download/media-jobs-v0.1.0-preview.1/CALF-Video-Work-Management-Pack-0.1.0-preview.1.zip)** · **[GitLab](https://gitlab.com/-/project/88597295/uploads/70317778aad7ed83ef0ec59d9c40dd50/CALF-Video-Work-Management-Pack-0.1.0-preview.1.zip)** |
+| **1. Download ZIP** | **[GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/download/docs-20261107.1/CALF-Video-Work-Management-Pack-0.1.0-preview.1%2Bdocs.1.zip)** · **[GitLab](https://gitlab.com/-/project/88597295/uploads/91b29c940e075497d7ab5951dfdc43c8/CALF-Video-Work-Management-Pack-0.1.0-preview.1+docs.1.zip)** |
 | **2. Install** | **[INSTALL.md — AI-assisted beginner guide](INSTALL.md)** · [한국어](INSTALL_KR.md) |
 | **3. Use it** | **[Step-by-step guide with actual captures](docs/media-jobs-manual/README.md)** |
-| Other formats / checksums / report | [GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/tag/media-jobs-v0.1.0-preview.1) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/media-jobs-v0.1.0-preview.1) |
+| Other formats / checksums / report | [GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/tag/docs-20261107.1) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/docs-20261107.1) |
 
 Requires Python 3.10+, separate CALF SDK 0.2.1/native executable and FFmpeg/ffprobe. This is an unpack-and-run preview; those dependencies are separate. Qualified on macOS ARM64 with synthetic 1080p clips; Windows/Linux, production footage and provider APIs are not qualified for this added pack.
 
@@ -29,9 +31,9 @@ Each feature has its own setup and verification scope.
 
 | Feature | Download | Guide / requirements |
 |---|---|---|
-| Repository Navigator · 0.1.0-dev.1 | [GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/tag/navigator-v0.1.0-dev.1) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/navigator-v0.1.0-dev.1) | [Screenshot manual](docs/navigator-manual/README.md). Python and Git; no CALF core/SDK required. |
-| Local Pack Tools + Repository Pack · 0.1.0-preview.1 | [GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/tag/packs-v0.1.0-preview.1) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/packs-v0.1.0-preview.1) | [Pack guide](docs/PACKS_GUIDE.md). Python and Git; local read-only repository operations. |
-| FFmpeg scene workflow · 0.1.0 | [GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/tag/v0.1.0) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/ffmpeg-v0.1.0) | [FFmpeg guide](docs/FFMPEG.md). Python, SDK/native CALF and FFmpeg/ffprobe. |
+| Repository Navigator · 0.1.0-dev.1 | [GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/tag/docs-20261107.1) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/docs-20261107.1) | [Screenshot manual](docs/navigator-manual/README.md). Python and Git; no CALF core/SDK required. |
+| Local Pack Tools + Repository Pack · 0.1.0-preview.1 | [GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/tag/docs-20261107.1) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/docs-20261107.1) | [Pack guide](docs/PACKS_GUIDE.md). Python and Git; local read-only repository operations. |
+| FFmpeg scene workflow · 0.1.0 | [GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/tag/docs-20261107.1) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/docs-20261107.1) | [FFmpeg guide](docs/FFMPEG.md). Python, SDK/native CALF and FFmpeg/ffprobe. |
 
 The older FFmpeg preview has separate [cross-platform verification](VERIFICATION.json). Its results do not qualify the newer video-management pack. Existing release files and earlier versions remain available.
 

@@ -1,0 +1,196 @@
+{
+  "schema": "calf.documentation-release-verification.v1",
+  "releaseTag": "docs-20261107.1",
+  "revision": "docs.1",
+  "date": "2026-11-07",
+  "runtimeVersions": {
+    "Harness": "1.8.8",
+    "Workbench": "1.9.3",
+    "SDK": "0.2.2",
+    "HostConnections": "1.8.8-hosts.1"
+  },
+  "scope": "Documentation repack and native update-manifest correction. No runtime-code changes.",
+  "static": {
+    "status": "PASS",
+    "archivesAcrossBothRepositories": 15,
+    "documentsAcrossBothRepositories": 253,
+    "unchangedRuntimeFilesAcrossBothRepositories": 208,
+    "relativeDocumentLinks": "PASS",
+    "navigatorInnerCodeAndAssets": "unchanged"
+  },
+  "platformPackageChecks": {
+    "macos": {
+      "status": "PASS",
+      "platform": "darwin",
+      "python": "3.12.13",
+      "harness": {
+        "version": "1.8.8",
+        "coreSha256": "cddbf73743e3b27d9125a8f13f4186d92d1fd3fbadb1d1d56c2814b0bc93387b",
+        "manifestFiles": 31,
+        "localUpdatePrepare": "PASS"
+      },
+      "workbench": {
+        "version": "1.9.3",
+        "coreSha256": "efb178d417e907a652b68e2acc5520c5680d9563b3ba84343e7a35450b767597",
+        "manifestFiles": 35,
+        "localUpdatePrepare": "PASS",
+        "nativeSelfCheck": "PASS"
+      },
+      "sdkInventoryFiles": 28,
+      "sdkUnitTests": 16,
+      "toolsInventoryFiles": 49,
+      "git": "git version 2.54.0 (Apple Git-157)",
+      "repository": {
+        "newVersion": "0.1.0-preview.1+docs.1",
+        "bothVersionsQualified": true,
+        "activationRollbackReselection": "PASS",
+        "oldLockUnchanged": true
+      },
+      "navigatorInventoryFiles": 55,
+      "navigator": {
+        "version": "0.1.0-dev.1+docs.1",
+        "freshInstallationQualification": "PASS",
+        "status": "PASS"
+      }
+    },
+    "windows": {
+      "status": "PASS",
+      "platform": "win32",
+      "python": "3.12.10",
+      "harness": {
+        "version": "1.8.8",
+        "coreSha256": "e2ced3127fb9538826598610af66f039520af29fdf14e296261583845bc56b15",
+        "manifestFiles": 31,
+        "localUpdatePrepare": "PASS"
+      },
+      "workbench": {
+        "version": "1.9.3",
+        "coreSha256": "564899607ce07abb5b1377404184d4fb7553bb2858a150cb93ea1ab60821b2e4",
+        "manifestFiles": 32,
+        "localUpdatePrepare": "PASS",
+        "nativeSelfCheck": "PASS"
+      },
+      "sdkInventoryFiles": 28,
+      "sdkUnitTests": 16,
+      "toolsInventoryFiles": 49,
+      "git": "git version 2.55.0.windows.1",
+      "repository": {
+        "newVersion": "0.1.0-preview.1+docs.1",
+        "bothVersionsQualified": true,
+        "activationRollbackReselection": "PASS",
+        "oldLockUnchanged": true
+      },
+      "navigatorInventoryFiles": 55,
+      "navigator": {
+        "version": "0.1.0-dev.1+docs.1",
+        "freshInstallationQualification": "PASS",
+        "status": "PASS"
+      }
+    },
+    "linux": {
+      "status": "PASS",
+      "platform": "linux",
+      "python": "3.13.5",
+      "harness": {
+        "version": "1.8.8",
+        "coreSha256": "75d03e6222a20d1137b43428ea6c6a427166e1dde1a271e9042bb01c685993a8",
+        "manifestFiles": 31,
+        "localUpdatePrepare": "PASS"
+      },
+      "workbench": {
+        "version": "1.9.3",
+        "coreSha256": "026fa9794e6106abbe5982b44fce174ee425e25870ed351782cf8c38135d31e5",
+        "manifestFiles": 32,
+        "localUpdatePrepare": "PASS",
+        "nativeSelfCheck": "PASS"
+      },
+      "sdkInventoryFiles": 28,
+      "sdkUnitTests": 16,
+      "toolsInventoryFiles": 49,
+      "git": "git version 2.47.3",
+      "repository": {
+        "newVersion": "0.1.0-preview.1+docs.1",
+        "bothVersionsQualified": true,
+        "activationRollbackReselection": "PASS",
+        "oldLockUnchanged": true
+      },
+      "navigatorInventoryFiles": 55,
+      "navigator": {
+        "version": "0.1.0-dev.1+docs.1",
+        "freshInstallationQualification": "PASS",
+        "status": "PASS"
+      }
+    }
+  },
+  "archives": [
+    {
+      "name": "CALF-FFmpeg-Extension-0.1.0-docs.1.tar.gz",
+      "sha256": "b4aa97709a99e7f55aa564e159bf94d1265eb2ec252e56cbabe63a1d978ae3c3",
+      "bytes": 41995,
+      "originalArchive": "CALF-FFmpeg-Extension-0.1.0.tar.gz",
+      "runtimeCodeUnchanged": true,
+      "packVersion": null
+    },
+    {
+      "name": "CALF-FFmpeg-Extension-0.1.0-docs.1.zip",
+      "sha256": "57bc2e84d27d23cc13b68083be94a7bab4dd9f02868e6f4328415063cf45f7f3",
+      "bytes": 54914,
+      "originalArchive": "CALF-FFmpeg-Extension-0.1.0.zip",
+      "runtimeCodeUnchanged": true,
+      "packVersion": null
+    },
+    {
+      "name": "CALF-Local-Pack-Tools-0.1.0-preview.1-docs.1.zip",
+      "sha256": "4cb1e65843d7eef1dd9dabfca6b3b125f5011676cf476af08f2ea165d3b71199",
+      "bytes": 141985,
+      "originalArchive": "CALF-Local-Pack-Tools-0.1.0-preview.1.zip",
+      "runtimeCodeUnchanged": true,
+      "packVersion": null
+    },
+    {
+      "name": "CALF-Repository-Pack-0.1.0-preview.1+docs.1.zip",
+      "sha256": "cdb8c3a17522939fb442fc4b326f3aa3f25065bfb8bfcd55e30bd0cb09c37169",
+      "bytes": 78770,
+      "originalArchive": "CALF-Repository-Pack-0.1.0-preview.1.zip",
+      "runtimeCodeUnchanged": true,
+      "packVersion": "0.1.0-preview.1+docs.1"
+    },
+    {
+      "name": "CALF-Repository-Navigator-0.1.0-dev.1+docs.1.zip",
+      "sha256": "d127bda2c4ba8493e331337dff957da04e892c63fa8c7289a9c30b041fa74902",
+      "bytes": 3745977,
+      "originalArchive": "CALF-Repository-Navigator-0.1.0-dev.1.zip",
+      "runtimeCodeUnchanged": true,
+      "packVersion": "0.1.0-dev.1+docs.1"
+    },
+    {
+      "name": "CALF-Video-Work-Management-Pack-0.1.0-preview.1+docs.1.tar.gz",
+      "sha256": "29434a19f07431feaa0646948c708cab5a600669aa61bfaff6fa77331352bac3",
+      "bytes": 1335921,
+      "originalArchive": "CALF-Video-Work-Management-Pack-0.1.0-preview.1.tar.gz",
+      "runtimeCodeUnchanged": true,
+      "packVersion": "0.1.0-preview.1+docs.1"
+    },
+    {
+      "name": "CALF-Video-Work-Management-Pack-0.1.0-preview.1+docs.1.zip",
+      "sha256": "0f06fd4010de57d433a11b6afd90b5ae8f5a9a20cf09c521a3847ba68b33a630",
+      "bytes": 1359376,
+      "originalArchive": "CALF-Video-Work-Management-Pack-0.1.0-preview.1.zip",
+      "runtimeCodeUnchanged": true,
+      "packVersion": "0.1.0-preview.1+docs.1"
+    }
+  ],
+  "preservation": {
+    "originalTagsAndAssets": "retained; public readback checked separately after publication",
+    "existingUserHomes": "not used by these checks; isolated fresh test stores only",
+    "oldPackLock": "unchanged during activation and rollback tests"
+  },
+  "limits": [
+    "No new live AI/provider calls, graphical UI qualification, memory or long-duration tests.",
+    "The FFmpeg runtime retains its original macOS/Windows/Linux qualification; its SDK requirement remains 0.2.1.",
+    "Video work management retains its macOS synthetic-media scope. Its new payload inventory passes; Windows/Linux media execution and generation APIs are not newly qualified.",
+    "Repository, Navigator and Video pack identities use +docs.1; existing locks do not carry over. Install and qualify a new candidate, then select it explicitly.",
+    "Native runtime versions are unchanged. Download docs.1 manually; it is not a higher runtime version in automatic update discovery.",
+    "macOS integrity signatures are ad hoc, not Apple notarization; Windows binaries have no publisher signature."
+  ]
+}
