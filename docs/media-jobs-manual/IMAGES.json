@@ -1,0 +1,112 @@
+{
+  "format": "calf.media.jobs.manual-images.v2",
+  "kind": "actual_native_screenshots_with_separate_cli_illustrations",
+  "actualScreenshotCount": 4,
+  "renderedIllustrationCount": 8,
+  "providerCalls": 0,
+  "platform": "macOS ARM64; screenshots use Korean OS UI",
+  "screenshots": {
+    "finder-handoff.jpg": {
+      "sha256": "877bfa42c31531ed8f77fa9b6738ac87bcacc8f599f9663208e8ed5b8a0f8998",
+      "bytes": 123649,
+      "mediaType": "image/jpeg",
+      "actualScreenshot": true,
+      "captureInterface": "CUA native app getScreenshot",
+      "application": "macOS Finder / Quick Look",
+      "osInterfaceLanguage": "Korean",
+      "state": "completed_demo_request_folder",
+      "description": "The completed demo request folder with handoff.txt selected; later return files are also present.",
+      "imageAlteredAfterCapture": false,
+      "syntheticDemo": true
+    },
+    "finder-returned.jpg": {
+      "sha256": "04f7e82a091a212276231475d0c6727b2230c45f8eccc1ddcada23157379032d",
+      "bytes": 299172,
+      "mediaType": "image/jpeg",
+      "actualScreenshot": true,
+      "captureInterface": "CUA native app getScreenshot",
+      "application": "macOS Finder / Quick Look",
+      "osInterfaceLanguage": "Korean",
+      "state": "native_return_review",
+      "description": "The actual synthetic returned.mp4 opened in macOS Quick Look.",
+      "imageAlteredAfterCapture": false,
+      "syntheticDemo": true
+    },
+    "finder-version.jpg": {
+      "sha256": "bc72bc5c09aa7a67248e48ae3d92bdbcc6cadc58bd1e4ab94a5fc288816ba722",
+      "bytes": 60287,
+      "mediaType": "image/jpeg",
+      "actualScreenshot": true,
+      "captureInterface": "CUA native app getScreenshot",
+      "application": "macOS Finder / Quick Look",
+      "osInterfaceLanguage": "Korean",
+      "state": "retained_selected_version",
+      "description": "The retained version folder containing video.mp4 and version.json.",
+      "imageAlteredAfterCapture": false,
+      "syntheticDemo": true
+    },
+    "finder-revisions.jpg": {
+      "sha256": "16197a16def259e5aff4b2f452d7b27c9668c167e71c7d6938f184cf8afe4f60",
+      "bytes": 63343,
+      "mediaType": "image/jpeg",
+      "actualScreenshot": true,
+      "captureInterface": "CUA native app getScreenshot",
+      "application": "macOS Finder / Quick Look",
+      "osInterfaceLanguage": "Korean",
+      "state": "retained_revision_requests",
+      "description": "The handoffs directory retains both sign-v1 and sign-v2 request folders.",
+      "imageAlteredAfterCapture": false,
+      "syntheticDemo": true
+    }
+  },
+  "illustrations": {
+    "04-revision-ko.png": {
+      "sha256": "16ff154b5479c58382621c0440fd078344a89b03dc8cc8e384e0e935aea056b8",
+      "language": "ko",
+      "actualScreenshot": false,
+      "kind": "document_rendering_of_selected_actual_cli_results"
+    },
+    "01-request-ko.png": {
+      "sha256": "1a2f97f223a60ef36c08f551d6df4c47a140a1e6feaea40b054e07ea1eef735e",
+      "language": "ko",
+      "actualScreenshot": false,
+      "kind": "document_rendering_of_selected_actual_cli_results"
+    },
+    "03-adopt-ko.png": {
+      "sha256": "c94c3c294e772bd85a5f02349dc4c2b7fed83fca063a15162a279f69b50b2d5e",
+      "language": "ko",
+      "actualScreenshot": false,
+      "kind": "document_rendering_of_selected_actual_cli_results"
+    },
+    "02-review-en.png": {
+      "sha256": "7e1997f6c864c99062c5aeaab9325c848cd015ba0da57725a1bdf8dab2c83efb",
+      "language": "en",
+      "actualScreenshot": false,
+      "kind": "document_rendering_of_selected_actual_cli_results"
+    },
+    "03-adopt-en.png": {
+      "sha256": "e898016f4fa1428247f016e5f1ae89eed122e58e76a1d4b855816901466d9dab",
+      "language": "en",
+      "actualScreenshot": false,
+      "kind": "document_rendering_of_selected_actual_cli_results"
+    },
+    "02-review-ko.png": {
+      "sha256": "2d8751e13706de56017f65e4b53bda341f367240ef4edefea4a66d204bb1b8de",
+      "language": "ko",
+      "actualScreenshot": false,
+      "kind": "document_rendering_of_selected_actual_cli_results"
+    },
+    "04-revision-en.png": {
+      "sha256": "35dbe18495a2366f46a3a1285f346a76f7947ef5daa8976ca5db49f010935b67",
+      "language": "en",
+      "actualScreenshot": false,
+      "kind": "document_rendering_of_selected_actual_cli_results"
+    },
+    "01-request-en.png": {
+      "sha256": "a63206a0bc75bae399b72ddf8577e5411b1236cd87fb3da1537638406c9a56fa",
+      "language": "en",
+      "actualScreenshot": false,
+      "kind": "document_rendering_of_selected_actual_cli_results"
+    }
+  }
+}

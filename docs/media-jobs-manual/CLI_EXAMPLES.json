@@ -1,0 +1,75 @@
+{
+  "source": "actual local CLI replay; selected fields only; commands use portable path variables",
+  "platform": "macOS ARM64",
+  "syntheticMedia": true,
+  "providerCalls": 0,
+  "cards": [
+    {
+      "id": "01-request",
+      "commands": [
+        "jobs request --project \"$PROJECT\" --scene scene-1 --key sign-v1 \\\n  --brief \"$BRIEF\" --profile \"$PROFILE\" --tool \"External video tool\" \\\n  --reference \"$REFERENCE\"",
+        "jobs status --project \"$PROJECT\" --key sign-v1"
+      ],
+      "output": {
+        "key": "sign-v1",
+        "sceneId": "scene-1",
+        "state": "awaiting_result",
+        "externalExecution": "not_observed",
+        "referenceSnapshots": 1
+      }
+    },
+    {
+      "id": "02-review",
+      "commands": [
+        "jobs receive --project \"$PROJECT\" --key sign-v1 \\\n  --file \"$RETURNED_MP4\" --registration \"$TOOLS/registration.json\"",
+        "jobs run --project \"$PROJECT\" --key sign-v1",
+        "jobs status --project \"$PROJECT\" --key sign-v1"
+      ],
+      "output": {
+        "outcome": "SATISFIED",
+        "verified": true,
+        "state": "ready_for_review",
+        "width": 1920,
+        "height": 1080,
+        "checks": [
+          "probe_and_frame_count",
+          "full_decode",
+          "blackMs"
+        ]
+      }
+    },
+    {
+      "id": "03-adopt",
+      "commands": [
+        "# After reviewing the returned video:",
+        "jobs adopt --project \"$PROJECT\" --key sign-v1",
+        "jobs status --project \"$PROJECT\""
+      ],
+      "output": {
+        "sceneId": "scene-1",
+        "state": "selected",
+        "selectedSha256": "488f61ac087081dd5e02ef7cbab82b1391f39a37cdf77af011f02346fad4e2ec",
+        "returnedSha256": "488f61ac087081dd5e02ef7cbab82b1391f39a37cdf77af011f02346fad4e2ec",
+        "scene2Selection": null
+      }
+    },
+    {
+      "id": "04-revision",
+      "commands": [
+        "jobs request --project \"$PROJECT\" --scene scene-1 --key sign-v2 \\\n  --parent sign-v1 --brief \"$BRIEF_V2\" --profile \"$PROFILE\" \\\n  --tool \"External video tool\"",
+        "# A returned clip with the wrong specification was checked:",
+        "jobs run --project \"$PROJECT\" --key sign-v2"
+      ],
+      "output": {
+        "key": "sign-v2",
+        "parent": "sign-v1",
+        "outcome": "VIOLATED",
+        "violations": [
+          "stream_inventory"
+        ],
+        "adoptionError": "fresh_satisfied_evidence_required",
+        "selectedSceneUnchanged": true
+      }
+    }
+  ]
+}

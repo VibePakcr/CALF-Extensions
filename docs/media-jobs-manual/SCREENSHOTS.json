@@ -1,0 +1,62 @@
+{
+  "schema": "calf.media.jobs.screenshots.v1",
+  "source": "Actual native Finder / Quick Look window captures",
+  "captureDate": "2026-11-07",
+  "imageAlteredAfterCapture": false,
+  "captureCount": 4,
+  "images": {
+    "finder-handoff.jpg": {
+      "sha256": "877bfa42c31531ed8f77fa9b6738ac87bcacc8f599f9663208e8ed5b8a0f8998",
+      "bytes": 123649,
+      "mediaType": "image/jpeg",
+      "actualScreenshot": true,
+      "captureInterface": "CUA native app getScreenshot",
+      "application": "macOS Finder / Quick Look",
+      "osInterfaceLanguage": "Korean",
+      "state": "completed_demo_request_folder",
+      "description": "The completed demo request folder with handoff.txt selected; later return files are also present.",
+      "imageAlteredAfterCapture": false,
+      "syntheticDemo": true
+    },
+    "finder-returned.jpg": {
+      "sha256": "04f7e82a091a212276231475d0c6727b2230c45f8eccc1ddcada23157379032d",
+      "bytes": 299172,
+      "mediaType": "image/jpeg",
+      "actualScreenshot": true,
+      "captureInterface": "CUA native app getScreenshot",
+      "application": "macOS Finder / Quick Look",
+      "osInterfaceLanguage": "Korean",
+      "state": "native_return_review",
+      "description": "The actual synthetic returned.mp4 opened in macOS Quick Look.",
+      "imageAlteredAfterCapture": false,
+      "syntheticDemo": true
+    },
+    "finder-version.jpg": {
+      "sha256": "bc72bc5c09aa7a67248e48ae3d92bdbcc6cadc58bd1e4ab94a5fc288816ba722",
+      "bytes": 60287,
+      "mediaType": "image/jpeg",
+      "actualScreenshot": true,
+      "captureInterface": "CUA native app getScreenshot",
+      "application": "macOS Finder / Quick Look",
+      "osInterfaceLanguage": "Korean",
+      "state": "retained_selected_version",
+      "description": "The retained version folder containing video.mp4 and version.json.",
+      "imageAlteredAfterCapture": false,
+      "syntheticDemo": true
+    },
+    "finder-revisions.jpg": {
+      "sha256": "16197a16def259e5aff4b2f452d7b27c9668c167e71c7d6938f184cf8afe4f60",
+      "bytes": 63343,
+      "mediaType": "image/jpeg",
+      "actualScreenshot": true,
+      "captureInterface": "CUA native app getScreenshot",
+      "application": "macOS Finder / Quick Look",
+      "osInterfaceLanguage": "Korean",
+      "state": "retained_revision_requests",
+      "description": "The handoffs directory retains both sign-v1 and sign-v2 request folders.",
+      "imageAlteredAfterCapture": false,
+      "syntheticDemo": true
+    }
+  },
+  "scope": "Local CLI workflow files from a completed synthetic demo; native filesystem review screens, not an external provider API or CALF product GUI qualification."
+}
