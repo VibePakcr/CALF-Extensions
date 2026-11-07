@@ -19,11 +19,11 @@ Use `python` and Windows paths on Windows. Keep the test/store path short; the e
 Build a new trusted local candidate, or use its supplied ZIP and SHA-256:
 
 ```sh
-python3 -B -m calf_extensions.packs.build_repository --source /work/CALF-Extensions --output /work/repo-pack-build --version 0.1.0-dev.1
+python3 -B -m calf_extensions.packs.build_repository --source /work/CALF-Extensions --output /work/repo-pack-build --version 0.1.0-preview.1
 python3 -B -m calf_extensions.packs.cli --home /work/repo-pack-store init
-python3 -B -m calf_extensions.packs.cli --home /work/repo-pack-store stage --archive /work/repo-pack-build/CALF-Repository-Pack-0.1.0-dev.1.zip --sha256 TRUSTED_ARCHIVE_SHA256 --source reviewed-local-build
-python3 -B -m calf_extensions.packs.cli --home /work/repo-pack-store check --id calf.repository.local-git --version 0.1.0-dev.1 --mode inspect --environment /work/environment.json
-python3 -B -m calf_extensions.packs.cli --home /work/repo-pack-store qualify --id calf.repository.local-git --version 0.1.0-dev.1 --mode inspect --environment /work/environment.json
+python3 -B -m calf_extensions.packs.cli --home /work/repo-pack-store stage --archive /work/repo-pack-build/CALF-Repository-Pack-0.1.0-preview.1.zip --sha256 TRUSTED_ARCHIVE_SHA256 --source reviewed-local-build
+python3 -B -m calf_extensions.packs.cli --home /work/repo-pack-store check --id calf.repository.local-git --version 0.1.0-preview.1 --mode inspect --environment /work/environment.json
+python3 -B -m calf_extensions.packs.cli --home /work/repo-pack-store qualify --id calf.repository.local-git --version 0.1.0-preview.1 --mode inspect --environment /work/environment.json
 python3 -B -m calf_extensions.packs.cli --home /work/repo-pack-store activate --lock LOCK_FROM_QUALIFY --expected-active none --experimental
 ```
 

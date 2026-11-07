@@ -1,5 +1,10 @@
 # CALF Extensions
 
+## Local packs preview
+
+**Local Pack Tools + Repository Pack 0.1.0-preview.1** now have verified install, update and recovery on macOS, Windows and Linux. [Download and verification](https://github.com/VibePakcr/CALF-Extensions/releases/tag/packs-v0.1.0-preview.1) · [English guide](docs/PACKS_GUIDE.md) · [한국어 안내](docs/PACKS_GUIDE_KR.md). This read-only local mode needs Python and Git, with no model or native core required.
+
+
 [한국어](README_KR.md) · [CALF downloads](https://github.com/VibePakcr/CALF/blob/main/DOWNLOADS.md) · [License](LICENSE-EXTENSIONS.txt)
 
 Small, local extensions for **CALF — Controlled Agent Lifecycle Framework**. Connect a runtime to CALF's work contracts, independent checks and version-bound evidence without modifying the proprietary core.

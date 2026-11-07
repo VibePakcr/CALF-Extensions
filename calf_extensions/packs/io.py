@@ -122,7 +122,12 @@ def run(argv,*,input_bytes=b'',timeout=30,limit=1048576,cwd=None):
             return raw
         finally:
             if p.poll() is None:
-                if os.name=='nt':p.kill()
+                if os.name=='nt':
+                    # This PID belongs to our still-running child. Bound the
+                    # tree termination and retain a direct-handle fallback.
+                    try:subprocess.run(['taskkill','/PID',str(p.pid),'/T','/F'],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL,timeout=4,check=False)
+                    except (OSError,subprocess.TimeoutExpired):pass
+                    if p.poll() is None:p.kill()
                 else:
                     try:os.killpg(p.pid,signal.SIGKILL)
                     except ProcessLookupError:pass

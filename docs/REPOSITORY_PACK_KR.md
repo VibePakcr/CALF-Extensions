@@ -19,11 +19,11 @@ Windows에서는 `python`과 Windows 경로를 사용하세요. 시험·저장�
 검토한 로컬 소스로 새 후보를 만들거나 제공된 ZIP과 SHA-256을 사용합니다.
 
 ```sh
-python3 -B -m calf_extensions.packs.build_repository --source /work/CALF-Extensions --output /work/repo-pack-build --version 0.1.0-dev.1
+python3 -B -m calf_extensions.packs.build_repository --source /work/CALF-Extensions --output /work/repo-pack-build --version 0.1.0-preview.1
 python3 -B -m calf_extensions.packs.cli --home /work/repo-pack-store init
-python3 -B -m calf_extensions.packs.cli --home /work/repo-pack-store stage --archive /work/repo-pack-build/CALF-Repository-Pack-0.1.0-dev.1.zip --sha256 TRUSTED_ARCHIVE_SHA256 --source reviewed-local-build
-python3 -B -m calf_extensions.packs.cli --home /work/repo-pack-store check --id calf.repository.local-git --version 0.1.0-dev.1 --mode inspect --environment /work/environment.json
-python3 -B -m calf_extensions.packs.cli --home /work/repo-pack-store qualify --id calf.repository.local-git --version 0.1.0-dev.1 --mode inspect --environment /work/environment.json
+python3 -B -m calf_extensions.packs.cli --home /work/repo-pack-store stage --archive /work/repo-pack-build/CALF-Repository-Pack-0.1.0-preview.1.zip --sha256 TRUSTED_ARCHIVE_SHA256 --source reviewed-local-build
+python3 -B -m calf_extensions.packs.cli --home /work/repo-pack-store check --id calf.repository.local-git --version 0.1.0-preview.1 --mode inspect --environment /work/environment.json
+python3 -B -m calf_extensions.packs.cli --home /work/repo-pack-store qualify --id calf.repository.local-git --version 0.1.0-preview.1 --mode inspect --environment /work/environment.json
 python3 -B -m calf_extensions.packs.cli --home /work/repo-pack-store activate --lock LOCK_FROM_QUALIFY --expected-active none --experimental
 ```
 
