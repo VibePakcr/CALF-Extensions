@@ -4,7 +4,7 @@
 
 This source preview reads an explicitly selected CALF `history.html`. It creates a small index and module notes without changing the original journal, hash chain, contracts or completion rules. The generated files are disposable views; CALF never imports them as evidence.
 
-Indexing and reading use Python 3.10+ and its standard library. No Git, SDK, model, network or background service is involved. Native chain confirmation and current verdict queries additionally need an explicitly selected CALF executable. Actual native integration was checked with Harness 1.8.8; other core versions and operating systems need separate qualification.
+Indexing and reading use Python 3.10+ and its standard library. No Git, SDK, model, network or background service is involved. Native chain confirmation and current verdict queries additionally need an explicitly selected CALF executable. Harness 1.8.8 integration is qualified on macOS ARM64, Windows x64 and Debian x64. Fresh local Codex, Antigravity and Claude Code context tests are documented in the [follow-up qualification](REPOSITORY_HISTORY_QUALIFICATION.md). Other versions and environments need separate qualification.
 
 ## Define the modules
 

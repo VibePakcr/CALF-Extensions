@@ -1,0 +1,342 @@
+{
+  "schema": "calf.repository.history.cross-qualification.v1",
+  "qualifiedAt": "2026-11-08",
+  "status": "PASS_WITH_DECLARED_SCOPE",
+  "packVersion": "0.1.1-preview.4",
+  "archiveSha256": "a2315cbbd9fc76994d6ee11c04b14f3e832d71aec9bd63d2f0dc4e63456f75fe",
+  "runtimeCodeChanged": false,
+  "nativeCoreVersion": "1.8.8",
+  "platforms": {
+    "windows-x86_64": {
+      "platform": "win32",
+      "machine": "AMD64",
+      "python": "3.12.10",
+      "git": "git version 2.55.0.windows.1",
+      "packVersion": "0.1.1-preview.4",
+      "archiveSha256": "a2315cbbd9fc76994d6ee11c04b14f3e832d71aec9bd63d2f0dc4e63456f75fe",
+      "coreVersion": "1.8.8",
+      "coreSha256": "e2ced3127fb9538826598610af66f039520af29fdf14e296261583845bc56b15",
+      "boundaryTests": {
+        "exit": 0,
+        "expected": 21,
+        "skipped": false
+      },
+      "checks": [
+        {
+          "check": "install-update-qualification",
+          "passed": true,
+          "oldAndNewLocksRetained": true,
+          "groupsPerVersion": 3
+        },
+        {
+          "check": "new-history-boundaries",
+          "passed": true,
+          "tests": 21,
+          "skipped": 0
+        },
+        {
+          "check": "real-native-selective-context",
+          "passed": true,
+          "recordsExact": 76,
+          "oldRuleFoundOutsideRecentNotes": true,
+          "moduleReadBytes": {
+            "indexBytesRead": 7855,
+            "sourceBytesRead": 0
+          },
+          "searchReadBytes": {
+            "indexBytesRead": 38207,
+            "sourceBytesRead": 0
+          },
+          "exactReadBytes": {
+            "indexBytesRead": 17551,
+            "sourceBytesRead": 686
+          },
+          "moduleResponseBytes": 5389,
+          "sourceBytes": 118026,
+          "nativeBefore": "SATISFIED",
+          "nativeAfter": "UNKNOWN"
+        },
+        {
+          "check": "installed-real-cli-cjk",
+          "passed": true
+        },
+        {
+          "check": "tamper-refusal-and-append-rebuild",
+          "passed": true,
+          "oldIndexPreserved": true
+        },
+        {
+          "check": "rollback-reselect-preserves-locks",
+          "passed": true
+        }
+      ],
+      "preservation": {
+        "checked": 744,
+        "byteIdentical": 744,
+        "changed": 0,
+        "existingRecordsOrSettingsRestored": false
+      }
+    },
+    "linux-x86_64": {
+      "platform": "linux",
+      "machine": "x86_64",
+      "python": "3.13.5",
+      "git": "git version 2.47.3",
+      "packVersion": "0.1.1-preview.4",
+      "archiveSha256": "a2315cbbd9fc76994d6ee11c04b14f3e832d71aec9bd63d2f0dc4e63456f75fe",
+      "coreVersion": "1.8.8",
+      "coreSha256": "75d03e6222a20d1137b43428ea6c6a427166e1dde1a271e9042bb01c685993a8",
+      "boundaryTests": {
+        "exit": 0,
+        "expected": 21,
+        "skipped": false
+      },
+      "checks": [
+        {
+          "check": "install-update-qualification",
+          "passed": true,
+          "oldAndNewLocksRetained": true,
+          "groupsPerVersion": 3
+        },
+        {
+          "check": "new-history-boundaries",
+          "passed": true,
+          "tests": 21,
+          "skipped": 0
+        },
+        {
+          "check": "real-native-selective-context",
+          "passed": true,
+          "recordsExact": 76,
+          "oldRuleFoundOutsideRecentNotes": true,
+          "moduleReadBytes": {
+            "indexBytesRead": 7846,
+            "sourceBytesRead": 0
+          },
+          "searchReadBytes": {
+            "indexBytesRead": 38194,
+            "sourceBytesRead": 0
+          },
+          "exactReadBytes": {
+            "indexBytesRead": 17542,
+            "sourceBytesRead": 646
+          },
+          "moduleResponseBytes": 5389,
+          "sourceBytes": 111991,
+          "nativeBefore": "SATISFIED",
+          "nativeAfter": "UNKNOWN"
+        },
+        {
+          "check": "installed-real-cli-cjk",
+          "passed": true
+        },
+        {
+          "check": "tamper-refusal-and-append-rebuild",
+          "passed": true,
+          "oldIndexPreserved": true
+        },
+        {
+          "check": "rollback-reselect-preserves-locks",
+          "passed": true
+        }
+      ],
+      "preservation": {
+        "checked": 878,
+        "byteIdentical": 878,
+        "changed": 0,
+        "existingRecordsOrSettingsRestored": false
+      }
+    }
+  },
+  "macosEvidence": "Previously qualified exact archive:21 new boundary tests; fresh native-context sessions in this follow-up",
+  "freshHostSessions": {
+    "codex": {
+      "surface": "Codex app-server",
+      "freshSession": true,
+      "modelOverridden": false,
+      "parentTranscriptPassed": false,
+      "status": "PASS",
+      "hostExit": 0,
+      "queryCalls": 4,
+      "moduleNotesReturned": [
+        "map"
+      ],
+      "otherModuleNotesRead": false,
+      "oldConstraintRecovered": true,
+      "originalRecordIdentityExact": true,
+      "historicalCompletionNotPromoted": true,
+      "nativeCurrentOutcome": "UNKNOWN",
+      "structuredResponseBytes": 8345,
+      "historyBytes": 125216,
+      "queryMetrics": [
+        {
+          "action": "module",
+          "metrics": {
+            "indexBytesRead": 7900,
+            "sourceBytesRead": 0
+          }
+        },
+        {
+          "action": "search",
+          "metrics": {
+            "indexBytesRead": 38256,
+            "sourceBytesRead": 0
+          }
+        },
+        {
+          "action": "record",
+          "metrics": {
+            "indexBytesRead": 17596,
+            "sourceBytesRead": 732
+          }
+        },
+        {
+          "action": "status",
+          "metrics": {
+            "indexBytesRead": 2511,
+            "sourceBytesRead": 125216,
+            "nativeIOBytesMeasured": false
+          }
+        }
+      ]
+    },
+    "antigravity": {
+      "surface": "Antigravity native ACP",
+      "freshSession": true,
+      "modelOverridden": false,
+      "parentTranscriptPassed": false,
+      "status": "PASS",
+      "hostExit": 0,
+      "queryCalls": 4,
+      "moduleNotesReturned": [
+        "map"
+      ],
+      "otherModuleNotesRead": false,
+      "oldConstraintRecovered": true,
+      "originalRecordIdentityExact": true,
+      "historicalCompletionNotPromoted": true,
+      "nativeCurrentOutcome": "UNKNOWN",
+      "structuredResponseBytes": 8345,
+      "historyBytes": 125216,
+      "queryMetrics": [
+        {
+          "action": "module",
+          "metrics": {
+            "indexBytesRead": 7900,
+            "sourceBytesRead": 0
+          }
+        },
+        {
+          "action": "search",
+          "metrics": {
+            "indexBytesRead": 38256,
+            "sourceBytesRead": 0
+          }
+        },
+        {
+          "action": "record",
+          "metrics": {
+            "indexBytesRead": 17596,
+            "sourceBytesRead": 732
+          }
+        },
+        {
+          "action": "status",
+          "metrics": {
+            "indexBytesRead": 2511,
+            "sourceBytesRead": 125216,
+            "nativeIOBytesMeasured": false
+          }
+        }
+      ]
+    },
+    "claude": {
+      "surface": "Fresh Claude Code session with ephemeral read-only Repository MCP and existing CALF188 hooks",
+      "freshSession": true,
+      "modelOverridden": false,
+      "parentTranscriptPassed": false,
+      "status": "PASS",
+      "hostExit": 0,
+      "queryCalls": 4,
+      "moduleNotesReturned": [
+        "map"
+      ],
+      "otherModuleNotesRead": false,
+      "oldConstraintRecovered": true,
+      "originalRecordIdentityExact": true,
+      "historicalCompletionNotPromoted": true,
+      "nativeCurrentOutcome": "UNKNOWN",
+      "structuredResponseBytes": 8345,
+      "historyBytes": 125216,
+      "queryMetrics": [
+        {
+          "action": "module",
+          "metrics": {
+            "indexBytesRead": 7900,
+            "sourceBytesRead": 0
+          }
+        },
+        {
+          "action": "search",
+          "metrics": {
+            "indexBytesRead": 38256,
+            "sourceBytesRead": 0
+          }
+        },
+        {
+          "action": "record",
+          "metrics": {
+            "indexBytesRead": 17596,
+            "sourceBytesRead": 732
+          }
+        },
+        {
+          "action": "status",
+          "metrics": {
+            "indexBytesRead": 2511,
+            "sourceBytesRead": 125216,
+            "nativeIOBytesMeasured": false
+          }
+        }
+      ]
+    }
+  },
+  "claudeTransport": {
+    "qualified": "Four ephemeral read-only MCP tools; no Bash or directory tool; connected before the model prompt; process gone after exit",
+    "generalReleasedRepositoryMcpServer": false,
+    "earlierBashTrial": {
+      "strictDriverStatus": "FAIL retained",
+      "functionalAnswerExact": true,
+      "additionalReads": [
+        "local bootstrap",
+        "workspace-specific nonexistent native-memory index"
+      ],
+      "overallStrictPassClaimed": false
+    }
+  },
+  "preservation": {
+    "remoteWindowsFilesByteIdentical": 744,
+    "remoteLinuxFilesByteIdentical": 878,
+    "localInitialProtectedFiles": 818,
+    "localByteIdentical": 817,
+    "originalHistoryPrefixesPreserved": 938,
+    "concurrentUiMetadataFilesReviewed": 1,
+    "settingsRestored": false,
+    "baselineAdvanced": false,
+    "supplementalCliProfileCache": {
+      "capturedAtTaskStart": false,
+      "runtimeBackupCompared": true,
+      "onlyObservedFieldDelta": "oauthAccount.profileFetchedAt",
+      "cleanupMarkerBeforeBytesAvailable": false,
+      "wholeProfilePreservationClaimed": false
+    }
+  },
+  "measurementScope": "Structured query-response bytes only; excludes host instructions, transport wrapping and diagnostics. Native status rehashes the whole source; native I/O is unmeasured. Not an LLM-token, memory or speed benchmark.",
+  "limits": [
+    "Fresh host sessions use local Codex app-server, Antigravity ACP and Claude Code CLI/MCP; no new GUI, ordinary chat or cloud-session qualification.",
+    "Project bootstrap/query route is explicit. Arbitrary-project discovery, automatic module inference and global context injection are not certified.",
+    "Task-scoped test bridge is not an OS sandbox. No generic released Repository MCP server is added.",
+    "The original ZIP, core, hash-chain writer, contracts and completion rules are unchanged. Appends still require a new index.",
+    "Earlier failed tests and strict preservation observations are retained; runtime-cache comparison is not a missing task-start snapshot."
+  ]
+}

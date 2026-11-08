@@ -14,7 +14,7 @@ Read a long CALF journal without loading all of it into the next task. This prev
 
 **Installation:** use the ZIP and SHA256SUMS attached to this release. Stage, check and qualify it with the existing Local Pack Tools, then activate with the current active digest and `--experimental`. Keep the old pack, locks and bindings. For standalone queries, extract the ZIP into a new folder and follow [the English guide](docs/REPOSITORY_HISTORY.md). The older Local Pack Tools download remains available in `packs-v0.1.0-preview.1`.
 
-**Scope:** fresh native and history-query verification is macOS ARM64 / Harness 1.8.8 only. Earlier three-platform pack-lifecycle results do not qualify this new feature on Windows/Linux. Only supported native v1 journals are indexed. New journal entries require a new index. Search covers IDs, kinds and 160-character excerpts, not full payloads. No Workbench panel, automatic host context injection or new core release is included. Existing release tags and files are retained.
+**Qualification updated 2026-11-08:** the unchanged archive passed 21 history tests each on Windows x64 and Debian x64 with native Harness 1.8.8, in addition to its macOS qualification. Fresh Codex, Antigravity and scoped Claude Code/MCP context results are described in [the follow-up report](docs/REPOSITORY_HISTORY_QUALIFICATION.md). Only supported native v1 journals are indexed. New journal entries require a new index. Search covers IDs, kinds and 160-character excerpts, not full payloads. No Workbench panel, automatic host context injection or new core release is included. Existing release tags and files are retained.
 
 ## 한국어
 
@@ -28,4 +28,4 @@ Read a long CALF journal without loading all of it into the next task. This prev
 
 **설치:** 이 릴리즈의 ZIP과 SHA256SUMS를 받으세요. 기존 Local Pack Tools로 stage·check·qualify 후 현재 active digest와 `--experimental`로 선택합니다. 이전 팩·잠금·작업 연결은 보관하세요. 독립 조회는 ZIP을 새 폴더에 풀고 [한국어 안내](docs/REPOSITORY_HISTORY_KR.md)를 따르면 됩니다. 기존 Local Pack Tools는 `packs-v0.1.0-preview.1`에서 계속 받을 수 있습니다.
 
-**검증 범위:** 이번 기록 조회·네이티브 검증은 macOS ARM64·Harness 1.8.8 기준입니다. 이전의 세 운영체제 팩 관리 시험이 새 기능의 Windows/Linux 검증을 대신하지는 않습니다. 지원되는 네이티브 v1 기록만 읽으며, 기록이 추가되면 새 인덱스를 만들어야 합니다. 검색은 ID·종류·160자 요약을 대상으로 하고 본문 전체를 검색하지 않습니다. Workbench 화면·호스트 자동 문맥 주입·새 코어 릴리즈는 포함하지 않습니다. 기존 릴리즈와 파일은 계속 보관합니다.
+**2026-11-08 추가 검증:** 같은 ZIP을 유지하면서 macOS에 이어 Windows x64·Debian x64에서도 Harness 1.8.8과 기록 조회 검사 21개를 각각 통과했습니다. Codex·Antigravity·작업 범위를 제한한 Claude Code/MCP 새 세션의 결과는 [추가 검증 안내](docs/REPOSITORY_HISTORY_QUALIFICATION_KR.md)를 참고하세요. 지원되는 네이티브 v1 기록만 읽으며, 기록이 추가되면 새 인덱스를 만들어야 합니다. 검색은 ID·종류·160자 요약을 대상으로 하고 본문 전체를 검색하지 않습니다. Workbench 화면·호스트 자동 문맥 주입·새 코어 릴리즈는 포함하지 않습니다. 기존 릴리즈와 파일은 계속 보관합니다.

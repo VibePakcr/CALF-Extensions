@@ -8,7 +8,7 @@ CALF — Controlled Agent Lifecycle Framework에 연결하는 로컬 도구 모�
 
 ## Repository 기록 조회 · 0.1.1-preview.4
 
-전체 기록을 문맥에 올리지 않고 모듈 요약·과거 결정·원본 한 건을 찾아 읽습니다. 원본 이력·계약·코어 완료 판정은 그대로 유지하며, 로컬 조회는 Python만 사용합니다. [한국어 안내](docs/REPOSITORY_HISTORY_KR.md) · [English](docs/REPOSITORY_HISTORY.md) · [GitHub 릴리즈](https://github.com/VibePakcr/CALF-Extensions/releases/tag/repository-v0.1.1-preview.4) · [GitLab 릴리즈](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/repository-v0.1.1-preview.4). 이번 검증은 macOS ARM64·Harness 1.8.8 기준이며 새 기능의 Windows/Linux 검증은 아직 포함하지 않습니다. [변경 내용과 검증](REPOSITORY-HISTORY-RELEASE.md).
+전체 기록을 문맥에 올리지 않고 모듈 요약·과거 결정·원본 한 건을 찾아 읽습니다. 원본 이력·계약·코어 완료 판정은 그대로 유지하며, 로컬 조회는 Python만 사용합니다. [한국어 안내](docs/REPOSITORY_HISTORY_KR.md) · [English](docs/REPOSITORY_HISTORY.md) · [GitHub 릴리즈](https://github.com/VibePakcr/CALF-Extensions/releases/tag/repository-v0.1.1-preview.4) · [GitLab 릴리즈](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/repository-v0.1.1-preview.4). 2026-11-08 추가 검증에서 Windows·Linux가 각각 기록 조회 검사 21개를 통과했고, Codex·Antigravity·작업 범위를 제한한 Claude Code/MCP 새 세션의 맥락 연결도 확인했습니다. ZIP과 코어는 바꾸지 않았습니다. [검증 결과와 범위](docs/REPOSITORY_HISTORY_QUALIFICATION_KR.md). [변경 내용과 검증](REPOSITORY-HISTORY-RELEASE.md).
 
 ## 영상 작업 관리 팩 · 0.1.0-preview.1
 
