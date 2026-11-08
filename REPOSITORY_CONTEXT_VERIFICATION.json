@@ -1,0 +1,208 @@
+{
+  "schema": "calf.gcn.qualification.v1",
+  "qualifiedAt": "2026-11-09",
+  "status": "PASS_WITH_DECLARED_SCOPE",
+  "versions": {
+    "harness": "1.8.9",
+    "workbench": "1.9.4",
+    "repository": "0.1.2-preview.5",
+    "sdk": "0.2.2 unchanged"
+  },
+  "control": {
+    "compute": "CPU",
+    "executor": "single",
+    "nativeEngine": "CALF-native",
+    "extraModelOrDaemonAdded": false,
+    "nativeDependenciesAdded": false
+  },
+  "nativeGcnTests": {
+    "freshFinalCandidate": 8,
+    "earlierFullNativeRun": 56,
+    "unaffectedEarlierNativeRegressionCasesReused": 49
+  },
+  "repositoryContracts": {
+    "macos": 41,
+    "windows": 41,
+    "linux": 41,
+    "archiveSha256": "2c901ccf7a1431cb61fa577dd403d435b84512c4ac630a4b348e2aff064077ac",
+    "scope": "The exact final preview.5 archive passed on all three operating systems with the final native Harness 1.8.9 binary. Runtime Python files match preview.4; supplementary documentation links were corrected."
+  },
+  "finalPlatforms": {
+    "macos": {
+      "core": "a7e979042874f8e0989246a72b90d12ae87fde64726646e9be2e42138210a4e7",
+      "sdkGenericCall": true,
+      "bridge": "3c0d6daf308795cd79abd21c8b4663f640d561dce744e7bd8f2c1bb0d6827aae"
+    },
+    "windows": {
+      "status": "PASS",
+      "platform": "win32",
+      "modelCalls": 0,
+      "systemPackagesInstalled": false,
+      "ownerSettingsWritten": false,
+      "cores": {
+        "harness": "8f24609a80ff8793439bcdc89facb287f02a67faa3009c96a679af6ee9015d9f",
+        "workbench": "55a0140e8ae1b108479e6599a4bd3e0e58234dedfad2a5c93574accd21102ae6"
+      },
+      "desktopSha256": "1a087d5fc74ac33cc75f9d04e003a8bf8ad9773280a601a448e66a861c57a272",
+      "versions": {
+        "harness": "1.8.9",
+        "workbench": "1.9.4"
+      },
+      "nativeStates": [
+        "WAIT",
+        "READY",
+        "WAIT"
+      ],
+      "standardEnvelopeWithAndWithoutHome": true,
+      "gcnCreatedRecordsHome": false,
+      "wrongScopePassingEvidenceRefused": true,
+      "cjkNativeCheckPassed": true,
+      "nativeWorkbenchBridgePassed": true,
+      "windowInteractionClaimed": false,
+      "preservation": {
+        "oldTestFilesChecked": 332,
+        "byteIdentical": 332,
+        "changed": 0,
+        "restored": false
+      }
+    },
+    "linux": {
+      "status": "PASS",
+      "platform": "linux",
+      "modelCalls": 0,
+      "systemPackagesInstalled": false,
+      "ownerSettingsWritten": false,
+      "cores": {
+        "harness": "3995e9713681bad74cac76fbbd732aea766746ca040ecfea7fbc4232e1adac97",
+        "workbench": "2c5b83a00b644d7dadf73217b1a1016620ad7cb7c71379bfaf90cf0c1cfa8539"
+      },
+      "desktopSha256": "96cbf43994d18ea51120a459ffbc955cce278b997b463b9a6452fd85c976ea95",
+      "versions": {
+        "harness": "1.8.9",
+        "workbench": "1.9.4"
+      },
+      "nativeStates": [
+        "WAIT",
+        "READY",
+        "WAIT"
+      ],
+      "standardEnvelopeWithAndWithoutHome": true,
+      "gcnCreatedRecordsHome": false,
+      "wrongScopePassingEvidenceRefused": true,
+      "cjkNativeCheckPassed": true,
+      "nativeWorkbenchBridgePassed": true,
+      "windowInteractionClaimed": false,
+      "preservation": {
+        "oldTestFilesChecked": 332,
+        "byteIdentical": 332,
+        "changed": 0,
+        "restored": false
+      }
+    }
+  },
+  "freshHostContext": {
+    "codex": {
+      "status": "PASS",
+      "queries": 4
+    },
+    "antigravity": {
+      "status": "PASS",
+      "queries": 1
+    },
+    "claude": {
+      "status": "FUNCTIONAL_PASS_WITH_REPORT_FORMAT_VARIATION",
+      "strictReportFormat": "FAIL retained",
+      "queries": 1,
+      "reportDifferences": {
+        "historicalCoreVersion": {
+          "expected": "1.8.8",
+          "returned": "Native1.8.8",
+          "meaning": "Exact literal version label in the original record"
+        },
+        "authority": {
+          "expected": "native_core",
+          "returned": "CALF-native",
+          "meaning": "Exact engine label returned by the native endpoint"
+        }
+      }
+    }
+  },
+  "freshHostScope": "Actual registered source project; reference TASKs newly registered from its existing documentation. No query path or answer in the user prompt. Not a production-history age benchmark. Fresh host tests used the first native candidate; its GCN policy functions and Repository runtime code matches the final candidate.",
+  "contextMeasurement": {
+    "responseBytes": 5634,
+    "sourceRecordBytesRead": 1488,
+    "fullJournalBytes": 47308,
+    "recordsReturned": 2,
+    "recentMetadataRecords": 5,
+    "nativeIOBytesMeasured": false,
+    "claim": "Selected reference content only; native integrity/completion I/O is additional and not measured here."
+  },
+  "preservation": {
+    "protectedFiles": 821,
+    "byteIdentical": 816,
+    "historyPrefixesPreserved": 938,
+    "authorizedInstructionAppends": 2,
+    "authorizedPackSelection": 1,
+    "changedUiStateFiles": 2,
+    "originalSettingsRestored": false,
+    "baselineAdvanced": false,
+    "blanketAppStatePreservationClaimed": false
+  },
+  "hostSettingsObservation": {
+    "codex": "Display mode changed and native thread/start added a project trust entry; reproduced without a model or hooks in an isolated test home. Original settings not restored.",
+    "antigravity": "Later observed changes involve UI/session metadata. Complete task-start app-state bytes were unavailable; whole-app-state preservation is not claimed.",
+    "claude": "Original settings retained; instruction file created by this task was clarified for ordinary Bash."
+  },
+  "limits": [
+    "Native v1 TASK/criterion evidence only; additional domains/formats require separate bindings.",
+    "Native Workbench bridge self-checks; no new window-interaction, memory or soak qualification.",
+    "Existing 1.8.8 supervision hooks retained; GCN context uses a separate versioned 1.8.9 core.",
+    "Core source remains private; public Repository code is a thin reader/transport."
+  ],
+  "finalRepositoryLifecycle": {
+    "windows": {
+      "status": "PASS",
+      "platform": "win32",
+      "version": "0.1.2-preview.5",
+      "archiveSha256": "2c901ccf7a1431cb61fa577dd403d435b84512c4ac630a4b348e2aff064077ac",
+      "modelCalls": 0,
+      "tests": 41,
+      "skipped": 0,
+      "lifecycle": [
+        "install",
+        "update",
+        "rollback",
+        "reselect"
+      ],
+      "oldVersionsAndLocksRetained": true,
+      "coreSha256": "8f24609a80ff8793439bcdc89facb287f02a67faa3009c96a679af6ee9015d9f",
+      "preservation": {
+        "checked": 332,
+        "byteIdentical": 332,
+        "changed": 0
+      }
+    },
+    "linux": {
+      "status": "PASS",
+      "platform": "linux",
+      "version": "0.1.2-preview.5",
+      "archiveSha256": "2c901ccf7a1431cb61fa577dd403d435b84512c4ac630a4b348e2aff064077ac",
+      "modelCalls": 0,
+      "tests": 41,
+      "skipped": 0,
+      "lifecycle": [
+        "install",
+        "update",
+        "rollback",
+        "reselect"
+      ],
+      "oldVersionsAndLocksRetained": true,
+      "coreSha256": "3995e9713681bad74cac76fbbd732aea766746ca040ecfea7fbc4232e1adac97",
+      "preservation": {
+        "checked": 332,
+        "byteIdentical": 332,
+        "changed": 0
+      }
+    }
+  }
+}

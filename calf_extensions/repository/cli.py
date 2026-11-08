@@ -16,11 +16,15 @@ def default_data():
 
 
 def main(installation=None,manual_root=None):
+    if sys.argv[1:2]==['context']:
+        from .context import main as context_main
+        return context_main(sys.argv[2:])
     if sys.argv[1:2]==['history']:
         from .history_cli import main as history_main
         return history_main(sys.argv[2:])
     parser=argparse.ArgumentParser(description=__doc__)
     sub=parser.add_subparsers(dest='action',required=True)
+    sub.add_parser('context',help='Discover registered project/module context; see context --help')
     sub.add_parser('history',help='Build/query a local CALF history index; see history --help')
     for action in ['probe','scan','open']:
         p=sub.add_parser(action);selection=p.add_mutually_exclusive_group(required=True);selection.add_argument('--repo',type=Path);

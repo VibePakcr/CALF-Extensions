@@ -1,14 +1,16 @@
 # CALF Extensions
 
+**프로젝트 맥락과 CPU 레인 · 0.1.2-preview.5:** 새 세션이 등록한 프로젝트를 찾고 필요한 모듈의 원본 기록을 조회합니다. GCN/MCL 판단은 CALF 공통 네이티브 코어에서 처리합니다. [한국어](docs/REPOSITORY_CONTEXT_KR.md) · [English](docs/REPOSITORY_CONTEXT.md) · [릴리즈와 검증 범위](REPOSITORY-CONTEXT-RELEASE.md).
+
 **문서 개정판 docs.1:** 배포 패키지 안의 영·한 매뉴얼도 최신 교정본으로 맞췄습니다. 실행 코드와 기존 버전은 유지합니다. [변경 내용·검증 범위](DOCUMENTATION-RELEASE-20261107.1.md).
 
 CALF — Controlled Agent Lifecycle Framework에 연결하는 로컬 도구 모음입니다.
 
 [English](README.md) · **[AI와 함께 처음 설치하기](INSTALL_KR.md)** · [CALF 실행기 다운로드](https://github.com/VibePakcr/CALF/blob/main/DOWNLOADS.md)
 
-## Repository 기록 조회 · 0.1.1-preview.4
+## Repository 기록 조회 · 0.1.1-preview.5
 
-전체 기록을 문맥에 올리지 않고 모듈 요약·과거 결정·원본 한 건을 찾아 읽습니다. 원본 이력·계약·코어 완료 판정은 그대로 유지하며, 로컬 조회는 Python만 사용합니다. [한국어 안내](docs/REPOSITORY_HISTORY_KR.md) · [English](docs/REPOSITORY_HISTORY.md) · [GitHub 릴리즈](https://github.com/VibePakcr/CALF-Extensions/releases/tag/repository-v0.1.1-preview.4) · [GitLab 릴리즈](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/repository-v0.1.1-preview.4). 2026-11-08 추가 검증에서 Windows·Linux가 각각 기록 조회 검사 21개를 통과했고, Codex·Antigravity·작업 범위를 제한한 Claude Code/MCP 새 세션의 맥락 연결도 확인했습니다. ZIP과 코어는 바꾸지 않았습니다. [검증 결과와 범위](docs/REPOSITORY_HISTORY_QUALIFICATION_KR.md). [변경 내용과 검증](REPOSITORY-HISTORY-RELEASE.md).
+전체 기록을 문맥에 올리지 않고 모듈 요약·과거 결정·원본 한 건을 찾아 읽습니다. 원본 이력·계약·코어 완료 판정은 그대로 유지하며, 로컬 조회는 Python만 사용합니다. [한국어 안내](docs/REPOSITORY_HISTORY_KR.md) · [English](docs/REPOSITORY_HISTORY.md) · [GitHub 릴리즈](https://github.com/VibePakcr/CALF-Extensions/releases/tag/repository-v0.1.1-preview.5) · [GitLab 릴리즈](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/repository-v0.1.1-preview.5). 2026-11-08 추가 검증에서 Windows·Linux가 각각 기록 조회 검사 21개를 통과했고, Codex·Antigravity·작업 범위를 제한한 Claude Code/MCP 새 세션의 맥락 연결도 확인했습니다. ZIP과 코어는 바꾸지 않았습니다. [검증 결과와 범위](docs/REPOSITORY_HISTORY_QUALIFICATION_KR.md). [변경 내용과 검증](REPOSITORY-HISTORY-RELEASE.md).
 
 ## 영상 작업 관리 팩 · 0.1.0-preview.1
 

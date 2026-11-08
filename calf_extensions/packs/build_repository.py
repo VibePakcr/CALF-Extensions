@@ -1,8 +1,10 @@
 """Build a retained Local Git candidate; no core, SDK, media or model bundled."""
 import argparse
 import json
+import re
 from pathlib import Path
 import shutil
+import urllib.parse
 import zipfile
 from .io import physical,sha,canonical,relative
 from .metadata import manifest
@@ -23,9 +25,22 @@ def build(source,output,version):
     names=['calf_extensions/__init__.py','LICENSE-EXTENSIONS.txt','REPOSITORY_VERIFICATION.json']
     names += [p.relative_to(source).as_posix() for p in (source/'calf_extensions/repository').rglob('*') if p.is_file() and '__pycache__' not in p.parts and p.suffix!='.pyc']
     names += ['docs/'+n for n in ['REPOSITORY_PACK.md','REPOSITORY_PACK_KR.md','REPOSITORY_HISTORY.md','REPOSITORY_HISTORY_KR.md','REPOSITORY_NAVIGATOR.md','REPOSITORY_NAVIGATOR_KR.md','REPOSITORY_LOCAL_GIT_PLAN.md','REPOSITORY_LOCAL_GIT_PLAN_KR.md']]
+    names += ['docs/REPOSITORY_CONTEXT.md','docs/REPOSITORY_CONTEXT_KR.md']
     for name in sorted(set(names)):
         relative(name);origin=physical(source/name);before=sha(origin);target=payload/name;target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(origin,target)
         if sha(target)!=before or sha(origin)!=before:raise ValueError('source_changed_during_build')
+    # Supplementary design/qualification guides remain online. Preserve working
+    # relative links and make omitted Markdown targets explicit public links.
+    for target in payload.rglob('*.md'):
+        def link(match):
+            label,url=match.groups()
+            if url.startswith(('http:','https:','#','mailto:')):return match.group(0)
+            path,_,anchor=url.partition('#');decoded=urllib.parse.unquote(path)
+            if not decoded or (target.parent/decoded).is_file():return match.group(0)
+            origin=(source/target.relative_to(payload).parent/decoded).resolve()
+            if not origin.is_relative_to(source) or not origin.is_file() or origin.suffix!='.md':raise ValueError('unresolved_package_document_link')
+            return '['+label+'](https://github.com/VibePakcr/CALF-Extensions/blob/main/'+urllib.parse.quote(origin.relative_to(source).as_posix())+('#'+anchor if anchor else '')+')'
+        target.write_text(re.sub(r'(?<!!)\[([^\]]*)\]\(([^)]+)\)',link,target.read_text('utf8')),encoding='utf8')
     (payload/'pack.json').write_bytes(canonical(meta)+b'\n');manifest(payload/'pack.json')
     (payload/'qualification.json').write_bytes(canonical({'schema':'calf.pack.candidate.v1','lifecycleStatus':'NOT_RUN','requiredChecks':meta['verification']['requiredChecks'],'note':'Local Git inspect lifecycle only; hosted access and browser qualification are separate.'})+b'\n')
     (payload/'README.md').write_text('# Repository local candidate pack\n\n[English](docs/REPOSITORY_PACK.md) · [한국어](docs/REPOSITORY_PACK_KR.md)\n\nStage and qualify this candidate with the local pack manager before activation. No core, SDK or global installation is required.\n',encoding='utf8')
