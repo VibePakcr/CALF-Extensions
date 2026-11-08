@@ -8,9 +8,9 @@ Local tools for CALF — Controlled Agent Lifecycle Framework.
 
 [한국어](README_KR.md) · **[Install with an AI assistant](INSTALL.md)** · [CALF core downloads](https://github.com/VibePakcr/CALF/blob/main/DOWNLOADS.md)
 
-## Repository history queries · 0.1.1-preview.5
+## Repository history queries · 0.1.1-preview.4
 
-Read module notes, search older decisions and open exact original records without loading a whole journal into context. The original history, contracts and native completion checks stay authoritative. Local queries use Python only. [English guide](docs/REPOSITORY_HISTORY.md) · [한국어](docs/REPOSITORY_HISTORY_KR.md) · [GitHub release](https://github.com/VibePakcr/CALF-Extensions/releases/tag/repository-v0.1.1-preview.5) · [GitLab release](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/repository-v0.1.1-preview.5). Follow-up qualification on 2026-11-08 passed all 21 new history tests on both Windows and Linux, plus fresh local Codex, Antigravity and scoped Claude Code/MCP context continuation. The ZIP and core are unchanged. [Qualification and scope](docs/REPOSITORY_HISTORY_QUALIFICATION.md). [Changes and verification](REPOSITORY-HISTORY-RELEASE.md).
+Read module notes, search older decisions and open exact original records without loading a whole journal into context. The original history, contracts and native completion checks stay authoritative. Local queries use Python only. [English guide](docs/REPOSITORY_HISTORY.md) · [한국어](docs/REPOSITORY_HISTORY_KR.md) · [GitHub release](https://github.com/VibePakcr/CALF-Extensions/releases/tag/repository-v0.1.1-preview.4) · [GitLab release](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/repository-v0.1.1-preview.4). Follow-up qualification on 2026-11-08 passed all 21 new history tests on both Windows and Linux, plus fresh local Codex, Antigravity and scoped Claude Code/MCP context continuation. The ZIP and core are unchanged. [Qualification and scope](docs/REPOSITORY_HISTORY_QUALIFICATION.md). [Changes and verification](REPOSITORY-HISTORY-RELEASE.md).
 
 ## Video Work Management Pack · 0.1.0-preview.1
 
