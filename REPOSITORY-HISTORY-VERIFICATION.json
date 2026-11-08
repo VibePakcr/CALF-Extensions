@@ -1,0 +1,50 @@
+{
+  "schema": "calf.repository.history-qualification.v1",
+  "version": "0.1.1-preview.4",
+  "status": "PASS_WITH_DECLARED_SCOPE",
+  "platform": "macos-arm64",
+  "nativeCoreTested": "1.8.8",
+  "newBoundaryTests": 21,
+  "skipped": 0,
+  "earlierRegressionTests": 24,
+  "exactRecordReferences": 391,
+  "nativeChangedFileVerdict": "UNKNOWN",
+  "nativeDamagedChainRefused": true,
+  "benchmark": {
+    "sourceBytes": 848806,
+    "records": 377,
+    "moduleMarkdownBytes": 6049,
+    "modulePythonIO": {
+      "indexBytesRead": 9145,
+      "sourceBytesRead": 0
+    },
+    "singleRecordPythonIO": {
+      "indexBytesRead": 16442,
+      "sourceBytesRead": 802
+    },
+    "fullReadParseMedianMs": 3.0638750176876783,
+    "moduleQueryMedianMs": 0.1486249966546893,
+    "returnedByteReductionPercent": 99.28735188017049,
+    "derivedFilesBytes": 222978,
+    "initialBuildMsIncludingNative": 112.30512498877943,
+    "samples": 5,
+    "nativeIOBytesMeasured": false,
+    "scope": "In-process warm-cache local measurement; not LLM-token counts, CLI startup latency or a general speed guarantee.",
+    "actualPackagedCliQueryPassed": true,
+    "oldDecisionReferencesExact": true,
+    "oldDecisionMatches": 4,
+    "actualPackagedSearchPassed": true,
+    "decisionSearchPythonIO": {
+      "indexBytesRead": 204073,
+      "sourceBytesRead": 0
+    }
+  },
+  "sourceWrites": false,
+  "coreCodeChanged": false,
+  "limitations": [
+    "No new Windows/Linux qualification",
+    "No incremental refresh or Workbench panel",
+    "Metadata excerpt search only",
+    "Views are derived references, never completion evidence"
+  ]
+}

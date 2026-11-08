@@ -22,7 +22,7 @@ def build(source,output,version):
     output.mkdir(parents=True);payload=output/'payload';payload.mkdir()
     names=['calf_extensions/__init__.py','LICENSE-EXTENSIONS.txt','REPOSITORY_VERIFICATION.json']
     names += [p.relative_to(source).as_posix() for p in (source/'calf_extensions/repository').rglob('*') if p.is_file() and '__pycache__' not in p.parts and p.suffix!='.pyc']
-    names += ['docs/'+n for n in ['REPOSITORY_PACK.md','REPOSITORY_PACK_KR.md','REPOSITORY_NAVIGATOR.md','REPOSITORY_NAVIGATOR_KR.md','REPOSITORY_LOCAL_GIT_PLAN.md','REPOSITORY_LOCAL_GIT_PLAN_KR.md']]
+    names += ['docs/'+n for n in ['REPOSITORY_PACK.md','REPOSITORY_PACK_KR.md','REPOSITORY_HISTORY.md','REPOSITORY_HISTORY_KR.md','REPOSITORY_NAVIGATOR.md','REPOSITORY_NAVIGATOR_KR.md','REPOSITORY_LOCAL_GIT_PLAN.md','REPOSITORY_LOCAL_GIT_PLAN_KR.md']]
     for name in sorted(set(names)):
         relative(name);origin=physical(source/name);before=sha(origin);target=payload/name;target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(origin,target)
         if sha(target)!=before or sha(origin)!=before:raise ValueError('source_changed_during_build')

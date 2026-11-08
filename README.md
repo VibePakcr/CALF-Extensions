@@ -6,6 +6,10 @@ Local tools for CALF — Controlled Agent Lifecycle Framework.
 
 [한국어](README_KR.md) · **[Install with an AI assistant](INSTALL.md)** · [CALF core downloads](https://github.com/VibePakcr/CALF/blob/main/DOWNLOADS.md)
 
+## Repository history queries · 0.1.1-preview.4
+
+Read module notes, search older decisions and open exact original records without loading a whole journal into context. The original history, contracts and native completion checks stay authoritative. Local queries use Python only. [English guide](docs/REPOSITORY_HISTORY.md) · [한국어](docs/REPOSITORY_HISTORY_KR.md) · [GitHub release](https://github.com/VibePakcr/CALF-Extensions/releases/tag/repository-v0.1.1-preview.4) · [GitLab release](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/repository-v0.1.1-preview.4). Fresh qualification is macOS ARM64 / Harness 1.8.8; this feature has not been newly qualified on Windows/Linux. [Changes and verification](REPOSITORY-HISTORY-RELEASE.md).
+
 ## Video Work Management Pack · 0.1.0-preview.1
 
 Keep external video requests, returned files, review, adoption and revisions connected to existing CALF scene records. Returned files retain their original bytes and resolution.

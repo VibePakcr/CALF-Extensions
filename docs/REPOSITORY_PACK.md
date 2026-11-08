@@ -62,3 +62,7 @@ Both versions, locks, original operation records and captures remain available. 
 For interrupted installation/activation, `recover` compares retained intent with actual bytes. An explicit `recover --acknowledge OPERATION_ID` finishes confirmed bookkeeping. It does not rerun a scan or rewrite a capture. An uncertain started scan remains an uncertain scan; manager recovery does not manufacture its result. See the manager guide for pagination and process-interruption limits.
 
 No automatic dependency download, registry access, cache eviction, pack deletion, model dispatch or multi-agent runner is added. Hashes stream in bounded chunks. Only the selected capture is loaded. The caller's existing OS/host permissions remain separate from the reader's controlled operations.
+
+## Local CALF history queries
+
+The source preview also provides a separate [history index and module Markdown reader](REPOSITORY_HISTORY.md). It reads an explicitly selected journal and writes disposable views outside the workspace. Current completion still comes from an explicit native query; the original journal is never rewritten. Its qualification and measurements are separate from the Git `inspect` groups above.

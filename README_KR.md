@@ -6,6 +6,10 @@ CALF — Controlled Agent Lifecycle Framework에 연결하는 로컬 도구 모�
 
 [English](README.md) · **[AI와 함께 처음 설치하기](INSTALL_KR.md)** · [CALF 실행기 다운로드](https://github.com/VibePakcr/CALF/blob/main/DOWNLOADS.md)
 
+## Repository 기록 조회 · 0.1.1-preview.4
+
+전체 기록을 문맥에 올리지 않고 모듈 요약·과거 결정·원본 한 건을 찾아 읽습니다. 원본 이력·계약·코어 완료 판정은 그대로 유지하며, 로컬 조회는 Python만 사용합니다. [한국어 안내](docs/REPOSITORY_HISTORY_KR.md) · [English](docs/REPOSITORY_HISTORY.md) · [GitHub 릴리즈](https://github.com/VibePakcr/CALF-Extensions/releases/tag/repository-v0.1.1-preview.4) · [GitLab 릴리즈](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/repository-v0.1.1-preview.4). 이번 검증은 macOS ARM64·Harness 1.8.8 기준이며 새 기능의 Windows/Linux 검증은 아직 포함하지 않습니다. [변경 내용과 검증](REPOSITORY-HISTORY-RELEASE.md).
+
 ## 영상 작업 관리 팩 · 0.1.0-preview.1
 
 외부 영상 도구에 보낸 요청부터 결과 파일 수신·검토·채택·재수정까지 기존 CALF 씬 기록으로 관리합니다. 반환 파일의 원본 바이트와 해상도를 보존합니다.
