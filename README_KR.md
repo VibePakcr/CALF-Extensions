@@ -1,55 +1,34 @@
 # CALF Extensions
 
-**프로젝트 맥락과 CPU 레인 · 0.1.2-preview.5:** 새 세션이 등록한 프로젝트를 찾고 필요한 모듈의 원본 기록을 조회합니다. GCN/MCL 판단은 CALF 공통 네이티브 코어에서 처리합니다. [한국어](docs/REPOSITORY_CONTEXT_KR.md) · [English](docs/REPOSITORY_CONTEXT.md) · [릴리즈와 검증 범위](REPOSITORY-CONTEXT-RELEASE.md).
+[English](README.md) · [설치 안내](INSTALL_KR.md) · [CALF 다운로드](https://github.com/VibePakcr/CALF/blob/main/DOWNLOADS.md)
 
-**문서 개정판 docs.1:** 배포 패키지 안의 영·한 매뉴얼도 최신 교정본으로 맞췄습니다. 실행 코드와 기존 버전은 유지합니다. [변경 내용·검증 범위](DOCUMENTATION-RELEASE-20261107.1.md).
+**현재 선택 확장은 FFmpeg 하나입니다.** Repository Intelligence는 CALF 하네스 1.8.15와 워크벤치 1.9.11의 기본 기능으로 통합했습니다. 모듈 기록·정확한 원문 조회·CPU 레인과 검사 연결을 사용하기 위해 Repository 팩을 따로 설치할 필요가 없습니다.
 
-CALF — Controlled Agent Lifecycle Framework에 연결하는 로컬 도구 모음입니다.
+## FFmpeg 씬 작업 · 0.2.0-preview.1
 
-[English](README.md) · **[AI와 함께 처음 설치하기](INSTALL_KR.md)** · [CALF 실행기 다운로드](https://github.com/VibePakcr/CALF/blob/main/DOWNLOADS.md)
+고칠 씬만 새 후보로 만들고, 별도 검사로 확인한 뒤 검증된 버전을 선택합니다. 다른 승인 씬과 이전 버전은 그대로 남습니다. 요청 키로 중복을 확인하며, 결과가 불명확한 요청을 무조건 다시 제출하지 않습니다.
 
-## Repository 기록 조회 · 0.1.1-preview.4
+확장은 CALF의 공개 작업 규약을 사용하는 **Rust 실행 파일**입니다. CALF와 설치된 FFmpeg·ffprobe가 필요합니다. Python·Node·SDK 실행 환경·로컬 모델·백그라운드 서비스는 필요하지 않습니다. 다른 앱에서 언어별 연결이 필요하면 SDK를 사용할 수 있습니다.
 
-전체 기록을 문맥에 올리지 않고 모듈 요약·과거 결정·원본 한 건을 찾아 읽습니다. 원본 이력·계약·코어 완료 판정은 그대로 유지하며, 로컬 조회는 Python만 사용합니다. [한국어 안내](docs/REPOSITORY_HISTORY_KR.md) · [English](docs/REPOSITORY_HISTORY.md) · [GitHub 릴리즈](https://github.com/VibePakcr/CALF-Extensions/releases/tag/repository-v0.1.1-preview.4) · [GitLab 릴리즈](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/repository-v0.1.1-preview.4). 2026-11-08 추가 검증에서 Windows·Linux가 각각 기록 조회 검사 21개를 통과했고, Codex·Antigravity·작업 범위를 제한한 Claude Code/MCP 새 세션의 맥락 연결도 확인했습니다. ZIP과 코어는 바꾸지 않았습니다. [검증 결과와 범위](docs/REPOSITORY_HISTORY_QUALIFICATION_KR.md). [변경 내용과 검증](REPOSITORY-HISTORY-RELEASE.md).
+- [설치와 첫 실행](INSTALL_KR.md)
+- [명령·제한·복구](native-ffmpeg/README_KR.md)
+- [현재 확장 목록](catalog.json)
+- [최신 릴리즈 다운로드](https://github.com/VibePakcr/CALF-Extensions/releases/latest)
+- [GitLab 릴리즈](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases)
 
-## 영상 작업 관리 팩 · 0.1.0-preview.1
+기술 검사는 확정된 영상 규격과 후보 해시를 확인합니다. 미적 품질을 판단하지 않으며, 채택은 사용자가 명시적으로 선택합니다. 외부 생성 API나 프로바이더 계정을 자동 호출하지 않습니다.
 
-외부 영상 도구에 보낸 요청부터 결과 파일 수신·검토·채택·재수정까지 기존 CALF 씬 기록으로 관리합니다. 반환 파일의 원본 바이트와 해상도를 보존합니다.
+## 소스에서 빌드하기
 
-| 시작 순서 | 바로가기 |
-|---|---|
-| **1. ZIP 다운로드** | **[GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/download/docs-20261107.1/CALF-Video-Work-Management-Pack-0.1.0-preview.1%2Bdocs.1.zip)** · **[GitLab](https://gitlab.com/-/project/88597295/uploads/91b29c940e075497d7ab5951dfdc43c8/CALF-Video-Work-Management-Pack-0.1.0-preview.1+docs.1.zip)** |
-| **2. 설치** | **[INSTALL_KR.md — AI와 함께하는 초보자 안내](INSTALL_KR.md)** · [English](INSTALL.md) |
-| **3. 사용** | **[실제 캡처가 포함된 단계별 매뉴얼](docs/media-jobs-manual/README_KR.md)** |
-| 다른 압축 형식·체크섬·검증 보고서 | [GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/tag/docs-20261107.1) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/docs-20261107.1) |
+```sh
+cargo build --release --locked --manifest-path native-ffmpeg/Cargo.toml
+cargo test --locked --manifest-path native-ffmpeg/Cargo.toml
+```
 
-Python 3.10 이상, 별도 CALF SDK 0.2.1·네이티브 실행기·FFmpeg/ffprobe가 필요합니다. 새 폴더에 압축을 풀어 실행하는 프리뷰이며 의존 도구는 별도로 준비합니다. macOS ARM64·1080p 합성 영상으로 검증했습니다. 이 추가 팩의 Windows/Linux·실제 납품 영상·생성 API 연결은 검증 범위에 포함되지 않습니다.
+사용 중인 OS와 아키텍처에 맞는 실행 파일을 선택하세요. 릴리즈 검증 보고서에 실제 시험한 플랫폼과 합성 데이터의 범위를 표시합니다. 빌드 성공만으로 실행 검증을 마쳤다고 판단하지 않습니다.
 
-**요청 → 외부 영상 도구 → 반환 → 검사 → 영상 검토 → 채택 → 재수정.** Gemini/Veo 등과의 전달·다운로드는 수동입니다. 기술 검사가 미적 품질이나 수정 의도 충족 여부를 판정하지는 않습니다.
+## 이전 작업 보존
 
-![합성 반환 영상을 실제 macOS 빠른 보기로 확인하는 화면](docs/media-jobs-manual/images/finder-returned.jpg)
+Navigator·Video Work Management·모션 실험과 이전 Python 구현은 현재 목록과 패키지에서 제외합니다. 소스와 과거 릴리즈는 [이전 자료](legacy/README.md)로 남습니다. 새 실행 파일을 설치해도 기존 기록·계약·설정·원본 영상·승인 씬 버전을 삭제하거나 자동 이전하지 않습니다.
 
-실제 데모 캡처입니다. 네 단계의 전체 화면과 명령은 사용 매뉴얼에서 확인하세요.
-
-## 다른 도구 다운로드
-
-기능마다 설치 요건과 검증 범위가 다릅니다.
-
-| 기능 | 다운로드 | 안내·준비물 |
-|---|---|---|
-| Repository Navigator · 0.1.0-dev.1 | [GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/tag/docs-20261107.1) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/docs-20261107.1) | [화면 매뉴얼](docs/navigator-manual/README_KR.md). Python·Git. CALF core·SDK는 필요하지 않습니다. |
-| Local Pack Tools + Repository Pack · 0.1.0-preview.1 | [GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/tag/docs-20261107.1) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/docs-20261107.1) | [팩 안내](docs/PACKS_GUIDE_KR.md). Python·Git. 로컬 저장소 읽기 전용 작업입니다. |
-| FFmpeg 씬 작업 · 0.1.0 | [GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/tag/docs-20261107.1) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/docs-20261107.1) | [FFmpeg 안내](docs/FFMPEG_KR.md). Python·SDK·CALF 실행기·FFmpeg/ffprobe. |
-
-이전 FFmpeg 프리뷰의 [운영체제별 검증](VERIFICATION.json)은 새 영상 작업 관리 팩의 검증과 별개입니다. 기존 배포 파일과 이전 버전은 계속 보관합니다.
-
-## 에이전트·개발자 참고
-
-- [영상 관리 CLI·지원 범위·복구](calf_extensions/media_jobs/README_KR.md)
-- [기존 Work MCP·에이전트 연동](docs/AGENTS_KR.md) · [Claude 예제](docs/CLAUDE_KR.md)
-- [로컬 팩 안내](docs/PACKS_GUIDE_KR.md) · [프리뷰 팩 명세](specs/pack-v1/README.md)
-- [확장 라이선스](LICENSE-EXTENSIONS.txt) · [SDK 라이선스](LICENSE-SDK.txt)
-
-SDK·네이티브 실행기는 별도입니다. 새 버전은 새 폴더에 준비하고 이전 소스·도구 위치, 계약·기록·승인 영상을 보존하세요.
-
-최신 안내 문서는 [문서 체크섬](DOCS-SHA256SUMS)으로 확인할 수 있습니다. 루트의 `SHA256SUMS`는 최초 FFmpeg 0.1.0 패키지의 파일 목록이며, 배포 압축 파일은 해당 릴리즈의 체크섬과 대조하세요. 기존 패키지에는 그 버전의 매뉴얼이 그대로 보관됩니다.
+CALF의 비공개 코어는 별도로 유지합니다. 이 확장은 문서화된 인터페이스만 사용하며 새로운 실행 권한을 부여하지 않습니다. [확장 라이선스](LICENSE-EXTENSIONS.txt).

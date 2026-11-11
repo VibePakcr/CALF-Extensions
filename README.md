@@ -1,55 +1,34 @@
 # CALF Extensions
 
-**Project context and CPU lanes · 0.1.2-preview.5:** new sessions can discover a registered project and retrieve selected original module records. GCN/MCL decisions run in the shared CALF native core. [English](docs/REPOSITORY_CONTEXT.md) · [한국어](docs/REPOSITORY_CONTEXT_KR.md) · [Release and scope](REPOSITORY-CONTEXT-RELEASE.md).
+[한국어](README_KR.md) · [Install](INSTALL.md) · [CALF downloads](https://github.com/VibePakcr/CALF/blob/main/DOWNLOADS.md)
 
-**Documentation revision docs.1:** download packages now include the reviewed English and Korean manuals. Runtime code and previous releases are retained. [Changes and verification scope](DOCUMENTATION-RELEASE-20261107.1.md).
+**FFmpeg is the only current optional extension.** Repository Intelligence is now built into CALF Harness 1.8.15 and Workbench 1.9.11. Its module history, exact-record queries and CPU lane/gate connection no longer require a Repository pack.
 
-Local tools for CALF — Controlled Agent Lifecycle Framework.
+## FFmpeg scene workflow · 0.2.0-preview.1
 
-[한국어](README_KR.md) · **[Install with an AI assistant](INSTALL.md)** · [CALF core downloads](https://github.com/VibePakcr/CALF/blob/main/DOWNLOADS.md)
+Create a new candidate for the scene you want to change, independently check it, then select the verified version. Other approved scenes and previous versions remain intact. A request key prevents an uncertain or repeated request from being blindly submitted again.
 
-## Repository history queries · 0.1.1-preview.4
+The extension is a native **Rust executable**, using the public CALF work protocol. It requires CALF and installed FFmpeg/ffprobe. Python, Node, an SDK runtime, a local model and a background service are not required. The SDK remains available for applications that want a language binding.
 
-Read module notes, search older decisions and open exact original records without loading a whole journal into context. The original history, contracts and native completion checks stay authoritative. Local queries use Python only. [English guide](docs/REPOSITORY_HISTORY.md) · [한국어](docs/REPOSITORY_HISTORY_KR.md) · [GitHub release](https://github.com/VibePakcr/CALF-Extensions/releases/tag/repository-v0.1.1-preview.4) · [GitLab release](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/repository-v0.1.1-preview.4). Follow-up qualification on 2026-11-08 passed all 21 new history tests on both Windows and Linux, plus fresh local Codex, Antigravity and scoped Claude Code/MCP context continuation. The ZIP and core are unchanged. [Qualification and scope](docs/REPOSITORY_HISTORY_QUALIFICATION.md). [Changes and verification](REPOSITORY-HISTORY-RELEASE.md).
+- [Install and first use](INSTALL.md)
+- [Commands, bounds and recovery](native-ffmpeg/README.md)
+- [Current extension catalogue](catalog.json)
+- [Latest downloadable release](https://github.com/VibePakcr/CALF-Extensions/releases/latest)
+- [GitLab releases](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases)
 
-## Video Work Management Pack · 0.1.0-preview.1
+Technical validation checks the frozen media profile and candidate hash, not aesthetic quality. Approval is explicit. No provider account or image/video generation API is called automatically.
 
-Keep external video requests, returned files, review, adoption and revisions connected to existing CALF scene records. Returned files retain their original bytes and resolution.
+## Build from source
 
-| Start here | Link |
-|---|---|
-| **1. Download ZIP** | **[GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/download/docs-20261107.1/CALF-Video-Work-Management-Pack-0.1.0-preview.1%2Bdocs.1.zip)** · **[GitLab](https://gitlab.com/-/project/88597295/uploads/91b29c940e075497d7ab5951dfdc43c8/CALF-Video-Work-Management-Pack-0.1.0-preview.1+docs.1.zip)** |
-| **2. Install** | **[INSTALL.md — AI-assisted beginner guide](INSTALL.md)** · [한국어](INSTALL_KR.md) |
-| **3. Use it** | **[Step-by-step guide with actual captures](docs/media-jobs-manual/README.md)** |
-| Other formats / checksums / report | [GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/tag/docs-20261107.1) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/docs-20261107.1) |
+```sh
+cargo build --release --locked --manifest-path native-ffmpeg/Cargo.toml
+cargo test --locked --manifest-path native-ffmpeg/Cargo.toml
+```
 
-Requires Python 3.10+, separate CALF SDK 0.2.1/native executable and FFmpeg/ffprobe. This is an unpack-and-run preview; those dependencies are separate. Qualified on macOS ARM64 with synthetic 1080p clips; Windows/Linux, production footage and provider APIs are not qualified for this added pack.
+Use the executable for your OS and architecture. Release verification reports state exactly which platforms and synthetic scenarios were tested; a successful build alone is not runtime qualification.
 
-**Request → external video tool → receive → check → visual review → adopt → revise.** Handoff and download with tools such as Gemini/Veo are manual. Technical checks do not judge aesthetic quality or whether an edit meets the brief.
+## Earlier work
 
-![Actual macOS Quick Look capture of a synthetic returned MP4](docs/media-jobs-manual/images/finder-returned.jpg)
+Navigator, Video Work Management, motion experiments and earlier Python implementations are excluded from the current catalogue and packages. Their source and published releases remain available as [historical material](legacy/README.md). Existing records, contracts, settings, source media and approved scene versions are not removed or migrated by viewing this repository or installing a new binary.
 
-Actual demo capture; see the guide for all four screens and commands.
-
-## Other downloads
-
-Each feature has its own setup and verification scope.
-
-| Feature | Download | Guide / requirements |
-|---|---|---|
-| Repository Navigator · 0.1.0-dev.1 | [GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/tag/docs-20261107.1) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/docs-20261107.1) | [Screenshot manual](docs/navigator-manual/README.md). Python and Git; no CALF core/SDK required. |
-| Local Pack Tools + Repository Pack · 0.1.0-preview.1 | [GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/tag/docs-20261107.1) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/docs-20261107.1) | [Pack guide](docs/PACKS_GUIDE.md). Python and Git; local read-only repository operations. |
-| FFmpeg scene workflow · 0.1.0 | [GitHub](https://github.com/VibePakcr/CALF-Extensions/releases/tag/docs-20261107.1) · [GitLab](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases/docs-20261107.1) | [FFmpeg guide](docs/FFMPEG.md). Python, SDK/native CALF and FFmpeg/ffprobe. |
-
-The older FFmpeg preview has separate [cross-platform verification](VERIFICATION.json). Its results do not qualify the newer video-management pack. Existing release files and earlier versions remain available.
-
-## Agent and developer references
-
-- [Video CLI, bounds and recovery](calf_extensions/media_jobs/README.md)
-- [Existing Work MCP and agent integration](docs/AGENTS.md) · [Claude example](docs/CLAUDE.md)
-- [Local pack guide](docs/PACKS_GUIDE.md) · [Preview pack specification](specs/pack-v1/README.md)
-- [Extensions license](LICENSE-EXTENSIONS.txt) · [SDK license](LICENSE-SDK.txt)
-
-The SDK/native runtime are separate. Keep old source/tool locations, contracts, records and approved media when preparing a new version in a new folder.
-
-Current guides: [documentation checksums](DOCS-SHA256SUMS). The root `SHA256SUMS` records the original FFmpeg 0.1.0 package; use each release’s checksums for its archives. Published packages retain the manuals supplied with that version.
+CALF's proprietary core stays separate. This extension uses its documented interfaces and adds no execution authority. [Extension license](LICENSE-EXTENSIONS.txt).
