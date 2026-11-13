@@ -1,0 +1,13 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),cp=require('node:child_process');
+const contract=require('./contract.json');
+const hash=p=>{const stat=fs.statSync(p);if(!stat.isFile()||stat.size>128*1024*1024)throw Error('Choose an existing native executable (at most 128 MiB).');return crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');};
+function physical(p,directory=false){if(typeof p!=='string'||!path.isAbsolute(p)||p.includes('\0'))throw Error('Use an absolute existing path.');const real=fs.realpathSync.native(p);if(directory&&!fs.statSync(real).isDirectory())throw Error('Choose an existing records folder.');return real;}
+function configure(core,home,workbench){core=physical(core);home=physical(home,true);workbench=physical(workbench);return {schema:1,core,coreSha256:hash(core),home,workbench,workbenchSha256:hash(workbench)};}
+function check(c){if(c?.schema!==1||physical(c.home,true)!==c.home||hash(c.core)!==c.coreSha256||hash(c.workbench)!==c.workbenchSha256)throw Error('Connection identity changed. Select your connection again; no automatic substitution was made.');}
+function expand(v,c){if(typeof v==='string'&&v.startsWith('$')){const value=c[v.slice(1)];if(typeof value!=='string')throw Error('Missing connection value.');return value;}if(Array.isArray(v))return v.map(x=>expand(x,c));if(v&&typeof v==='object')return Object.fromEntries(Object.entries(v).map(([k,x])=>[k,expand(x,c)]));return v;}
+function request(action,c){const definition=contract.actions[action];if(!definition)throw Error('Unsupported connection action.');return {args:expand(definition.arguments,c),input:expand(definition.input,c)};}
+function call(c,action){check(c);const r=request(action,c);return new Promise((resolve,reject)=>{const child=cp.execFile(c.core,r.args,{env:{...process.env,CALF_WORK_HOME:c.home},timeout:30000,maxBuffer:1024*1024,encoding:'utf8'},(err,stdout)=>{if(err)return reject(Error('CALF did not return a confirmed response. Inspect existing records; no retry was attempted.'));try{check(c);const value=JSON.parse(stdout);if(value.error)throw Error(value.error);resolve(value);}catch(e){reject(e);}});child.stdin.on('error',()=>{});child.stdin.end(JSON.stringify(r.input));});}
+function open(c){check(c);const child=cp.spawn(c.workbench,[],{env:{...process.env,CALF_WORK_HOME:c.home},detached:true,stdio:'ignore'});return new Promise((resolve,reject)=>{child.once('error',reject);child.once('spawn',()=>{child.unref();resolve();});});}
+function mcp(c){check(c);return {command:c.core,args:expand(contract.mcp.arguments,c)};}
+module.exports={configure,request,call,open,mcp};

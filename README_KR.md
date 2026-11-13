@@ -1,10 +1,15 @@
 # CALF Extensions
 
+**처음 시작:** [설치](INSTALL_KR.md) · [버전·검증 구분](CURRENT_VERIFICATION.md#한국어) · [첫 작업 도우미·개발 미리보기](native-ffmpeg/FIRST_TASK_KR.md)
+
+프리뷰 한도는 입출력 각 64 MiB·1280×720·30초·정수 24/25/30 fps·시도 1회입니다. 원해상도 제작 전반이나 VFX 품질을 보장하는 범위가 아닙니다.
+
+
 [English](README.md) · [설치 안내](INSTALL_KR.md) · [CALF 다운로드](https://github.com/VibePakcr/CALF/blob/main/DOWNLOADS.md)
 
-**현재 선택 확장은 FFmpeg 하나입니다.** Repository Intelligence는 CALF 하네스 1.8.15와 워크벤치 1.9.11의 기본 기능으로 통합했습니다. 모듈 기록·정확한 원문 조회·CPU 레인과 검사 연결을 사용하기 위해 Repository 팩을 따로 설치할 필요가 없습니다.
+**현재 네이티브 씬 확장은 FFmpeg입니다.** [CALF Connect IDE 연결](ide-connect/INSTALL_KR.md)은 별도로 설치합니다. Repository Intelligence는 CALF 하네스 1.8.15와 워크벤치 1.9.11의 기본 기능으로 통합했습니다. 모듈 기록·정확한 원문 조회·CPU 레인과 검사 연결을 사용하기 위해 Repository 팩을 따로 설치할 필요가 없습니다.
 
-## FFmpeg 씬 작업 · 0.2.0-preview.1
+## FFmpeg 씬 작업 · 0.2.0-preview.2
 
 고칠 씬만 새 후보로 만들고, 별도 검사로 확인한 뒤 검증된 버전을 선택합니다. 다른 승인 씬과 이전 버전은 그대로 남습니다. 요청 키로 중복을 확인하며, 결과가 불명확한 요청을 무조건 다시 제출하지 않습니다.
 
@@ -13,7 +18,7 @@
 - [설치와 첫 실행](INSTALL_KR.md)
 - [명령·제한·복구](native-ffmpeg/README_KR.md)
 - [현재 확장 목록](catalog.json)
-- [최신 릴리즈 다운로드](https://github.com/VibePakcr/CALF-Extensions/releases/latest)
+- [최신 릴리즈 다운로드](https://github.com/VibePakcr/CALF-Extensions/releases/tag/ffmpeg-v0.2.0-preview.2)
 - [GitLab 릴리즈](https://gitlab.com/vibepackr-group/CALF-Extensions/-/releases)
 
 기술 검사는 확정된 영상 규격과 후보 해시를 확인합니다. 미적 품질을 판단하지 않으며, 채택은 사용자가 명시적으로 선택합니다. 외부 생성 API나 프로바이더 계정을 자동 호출하지 않습니다.
@@ -32,3 +37,10 @@ cargo test --locked --manifest-path native-ffmpeg/Cargo.toml
 Navigator·Video Work Management·모션 실험과 이전 Python 구현은 현재 목록과 패키지에서 제외합니다. 소스와 과거 릴리즈는 [이전 자료](legacy/README.md)로 남습니다. 새 실행 파일을 설치해도 기존 기록·계약·설정·원본 영상·승인 씬 버전을 삭제하거나 자동 이전하지 않습니다.
 
 CALF의 비공개 코어는 별도로 유지합니다. 이 확장은 문서화된 인터페이스만 사용하며 새로운 실행 권한을 부여하지 않습니다. [확장 라이선스](LICENSE-EXTENSIONS.txt).
+
+## IDE에서 연결하기
+
+[CALF Connect 설치](ide-connect/INSTALL_KR.md) · [실제 화면 매뉴얼](ide-connect/MANUAL_KR.md). VS Code·Cursor·Antigravity IDE는 같은 VSIX를, PyCharm은 별도 어댑터를 사용합니다. macOS·Windows·Debian의 12개 조합에서 실제 메뉴·설정·읽기 전용 조회·Workbench 실행을 확인했습니다. FFmpeg와 별도로 설치하는 개발 미리보기이며 실행·승인·완료 권한은 추가하지 않습니다.
+
+
+[Earlier releases / 이전 배포](LEGACY.md)

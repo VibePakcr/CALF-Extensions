@@ -203,7 +203,18 @@ pub fn run_suite(core: &Path, ffmpeg: &Path, ffprobe: &Path, output: &Path) -> R
         sha(&source)? == source_sha && sha(protected_path)? == protected_sha,
         "existing_bytes_changed"
     );
-    let report = json!({"status":"PASS","implementation":"Rust-native","platform":std::env::consts::OS,"arch":std::env::consts::ARCH,"extensionVersion":env!("CARGO_PKG_VERSION"),"modelCalls":0,"pythonRuntimeRequired":false,"sdkRuntimeRequired":false,"checks":CHECKS.iter().map(|name|json!({"check":name,"passed":true,"tests":1,"skipped":0})).collect::<Vec<_>>(),"additionalChecks":["same request is not resubmitted","wrong output profile remains VIOLATED","stale project selection is refused","restoration selects the retained validated version","source and other approved scene bytes unchanged"]});
+    let first_use=output.join("first-use");
+    let onboarding=crate::first_task::run(core,ffmpeg,ffprobe,&source,&first_use)?;
+    ensure!(onboarding["status"]=="REVIEW_REQUIRED" && onboarding["adopted"]==false,"first_task_did_not_stop_for_review");
+    let untouched=project::manifest(&first_use.join("project"))?;
+    ensure!(untouched.0["scenes"]["scene1"].is_null() && untouched.0["scenes"]["scene2"].is_null(),"first_task_auto_adopted");
+    let saved=sha(&first_use.join("first-task-result.json"))?;
+    ensure!(crate::first_task::run(core,ffmpeg,ffprobe,&source,&first_use).is_err(),"first_task_reused_existing_output");
+    ensure!(sha(&first_use.join("first-task-result.json"))?==saved,"first_task_overwrote_result");
+    let prepared=read_json(&first_use.join("first-task-prepared.json"))?;
+    let retained=integration::run_scene(&Client::new(core,&first_use.join("records"))?,&prepared["ticket"])?;
+    ensure!(retained["attempt"]==onboarding["result"]["attempt"] && retained["manifest"]==onboarding["result"]["manifest"],"first_task_resubmitted");
+    let report = json!({"status":"PASS","implementation":"Rust-native","platform":std::env::consts::OS,"arch":std::env::consts::ARCH,"extensionVersion":env!("CARGO_PKG_VERSION"),"modelCalls":0,"pythonRuntimeRequired":false,"sdkRuntimeRequired":false,"checks":CHECKS.iter().map(|name|json!({"check":name,"passed":true,"tests":1,"skipped":0})).collect::<Vec<_>>(),"additionalChecks":["first-task-stops-before-adoption","same request is not resubmitted","wrong output profile remains VIOLATED","stale project selection is refused","restoration selects the retained validated version","source and other approved scene bytes unchanged"]});
     json_new(&output.join("report.json"), &report)?;
     Ok(report)
 }

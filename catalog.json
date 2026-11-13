@@ -1,8 +1,16 @@
 {
   "schema": "calf.extensions.catalog.v2",
   "extensions": [
-    {"id": "calf.media.ffmpeg", "version": "0.2.0-preview.1", "runtime": "Rust", "source": "native-ffmpeg", "optional": true}
+    {
+      "id": "calf.media.ffmpeg",
+      "version": "0.2.0-preview.2",
+      "runtime": "Rust",
+      "source": "native-ffmpeg",
+      "optional": true
+    }
   ],
-  "movedToCore": ["calf.repository.local-git"],
+  "movedToCore": [
+    "calf.repository.local-git"
+  ],
   "historicalSourceRetained": true
 }

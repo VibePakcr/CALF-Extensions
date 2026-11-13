@@ -1,0 +1,7 @@
+CALF Connect development prototype
+Copyright (c) 2026 VibePackr. All rights reserved.
+
+This local development artifact grants no new redistribution rights to CALF's
+proprietary core or any third-party IDE or library. CALF core, SDK, integration
+sources and third-party components retain their separate applicable licenses.
+This notice does not extend or rewrite their existing license scope.

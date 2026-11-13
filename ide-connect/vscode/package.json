@@ -1,0 +1,48 @@
+{
+  "name": "calf-connect",
+  "displayName": "CALF Connect",
+  "publisher": "vibepakcr",
+  "version": "0.1.0-dev.1",
+  "description": "Open CALF Workbench and read native work attention from your IDE.",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./extension.js",
+  "activationEvents": [
+    "onCommand:calfConnect.configure",
+    "onCommand:calfConnect.open",
+    "onCommand:calfConnect.attention",
+    "onCommand:calfConnect.copyMcp"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": false
+    }
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "calfConnect.configure",
+        "title": "CALF: Configure this workspace connection"
+      },
+      {
+        "command": "calfConnect.open",
+        "title": "CALF: Open Workbench"
+      },
+      {
+        "command": "calfConnect.attention",
+        "title": "CALF: Read work attention"
+      },
+      {
+        "command": "calfConnect.copyMcp",
+        "title": "CALF: Copy read-only MCP server entry"
+      }
+    ]
+  },
+  "extensionKind": [
+    "ui"
+  ]
+}

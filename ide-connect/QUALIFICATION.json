@@ -1,0 +1,65 @@
+{
+  "schema": "calf.ide-connect.qualification.v1",
+  "version": "0.1.0-dev.1",
+  "qualification": "TWELVE_IDE_GUI_FLOWS_OBSERVED",
+  "channel": "unsigned development preview",
+  "date": "2026-11-13",
+  "ownerProfilesInstalled": false,
+  "nativeTransport": {
+    "javascriptTests": 6,
+    "javaProbeChecks": 5,
+    "modelCalls": 0,
+    "defaultMcpControl": false
+  },
+  "flow": [
+    "actual menu",
+    "explicit project connection",
+    "native readOnly:true/completionEvaluated:false",
+    "actual Workbench window"
+  ],
+  "platforms": {
+    "macos": {
+      "vscode": "1.146.0",
+      "cursor": "3.30.8",
+      "pycharm": "2026.3",
+      "antigravityVscodeApi": "1.107.0",
+      "fourFlows": "OBSERVED"
+    },
+    "windows": {
+      "vscode": "1.146.0",
+      "cursor": "3.30.8",
+      "pycharm": "2026.3",
+      "antigravityVscodeApi": "1.107.0",
+      "fourFlows": "OBSERVED"
+    },
+    "debian13": {
+      "vscode": "1.145.2",
+      "cursor": "3.30.8",
+      "pycharm": "2026.3",
+      "antigravityVscodeApi": "1.107.0",
+      "fourFlows": "OBSERVED"
+    }
+  },
+  "normalMacPycharmRestart": "CONNECTION_RETAINED",
+  "limits": [
+    "Cursor used an open project; empty-window activation not qualified",
+    "Other JetBrains products not qualified",
+    "No production acceptance, marketplace signing, new AI task, human usability or token saving measurement",
+    "Records preservation refers to isolated test paths and inventoried files, not whole-machine immutability"
+  ],
+  "workbenchReleaseScreens": {
+    "version": "1.9.16",
+    "platforms": [
+      "macos",
+      "windows",
+      "linux"
+    ],
+    "connectorRuntimeChanged": false,
+    "freshAITask": false,
+    "images": {
+      "macos": "a131864582914549112b3cf985ebbd7c906c8f2abaa4342d2aad15e45e5f6f0a",
+      "windows": "9964e5e156c8c5918a327da52f2675e93eeebc0956008875ee40c9faae234547",
+      "linux": "4302fce64088bc8f727700a848b34c9d75e975fef9f1952162dbd65e2aab4157"
+    }
+  }
+}

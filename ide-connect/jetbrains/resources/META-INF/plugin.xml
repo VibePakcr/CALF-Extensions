@@ -1,0 +1,18 @@
+<idea-plugin>
+  <id>com.vibepakcr.calf.connect</id>
+  <name>CALF Connect</name>
+  <version>0.1.0-dev.1</version>
+  <vendor>VibePakcr</vendor>
+  <description>Open CALF Workbench and read native work attention. Transport only; no task execution, model call or automatic approval.</description>
+  <idea-version since-build="263"/>
+  <depends>com.intellij.modules.platform</depends>
+  <actions>
+    <group id="CalfConnect.Group" text="CALF" popup="true">
+      <add-to-group group-id="ToolsMenu" anchor="last"/>
+      <action id="CalfConnect.Configure" class="com.vibepakcr.calf.CalfConnect$Configure" text="Configure workspace connection"/>
+      <action id="CalfConnect.Open" class="com.vibepakcr.calf.CalfConnect$Open" text="Open Workbench"/>
+      <action id="CalfConnect.Attention" class="com.vibepakcr.calf.CalfConnect$Attention" text="Read work attention"/>
+      <action id="CalfConnect.Mcp" class="com.vibepakcr.calf.CalfConnect$Mcp" text="Copy read-only MCP server entry"/>
+    </group>
+  </actions>
+</idea-plugin>

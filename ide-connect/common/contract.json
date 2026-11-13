@@ -1,0 +1,23 @@
+{
+  "schema": "calf.ide-connect.transport.v1",
+  "version": "0.1.0-dev.1",
+  "actions": {
+    "attention": {
+      "arguments": [
+        "api"
+      ],
+      "input": {
+        "op": "attention",
+        "home": "$home"
+      }
+    }
+  },
+  "mcp": {
+    "arguments": [
+      "work-mcp",
+      "$home"
+    ],
+    "controlEnabled": false
+  },
+  "authority": "Native CALF only; this file describes transport, not work policy or completion."
+}

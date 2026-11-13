@@ -1,5 +1,8 @@
 # Native FFmpeg scene workflow
 
+Included in 0.2.0-preview.2: [one-command first task](FIRST_TASK.md). It preserves the existing checks and stops before adoption. It is not present in existing preview.1 downloads. [Version/verification map](../CURRENT_VERIFICATION.md).
+
+
 [한국어](README_KR.md) · [Installation](../INSTALL.md)
 
 Rust implementation of the existing CALF scene workflow. Rendering creates a per-attempt candidate; a separate validator checks its exact bytes against the frozen profile using ffprobe and a full FFmpeg decode. Adoption changes only the selected scene after current native SATISFIED evidence. Source files, earlier candidates and other approved scenes stay intact.

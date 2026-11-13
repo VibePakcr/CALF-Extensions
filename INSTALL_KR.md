@@ -1,4 +1,17 @@
-# Rust FFmpeg 확장 설치
+# CALF Extensions 설치
+
+**IDE에서 Workbench 열기:** [CALF Connect 설치](ide-connect/INSTALL_KR.md) · [화면 매뉴얼](ide-connect/MANUAL_KR.md)
+
+**영상 작업 관리:** 아래 FFmpeg 설치를 따르세요. 두 항목은 각각 설치합니다.
+
+## Rust FFmpeg 확장 설치
+
+1번의 버전은 현재 릴리즈에서 검증한 최소 조합이며 최신 버전 표시가 아닙니다. [현재·과거 검증 구분](CURRENT_VERIFICATION.md#한국어)을 확인하세요.
+
+영상 준비 전에 프리뷰 한도인 입출력 각 64 MiB·1280×720·30초·짝수 가로세로·정수 24/25/30 fps를 확인하세요.
+
+FFmpeg 0.2.0-preview.2는 [첫 작업 안내](native-ffmpeg/FIRST_TASK_KR.md)로 진입 명령을 하나로 줄이고 시각 검토·채택은 직접 선택하도록 했습니다. 기존 preview.1 다운로드는 [전체 명령 순서](native-ffmpeg/README_KR.md)를 사용합니다. 터미널·PowerShell 또는 IDE 내장 터미널에서 실행하며 IDE 설정은 바꾸지 않아도 됩니다.
+
 
 [English](INSTALL.md)
 
@@ -12,3 +25,12 @@
 Repository Intelligence는 이미 기본 기능입니다. 이전 Repository 팩을 중복 설치하지 마세요. 다른 과거 확장은 이번 배포에 포함하지 않습니다.
 
 원본 영상·기록·계약·무관한 설정을 확장 폴더로 복사할 필요가 없습니다. 첫 검증은 새 합성 프로젝트에서 진행하세요. 기술 검사는 사용자의 시각적 검토를 대신하지 않습니다.
+
+FFmpeg 0.2.0-preview.2에는 [첫 작업 안내](native-ffmpeg/FIRST_TASK_KR.md)의 `first-task`가 포함됩니다. 기존 preview.1은 변경하지 않습니다.
+
+
+## FFmpeg 다운로드 · 0.2.0-preview.2
+
+- [macos arm64](https://github.com/VibePakcr/CALF-Extensions/releases/download/ffmpeg-v0.2.0-preview.2/CALF-FFmpeg-0.2.0-preview.2-macos-arm64.zip)
+- [windows x86_64](https://github.com/VibePakcr/CALF-Extensions/releases/download/ffmpeg-v0.2.0-preview.2/CALF-FFmpeg-0.2.0-preview.2-windows-x86_64.zip)
+- [linux x86_64](https://github.com/VibePakcr/CALF-Extensions/releases/download/ffmpeg-v0.2.0-preview.2/CALF-FFmpeg-0.2.0-preview.2-linux-x86_64.tar.gz)

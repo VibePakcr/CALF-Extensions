@@ -1,5 +1,8 @@
 # Rust FFmpeg 씬 작업
 
+0.2.0-preview.2에 [명령 하나로 첫 작업 시작](FIRST_TASK_KR.md)을 추가했습니다. 기존 검사를 유지하며 채택 전에 멈춥니다. 기존 preview.1 다운로드에는 포함되지 않습니다. [버전·검증 구분](../CURRENT_VERIFICATION.md#한국어).
+
+
 [English](README.md) · [설치](../INSTALL_KR.md)
 
 기존 CALF 씬 작업 규약을 Rust로 구현했습니다. 실행할 때마다 새 후보를 저장하고, 별도 검수기가 ffprobe와 FFmpeg 전체 디코딩으로 해당 파일의 정확한 바이트와 확정된 규격을 확인합니다. 채택은 현재 네이티브 SATISFIED 근거를 확인한 뒤 선택한 씬만 변경합니다. 원본·이전 후보·다른 승인 씬은 보존합니다.
